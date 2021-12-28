@@ -22,17 +22,23 @@ public class Product {
 
 	private int year; // Year published?
 	private String edition;
+	
 	@ManyToOne
 	private Genre genre;
 
 	private String bindingType; // options are hardcover/softcover/ebook
+	
 	@ManyToOne
 	private Categories category;
+	
 	private String condition; // new or used (Used = set price? Or originalPrice x percentage ?)
 	private boolean isOnSale;
 	private double buyPrice;
 	private double rentPrice;
 
+	//@OneToOne
+	//private Sale sale; // ToBe implemented
+	
 	public Product() {
 		super();
 	}
