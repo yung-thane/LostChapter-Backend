@@ -16,7 +16,7 @@ public class BookToBuy {
 	private int id;
 
 	@ManyToOne
-	private Product books;
+	private Book books;
 
 	private int quantityToBuy;
 
@@ -24,7 +24,7 @@ public class BookToBuy {
 		super();
 	}
 
-	public BookToBuy(Product books, int quantityToBuy) {
+	public BookToBuy(Book books, int quantityToBuy) {
 		super();
 		this.books = books;
 		this.quantityToBuy = quantityToBuy;
@@ -38,11 +38,11 @@ public class BookToBuy {
 		this.id = id;
 	}
 
-	public Product getBooks() {
+	public Book getBooks() {
 		return books;
 	}
 
-	public void setBooks(Product books) {
+	public void setBooks(Book books) {
 		this.books = books;
 	}
 
