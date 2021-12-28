@@ -58,10 +58,10 @@ public class AuthenticationController {
 	}
 	
 	@PostMapping(path = "/logout")
-	public ResponseEntity<Users> logout() {
+	public ResponseEntity<Object> logout() {
 		req.getSession().invalidate();
 		
-		return ResponseEntity.status(200).body(new Users());
+		return ResponseEntity.status(200).body("Successfully logged out");
 	}
 	
 	@GetMapping(path = "/loginstatus")
