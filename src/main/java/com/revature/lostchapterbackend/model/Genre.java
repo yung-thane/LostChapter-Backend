@@ -2,6 +2,8 @@ package com.revature.lostchapterbackend.model;
 
 import java.util.Objects;
 
+import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,14 +16,16 @@ public class Genre {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int genreId;
 
+	@Column(nullable = false)
 	private String genre;
 
 	public Genre() {
 		super();
 	}
 
-	public Genre(String genre) {
+	public Genre(int genreId, String genre) {
 		super();
+		this.genreId = genreId;
 		this.genre = genre;
 	}
 
