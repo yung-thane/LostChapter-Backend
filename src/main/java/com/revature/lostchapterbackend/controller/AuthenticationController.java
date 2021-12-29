@@ -1,5 +1,7 @@
 package com.revature.lostchapterbackend.controller;
 
+import java.security.NoSuchAlgorithmException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.revature.lostchapterbackend.dto.LoginDto;
 import com.revature.lostchapterbackend.dto.SignUpDto;
 import com.revature.lostchapterbackend.exceptions.InvalidLoginException;
+import com.revature.lostchapterbackend.exceptions.InvalidParameter;
 import com.revature.lostchapterbackend.exceptions.UserNotFoundException;
 import com.revature.lostchapterbackend.model.Users;
 import com.revature.lostchapterbackend.service.UserService;
@@ -30,7 +33,7 @@ public class AuthenticationController {
 	private HttpServletRequest req;
 	
 	@PostMapping(path = "/signup")
-	public ResponseEntity<Object> signUp(@RequestBody SignUpDto dto) {
+	public ResponseEntity<Object> signUp(@RequestBody SignUpDto dto) throws InvalidParameter, NoSuchAlgorithmException {
 		
 		try {
 			Users user = this.us.createUser(dto);
@@ -43,7 +46,7 @@ public class AuthenticationController {
 	}
 	
 	@PostMapping(path = "/login")
-	public ResponseEntity<Object> login(@RequestBody LoginDto dto) {
+	public ResponseEntity<Object> login(@RequestBody LoginDto dto) throws NoSuchAlgorithmException {
 		
 		try {
 			Users user = this.us.getUser(dto.getAccess(), dto.getPassword());
@@ -72,7 +75,7 @@ public class AuthenticationController {
 			return ResponseEntity.status(200).body(currentlyLoggedInUser);
 		}
 		
-		return ResponseEntity.status(200).body(new Users());
+		return ResponseEntity.status(200).body("No one is currently logged in");
 	}
 	
 	@DeleteMapping(path = "/delete")
