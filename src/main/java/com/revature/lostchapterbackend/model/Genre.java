@@ -11,6 +11,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Genre {
+<<<<<<< HEAD
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -66,5 +67,66 @@ public class Genre {
 	public String toString() {
 		return "Genre [genreId=" + Id + ", genre=" + genre + "]";
 	}
+=======
+	
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private int Id;
+
+@Column(nullable = false)
+private String genre;
+
+public Genre() {
+	super();
+ }
+
+public Genre(int id, String genre) {
+	super();
+	Id = id;
+	this.genre = genre;
+}
+
+public int getId() {
+	return Id;
+}
+
+public void setId(int id) {
+	Id = id;
+}
+>>>>>>> origin/products-feature
 
 }
+<<<<<<< HEAD
+=======
+
+public void setGenre(String genre) {
+	this.genre = genre;
+}
+
+@Override
+public int hashCode() {
+	return Objects.hash(Id, genre);
+}
+
+@Override
+public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	Genre other = (Genre) obj;
+	return Id == other.Id && Objects.equals(genre, other.genre);
+}
+
+@Override
+public String toString() {
+	return "Genre [Id=" + Id + ", genre=" + genre + "]";
+}
+
+
+
+}
+
+>>>>>>> origin/products-feature
