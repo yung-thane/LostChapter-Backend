@@ -45,7 +45,7 @@ public class BookService {
 
 	public List<Book> getBooksByKeyword(String keyword) {
 		
-		return null;
+		return bd.findByBookIgnoreCaseContaining(keyword);
 	}
 
 }
