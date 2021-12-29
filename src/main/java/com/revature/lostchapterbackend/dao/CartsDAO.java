@@ -33,7 +33,8 @@ public class CartsDAO {
 
 		return currentCart;
 	}
-
+	
+	@Transactional
 	public Carts insertToCart(Carts currentCart, BookToBuy booksToBeBought) {
 		Session session = em.unwrap(Session.class);
 

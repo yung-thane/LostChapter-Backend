@@ -14,7 +14,7 @@ public class Genre {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int genreId;
+	private int Id;
 
 	@Column(nullable = false)
 	private String genre;
@@ -23,18 +23,18 @@ public class Genre {
 		super();
 	}
 
-	public Genre(int genreId, String genre) {
+	public Genre(int Id, String genre) {
 		super();
-		this.genreId = genreId;
+		this.Id = Id;
 		this.genre = genre;
 	}
 
-	public int getGenreId() {
-		return genreId;
+	public int getId() {
+		return Id;
 	}
 
-	public void setGenreId(int genreId) {
-		this.genreId = genreId;
+	public void setId(int Id) {
+		this.Id = Id;
 	}
 
 	public String getGenre() {
@@ -47,7 +47,7 @@ public class Genre {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(genre, genreId);
+		return Objects.hash(genre, Id);
 	}
 
 	@Override
@@ -59,12 +59,12 @@ public class Genre {
 		if (getClass() != obj.getClass())
 			return false;
 		Genre other = (Genre) obj;
-		return Objects.equals(genre, other.genre) && genreId == other.genreId;
+		return Objects.equals(genre, other.genre) && Id == other.Id;
 	}
 
 	@Override
 	public String toString() {
-		return "Genre [genreId=" + genreId + ", genre=" + genre + "]";
+		return "Genre [genreId=" + Id + ", genre=" + genre + "]";
 	}
 
 }
