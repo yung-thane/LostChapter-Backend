@@ -29,7 +29,6 @@ public class Book {
 	private String author;
 
 	@ManyToOne
-	@Column(nullable = false)
 	private Genre genreId;
 
 	@Column(nullable = false)
@@ -69,7 +68,7 @@ public class Book {
 			String edition, String publisher, String bindingType, boolean saleIsActive, double saleDiscountRate,
 			String condition, double bookPrice) {
 		super();
-		ISBN = iSBN;
+		this.ISBN = iSBN;
 		this.bookName = bookName;
 		this.synopsis = synopsis;
 		this.author = author;

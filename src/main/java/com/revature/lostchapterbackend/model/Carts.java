@@ -31,6 +31,22 @@ public class Carts {
 		this.booksToBuy = booksToBuy;
 	}
 
+	public int getCartId() {
+		return cartId;
+	}
+
+	public void setCartId(int cartId) {
+		this.cartId = cartId;
+	}
+
+	public List<BookToBuy> getBooksToBuy() {
+		return booksToBuy;
+	}
+
+	public void setBooksToBuy(List<BookToBuy> booksToBuy) {
+		this.booksToBuy = booksToBuy;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(booksToBuy, cartId);

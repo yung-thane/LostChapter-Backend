@@ -24,22 +24,28 @@
 >#### GET
 * /books
     * Get all books
-* /books
-    * Get a book by bookId (@RequestParam)
+* /books/{bookId}
+    * Get a book by bookId (@PathVariable)
+* /books/ISBN (stretch goal)
     * Get a book by ISBN (@RequestParam)
+* /books (@requestParam)
     * Get a book that matches certain characters/words
-        * To achieve this, I think there would be an if/else statement:
-            * if bookId == bookId, use a Service for looking a book by its id;
-            * else if book isbn == isbn, use a Service that looks for a book by its isbn number;
-            * else if book contains specific words/characters, use a Service for looking a book that matches certain characters/words
+* /books/genre/{genreId}
+    * Get a book by genre id (@PathVariable)
+* /books/sales
+    * Get all books on sale
+
 >#### POST
 * /books (Added feature, not stated on MVP, skip for now)
     * Add new Book into the system: (JSON Format)
 
 ### Carts
+#### GET
+>Because a User has a `OneToOne relationship` with the Cart, we can then find the cart Id by using the userId
+* /user/{userId}/cart
+    * main endpoint for displaying all the books in the cart and the quantity of the books the customer wants to buy
 >#### POST
 * /user/{userId}/cart?bookId=&quantityToBuy=
-    * Because a User is connected to a Cart, we can then find the cart Id by using the userId
     * Adding a book into the cart
     * One PathVariable: userId
     * Two Request Params: bookId & quantityToBuy
