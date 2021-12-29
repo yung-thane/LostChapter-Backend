@@ -1,34 +1,31 @@
 package com.revature.lostchapterbackend.utility;
 
-import java.security.InvalidParameterException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.revature.lostchapterbackend.dto.LoginDto;
 import com.revature.lostchapterbackend.dto.SignUpDto;
-import com.revature.lostchapterbackend.exceptions.InvalidLoginException;
-import com.revature.lostchapterbackend.exceptions.InvalidParameter;
+import com.revature.lostchapterbackend.exceptions.InvalidParameterException;
 import com.revature.lostchapterbackend.model.Users;
 import com.revature.lostchapterbackend.service.UserService;
 
-import io.micrometer.core.instrument.util.StringUtils;
+
 
 public class ValidateUtil {
 	
-	Logger logger = LoggerFactory.getLogger(ValidateUtil.class);
+	public static Logger logger = LoggerFactory.getLogger(ValidateUtil.class);
 	
 	@Autowired
+	static
 	UserService userService;
 	
-	static List<String> userRoleList = Arrays.asList("Customer", "Employee");
+	static List<String> userRoleList = Arrays.asList("customer", "admin");
 	
-	public void verifySignUp(Users user) throws InvalidParameter {
+	public static void verifySignUp(SignUpDto user) throws InvalidParameterException {
 		logger.info("ValidateUtil.createUser() invoked");
 		
 		logger.info("check if inputs are blank");
@@ -37,58 +34,83 @@ public class ValidateUtil {
 		StringBuilder blankInputStrings = new StringBuilder();
 		
 		if (StringUtils.isBlank(user.getUsername().trim())) {
-			blankInputStrings.append("username");
+			blankInputStrings.append("username ");
 			blankInputs = true;
 		}
 		
 		if (StringUtils.isBlank(user.getPassword().trim())) {
-			blankInputStrings.append("password");
+			blankInputStrings.append("password ");
 			blankInputs = true;
 		}
 		
 		if (StringUtils.isBlank(user.getFirstName().trim())) {
-			blankInputStrings.append("firstName");
+			blankInputStrings.append("firstName ");
 			blankInputs = true;
 		}
 		
 		if (StringUtils.isBlank(user.getLastName().trim())) {
-			blankInputStrings.append("lastName");
+			blankInputStrings.append("lastName ");
 			blankInputs = true;
 		}
 		
 		if (StringUtils.isBlank(user.getEmail().trim())) {
-			blankInputStrings.append("email");
+			blankInputStrings.append("email ");
 			blankInputs = true;
+			
 		}
 		
 		if (StringUtils.isBlank(user.getBirthday().trim())) {
-			blankInputStrings.append("birthday");
+			blankInputStrings.append("birthday ");
 			blankInputs = true;
 		}
 		
 		if (StringUtils.isBlank(user.getAddress().trim())) {
-			blankInputStrings.append("address");
+			blankInputStrings.append("address ");
 			blankInputs = true;
 		}
 		
 		if (StringUtils.isBlank(user.getRole().trim())) {
-			blankInputStrings.append("role");
+			blankInputStrings.append("role ");
 			blankInputs = true;
 		}
 		
+		if (blankInputs) {
+            blankInputStrings.append("cannot be blank.");
+            throw new InvalidParameterException(blankInputStrings.toString());
+        }
+		
 		logger.info("Check if email already exist");
 		
-		Users databaseUser = userService.getUserByEmail(user.getEmail());
+		logger.info("user.getEmail(): {}", user.getEmail());
 		
-		boolean emailExistsBoolean = false;
-		StringBuilder emailExistsString = new StringBuilder();
+        Users databaseUser = userService.getUserByEmail(user.getEmail());
+        
+		logger.info("databaseUser: {}", databaseUser);
+
+        if (databaseUser != null) {
+            if (StringUtils.equalsAnyIgnoreCase(databaseUser.getEmail().trim(), user.getEmail().trim())) {
+
+                throw new InvalidParameterException("Email already exist.");
+            }
+        }
 		
-		logger.debug("databaseUser {}", databaseUser);
-		
-		if (databaseUser != null) {
-							
-			throw new InvalidParameter("This email already exists!");
+		logger.info("email verification");
+
+		String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+
+		if (!user.getEmail().matches(regex)) {
+			throw new InvalidParameterException("Invalid Email.");
 		}
+//		boolean emailExistsBoolean = false;
+//		StringBuilder emailExistsString = new StringBuilder();
+//		
+//		
+//		logger.debug("databaseUser {}", databaseUser);
+//		
+//		if (databaseUser != null) {
+//							
+//			throw new InvalidParameter("This email already exists!");
+//		}
 		
 	}
 

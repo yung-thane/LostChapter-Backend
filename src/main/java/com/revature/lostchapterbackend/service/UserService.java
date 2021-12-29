@@ -9,10 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
+import com.revature.lostchapterbackend.utility.ValidateUtil;
 import com.revature.lostchapterbackend.dao.UserDao;
 import com.revature.lostchapterbackend.dto.SignUpDto;
 import com.revature.lostchapterbackend.exceptions.InvalidLoginException;
-import com.revature.lostchapterbackend.exceptions.InvalidParameter;
+import com.revature.lostchapterbackend.exceptions.InvalidParameterException;
 import com.revature.lostchapterbackend.exceptions.UserNotFoundException;
 import com.revature.lostchapterbackend.model.Users;
 import com.revature.lostchapterbackend.utility.HashUtil;
@@ -25,18 +26,19 @@ public class UserService {
 	
 	private Logger logger = LoggerFactory.getLogger(UserService.class);
 	
-	public Users createUser(SignUpDto dto) throws InvalidLoginException, InvalidParameter, NoSuchAlgorithmException {
+	public Users createUser(SignUpDto dto) throws InvalidLoginException, InvalidParameterException, NoSuchAlgorithmException {
 		
 		if (dto.getUsername().trim().equals("") || dto.getPassword().trim().equals("")
                 || dto.getFirstName().trim().equals("") || dto.getLastName().trim().equals("")
                 || dto.getBirthday().trim().equals("") || dto.getEmail().trim().equals("")
                 || dto.getAddress().trim().equals("")  || dto.getRole().trim().equals("")) {
-            throw new InvalidParameter("Do not leave any information blank");
+            throw new InvalidParameterException("Do not leave any information blank");
         }
 		
 		if (dto.getAge() < 5 || dto.getAge() > 125) {
-			throw new InvalidParameter("Age cannot be less than 5 or greater than 125");
+			throw new InvalidParameterException("Age cannot be less than 5 or greater than 125");
 		}
+		
 		
 		String algorithm = "SHA-256";
 		String hashedPassword = HashUtil.hashPassword(dto.getPassword().trim(), algorithm);
@@ -56,7 +58,8 @@ public class UserService {
 		
 		logger.info("UserService.getUser() invoked");
 		
-		Users user = ud.getUser(access, password);
+		Users user = ud.getUser(access);
+		// Users user = ud.getUser(access, password);
 		System.out.println(user.getPassword());
 		
 		try {
@@ -103,6 +106,30 @@ public class UserService {
 		Users users = this.ud.getUserByEmail(email);
 		
 		return users;
+	}
+	
+	public Users updateUser(Users currentUser, Users updatedUserInfo) throws InvalidParameterException {
+		
+		if (updatedUserInfo.getUsername().trim().equals("") || updatedUserInfo.getPassword().trim().equals("")
+                || updatedUserInfo.getFirstName().trim().equals("") || updatedUserInfo.getLastName().trim().equals("")
+                || updatedUserInfo.getBirthday().trim().equals("") || updatedUserInfo.getEmail().trim().equals("")
+                || updatedUserInfo.getAddress().trim().equals("")  || updatedUserInfo.getRole().trim().equals("")) {
+            throw new InvalidParameterException("Do not leave any information blank");
+        }
+		
+		if (updatedUserInfo.getAge() < 5 || updatedUserInfo.getAge() > 125) {
+			throw new InvalidParameterException("Age cannot be less than 5 or greater than 125");
+		}
+		
+		int currentUserId = currentUser.getId();
+		updatedUserInfo.setId(currentUserId);
+		updatedUserInfo.setUsername(currentUser.getUsername());
+		updatedUserInfo.setPassword(currentUser.getPassword());
+		updatedUserInfo.setRole(currentUser.getRole());
+		
+		updatedUserInfo = ud.updateUser(currentUserId, updatedUserInfo);
+		
+		return updatedUserInfo;
 	}
 
 }
