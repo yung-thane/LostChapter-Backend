@@ -29,8 +29,8 @@ private String synopsis;
 private String author;
 
 @ManyToOne
-@Column(nullable = false)
-private Genre genreId;
+//@Column(nullable = false)
+private Genre genre;
 
 @Column(nullable = false)
 private int quantity;
@@ -67,7 +67,7 @@ public Book() {
 	super();
 }
 
-public Book(String iSBN, String bookName, String synopsis, String author, Genre genreId, int quantity, int year,
+public Book(String iSBN, String bookName, String synopsis, String author, Genre genre, int quantity, int year,
 		String edition, String publisher, String bindingType, boolean saleIsActive,
 		double saleDiscountRate, String condition, double bookPrice) {
 	super();
@@ -75,7 +75,7 @@ public Book(String iSBN, String bookName, String synopsis, String author, Genre 
 	this.bookName = bookName;
 	this.synopsis = synopsis;
 	this.author = author;
-	this.genreId = genreId;
+	this.genre = genre;
 	this.quantity = quantity;
 	this.year = year;
 	this.edition = edition;
@@ -89,7 +89,7 @@ public Book(String iSBN, String bookName, String synopsis, String author, Genre 
 
 @Override
 public int hashCode() {
-	return Objects.hash(ISBN, author, bindingType, bookId, bookName, bookPrice, condition, edition, genreId, publisher,
+	return Objects.hash(ISBN, author, bindingType, bookId, bookName, bookPrice, condition, edition, genre, publisher,
 			quantity, saleDiscountRate, saleIsActive, synopsis, year);
 }
 
@@ -107,7 +107,7 @@ public boolean equals(Object obj) {
 			&& Objects.equals(bookName, other.bookName)
 			&& Double.doubleToLongBits(bookPrice) == Double.doubleToLongBits(other.bookPrice)
 			&& Objects.equals(condition, other.condition) && Objects.equals(edition, other.edition)
-			&& Objects.equals(genreId, other.genreId) && Objects.equals(publisher, other.publisher)
+			&& Objects.equals(genre, other.genre) && Objects.equals(publisher, other.publisher)
 			&& quantity == other.quantity
 			&& Double.doubleToLongBits(saleDiscountRate) == Double.doubleToLongBits(other.saleDiscountRate)
 			&& saleIsActive == other.saleIsActive && Objects.equals(synopsis, other.synopsis) && year == other.year;
@@ -153,12 +153,12 @@ public void setAuthor(String author) {
 	this.author = author;
 }
 
-public Genre getGenreId() {
-	return genreId;
+public Genre getGenre() {
+	return genre;
 }
 
-public void setGenreId(Genre genreId) {
-	this.genreId = genreId;
+public void setGenre(Genre genre) {
+	this.genre = genre;
 }
 
 public int getQuantity() {
@@ -236,7 +236,7 @@ public void setBookPrice(double bookPrice) {
 @Override
 public String toString() {
 	return "Book [bookId=" + bookId + ", ISBN=" + ISBN + ", bookName=" + bookName + ", synopsis=" + synopsis
-			+ ", author=" + author + ", genreId=" + genreId + ", quantity=" + quantity + ", year=" + year + ", edition="
+			+ ", author=" + author + ", genre=" + genre + ", quantity=" + quantity + ", year=" + year + ", edition="
 			+ edition + ", publisher=" + publisher + ", bindingType=" + bindingType + ", saleIsActive=" + saleIsActive
 			+ ", saleDiscountRate=" + saleDiscountRate + ", condition=" + condition + ", bookPrice=" + bookPrice + "]";
 }
