@@ -98,6 +98,7 @@ public class AuthenticationController {
 		
 		int id = currentlyLoggedInUser.getId();
 		us.deleteUserById(currentlyLoggedInUser);
+		req.getSession().invalidate();
 		
 		return ResponseEntity.status(200).body("This user has been successfully deleted by id: " + id);
 	}

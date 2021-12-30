@@ -2353,3 +2353,141 @@ org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique co
 30 Dec 2021 - 12:39:55.821 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
 30 Dec 2021 - 12:39:55.928 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - databaseUser: null
 30 Dec 2021 - 12:39:55.929 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - email verification
+30 Dec 2021 - 12:41:28.682 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 16.0.2 on DESKTOP-DVBGLLH with PID 17312 (C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend\target\classes started by husto in C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend)
+30 Dec 2021 - 12:41:28.686 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+30 Dec 2021 - 12:41:28.855 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+30 Dec 2021 - 12:41:28.857 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+30 Dec 2021 - 12:41:31.288 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+30 Dec 2021 - 12:41:31.370 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 0 JPA repository interfaces.
+30 Dec 2021 - 12:41:33.828 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+30 Dec 2021 - 12:41:33.854 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+30 Dec 2021 - 12:41:33.855 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+30 Dec 2021 - 12:41:33.855 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+30 Dec 2021 - 12:41:34.135 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+30 Dec 2021 - 12:41:34.136 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5278 ms
+30 Dec 2021 - 12:41:34.789 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+30 Dec 2021 - 12:41:36.210 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+30 Dec 2021 - 12:41:36.225 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+30 Dec 2021 - 12:41:36.799 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+30 Dec 2021 - 12:41:36.923 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+30 Dec 2021 - 12:41:37.441 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+30 Dec 2021 - 12:41:37.750 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+30 Dec 2021 - 12:41:39.295 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+30 Dec 2021 - 12:41:39.309 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+30 Dec 2021 - 12:41:39.719 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+30 Dec 2021 - 12:41:42.235 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+30 Dec 2021 - 12:41:42.253 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+30 Dec 2021 - 12:41:42.316 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+30 Dec 2021 - 12:41:42.382 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+30 Dec 2021 - 12:41:42.428 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 14.543 seconds (JVM running for 16.571)
+30 Dec 2021 - 12:41:53.042 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+30 Dec 2021 - 12:41:53.044 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+30 Dec 2021 - 12:41:53.050 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+30 Dec 2021 - 12:41:53.546 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+30 Dec 2021 - 12:41:53.625 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 12:41:53.946 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - userUsers [id=15, username=kibru, password=BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E, firstName=Kibru, lastName=Kassa, age=23, email=kkassa124@gmail.com, birthday=12/31/97, address=5456 RiverBend Dr., role=customer]
+30 Dec 2021 - 12:41:54.028 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - hashedInputPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 12:41:54.028 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - user.getPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 12:42:06.069 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 12:42:06.069 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 12:42:06.076 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 12:42:06.077 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): kkassa124gmail.com
+30 Dec 2021 - 12:42:06.077 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@180b71c2
+30 Dec 2021 - 12:42:11.398 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 12:42:11.399 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 12:42:11.401 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 12:42:11.401 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): kkassa124@gmail.com
+30 Dec 2021 - 12:42:11.401 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@180b71c2
+30 Dec 2021 - 12:42:24.588 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 12:42:24.589 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 12:42:24.589 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 12:42:24.589 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): kkassa124@gmail.com
+30 Dec 2021 - 12:42:24.589 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@180b71c2
+30 Dec 2021 - 12:42:45.191 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+30 Dec 2021 - 12:42:45.245 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 12:42:45.305 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - userUsers [id=15, username=kibru, password=BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E, firstName=Kibru, lastName=Kassa, age=23, email=kkassa124@gmail.com, birthday=12/31/97, address=5456 RiverBend Dr., role=customer]
+30 Dec 2021 - 12:42:45.353 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - hashedInputPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 12:42:45.355 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - user.getPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 12:42:53.894 [http-nio-8081-exec-9] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+30 Dec 2021 - 12:42:53.939 [http-nio-8081-exec-9] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 12:42:54.013 [http-nio-8081-exec-9] INFO  c.r.lostchapterbackend.dao.UserDao - userUsers [id=15, username=kibru, password=BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E, firstName=Kibru, lastName=Kassa, age=23, email=kkassa124@gmail.com, birthday=12/31/97, address=5456 RiverBend Dr., role=customer]
+30 Dec 2021 - 12:42:54.082 [http-nio-8081-exec-9] INFO  c.r.l.service.UserService - hashedInputPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 12:42:54.083 [http-nio-8081-exec-9] INFO  c.r.l.service.UserService - user.getPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 12:45:11.427 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+30 Dec 2021 - 12:45:11.474 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 12:45:23.408 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+30 Dec 2021 - 12:45:23.469 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 12:45:23.521 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - userUsers [id=15, username=kibru, password=BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E, firstName=Kibru, lastName=Kassa, age=23, email=kkassa124@gmail.com, birthday=12/31/97, address=5456 RiverBend Dr., role=customer]
+30 Dec 2021 - 12:45:23.569 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - hashedInputPassword E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855
+30 Dec 2021 - 12:45:23.569 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - user.getPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 12:45:28.318 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+30 Dec 2021 - 12:45:28.370 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 12:45:28.434 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - userUsers [id=15, username=kibru, password=BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E, firstName=Kibru, lastName=Kassa, age=23, email=kkassa124@gmail.com, birthday=12/31/97, address=5456 RiverBend Dr., role=customer]
+30 Dec 2021 - 12:45:28.478 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - hashedInputPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 12:45:28.480 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - user.getPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 12:51:47.296 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 12:51:47.296 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 12:51:47.296 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 12:51:47.296 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): kkassa124@gmail.com
+30 Dec 2021 - 12:51:47.296 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@180b71c2
+30 Dec 2021 - 12:51:54.169 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 12:51:54.169 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 12:51:54.170 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 12:51:54.170 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): kkassa124@gmail.com
+30 Dec 2021 - 12:51:54.170 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@180b71c2
+30 Dec 2021 - 12:53:11.515 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 12:53:11.515 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 12:53:17.528 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 12:53:17.528 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 12:53:17.528 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 12:53:17.528 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): kkassa124@gmail.com
+30 Dec 2021 - 12:53:17.528 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@180b71c2
+30 Dec 2021 - 14:15:04.037 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 14:15:04.037 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 14:15:04.038 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 14:15:04.038 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): aKassa12@gmail.com
+30 Dec 2021 - 14:15:04.038 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@180b71c2
+30 Dec 2021 - 14:15:04.043 [http-nio-8081-exec-9] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+30 Dec 2021 - 14:15:04.087 [http-nio-8081-exec-9] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+30 Dec 2021 - 14:15:04.188 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - databaseUser: null
+30 Dec 2021 - 14:15:04.188 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - email verification
+30 Dec 2021 - 14:15:21.146 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+30 Dec 2021 - 14:15:21.191 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 14:15:21.246 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - userUsers [id=16, username=allexa, password=6CF615D5BCAAC778352A8F1F3360D23F02F34EC182E259897FD6CE485D7870D4, firstName=Allexa, lastName=Kassa, age=40, email=aKassa12@gmail.com, birthday=03/23/81, address=5457 RiverBend Dr., role=customer]
+30 Dec 2021 - 14:15:21.289 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - hashedInputPassword 6CF615D5BCAAC778352A8F1F3360D23F02F34EC182E259897FD6CE485D7870D4
+30 Dec 2021 - 14:15:21.289 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - user.getPassword 6CF615D5BCAAC778352A8F1F3360D23F02F34EC182E259897FD6CE485D7870D4
+30 Dec 2021 - 14:15:57.547 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 14:15:57.547 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 14:15:57.548 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 14:15:57.548 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): aKassa12@gmail.com
+30 Dec 2021 - 14:15:57.548 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@180b71c2
+30 Dec 2021 - 14:16:18.255 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 14:16:18.255 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 14:16:18.255 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 14:16:18.255 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): aKassa12@gmail.com
+30 Dec 2021 - 14:16:18.255 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@180b71c2
+30 Dec 2021 - 14:16:26.056 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 14:16:26.056 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 14:16:26.056 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 14:16:26.056 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): aKassa12@gmail.com
+30 Dec 2021 - 14:16:26.056 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@180b71c2
+30 Dec 2021 - 14:16:36.201 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 14:16:36.202 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 14:16:36.202 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 14:16:36.202 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): aKassa12@gmail.com
+30 Dec 2021 - 14:16:36.202 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@180b71c2
+30 Dec 2021 - 14:16:43.530 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 14:16:43.531 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 14:16:43.531 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 14:16:43.531 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): aKassa12@gmail.com
+30 Dec 2021 - 14:16:43.531 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@180b71c2
+30 Dec 2021 - 14:16:52.427 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 14:16:52.427 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 14:16:52.427 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 14:16:52.427 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): aKassa12@gmail.com
+30 Dec 2021 - 14:16:52.428 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@180b71c2
+30 Dec 2021 - 14:17:08.422 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+30 Dec 2021 - 14:17:08.471 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 14:19:23.637 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+30 Dec 2021 - 14:19:23.658 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+30 Dec 2021 - 14:19:23.668 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
