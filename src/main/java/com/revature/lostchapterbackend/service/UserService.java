@@ -44,14 +44,10 @@ public class UserService {
 		String hashedPassword = HashUtil.hashPassword(dto.getPassword().trim(), algorithm);
 		dto.setPassword(hashedPassword);
 		System.out.println(hashedPassword);
-		
-		try {
 			
 			Users createdUser = this.ud.addUser(dto);
 			return createdUser;
-		} catch (DataAccessException e) {
-			throw new InvalidLoginException("Username already exists");
-		}
+		
 	}
 	
 	public Users getUser(String username, String password) throws InvalidLoginException, NoSuchAlgorithmException {

@@ -17,7 +17,7 @@ import com.revature.lostchapterbackend.service.UserService;
 
 public class ValidateUtil {
 	
-	public static Logger logger = LoggerFactory.getLogger(ValidateUtil.class);
+	public  Logger logger = LoggerFactory.getLogger(ValidateUtil.class);
 	
 	@Autowired
 	UserService userService;
@@ -80,12 +80,12 @@ public class ValidateUtil {
 		
 		logger.info("Check if email already exist");
 		
-		logger.info("user.getEmail(): {}", user.getEmail());
-		logger.info("userService: {}", userService);
+		logger.debug("user.getEmail(): {}", user.getEmail());
+		logger.debug("userService: {}", userService);
 		
         Users databaseUser = userService.getUserByEmail(user.getEmail());
         
-		logger.info("databaseUser: {}", databaseUser);
+		logger.debug("databaseUser: {}", databaseUser);
 
         if (databaseUser != null) {
             if (StringUtils.equalsAnyIgnoreCase(databaseUser.getEmail().trim(), user.getEmail().trim())) {
