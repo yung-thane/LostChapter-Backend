@@ -20,12 +20,11 @@ public class ValidateUtil {
 	public static Logger logger = LoggerFactory.getLogger(ValidateUtil.class);
 	
 	@Autowired
-	static
 	UserService userService;
 	
 	static List<String> userRoleList = Arrays.asList("customer", "admin");
 	
-	public static void verifySignUp(SignUpDto user) throws InvalidParameterException {
+	public void verifySignUp(SignUpDto user) throws InvalidParameterException {
 		logger.info("ValidateUtil.createUser() invoked");
 		
 		logger.info("check if inputs are blank");
@@ -82,6 +81,7 @@ public class ValidateUtil {
 		logger.info("Check if email already exist");
 		
 		logger.info("user.getEmail(): {}", user.getEmail());
+		logger.info("userService: {}", userService);
 		
         Users databaseUser = userService.getUserByEmail(user.getEmail());
         
@@ -101,16 +101,6 @@ public class ValidateUtil {
 		if (!user.getEmail().matches(regex)) {
 			throw new InvalidParameterException("Invalid Email.");
 		}
-//		boolean emailExistsBoolean = false;
-//		StringBuilder emailExistsString = new StringBuilder();
-//		
-//		
-//		logger.debug("databaseUser {}", databaseUser);
-//		
-//		if (databaseUser != null) {
-//							
-//			throw new InvalidParameter("This email already exists!");
-//		}
 		
 	}
 

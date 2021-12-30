@@ -45,6 +45,7 @@ public class UserDao {
 				.setParameter("username", access)
 				.setParameter("password", password)
 				.getSingleResult();
+		logger.info("user {}", user);
 		//logger.info("User: " + user);
 //		if (user == null) {
 //			 user = em.createQuery("FROM Users u WHERE u.email = :email AND u.password = :password", Users.class)
@@ -57,11 +58,16 @@ public class UserDao {
 	
 	@Transactional
 	public Users getUser(String access) {
+		logger.info("UserDao.getUser() invoked");
 		
+		try {
 		Users user = em.createQuery("FROM Users u WHERE u.username = :username", Users.class)
 				.setParameter("username", access).getSingleResult();
-		
+		logger.info("user{}", user);
 		return user;
+		}catch (NoResultException e) {
+			return null;
+		}
 	}
 	
 	//Delete User method
@@ -78,7 +84,7 @@ public class UserDao {
 		logger.info("UserDao.getUserByEmail() invoked");
 		
 		try {
-			Users user = em.createQuery("FROM Users u WHERE u.email = :email AND u.password = :password", Users.class)
+			Users user = em.createQuery("FROM Users u WHERE u.email = :email", Users.class)
 					.setParameter("email", email).getSingleResult();
 			
 			

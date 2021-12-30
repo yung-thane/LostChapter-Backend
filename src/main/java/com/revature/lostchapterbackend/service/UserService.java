@@ -54,13 +54,12 @@ public class UserService {
 		}
 	}
 	
-	public Users getUser(String access, String password) throws InvalidLoginException, NoSuchAlgorithmException {
+	public Users getUser(String username, String password) throws InvalidLoginException, NoSuchAlgorithmException {
 		
 		logger.info("UserService.getUser() invoked");
 		
-		Users user = ud.getUser(access);
+		Users user = ud.getUser(username);
 		// Users user = ud.getUser(access, password);
-		System.out.println(user.getPassword());
 		
 		try {
 			
@@ -69,8 +68,8 @@ public class UserService {
 				String hashedInputPassword = HashUtil.hashInputPassword(password.trim(), algorithm);
 				System.out.println(hashedInputPassword);
 				
-				logger.debug("hashedInputPassword {}", hashedInputPassword);
-				logger.debug("user.getPassword {}", user.getPassword());
+				logger.info("hashedInputPassword {}", hashedInputPassword);
+				logger.info("user.getPassword {}", user.getPassword());
 				
 				Boolean correctPassword = hashedInputPassword.equals(user.getPassword());
 				

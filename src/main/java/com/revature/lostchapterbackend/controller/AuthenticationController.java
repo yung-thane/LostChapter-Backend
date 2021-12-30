@@ -34,12 +34,15 @@ public class AuthenticationController {
 	@Autowired
 	private HttpServletRequest req;
 	
+	@Autowired
+	private ValidateUtil validateUtil; 
+	
 	@PostMapping(path = "/signup")
 	public ResponseEntity<Object> signUp(@RequestBody SignUpDto dto) throws InvalidParameterException, NoSuchAlgorithmException, InvalidLoginException {
 		
 		try {
 			
-			ValidateUtil.verifySignUp(dto);
+			validateUtil.verifySignUp(dto);
 			
 			Users user = this.us.createUser(dto);
 			
