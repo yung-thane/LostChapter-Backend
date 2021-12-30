@@ -18,7 +18,13 @@
 * /signup
 
 ### User Profile
->####
+>#### PUT
+* /update
+    * Updates User Information
+
+>#### DELETE
+* /delete
+    * Deletes User's Account(?)
 
 ### Books (Product)
 >#### GET
@@ -28,7 +34,7 @@
     * Get a book by bookId (@PathVariable)
 * /books/ISBN (stretch goal)
     * Get a book by ISBN (@RequestParam)
-* /books (@requestParam)
+* /books/search/{keyword} (@PathVariable)
     * Get a book that matches certain characters/words
 * /books/genre/{genreId}
     * Get a book by genre id (@PathVariable)
@@ -44,6 +50,7 @@
 >Because a User has a `OneToOne relationship` with the Cart, we can then find the cart Id by using the userId
 * /user/{userId}/cart
     * main endpoint for displaying all the books in the cart and the quantity of the books the customer wants to buy
+
 >#### POST
 * /user/{userId}/cart?bookId=&quantityToBuy=
     * Adding a book into the cart

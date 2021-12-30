@@ -17,8 +17,8 @@ import com.revature.lostchapterbackend.model.Genre;
 @Service
 public class CartsService {
 
-	// @Autowired
-	// private BookService bs;
+	 @Autowired
+	 private BookService bs;
 
 	@Autowired
 	private CartsDAO cd;
@@ -34,13 +34,7 @@ public class CartsService {
 
 		currentCart = this.getCartById(userId); // checking if carts exist
 		
-		// Book b = bs.getBookById(bookId); -- checking if book exists
-		Genre g = new Genre(1, "Novel"); // Manually Insertting Genre
-		Book b = new Book("9783462015393", "The Catcher In The Rye",
-				"set around the 1950s and is narrated by a young man named Holden Caulfield.", "J.D. Salinger", g, 100,
-				1951, "1st edition", "Little, Brown", "Paperback", false, 0.0, "new", 8.07); // Manually Insertting Book
-		b.setBookId(1); //Manually Inserting Id 
-		// Waiting for Search/Display Product to finish BookService for searching for a book by Id
+		Book b = bs.getBookById(bookId);
 		
 		int amountToBuy = Integer.parseInt(quantityToBuy);
 		BookToBuy booksToBeBought = new BookToBuy(b, amountToBuy);
