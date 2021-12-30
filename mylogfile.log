@@ -2589,3 +2589,152 @@ org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique co
 30 Dec 2021 - 14:56:21.580 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 30 Dec 2021 - 14:56:21.582 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
 30 Dec 2021 - 14:56:21.592 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+30 Dec 2021 - 15:09:56.460 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 1.8.0_301 on BoxMachine with PID 20556 (D:\Pie\Codings\RevatureWorkspace\Projects\Project Three\LostChapter-Backend\target\classes started by Danaya Chusuwan in D:\Pie\Codings\RevatureWorkspace\Projects\Project Three\LostChapter-Backend)
+30 Dec 2021 - 15:09:56.462 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+30 Dec 2021 - 15:09:56.504 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+30 Dec 2021 - 15:09:56.504 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+30 Dec 2021 - 15:09:57.217 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+30 Dec 2021 - 15:09:57.230 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+30 Dec 2021 - 15:09:58.047 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+30 Dec 2021 - 15:09:58.057 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+30 Dec 2021 - 15:09:58.057 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+30 Dec 2021 - 15:09:58.057 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+30 Dec 2021 - 15:09:58.166 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+30 Dec 2021 - 15:09:58.167 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1663 ms
+30 Dec 2021 - 15:09:58.381 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+30 Dec 2021 - 15:09:59.015 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+30 Dec 2021 - 15:09:59.025 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+30 Dec 2021 - 15:09:59.265 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+30 Dec 2021 - 15:09:59.322 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+30 Dec 2021 - 15:09:59.506 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+30 Dec 2021 - 15:09:59.620 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+30 Dec 2021 - 15:10:00.166 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+30 Dec 2021 - 15:10:00.174 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+30 Dec 2021 - 15:10:00.335 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+30 Dec 2021 - 15:10:01.545 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+30 Dec 2021 - 15:10:01.554 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+30 Dec 2021 - 15:10:01.580 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+30 Dec 2021 - 15:10:01.593 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+30 Dec 2021 - 15:10:01.605 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 5.452 seconds (JVM running for 6.216)
+30 Dec 2021 - 15:10:01.915 [RMI TCP Connection(3)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+30 Dec 2021 - 15:10:01.915 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+30 Dec 2021 - 15:10:01.917 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+30 Dec 2021 - 15:10:17.520 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 15:10:17.520 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 15:10:17.527 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+30 Dec 2021 - 15:10:17.527 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+30 Dec 2021 - 15:10:17.550 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+30 Dec 2021 - 15:10:17.693 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+30 Dec 2021 - 15:10:17.693 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 15:10:28.821 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 15:10:28.821 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 15:10:28.821 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+30 Dec 2021 - 15:10:28.821 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+30 Dec 2021 - 15:10:28.830 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+30 Dec 2021 - 15:10:28.850 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+30 Dec 2021 - 15:10:28.850 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 15:10:33.025 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 15:10:33.025 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 15:10:33.025 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+30 Dec 2021 - 15:10:33.025 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+30 Dec 2021 - 15:10:33.035 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+30 Dec 2021 - 15:10:33.056 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+30 Dec 2021 - 15:10:33.056 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 15:10:33.075 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - email verification
+30 Dec 2021 - 15:10:34.759 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 15:10:34.759 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 15:10:34.759 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+30 Dec 2021 - 15:10:34.759 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+30 Dec 2021 - 15:10:34.767 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+30 Dec 2021 - 15:10:34.789 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+30 Dec 2021 - 15:10:34.789 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 15:10:34.799 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - userUsers [id=18, username=janedoe, password=679F2B2219FB2CAE95F01730A4BAA03C25C94681BEF694827CBEDAD4562C8C8B, firstName=Jane, lastName=Doe, age=26, email=123@gmail.com, birthday=11111996, address=123 street, VA 22102, role=admin]
+30 Dec 2021 - 15:11:10.060 [Thread-8] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+30 Dec 2021 - 15:11:10.063 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+30 Dec 2021 - 15:11:10.068 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+30 Dec 2021 - 15:11:10.248 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 1.8.0_301 on BoxMachine with PID 20556 (D:\Pie\Codings\RevatureWorkspace\Projects\Project Three\LostChapter-Backend\target\classes started by Danaya Chusuwan in D:\Pie\Codings\RevatureWorkspace\Projects\Project Three\LostChapter-Backend)
+30 Dec 2021 - 15:11:10.248 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+30 Dec 2021 - 15:11:10.468 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+30 Dec 2021 - 15:11:10.471 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+30 Dec 2021 - 15:11:10.692 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+30 Dec 2021 - 15:11:10.692 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+30 Dec 2021 - 15:11:10.692 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+30 Dec 2021 - 15:11:10.692 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+30 Dec 2021 - 15:11:10.713 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+30 Dec 2021 - 15:11:10.713 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 463 ms
+30 Dec 2021 - 15:11:10.827 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+30 Dec 2021 - 15:11:11.033 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+30 Dec 2021 - 15:11:11.033 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+30 Dec 2021 - 15:11:11.099 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+30 Dec 2021 - 15:11:11.102 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+30 Dec 2021 - 15:11:11.180 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+30 Dec 2021 - 15:11:11.180 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+30 Dec 2021 - 15:11:11.267 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+30 Dec 2021 - 15:11:12.134 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+30 Dec 2021 - 15:11:12.143 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+30 Dec 2021 - 15:11:12.158 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+30 Dec 2021 - 15:11:12.160 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+30 Dec 2021 - 15:11:12.166 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 1.941 seconds (JVM running for 76.778)
+30 Dec 2021 - 15:11:12.169 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+30 Dec 2021 - 15:11:15.940 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+30 Dec 2021 - 15:11:16.070 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+30 Dec 2021 - 15:11:16.071 [RMI TCP Connection(4)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+30 Dec 2021 - 15:11:16.078 [RMI TCP Connection(4)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+30 Dec 2021 - 15:11:18.469 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 1.8.0_301 on BoxMachine with PID 8484 (D:\Pie\Codings\RevatureWorkspace\Projects\Project Three\LostChapter-Backend\target\classes started by Danaya Chusuwan in D:\Pie\Codings\RevatureWorkspace\Projects\Project Three\LostChapter-Backend)
+30 Dec 2021 - 15:11:18.471 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+30 Dec 2021 - 15:11:18.507 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+30 Dec 2021 - 15:11:18.507 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+30 Dec 2021 - 15:11:19.228 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+30 Dec 2021 - 15:11:19.241 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+30 Dec 2021 - 15:11:20.040 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+30 Dec 2021 - 15:11:20.049 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+30 Dec 2021 - 15:11:20.051 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+30 Dec 2021 - 15:11:20.051 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+30 Dec 2021 - 15:11:20.147 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+30 Dec 2021 - 15:11:20.148 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1640 ms
+30 Dec 2021 - 15:11:20.401 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+30 Dec 2021 - 15:11:21.020 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+30 Dec 2021 - 15:11:21.030 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+30 Dec 2021 - 15:11:21.247 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+30 Dec 2021 - 15:11:21.301 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+30 Dec 2021 - 15:11:21.452 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+30 Dec 2021 - 15:11:21.574 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+30 Dec 2021 - 15:11:22.162 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+30 Dec 2021 - 15:11:22.170 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+30 Dec 2021 - 15:11:22.326 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+30 Dec 2021 - 15:11:23.670 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+30 Dec 2021 - 15:11:23.679 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+30 Dec 2021 - 15:11:23.709 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+30 Dec 2021 - 15:11:23.724 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+30 Dec 2021 - 15:11:23.737 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 5.565 seconds (JVM running for 6.333)
+30 Dec 2021 - 15:11:23.861 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+30 Dec 2021 - 15:11:23.861 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+30 Dec 2021 - 15:11:23.863 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+30 Dec 2021 - 15:11:24.055 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 15:11:24.055 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 15:11:24.062 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+30 Dec 2021 - 15:11:24.062 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+30 Dec 2021 - 15:11:24.084 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+30 Dec 2021 - 15:11:24.231 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+30 Dec 2021 - 15:11:24.231 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 15:11:24.244 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - userUsers [id=18, username=janedoe, password=679F2B2219FB2CAE95F01730A4BAA03C25C94681BEF694827CBEDAD4562C8C8B, firstName=Jane, lastName=Doe, age=26, email=123@gmail.com, birthday=11111996, address=123 street, VA 22102, role=admin]
+30 Dec 2021 - 15:11:27.026 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 15:11:27.026 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 15:11:27.027 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+30 Dec 2021 - 15:11:27.027 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+30 Dec 2021 - 15:11:27.036 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+30 Dec 2021 - 15:11:27.056 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+30 Dec 2021 - 15:11:27.057 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 15:11:27.067 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - userUsers [id=18, username=janedoe, password=679F2B2219FB2CAE95F01730A4BAA03C25C94681BEF694827CBEDAD4562C8C8B, firstName=Jane, lastName=Doe, age=26, email=123@gmail.com, birthday=11111996, address=123 street, VA 22102, role=admin]
+30 Dec 2021 - 15:11:34.402 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 15:11:34.402 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 15:11:34.402 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+30 Dec 2021 - 15:11:34.402 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+30 Dec 2021 - 15:11:34.411 [http-nio-8081-exec-5] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+30 Dec 2021 - 15:11:34.434 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+30 Dec 2021 - 15:11:34.436 [http-nio-8081-exec-5] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 15:11:34.448 [http-nio-8081-exec-5] INFO  c.r.lostchapterbackend.dao.UserDao - userUsers [id=18, username=janedoe, password=679F2B2219FB2CAE95F01730A4BAA03C25C94681BEF694827CBEDAD4562C8C8B, firstName=Jane, lastName=Doe, age=26, email=123@gmail.com, birthday=11111996, address=123 street, VA 22102, role=admin]
+30 Dec 2021 - 15:11:40.778 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+30 Dec 2021 - 15:11:40.928 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+30 Dec 2021 - 15:11:40.931 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+30 Dec 2021 - 15:11:40.937 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

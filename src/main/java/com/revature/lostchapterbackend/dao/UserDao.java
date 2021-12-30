@@ -19,34 +19,32 @@ import com.revature.lostchapterbackend.model.Users;
 
 @Repository
 public class UserDao {
-	
+
 	@PersistenceContext
 	private EntityManager em;
-	
+
 	private Logger logger = LoggerFactory.getLogger(UserDao.class);
-	
-	//Sign up method
+
+	// Sign up method
 	@Transactional
 	public Users addUser(SignUpDto dto) {
-		Users createdUser = new Users(dto.getUsername(), dto.getPassword(), dto.getFirstName(), 
-				dto.getLastName(), dto.getAge(), dto.getEmail(), dto.getBirthday(), dto.getAddress(), dto.getRole());
-		
+		Users createdUser = new Users(dto.getUsername(), dto.getPassword(), dto.getFirstName(), dto.getLastName(),
+				dto.getAge(), dto.getEmail(), dto.getBirthday(), dto.getAddress(), dto.getRole());
+
 		em.persist(createdUser);
-		
+
 		return createdUser;
 	}
-	
-	//Login method
+
+	// Login method
 	@Transactional
 	public Users getUser(String access, String password) {
 		logger.info("UserDao.getUser() invoked");
-		
+
 		Users user = em.createQuery("FROM Users u WHERE u.username = :username AND u.password = :password", Users.class)
-				.setParameter("username", access)
-				.setParameter("password", password)
-				.getSingleResult();
+				.setParameter("username", access).setParameter("password", password).getSingleResult();
 		logger.info("user {}", user);
-		//logger.info("User: " + user);
+		// logger.info("User: " + user);
 //		if (user == null) {
 //			 user = em.createQuery("FROM Users u WHERE u.email = :email AND u.password = :password", Users.class)
 //					.setParameter("email", access)
@@ -55,60 +53,59 @@ public class UserDao {
 //		}
 		return user;
 	}
-	
+
 	@Transactional
 	public Users getUser(String access) {
 		logger.info("UserDao.getUser() invoked");
-		
+
 		try {
-		Users user = em.createQuery("FROM Users u WHERE u.username = :username", Users.class)
-				.setParameter("username", access).getSingleResult();
-		logger.info("user{}", user);
-		return user;
-		}catch (NoResultException e) {
+			Users user = em.createQuery("FROM Users u WHERE u.username = :username", Users.class)
+					.setParameter("username", access).getSingleResult();
+			logger.info("user{}", user);
+			return user;
+		} catch (NoResultException e) {
 			return null;
 		}
 	}
-	
-	//Delete User method
+
+	// Delete User method
 	@Transactional
 	public void deleteUserById(int id) {
 		Users user = em.find(Users.class, id);
-		
+
 		em.remove(user);
 	}
 
-	//Getting a user by email
+	// Getting a user by email
 	@Transactional
 	public Users getUserByEmail(String email) {
 		logger.info("UserDao.getUserByEmail() invoked");
-		
+
 		try {
-			Users user = em.createQuery("FROM Users u WHERE u.email = :email", Users.class)
-					.setParameter("email", email).getSingleResult();
-			
-			
+			Users user = em.createQuery("FROM Users u WHERE u.email = :email", Users.class).setParameter("email", email)
+					.getSingleResult();
+
 			return user;
 		} catch (DataAccessException e) {
-			
+
 			e.printStackTrace();
 			return null;
 		} catch (NoResultException e) {
 			return null;
 		}
-		
+
 	}
-	
-	//Updating a user's information
+
+	// Updating a user's information
 	@Transactional
 	public Users updateUser(int id, Users updatedUserInfo) {
 		Session session = em.unwrap(Session.class);
-		
+
 		Users currentlyLoggedInUser = session.find(Users.class, id);
 		currentlyLoggedInUser = updatedUserInfo;
-		
+
 		session.merge(currentlyLoggedInUser);
-		
+
 		return currentlyLoggedInUser;
 	}
 
