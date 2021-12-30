@@ -61,8 +61,8 @@ public class CartsController {
 		}
 	}
 	
-	@DeleteMapping(path = "/carts/{id}")
-	public ResponseEntity<Object> delteteProductInCart(@PathVariable("id") String cartId,
+	@DeleteMapping(path = "/users/{userId}/cart")
+	public ResponseEntity<Object> delteteProductInCart(@PathVariable("userId") String cartId,
 			@RequestParam("bookId") String bookId) throws /* ProductNotFoundException, */ NoResultException {
 
 		try {

@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Carts {
@@ -16,14 +17,19 @@ public class Carts {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int cartId;
 
-//	@OneToOne
-//	private User user;
+	@OneToOne
+	private Users user;
 
 	@OneToMany
 	private List<BookToBuy> booksToBuy;
 
 	public Carts() {
 		super();
+	}
+	
+	public Carts(Users user) {
+		super();
+		this.user = user;
 	}
 
 	public Carts(List<BookToBuy> booksToBuy) {
@@ -47,9 +53,17 @@ public class Carts {
 		this.booksToBuy = booksToBuy;
 	}
 
+	public Users getUser() {
+		return user;
+	}
+
+	public void setUser(Users user) {
+		this.user = user;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(booksToBuy, cartId);
+		return Objects.hash(booksToBuy, cartId, user);
 	}
 
 	@Override
@@ -61,12 +75,13 @@ public class Carts {
 		if (getClass() != obj.getClass())
 			return false;
 		Carts other = (Carts) obj;
-		return Objects.equals(booksToBuy, other.booksToBuy) && cartId == other.cartId;
+		return Objects.equals(booksToBuy, other.booksToBuy) && cartId == other.cartId
+				&& Objects.equals(user, other.user);
 	}
 
 	@Override
 	public String toString() {
-		return "Carts [cartId=" + cartId + ", booksToBuy=" + booksToBuy + "]";
+		return "Carts [cartId=" + cartId + ", user=" + user + ", booksToBuy=" + booksToBuy + "]";
 	}
 
 }

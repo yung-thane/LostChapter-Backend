@@ -57,57 +57,11 @@ public class Book {
 	@Column(nullable = false)
 	private double bookPrice;
 
-//@Column(nullable = false)
-//private String bookImage
+	@Column(nullable = false)
+	private String bookImage;
 
 	public Book() {
 		super();
-	}
-
-	public Book(String iSBN, String bookName, String synopsis, String author, Genre genre, int quantity, int year,
-			String edition, String publisher, String bindingType, boolean saleIsActive, double saleDiscountRate,
-			String condition, double bookPrice) {
-		super();
-		this.ISBN = iSBN;
-		this.bookName = bookName;
-		this.synopsis = synopsis;
-		this.author = author;
-		this.genre = genre;
-		this.quantity = quantity;
-		this.year = year;
-		this.edition = edition;
-		this.publisher = publisher;
-		this.bindingType = bindingType;
-		this.saleIsActive = saleIsActive;
-		this.saleDiscountRate = saleDiscountRate;
-		this.condition = condition;
-		this.bookPrice = bookPrice;
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(ISBN, author, bindingType, bookId, bookName, bookPrice, condition, edition, genre,
-				publisher, quantity, saleDiscountRate, saleIsActive, synopsis, year);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Book other = (Book) obj;
-		return Objects.equals(ISBN, other.ISBN) && Objects.equals(author, other.author)
-				&& Objects.equals(bindingType, other.bindingType) && bookId == other.bookId
-				&& Objects.equals(bookName, other.bookName)
-				&& Double.doubleToLongBits(bookPrice) == Double.doubleToLongBits(other.bookPrice)
-				&& Objects.equals(condition, other.condition) && Objects.equals(edition, other.edition)
-				&& Objects.equals(genre, other.genre) && Objects.equals(publisher, other.publisher)
-				&& quantity == other.quantity
-				&& Double.doubleToLongBits(saleDiscountRate) == Double.doubleToLongBits(other.saleDiscountRate)
-				&& saleIsActive == other.saleIsActive && Objects.equals(synopsis, other.synopsis) && year == other.year;
 	}
 
 	public int getBookId() {
@@ -230,13 +184,47 @@ public class Book {
 		this.bookPrice = bookPrice;
 	}
 
+	public String getBookImage() {
+		return bookImage;
+	}
+
+	public void setBookImage(String bookImage) {
+		this.bookImage = bookImage;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(ISBN, author, bindingType, bookId, bookImage, bookName, bookPrice, condition, edition,
+				genre, publisher, quantity, saleDiscountRate, saleIsActive, synopsis, year);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		return Objects.equals(ISBN, other.ISBN) && Objects.equals(author, other.author)
+				&& Objects.equals(bindingType, other.bindingType) && bookId == other.bookId
+				&& Objects.equals(bookImage, other.bookImage) && Objects.equals(bookName, other.bookName)
+				&& Double.doubleToLongBits(bookPrice) == Double.doubleToLongBits(other.bookPrice)
+				&& Objects.equals(condition, other.condition) && Objects.equals(edition, other.edition)
+				&& Objects.equals(genre, other.genre) && Objects.equals(publisher, other.publisher)
+				&& quantity == other.quantity
+				&& Double.doubleToLongBits(saleDiscountRate) == Double.doubleToLongBits(other.saleDiscountRate)
+				&& saleIsActive == other.saleIsActive && Objects.equals(synopsis, other.synopsis) && year == other.year;
+	}
+
 	@Override
 	public String toString() {
 		return "Book [bookId=" + bookId + ", ISBN=" + ISBN + ", bookName=" + bookName + ", synopsis=" + synopsis
-				+ ", author=" + author + ", genreId=" + genre + ", quantity=" + quantity + ", year=" + year
-				+ ", edition=" + edition + ", publisher=" + publisher + ", bindingType=" + bindingType
-				+ ", saleIsActive=" + saleIsActive + ", saleDiscountRate=" + saleDiscountRate + ", condition="
-				+ condition + ", bookPrice=" + bookPrice + "]";
+				+ ", author=" + author + ", genre=" + genre + ", quantity=" + quantity + ", year=" + year + ", edition="
+				+ edition + ", publisher=" + publisher + ", bindingType=" + bindingType + ", saleIsActive="
+				+ saleIsActive + ", saleDiscountRate=" + saleDiscountRate + ", condition=" + condition + ", bookPrice="
+				+ bookPrice + ", bookImage=" + bookImage + "]";
 	}
 
 }
