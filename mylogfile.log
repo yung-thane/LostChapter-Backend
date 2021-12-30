@@ -2129,3 +2129,227 @@ javax.persistence.NoResultException: No entity found for query
 30 Dec 2021 - 11:50:07.783 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
 30 Dec 2021 - 11:50:07.795 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 7.153 seconds (JVM running for 105.911)
 30 Dec 2021 - 11:50:07.802 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+30 Dec 2021 - 11:50:32.565 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 16.0.2 on DESKTOP-DVBGLLH with PID 11212 (C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend\target\classes started by husto in C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend)
+30 Dec 2021 - 11:50:32.570 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+30 Dec 2021 - 11:50:32.709 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+30 Dec 2021 - 11:50:32.710 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+30 Dec 2021 - 11:50:34.870 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+30 Dec 2021 - 11:50:34.910 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+30 Dec 2021 - 11:50:37.146 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+30 Dec 2021 - 11:50:37.167 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+30 Dec 2021 - 11:50:37.168 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+30 Dec 2021 - 11:50:37.168 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+30 Dec 2021 - 11:50:37.435 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+30 Dec 2021 - 11:50:37.437 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4726 ms
+30 Dec 2021 - 11:50:38.085 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+30 Dec 2021 - 11:50:39.873 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+30 Dec 2021 - 11:50:39.911 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+30 Dec 2021 - 11:50:40.848 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+30 Dec 2021 - 11:50:40.989 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+30 Dec 2021 - 11:50:41.447 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+30 Dec 2021 - 11:50:41.748 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+30 Dec 2021 - 11:50:43.008 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+30 Dec 2021 - 11:50:43.051 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+30 Dec 2021 - 11:50:43.596 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+30 Dec 2021 - 11:50:46.822 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+30 Dec 2021 - 11:50:46.842 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+30 Dec 2021 - 11:50:46.910 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+30 Dec 2021 - 11:50:46.986 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+30 Dec 2021 - 11:50:47.036 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 15.139 seconds (JVM running for 16.602)
+30 Dec 2021 - 11:50:53.405 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+30 Dec 2021 - 11:50:53.409 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+30 Dec 2021 - 11:50:53.429 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 20 ms
+30 Dec 2021 - 11:50:54.045 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+30 Dec 2021 - 11:50:54.425 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 11:50:54.894 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - userUsers [id=15, username=kibru, password=BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E, firstName=Kibru, lastName=Kassa, age=23, email=kkassa12@gmail.com, birthday=12/31/97, address=5456 RiverBend Dr., role=customer]
+30 Dec 2021 - 11:50:55.000 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - hashedInputPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 11:50:55.000 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - user.getPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 11:50:55.148 [http-nio-8081-exec-2] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [140] milliseconds.
+30 Dec 2021 - 11:51:39.979 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+30 Dec 2021 - 11:51:40.028 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 11:51:40.075 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - userUsers [id=15, username=kibru, password=BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E, firstName=Kibru, lastName=Kassa, age=23, email=kkassa12@gmail.com, birthday=12/31/97, address=5456 RiverBend Dr., role=customer]
+30 Dec 2021 - 11:51:40.127 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - hashedInputPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 11:51:40.127 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - user.getPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 11:52:12.146 [http-nio-8081-exec-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+30 Dec 2021 - 11:52:12.146 [http-nio-8081-exec-7] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Detail: Key (email)=(jBilly678gmail.com) already exists.
+30 Dec 2021 - 11:52:12.149 [http-nio-8081-exec-7] INFO  o.h.e.j.b.internal.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+30 Dec 2021 - 11:52:12.225 [http-nio-8081-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [uk_6dotkott2kjsp8vw4d0m25fb7]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
+  Detail: Key (email)=(jBilly678gmail.com) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2674)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2364)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:354)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:484)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:404)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:162)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:46)
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3571)
+	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3438)
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3852)
+	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:201)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:723)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1402)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:493)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3285)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2420)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.revature.lostchapterbackend.dao.UserDao$$EnhancerBySpringCGLIB$$9ba71160.updateUser(<generated>)
+	at com.revature.lostchapterbackend.service.UserService.updateUser(UserService.java:129)
+	at com.revature.lostchapterbackend.controller.AuthenticationController.updateUser(AuthenticationController.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+30 Dec 2021 - 12:38:38.386 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 16.0.2 on DESKTOP-DVBGLLH with PID 15660 (C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend\target\classes started by husto in C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend)
+30 Dec 2021 - 12:38:38.392 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+30 Dec 2021 - 12:38:38.544 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+30 Dec 2021 - 12:38:38.545 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+30 Dec 2021 - 12:38:41.248 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+30 Dec 2021 - 12:38:41.295 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+30 Dec 2021 - 12:38:43.603 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+30 Dec 2021 - 12:38:43.618 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+30 Dec 2021 - 12:38:43.618 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+30 Dec 2021 - 12:38:43.618 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+30 Dec 2021 - 12:38:43.842 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+30 Dec 2021 - 12:38:43.842 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5296 ms
+30 Dec 2021 - 12:38:44.472 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+30 Dec 2021 - 12:38:45.672 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+30 Dec 2021 - 12:38:45.688 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+30 Dec 2021 - 12:38:46.206 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+30 Dec 2021 - 12:38:46.307 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+30 Dec 2021 - 12:38:46.770 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+30 Dec 2021 - 12:38:47.065 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+30 Dec 2021 - 12:38:48.424 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+30 Dec 2021 - 12:38:48.433 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+30 Dec 2021 - 12:38:48.881 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+30 Dec 2021 - 12:38:51.299 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+30 Dec 2021 - 12:38:51.320 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+30 Dec 2021 - 12:38:51.372 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+30 Dec 2021 - 12:38:51.418 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+30 Dec 2021 - 12:38:51.495 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 13.836 seconds (JVM running for 15.075)
+30 Dec 2021 - 12:39:04.920 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+30 Dec 2021 - 12:39:04.921 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+30 Dec 2021 - 12:39:04.922 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+30 Dec 2021 - 12:39:05.396 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+30 Dec 2021 - 12:39:05.479 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+30 Dec 2021 - 12:39:05.775 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - userUsers [id=15, username=kibru, password=BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E, firstName=Kibru, lastName=Kassa, age=23, email=kkassa123@gmail.com, birthday=12/31/97, address=5456 RiverBend Dr., role=customer]
+30 Dec 2021 - 12:39:05.871 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - hashedInputPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 12:39:05.872 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - user.getPassword BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E
+30 Dec 2021 - 12:39:13.129 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 12:39:13.129 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 12:39:13.136 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 12:39:13.137 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): kkassa123gmail.com
+30 Dec 2021 - 12:39:13.137 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@6566dd2
+30 Dec 2021 - 12:39:13.137 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+30 Dec 2021 - 12:39:13.182 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+30 Dec 2021 - 12:39:13.293 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - databaseUser: null
+30 Dec 2021 - 12:39:13.293 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - email verification
+30 Dec 2021 - 12:39:29.045 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 12:39:29.045 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 12:39:29.045 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 12:39:29.045 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): kkassa123@gmail.com
+30 Dec 2021 - 12:39:29.045 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@6566dd2
+30 Dec 2021 - 12:39:29.045 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+30 Dec 2021 - 12:39:29.094 [http-nio-8081-exec-5] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+30 Dec 2021 - 12:39:29.232 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - databaseUser: Users [id=15, username=kibru, password=BF010751D0B1EEFF5BE22C940477C56BB9ADE1F1C037E7E1E2B03F51B7F21E8E, firstName=Kibru, lastName=Kassa, age=23, email=kkassa123@gmail.com, birthday=12/31/97, address=5456 RiverBend Dr., role=customer]
+30 Dec 2021 - 12:39:43.617 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 12:39:43.617 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 12:39:43.618 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 12:39:43.618 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): kkassa124gmail.com
+30 Dec 2021 - 12:39:43.618 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@6566dd2
+30 Dec 2021 - 12:39:43.618 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+30 Dec 2021 - 12:39:43.681 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+30 Dec 2021 - 12:39:43.773 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - databaseUser: null
+30 Dec 2021 - 12:39:43.773 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - email verification
+30 Dec 2021 - 12:39:50.189 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 12:39:50.189 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 12:39:50.189 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 12:39:50.190 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): kkassa124@gmail.com
+30 Dec 2021 - 12:39:50.190 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@6566dd2
+30 Dec 2021 - 12:39:50.190 [http-nio-8081-exec-9] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+30 Dec 2021 - 12:39:50.232 [http-nio-8081-exec-9] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+30 Dec 2021 - 12:39:50.332 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - databaseUser: null
+30 Dec 2021 - 12:39:50.332 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - email verification
+30 Dec 2021 - 12:39:55.774 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+30 Dec 2021 - 12:39:55.774 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+30 Dec 2021 - 12:39:55.775 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+30 Dec 2021 - 12:39:55.778 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): kkassa124@gmail.com
+30 Dec 2021 - 12:39:55.778 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - userService: com.revature.lostchapterbackend.service.UserService@6566dd2
+30 Dec 2021 - 12:39:55.778 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+30 Dec 2021 - 12:39:55.821 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+30 Dec 2021 - 12:39:55.928 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - databaseUser: null
+30 Dec 2021 - 12:39:55.929 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - email verification

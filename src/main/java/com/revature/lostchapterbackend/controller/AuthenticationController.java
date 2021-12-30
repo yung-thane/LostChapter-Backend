@@ -106,6 +106,7 @@ public class AuthenticationController {
 	public ResponseEntity<Object> updateUser(@RequestBody Users user) throws UserNotFoundException {
 		
 		try {
+			validateUtil.verifyUpdateUser(user);
 			HttpSession session = req.getSession();
 			Users currentlyLoggedInUser = (Users) session.getAttribute("currentUser");
 			

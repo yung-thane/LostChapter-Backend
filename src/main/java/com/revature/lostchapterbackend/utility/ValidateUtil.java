@@ -103,5 +103,72 @@ public class ValidateUtil {
 		}
 		
 	}
+	
+	public void verifyUpdateUser(Users user) throws InvalidParameterException {
+		logger.info("ValidateUtil.createUser() invoked");
+		
+		logger.info("check if inputs are blank");
+		
+		boolean blankInputs = false;
+		StringBuilder blankInputStrings = new StringBuilder();
+		
+		if (StringUtils.isBlank(user.getUsername().trim())) {
+			blankInputStrings.append("username ");
+			blankInputs = true;
+		}
+		
+		if (StringUtils.isBlank(user.getPassword().trim())) {
+			blankInputStrings.append("password ");
+			blankInputs = true;
+		}
+		
+		if (StringUtils.isBlank(user.getFirstName().trim())) {
+			blankInputStrings.append("firstName ");
+			blankInputs = true;
+		}
+		
+		if (StringUtils.isBlank(user.getLastName().trim())) {
+			blankInputStrings.append("lastName ");
+			blankInputs = true;
+		}
+		
+		if (StringUtils.isBlank(user.getEmail().trim())) {
+			blankInputStrings.append("email ");
+			blankInputs = true;
+			
+		}
+		
+		if (StringUtils.isBlank(user.getBirthday().trim())) {
+			blankInputStrings.append("birthday ");
+			blankInputs = true;
+		}
+		
+		if (StringUtils.isBlank(user.getAddress().trim())) {
+			blankInputStrings.append("address ");
+			blankInputs = true;
+		}
+		
+		if (StringUtils.isBlank(user.getRole().trim())) {
+			blankInputStrings.append("role ");
+			blankInputs = true;
+		}
+		
+		if (blankInputs) {
+            blankInputStrings.append("cannot be blank.");
+            throw new InvalidParameterException(blankInputStrings.toString());
+        }
+		
+		logger.info("Check if email already exist");
+		
+		logger.info("user.getEmail(): {}", user.getEmail());
+		logger.info("userService: {}", userService);
+
+		String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+
+		if (!user.getEmail().matches(regex)) {
+			throw new InvalidParameterException("Invalid Email.");
+		}
+		
+	}
 
 }
