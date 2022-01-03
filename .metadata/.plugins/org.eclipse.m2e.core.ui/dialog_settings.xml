@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+<<<<<<< HEAD
+			<item value="C:\Users\ahern\Documents\Job Related\Java\Coding\Project3"/>
+=======
 			<item value="D:\Curriculum-211018-Jymm\project-3-Lost-Chapter\LostChapter-Backend"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -27,6 +30,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+>>>>>>> main
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
