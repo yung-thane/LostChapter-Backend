@@ -1,7 +1,6 @@
 package com.revature.lostchapterbackend.service;
 
 import java.security.NoSuchAlgorithmException;
-import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
-import com.revature.lostchapterbackend.utility.ValidateUtil;
 import com.revature.lostchapterbackend.dao.UserDao;
 import com.revature.lostchapterbackend.dto.SignUpDto;
 import com.revature.lostchapterbackend.exceptions.InvalidLoginException;
 import com.revature.lostchapterbackend.exceptions.InvalidParameterException;
 import com.revature.lostchapterbackend.exceptions.UserNotFoundException;
+import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.model.Users;
 import com.revature.lostchapterbackend.utility.HashUtil;
 
@@ -45,7 +44,8 @@ public class UserService {
 		dto.setPassword(hashedPassword);
 		System.out.println(hashedPassword);
 
-		Users createdUser = this.ud.addUser(dto);
+		Carts c = null;
+		Users createdUser = this.ud.addUser(dto, c);
 		return createdUser;
 
 	}

@@ -15,6 +15,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.revature.lostchapterbackend.dto.SignUpDto;
+import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.model.Users;
 
 @Repository
@@ -27,12 +28,14 @@ public class UserDao {
 
 	// Sign up method
 	@Transactional
-	public Users addUser(SignUpDto dto) {
+	public Users addUser(SignUpDto dto, Carts c) {
 		Users createdUser = new Users(dto.getUsername(), dto.getPassword(), dto.getFirstName(), dto.getLastName(),
 				dto.getAge(), dto.getEmail(), dto.getBirthday(), dto.getAddress(), dto.getRole());
 
 		em.persist(createdUser);
-
+		
+		c = new Carts(createdUser);
+		em.persist(c);
 		return createdUser;
 	}
 
