@@ -14,6 +14,7 @@ import com.revature.lostchapterbackend.dto.SignUpDto;
 import com.revature.lostchapterbackend.exceptions.InvalidLoginException;
 import com.revature.lostchapterbackend.exceptions.InvalidParameterException;
 import com.revature.lostchapterbackend.exceptions.UserNotFoundException;
+import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.model.Users;
 import com.revature.lostchapterbackend.service.UserService;
 
@@ -35,8 +36,8 @@ public class UserServiceTest {
 		user.setId(1);
 		
 		SignUpDto createdUser = new SignUpDto("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
-		
-		Mockito.when(ud.addUser(createdUser)).thenReturn(user);
+		Carts c = null;
+		Mockito.when(ud.addUser(createdUser, c)).thenReturn(user);
 		
 		Users actual = us.createUser(createdUser);
 		
