@@ -17,6 +17,7 @@ import com.revature.lostchapterbackend.exceptions.UserNotFoundException;
 import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.model.Users;
 import com.revature.lostchapterbackend.service.UserService;
+import com.revature.lostchapterbackend.utility.HashUtil;
 
 public class UserServiceTest {
 
@@ -137,24 +138,24 @@ public class UserServiceTest {
 		});
 	}
 	
-//	@Test
-//	public void testGetUser_positive() throws NoSuchAlgorithmException, InvalidLoginException {
-//		Users user = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
-//		user.setId(1);
-//		
-//		System.out.println("password: " + user.getPassword());
-//		
-//		Mockito.when(ud.getUser("JDoe")).thenReturn(user);
-//		//hash: 0B14D501A594442A01C6859541BCB3E8164D183D32937B851835442F69D5C94E
-//		
-//		Users actual = us.getUser("JDoe", "password1");
-//		actual.setId(1);
-//		
-//		Users expected = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
-//		expected.setId(1);
-//		
-//		Assertions.assertEquals(expected, actual);
-//	}
+	@Test
+	public void testGetUser_positive() throws NoSuchAlgorithmException, InvalidLoginException {
+		Users user = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
+		user.setId(1);
+		user.setPassword(HashUtil.hashPassword("password1", "SHA-256"));
+		
+		Mockito.when(ud.getUser("JDoe")).thenReturn(user);
+		
+		Users actual = us.getUser("JDoe", "password1");
+		actual.setId(1);
+		actual.setPassword(HashUtil.hashInputPassword("password1", "SHA-256"));
+		
+		Users expected = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
+		expected.setId(1);
+		expected.setPassword(HashUtil.hashPassword("password1", "SHA-256"));
+		
+		Assertions.assertEquals(expected, actual);
+	}
 	
 	@Test
 	public void testDeleteUserByID_positive() throws UserNotFoundException {
