@@ -22,7 +22,7 @@ public class Book {
 	@Column(nullable = false)
 	private String bookName;
 
-	@Column(nullable = false)
+	@Column(nullable = false, length = 300)
 	private String synopsis;
 
 	@Column(nullable = false)

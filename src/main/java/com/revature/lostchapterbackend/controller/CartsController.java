@@ -1,5 +1,8 @@
 package com.revature.lostchapterbackend.controller;
 
+import java.security.InvalidParameterException;
+import java.util.NoSuchElementException;
+
 import javax.persistence.NoResultException;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.revature.lostchapterbackend.exceptions.BookNotFoundException;
 import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.service.CartsService;
 
@@ -48,22 +52,20 @@ public class CartsController {
 	public ResponseEntity<Object> getCartById(@PathVariable("userId") String userId) {
 		// Aspect or another class for protecting endpoint
 		try {
-			if (userId.matches(PATTERN)) {
-				Carts getCartById = cs.getCartById(userId);
-				return ResponseEntity.status(200).body(getCartById);
-			} else {
-				throw new NumberFormatException("product id or quantity must be of type int!");
-			}
-		} catch (NumberFormatException e) {
-			return ResponseEntity.status(400).body("boo boo");
-		} catch (NoResultException e) {
-			return ResponseEntity.status(404).body(e.getMessage());
+
+			Carts getCartById = cs.getCartById(userId);
+			return ResponseEntity.status(200).body(getCartById);
+
+		} catch (InvalidParameterException e) {
+			return ResponseEntity.status(400).body(e.getMessage());
+		}  catch (NoSuchElementException e) {
+			return ResponseEntity.status(404).body("There is no cart with the id of " +userId);
 		}
 	}
-	
+
 	@DeleteMapping(path = "/users/{userId}/cart")
 	public ResponseEntity<Object> delteteProductInCart(@PathVariable("userId") String cartId,
-			@RequestParam("bookId") String bookId) throws /* ProductNotFoundException, */ NoResultException {
+			@RequestParam("bookId") String bookId) throws BookNotFoundException, NoResultException {
 
 		try {
 			Carts currentCart = null;
@@ -75,11 +77,11 @@ public class CartsController {
 			}
 		} catch (NumberFormatException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
-		} catch (NoResultException e) { 
+		} catch (NoResultException e) {
 			return ResponseEntity.status(404).body(e.getMessage());
-		}/* To Be implemented once merged with Display/Search Product team
-			 * catch (BookNotFoundException e) { return
-			 * ResponseEntity.status(404).body(e.getMessage()); }
-			 */
+		} catch (BookNotFoundException e) {
+			return ResponseEntity.status(404).body(e.getMessage());
+		}
+
 	}
 }

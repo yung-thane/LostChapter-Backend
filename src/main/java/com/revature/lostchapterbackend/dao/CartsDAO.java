@@ -9,10 +9,9 @@ import javax.transaction.Transactional;
 import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
 
-import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.BookToBuy;
 import com.revature.lostchapterbackend.model.Carts;
-import com.revature.lostchapterbackend.model.Genre;
+
 
 @Repository
 public class CartsDAO {
@@ -21,21 +20,8 @@ public class CartsDAO {
 	private EntityManager em;
 
 	@Transactional
-	public Carts insertToCart(Carts currentCart, Book b, Genre g) {
-
-		Session session = em.unwrap(Session.class);
-
-		session.saveOrUpdate(g);
-
-		session.save(b);
-
-//		session.saveOrUpdate(currentCart);
-
-		return currentCart;
-	}
-	
-	@Transactional
 	public Carts insertToCart(Carts currentCart, BookToBuy booksToBeBought) {
+		
 		Session session = em.unwrap(Session.class);
 
 		session.saveOrUpdate(booksToBeBought);
@@ -43,19 +29,6 @@ public class CartsDAO {
 		session.saveOrUpdate(currentCart);
 
 		return currentCart;
-	}
-
-	@Transactional
-	public Carts selectACartById(int id) throws NoResultException {
-		Carts c;
-		try {
-			String query = "SELECT c FROM Carts c WHERE c.cartId = :id";
-			TypedQuery<Carts> typedQuery = em.createQuery(query, Carts.class);
-			c = typedQuery.setParameter("id", id).getSingleResult();
-		} catch (NoResultException e) {
-			throw new NoResultException("No exisiting cart with an id of " + id);
-		}
-		return c;
 	}
 
 	@Transactional
