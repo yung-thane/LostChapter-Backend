@@ -59,17 +59,19 @@ private String condition;
 @Column(nullable = false)
 private double bookPrice;
 
-//@Column(nullable = false)
-//private String bookImage
+@Column(nullable = false)
+private String bookImage;
 
 
 public Book() {
 	super();
 }
 
+
+
 public Book(String iSBN, String bookName, String synopsis, String author, Genre genre, int quantity, int year,
-		String edition, String publisher, String bindingType, boolean saleIsActive,
-		double saleDiscountRate, String condition, double bookPrice) {
+		String edition, String publisher, String bindingType, boolean saleIsActive, double saleDiscountRate,
+		String condition, double bookPrice, String bookImage) {
 	super();
 	ISBN = iSBN;
 	this.bookName = bookName;
@@ -85,12 +87,16 @@ public Book(String iSBN, String bookName, String synopsis, String author, Genre 
 	this.saleDiscountRate = saleDiscountRate;
 	this.condition = condition;
 	this.bookPrice = bookPrice;
+	this.bookImage = bookImage;
 }
+
+
+
 
 @Override
 public int hashCode() {
-	return Objects.hash(ISBN, author, bindingType, bookId, bookName, bookPrice, condition, edition, genre, publisher,
-			quantity, saleDiscountRate, saleIsActive, synopsis, year);
+	return Objects.hash(ISBN, author, bindingType, bookId, bookImage, bookName, bookPrice, condition, edition, genre,
+			publisher, quantity, saleDiscountRate, saleIsActive, synopsis, year);
 }
 
 @Override
@@ -104,7 +110,7 @@ public boolean equals(Object obj) {
 	Book other = (Book) obj;
 	return Objects.equals(ISBN, other.ISBN) && Objects.equals(author, other.author)
 			&& Objects.equals(bindingType, other.bindingType) && bookId == other.bookId
-			&& Objects.equals(bookName, other.bookName)
+			&& Objects.equals(bookImage, other.bookImage) && Objects.equals(bookName, other.bookName)
 			&& Double.doubleToLongBits(bookPrice) == Double.doubleToLongBits(other.bookPrice)
 			&& Objects.equals(condition, other.condition) && Objects.equals(edition, other.edition)
 			&& Objects.equals(genre, other.genre) && Objects.equals(publisher, other.publisher)
@@ -233,13 +239,25 @@ public void setBookPrice(double bookPrice) {
 	this.bookPrice = bookPrice;
 }
 
+
+public String getBookImage() {
+	return bookImage;
+}
+
+public void setBookImage(String bookImage) {
+	this.bookImage = bookImage;
+}
+
 @Override
 public String toString() {
 	return "Book [bookId=" + bookId + ", ISBN=" + ISBN + ", bookName=" + bookName + ", synopsis=" + synopsis
 			+ ", author=" + author + ", genre=" + genre + ", quantity=" + quantity + ", year=" + year + ", edition="
 			+ edition + ", publisher=" + publisher + ", bindingType=" + bindingType + ", saleIsActive=" + saleIsActive
-			+ ", saleDiscountRate=" + saleDiscountRate + ", condition=" + condition + ", bookPrice=" + bookPrice + "]";
+			+ ", saleDiscountRate=" + saleDiscountRate + ", condition=" + condition + ", bookPrice=" + bookPrice
+			+ ", bookImage=" + bookImage + "]";
 }
+
+
 
 
 

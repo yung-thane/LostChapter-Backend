@@ -10,63 +10,60 @@ import javax.persistence.Id;
 
 @Entity
 public class Genre {
-	
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private int Id;
 
-@Column(nullable = false)
-private String genre;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int Id;
 
-public Genre() {
-	super();
- }
+	@Column(nullable = false)
+	private String genre;
 
-public Genre(int id, String genre) {
-	super();
-	Id = id;
-	this.genre = genre;
-}
+	public Genre() {
+		super();
+	}
 
-public int getId() {
-	return Id;
-}
+	public Genre(int id, String genre) {
+		super();
+		Id = id;
+		this.genre = genre;
+	}
 
-public void setId(int id) {
-	Id = id;
-}
+	public int getId() {
+		return Id;
+	}
 
-public String getGenre() {
-	return genre;
-}
+	public void setId(int id) {
+		Id = id;
+	}
 
-public void setGenre(String genre) {
-	this.genre = genre;
-}
+	public String getGenre() {
+		return genre;
+	}
 
-@Override
-public int hashCode() {
-	return Objects.hash(Id, genre);
-}
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
 
-@Override
-public boolean equals(Object obj) {
-	if (this == obj)
-		return true;
-	if (obj == null)
-		return false;
-	if (getClass() != obj.getClass())
-		return false;
-	Genre other = (Genre) obj;
-	return Id == other.Id && Objects.equals(genre, other.genre);
-}
+	@Override
+	public int hashCode() {
+		return Objects.hash(Id, genre);
+	}
 
-@Override
-public String toString() {
-	return "Genre [Id=" + Id + ", genre=" + genre + "]";
-}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Genre other = (Genre) obj;
+		return Id == other.Id && Objects.equals(genre, other.genre);
+	}
 
-
+	@Override
+	public String toString() {
+		return "Genre [Id=" + Id + ", genre=" + genre + "]";
+	}
 
 }
-
