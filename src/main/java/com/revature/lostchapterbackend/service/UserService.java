@@ -26,6 +26,10 @@ public class UserService {
 
 	private Logger logger = LoggerFactory.getLogger(UserService.class);
 
+	public UserService(UserDao ud) {
+		this.ud = ud;
+	}
+	
 	public Users createUser(SignUpDto dto)
 			throws InvalidLoginException, InvalidParameterException, NoSuchAlgorithmException {
 

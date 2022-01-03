@@ -3913,3 +3913,59 @@ org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique co
 30 Dec 2021 - 14:42:58.379 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
 30 Dec 2021 - 14:42:58.379 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 30 Dec 2021 - 14:42:58.382 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+03 Jan 2022 - 12:35:14.249 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.revature.lostchapterbackend.usertests.UserServiceTest], using SpringBootContextLoader
+03 Jan 2022 - 12:35:14.267 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.revature.lostchapterbackend.usertests.UserServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+03 Jan 2022 - 12:35:14.269 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revature.lostchapterbackend.usertests.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+03 Jan 2022 - 12:35:14.740 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revature.lostchapterbackend.LostChapterBackendApplication for test class com.revature.lostchapterbackend.usertests.UserServiceTest
+03 Jan 2022 - 12:35:15.212 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+03 Jan 2022 - 12:35:15.282 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@74e47444, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@9bd0fa6, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@59d2103b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@39dcf4b0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6e4de19b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@f6c03cb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@46f699d5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@18518ccf, org.springframework.test.context.event.EventPublishingTestExecutionListener@1991f767, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@768ccdc5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4c6daf0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@10650953, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@659eef7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@162be91c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2488b073]
+03 Jan 2022 - 12:35:16.451 [main] INFO  c.r.l.usertests.UserServiceTest - Starting UserServiceTest using Java 16.0.2 on MSI with PID 18452 (started by ahern in C:\Users\ahern\Documents\Job Related\Java\Coding\Project3)
+03 Jan 2022 - 12:35:16.452 [main] INFO  c.r.l.usertests.UserServiceTest - The following profiles are active: UserService-test
+03 Jan 2022 - 12:35:19.204 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+03 Jan 2022 - 12:35:19.255 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 JPA repository interfaces.
+03 Jan 2022 - 12:35:21.822 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+03 Jan 2022 - 12:35:22.385 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+03 Jan 2022 - 12:35:22.641 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+03 Jan 2022 - 12:35:22.863 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+03 Jan 2022 - 12:35:23.423 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+03 Jan 2022 - 12:35:24.051 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+03 Jan 2022 - 12:35:25.843 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03 Jan 2022 - 12:35:25.867 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+03 Jan 2022 - 12:35:28.181 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+03 Jan 2022 - 12:35:33.348 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+03 Jan 2022 - 12:35:33.510 [main] INFO  c.r.l.usertests.UserServiceTest - Started UserServiceTest in 18.002 seconds (JVM running for 21.947)
+03 Jan 2022 - 12:35:34.089 [main] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+03 Jan 2022 - 12:35:34.243 [main] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+03 Jan 2022 - 12:35:34.298 [main] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+03 Jan 2022 - 12:35:34.357 [main] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+03 Jan 2022 - 12:35:34.409 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+03 Jan 2022 - 12:35:34.409 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+03 Jan 2022 - 12:35:34.413 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 90121, SQLState: 90121
+03 Jan 2022 - 12:35:34.413 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+03 Jan 2022 - 12:35:34.415 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 90121, SQLState: 90121
+03 Jan 2022 - 12:35:34.415 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+03 Jan 2022 - 12:35:34.416 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+03 Jan 2022 - 12:35:34.417 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+03 Jan 2022 - 12:35:34.421 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+03 Jan 2022 - 13:02:34.822 [main] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+03 Jan 2022 - 13:02:34.916 [main] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+03 Jan 2022 - 13:02:34.936 [main] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+03 Jan 2022 - 13:02:34.954 [main] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+03 Jan 2022 - 13:03:36.246 [main] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+03 Jan 2022 - 13:03:36.292 [main] INFO  c.r.l.service.UserService - hashedInputPassword 0B14D501A594442A01C6859541BCB3E8164D183D32937B851835442F69D5C94E
+03 Jan 2022 - 13:03:36.295 [main] INFO  c.r.l.service.UserService - user.getPassword password1
+03 Jan 2022 - 13:03:36.314 [main] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+03 Jan 2022 - 13:03:36.369 [main] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+03 Jan 2022 - 13:03:36.388 [main] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+03 Jan 2022 - 13:03:36.408 [main] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+03 Jan 2022 - 13:04:15.339 [main] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+03 Jan 2022 - 13:04:15.383 [main] INFO  c.r.l.service.UserService - hashedInputPassword 69A7298F55229B3083C1BCADD255827B709A509C73882D11A523A47C4CC675F4
+03 Jan 2022 - 13:04:15.387 [main] INFO  c.r.l.service.UserService - user.getPassword password1
+03 Jan 2022 - 13:04:15.404 [main] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+03 Jan 2022 - 13:04:15.456 [main] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+03 Jan 2022 - 13:04:15.474 [main] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+03 Jan 2022 - 13:04:15.491 [main] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+03 Jan 2022 - 13:05:29.723 [main] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+03 Jan 2022 - 13:05:29.820 [main] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+03 Jan 2022 - 13:05:29.838 [main] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+03 Jan 2022 - 13:05:29.859 [main] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked

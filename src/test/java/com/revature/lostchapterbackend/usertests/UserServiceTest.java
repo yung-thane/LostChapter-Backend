@@ -1,15 +1,13 @@
 package com.revature.lostchapterbackend.usertests;
 
+import static org.mockito.Mockito.mock;
+
 import java.security.NoSuchAlgorithmException;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.annotation.DirtiesContext.ClassMode;
-import org.springframework.test.context.ActiveProfiles;
 
 import com.revature.lostchapterbackend.dao.UserDao;
 import com.revature.lostchapterbackend.dto.SignUpDto;
@@ -19,17 +17,17 @@ import com.revature.lostchapterbackend.exceptions.UserNotFoundException;
 import com.revature.lostchapterbackend.model.Users;
 import com.revature.lostchapterbackend.service.UserService;
 
-//@DirtiesContext(classMode = ClassMode.BEFORE_EACH_TEST_METHOD)
-
-@ActiveProfiles("UserService-test")
-@SpringBootTest
 public class UserServiceTest {
-	@Autowired
+
 	private UserService us;
-	
-	
-	@Autowired
+
 	private UserDao ud;
+	
+	@BeforeEach
+	public void setUp() {
+		this.ud = mock(UserDao.class);
+		this.us = new UserService(ud);
+	}
 	
 	@Test
 	public void testCreateUser_positive() throws NoSuchAlgorithmException, InvalidLoginException, InvalidParameterException {
