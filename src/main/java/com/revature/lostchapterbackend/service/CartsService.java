@@ -7,8 +7,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.revature.lostchapterbackend.dao.BookToBuyDAO;
 import com.revature.lostchapterbackend.dao.CartsDAO;
-import com.revature.lostchapterbackend.dao.CartsDAOInterface;
 import com.revature.lostchapterbackend.exceptions.BookNotFoundException;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.BookToBuy;
@@ -21,16 +21,16 @@ public class CartsService {
 	private BookService bs;
 
 	@Autowired
-	private CartsDAO cd; //still using this, still trying to find a way to convert this ti JPA Repository
-
+	private CartsDAO cd; //using JPA Repository
+	
 	@Autowired
-	private CartsDAOInterface cdi; //using JPA Repository
+	private BookToBuyDAO btbd;
 
 	public Carts getCartById(String id) {
 		
 		try {
 			int cartId = Integer.parseInt(id);
-			return cdi.findById(cartId).get();
+			return cd.findById(cartId).get();
 
 		} catch (NumberFormatException e) {
 			throw new InvalidParameterException("The Id entered must be an int.");
@@ -62,8 +62,9 @@ public class CartsService {
 				}
 			}
 		}
-
-		return cd.insertToCart(currentCart, booksToBeBought);
+		btbd.saveAndFlush(booksToBeBought);
+		return cd.save(currentCart);
+ 
 	}
 
 	private boolean checkBookInTheCart(List<BookToBuy> currentBooksInTheCart, Book b) {
@@ -96,8 +97,10 @@ public class CartsService {
 			}
 		}
 		currentCart.setBooksToBuy(currentBooksInTheList);
-
-		return cd.deleteAProductInTheCart(currentCart, quantityToDelete);
+		
+		btbd.deleteById(quantityToDelete);
+		
+		return cd.saveAndFlush(currentCart);
 	}
 
 }
