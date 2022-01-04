@@ -43,7 +43,7 @@ public class AuthenticationControllerTest {
         Session session = em.unwrap(Session.class);
         Transaction tx = session.beginTransaction();
 
-        Users user1 = new Users("test123","password","testfn",
+        Users user1 = new Users("test123","5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8","testfn",
                 "testln",21,"test123@gmail.com","1990-12-09",
                 "address123","customer");
         session.persist(user1);
@@ -68,7 +68,7 @@ public class AuthenticationControllerTest {
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/login")
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
-        Users expectedUser = new Users("test123","password","testfn",
+        Users expectedUser = new Users("test123","5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8","testfn",
                 "testln",21,"test123@gmail.com","1990-12-09",
                 "address123","customer");
         expectedUser.setId(1);
