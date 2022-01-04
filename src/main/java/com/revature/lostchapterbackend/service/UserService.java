@@ -1,7 +1,6 @@
 package com.revature.lostchapterbackend.service;
 
 import java.security.NoSuchAlgorithmException;
-import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
-import com.revature.lostchapterbackend.utility.ValidateUtil;
 import com.revature.lostchapterbackend.dao.UserDao;
 import com.revature.lostchapterbackend.dto.SignUpDto;
 import com.revature.lostchapterbackend.exceptions.InvalidLoginException;
 import com.revature.lostchapterbackend.exceptions.InvalidParameterException;
 import com.revature.lostchapterbackend.exceptions.UserNotFoundException;
+import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.model.Users;
 import com.revature.lostchapterbackend.utility.HashUtil;
 
@@ -26,6 +25,10 @@ public class UserService {
 
 	private Logger logger = LoggerFactory.getLogger(UserService.class);
 
+	public UserService(UserDao ud) {
+		this.ud = ud;
+	}
+	
 	public Users createUser(SignUpDto dto)
 			throws InvalidLoginException, InvalidParameterException, NoSuchAlgorithmException {
 
@@ -45,7 +48,8 @@ public class UserService {
 		dto.setPassword(hashedPassword);
 		System.out.println(hashedPassword);
 
-		Users createdUser = this.ud.addUser(dto);
+		Carts c = null;
+		Users createdUser = this.ud.addUser(dto, c);
 		return createdUser;
 
 	}
@@ -72,10 +76,10 @@ public class UserService {
 				if (correctPassword) {
 					return user;
 				} else {
-					throw new InvalidLoginException("Username and/or password is incorrect");
+					throw new InvalidLoginException("User not Null: Username and/or password is incorrect");
 				}
 			} else {
-				throw new InvalidLoginException("Username and/or password is incorrect");
+				throw new InvalidLoginException("User is Null: Username and/or password is incorrect");
 			}
 		} catch (DataAccessException e) {
 			throw new InvalidLoginException("Username and/or password is incorrect");
@@ -92,9 +96,13 @@ public class UserService {
 		}
 	}
 
-	public Users getUserByEmail(String email) {
+	public Users getUserByEmail(String email) throws InvalidParameterException {
 		logger.info("UserService.getUserByEmail() invoked");
-
+		
+		if(email == null) {
+			throw new InvalidParameterException("Email is Null");
+		}
+		
 		Users users = this.ud.getUserByEmail(email);
 
 		return users;
@@ -124,9 +132,13 @@ public class UserService {
 		return updatedUserInfo;
 	}
 
-	public Users getUserByUsername(String username) {
+	public Users getUserByUsername(String username) throws InvalidParameterException {
 		logger.info("UserService.getUserByUsername() invoked");
 
+		if(username == null) {
+			throw new InvalidParameterException("username is Null");
+		}
+		
 		Users users = this.ud.getUser(username);
 
 		return users;

@@ -2,8 +2,15 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+<<<<<<< HEAD
 			<item value="C:\Users\singh\Desktop\Lost-Chapter\LostChapter-E2E"/>
 			<item value="C:\Users\singh\Desktop\Revature\Lost-chapter\LostChapter-Backend"/>
+=======
+<<<<<<< HEAD
+			<item value="C:\Users\ahern\Documents\Job Related\Java\Coding\Project3"/>
+=======
+			<item value="D:\Curriculum-211018-Jymm\project-3-Lost-Chapter\LostChapter-Backend"/>
+>>>>>>> affa676ab4baede1382f86692b899875d43f9a9a
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -14,8 +21,35 @@
 			<item value="[name]"/>
 		</list>
 	</section>
+<<<<<<< HEAD
 	<section name="org.eclipse.m2e.core.pom.overview">
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
+=======
+	<section name="MavenCheckoutLocationPage">
+		<list key="scmUrl">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+>>>>>>> main
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+>>>>>>> affa676ab4baede1382f86692b899875d43f9a9a
 	</section>
 </section>

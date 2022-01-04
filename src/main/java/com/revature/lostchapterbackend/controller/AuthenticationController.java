@@ -46,7 +46,7 @@ public class AuthenticationController {
 			
 			Users user = this.us.createUser(dto);
 			
-			return ResponseEntity.status(201).body(user);
+			return ResponseEntity.status(201).body("Successfully Sign up");
 			
 		} catch (InvalidParameterException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
