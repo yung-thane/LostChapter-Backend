@@ -1,8 +1,8 @@
 package com.revature.lostchapterbackend.integrationtests;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.lostchapterbackend.dto.LoginDto;
+import com.revature.lostchapterbackend.dto.SignUpDto;
 import com.revature.lostchapterbackend.model.Users;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -41,7 +41,9 @@ public class AuthenticationControllerTest {
         Session session = em.unwrap(Session.class);
         Transaction tx = session.beginTransaction();
 
-        Users user1 = new Users("test123","password","testfn",
+        Users user1 = new Users("test123",
+                "5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8",
+                "testfn",
                 "testln",21,"test123@gmail.com","1990-12-09",
                 "address123","customer");
         session.persist(user1);
@@ -52,26 +54,19 @@ public class AuthenticationControllerTest {
     }
 
     @Test
-    public void testlogin() throws Exception {
-
-        EntityManager em = emf.createEntityManager();
-        Session session = em.unwrap(Session.class);
-        Transaction tx = session.beginTransaction();
-
-        Users user1 = new Users("test123","password","testfn",
-                "testln",21,"test123@gmail.com","1990-12-09",
-                "address123","customer");
-        session.persist(user1);
+    public void testLogin_positive() throws Exception {
 
 
-        LoginDto dto = new LoginDto("test123", "password");
+        LoginDto dto = new LoginDto("test123",
+                "password");
         String jsonToSend = mapper.writeValueAsString(dto);
 
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/login")
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
-        Users expectedUser = new Users("test123","password","testfn",
+        Users expectedUser = new Users("test123",
+                "5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8","testfn",
                 "testln",21,"test123@gmail.com","1990-12-09",
                 "address123","customer");
         expectedUser.setId(1);
@@ -82,5 +77,250 @@ public class AuthenticationControllerTest {
                 .is(200)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
     }
 
+    @Test
+    public void testLoginWrongUsername_negative() throws Exception {
+        LoginDto dto = new LoginDto("gdygdweu","password");
+        String jsonToSend = mapper.writeValueAsString(dto);
 
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/login")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(builder).
+                andExpect(MockMvcResultMatchers.status()
+                        .is(400))
+                .andExpect(MockMvcResultMatchers.content()
+                        .string("Username and/or password is incorrect"));
+
+    }
+
+    @Test
+    public void testLoginWrongPassword_negative() throws Exception {
+        LoginDto dto = new LoginDto("test123","jgdjwgduwk");
+        String jsonToSend = mapper.writeValueAsString(dto);
+
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/login")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(builder).
+                andExpect(MockMvcResultMatchers.status()
+                        .is(400))
+                .andExpect(MockMvcResultMatchers.content()
+                        .string("Username and/or password is incorrect"));
+
+    }
+
+    @Test
+    public void testCreateUser_positive() throws Exception {
+
+        SignUpDto dto = new SignUpDto("testuser1",
+                "password123",
+                "testfirstname","testlastname",21,"test@list.com",
+                "1990-08-09","addresswest","customer");
+        String jsonToSend = mapper.writeValueAsString(dto);
+
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        Users expectedUser = new Users("testuser1",
+                "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
+                "testfirstname","testlastname",21,"test@list.com",
+                "1990-08-09","addresswest","customer");
+        expectedUser.setId(2);
+
+        String expectedJson = mapper.writeValueAsString(expectedUser);
+
+        this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
+                .is(201)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
+    }
+
+    @Test
+    public void testCreateUserUsernameIsEmpty_negative() throws Exception {
+
+        SignUpDto dto = new SignUpDto(" ",
+                "password123",
+                "testfirstname","testlastname",21,"test@list.com",
+                "1990-08-09","addresswest","customer");
+        String jsonToSend = mapper.writeValueAsString(dto);
+
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
+                .is(400)).andExpect(MockMvcResultMatchers.content()
+                .string("username cannot be blank."));
+
+    }
+
+    @Test
+    public void testCreateUserPasswordIsEmpty_negative() throws Exception {
+
+        SignUpDto dto = new SignUpDto("test123",
+                " ",
+                "testfirstname","testlastname",21,"test@list.com",
+                "1990-08-09","addresswest","customer");
+        String jsonToSend = mapper.writeValueAsString(dto);
+
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
+                .is(400)).andExpect(MockMvcResultMatchers.content()
+                .string("password cannot be blank."));
+
+    }
+
+    @Test
+    public void testCreateUserFirstNameIsEmpty_negative() throws Exception {
+
+        SignUpDto dto = new SignUpDto("test123",
+                "password123",
+                "","testlastname",21,"test@list.com",
+                "1990-08-09","addresswest","customer");
+        String jsonToSend = mapper.writeValueAsString(dto);
+
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
+                .is(400)).andExpect(MockMvcResultMatchers.content()
+                .string("firstName cannot be blank."));
+    }
+
+    @Test
+    public void testCreateUserLastNameIsEmpty_negative() throws Exception {
+
+        SignUpDto dto = new SignUpDto("test123",
+                "password123",
+                "testfirstname","",21,"test@list.com",
+                "1990-08-09","addresswest","customer");
+        String jsonToSend = mapper.writeValueAsString(dto);
+
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
+                .is(400)).andExpect(MockMvcResultMatchers.content()
+                .string("lastName cannot be blank."));
+    }
+
+    @Test
+    public void testCreateUserAgeIsLessThan3_negative() throws Exception {
+
+        SignUpDto dto = new SignUpDto("test1234",
+                "password123",
+                "testfirstname","testlastname",3,"test@list.com",
+                "1990-08-09","addresswest","customer");
+        String jsonToSend = mapper.writeValueAsString(dto);
+
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
+                .is(400)).andExpect(MockMvcResultMatchers.content()
+                .string("Age cannot be less than 5 or greater than 125"));
+
+    }
+
+    @Test
+    public void testCreateUserAgeIsGreaterThan125_negative() throws Exception {
+
+        SignUpDto dto = new SignUpDto("test1234",
+                "password123",
+                "testfirstname","testlastname",130,"test@list.com",
+                "1990-08-09","addresswest","customer");
+        String jsonToSend = mapper.writeValueAsString(dto);
+
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
+                .is(400)).andExpect(MockMvcResultMatchers.content()
+                .string("Age cannot be less than 5 or greater than 125"));
+
+    }
+
+    @Test
+    public void testCreateUserEmailIsEmpty_negative() throws Exception {
+
+        SignUpDto dto = new SignUpDto("test123",
+                "password123",
+                "testfirstname","testlastname",3,"",
+                "1990-08-09","addresswest","customer");
+        String jsonToSend = mapper.writeValueAsString(dto);
+
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
+                .is(400)).andExpect(MockMvcResultMatchers.content()
+                .string("email cannot be blank."));
+    }
+
+    @Test
+    public void testCreateUserBirthdateIsEmpty_negative() throws Exception {
+
+        SignUpDto dto = new SignUpDto("test123",
+                "password123",
+                "testfirstname","testlastname",3,"test@list.com",
+                "","addresswest","customer");
+        String jsonToSend = mapper.writeValueAsString(dto);
+
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
+                .is(400)).andExpect(MockMvcResultMatchers.content()
+                .string("birthday cannot be blank."));
+    }
+
+    @Test
+    public void testCreateUserAddressIsEmpty_negative() throws Exception {
+
+        SignUpDto dto = new SignUpDto("test123",
+                "password123",
+                "testfirstname","testlastname",3,"test@list.com",
+                "1990-08-09","","customer");
+        String jsonToSend = mapper.writeValueAsString(dto);
+
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
+                .is(400)).andExpect(MockMvcResultMatchers.content()
+                .string("address cannot be blank."));
+    }
+    
+    @Test
+    public void testCreateUserRoleIsEmpty_negative() throws Exception {
+
+        SignUpDto dto = new SignUpDto("test123",
+                "password123",
+                "testfirstname","testlastname",3,"test@list.com",
+                "1990-08-09","addresswest","");
+        String jsonToSend = mapper.writeValueAsString(dto);
+
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
+                .is(400)).andExpect(MockMvcResultMatchers.content()
+                .string("role cannot be blank."));
+    }
+
+    @Test
+    public void testCreateUserEverythingIsEmpty_negative() throws Exception {
+
+        SignUpDto dto = new SignUpDto("",
+                "",
+                "","",3,"",
+                "","","");
+        String jsonToSend = mapper.writeValueAsString(dto);
+
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
+                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
+                .is(400)).andExpect(MockMvcResultMatchers.content()
+                .string("username password firstName lastName email birthday address role cannot be blank."));
+    }
 }
