@@ -20,7 +20,7 @@ public class ValidateUtil {
 	@Autowired
 	UserService userService;
 
-	static List<String> userRoleList = Arrays.asList("customer", "admin");
+	static List<String> userRoleList = Arrays.asList("Customer", "Admin");
 
 	public void verifySignUp(SignUpDto user) throws InvalidParameterException {
 		logger.info("ValidateUtil.createUser() invoked");
@@ -30,43 +30,43 @@ public class ValidateUtil {
 		boolean blankInputs = false;
 		StringBuilder blankInputStrings = new StringBuilder();
 
-		if (StringUtils.isBlank(user.getUsername().trim())) {
+		if (user.getUsername() == null || StringUtils.isBlank(user.getUsername().trim())) {
 			blankInputStrings.append("username ");
 			blankInputs = true;
 		}
 
-		if (StringUtils.isBlank(user.getPassword().trim())) {
+		if (user.getPassword() == null || StringUtils.isBlank(user.getPassword().trim())) {
 			blankInputStrings.append("password ");
 			blankInputs = true;
 		}
 
-		if (StringUtils.isBlank(user.getFirstName().trim())) {
+		if (user.getFirstName() == null || StringUtils.isBlank(user.getFirstName().trim())) {
 			blankInputStrings.append("firstName ");
 			blankInputs = true;
 		}
 
-		if (StringUtils.isBlank(user.getLastName().trim())) {
+		if (user.getLastName() == null || StringUtils.isBlank(user.getLastName().trim())) {
 			blankInputStrings.append("lastName ");
 			blankInputs = true;
 		}
 
-		if (StringUtils.isBlank(user.getEmail().trim())) {
+		if (user.getEmail() == null || StringUtils.isBlank(user.getEmail().trim())) {
 			blankInputStrings.append("email ");
 			blankInputs = true;
 
 		}
 
-		if (StringUtils.isBlank(user.getBirthday().trim())) {
+		if (user.getBirthday() == null || StringUtils.isBlank(user.getBirthday().trim())) {
 			blankInputStrings.append("birthday ");
 			blankInputs = true;
 		}
 
-		if (StringUtils.isBlank(user.getAddress().trim())) {
+		if (user.getAddress() == null || StringUtils.isBlank(user.getAddress().trim())) {
 			blankInputStrings.append("address ");
 			blankInputs = true;
 		}
 
-		if (StringUtils.isBlank(user.getRole().trim())) {
+		if (user.getRole() == null || StringUtils.isBlank(user.getRole().trim())) {
 			blankInputStrings.append("role ");
 			blankInputs = true;
 		}
@@ -117,43 +117,43 @@ public class ValidateUtil {
 		boolean blankInputs = false;
 		StringBuilder blankInputStrings = new StringBuilder();
 
-		if (StringUtils.isBlank(user.getUsername().trim())) {
+		if (user.getUsername() == null || StringUtils.isBlank(user.getUsername().trim())) {
 			blankInputStrings.append("username ");
 			blankInputs = true;
 		}
 
-		if (StringUtils.isBlank(user.getPassword().trim())) {
+		if (user.getPassword() == null || StringUtils.isBlank(user.getPassword().trim())) {
 			blankInputStrings.append("password ");
 			blankInputs = true;
 		}
 
-		if (StringUtils.isBlank(user.getFirstName().trim())) {
+		if (user.getFirstName() == null || StringUtils.isBlank(user.getFirstName().trim())) {
 			blankInputStrings.append("firstName ");
 			blankInputs = true;
 		}
 
-		if (StringUtils.isBlank(user.getLastName().trim())) {
+		if (user.getLastName() == null || StringUtils.isBlank(user.getLastName().trim())) {
 			blankInputStrings.append("lastName ");
 			blankInputs = true;
 		}
 
-		if (StringUtils.isBlank(user.getEmail().trim())) {
+		if (user.getEmail() == null || StringUtils.isBlank(user.getEmail().trim())) {
 			blankInputStrings.append("email ");
 			blankInputs = true;
 
 		}
 
-		if (StringUtils.isBlank(user.getBirthday().trim())) {
+		if (user.getBirthday() == null || StringUtils.isBlank(user.getBirthday().trim())) {
 			blankInputStrings.append("birthday ");
 			blankInputs = true;
 		}
 
-		if (StringUtils.isBlank(user.getAddress().trim())) {
+		if (user.getAddress() == null || StringUtils.isBlank(user.getAddress().trim())) {
 			blankInputStrings.append("address ");
 			blankInputs = true;
 		}
 
-		if (StringUtils.isBlank(user.getRole().trim())) {
+		if (user.getRole() == null || StringUtils.isBlank(user.getRole().trim())) {
 			blankInputStrings.append("role ");
 			blankInputs = true;
 		}
