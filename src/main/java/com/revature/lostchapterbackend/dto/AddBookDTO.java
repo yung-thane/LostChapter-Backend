@@ -10,7 +10,7 @@ public class AddBookDTO {
 	private String bookName;
 	private String synopsis;
 	private String author;
-	private Genre genre;
+	private int genre;
 	private int quantity;
 	private int year;
 	private String edition;
@@ -26,11 +26,11 @@ public class AddBookDTO {
 		super();
 	}
 
-	public AddBookDTO(String iSBN, String bookName, String synopsis, String author, Genre genre, int quantity,
+	public AddBookDTO(String ISBN, String bookName, String synopsis, String author, int genre, int quantity,
 			int year, String edition, String publisher, String bindingType, boolean saleIsActive,
 			double saleDiscountRate, String condition, double bookPrice, String bookImage) {
 		super();
-		ISBN = iSBN;
+		this.ISBN = ISBN;
 		this.bookName = bookName;
 		this.synopsis = synopsis;
 		this.author = author;
@@ -51,8 +51,8 @@ public class AddBookDTO {
 		return ISBN;
 	}
 
-	public void setISBN(String iSBN) {
-		ISBN = iSBN;
+	public void setISBN(String ISBN) {
+		this.ISBN = ISBN;
 	}
 
 	public String getBookName() {
@@ -79,11 +79,11 @@ public class AddBookDTO {
 		this.author = author;
 	}
 
-	public Genre getGenre() {
+	public int getGenre() {
 		return genre;
 	}
 
-	public void setGenre(Genre genre) {
+	public void setGenre(int genre) {
 		this.genre = genre;
 	}
 

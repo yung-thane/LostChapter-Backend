@@ -22,7 +22,7 @@ private String ISBN;
 @Column(nullable = false)
 private String bookName;
 
-@Column(nullable = false)
+@Column(nullable = false, length = 300)
 private String synopsis;
 
 @Column(nullable = false)
@@ -73,7 +73,7 @@ public Book(String iSBN, String bookName, String synopsis, String author, Genre 
 		String edition, String publisher, String bindingType, boolean saleIsActive, double saleDiscountRate,
 		String condition, double bookPrice, String bookImage) {
 	super();
-	ISBN = iSBN;
+	this.ISBN = iSBN;
 	this.bookName = bookName;
 	this.synopsis = synopsis;
 	this.author = author;

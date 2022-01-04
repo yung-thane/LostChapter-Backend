@@ -2,14 +2,17 @@ package com.revature.lostchapterbackend.service;
 
 import java.security.InvalidParameterException;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.lostchapterbackend.dao.BookDAO;
+import com.revature.lostchapterbackend.dao.GenreDAO;
 import com.revature.lostchapterbackend.dto.AddBookDTO;
 import com.revature.lostchapterbackend.model.Book;
+import com.revature.lostchapterbackend.model.Genre;
 
 
 @Service
@@ -17,6 +20,9 @@ public class BookService {
 
 	@Autowired
 	private BookDAO bd;
+	
+	@Autowired
+	private GenreDAO gd;
 
 	public List<Book> getAllBooks() {
 
@@ -56,11 +62,13 @@ public class BookService {
 	}
 
 	public Book addBook(AddBookDTO dto) {
+		
+//		System.out.println(dto);
 
 		boolean blankInputs = false;
 		StringBuilder blankInputStrings = new StringBuilder();
 
-		if (StringUtils.isBlank(dto.getISBN().trim())) {
+		if (StringUtils.isBlank(dto.getISBN())) {
 			blankInputStrings.append("ISBN ");
 			blankInputs = true;
 		}
@@ -79,8 +87,9 @@ public class BookService {
 			blankInputStrings.append("author");
 			blankInputs = true;
 		}
-
-		if (StringUtils.isBlank(dto.getGenre().getGenre())) {
+		String genre = Integer.toString(dto.getGenre());
+		
+		if (StringUtils.isBlank(genre)) {
 			blankInputStrings.append("genre ");
 			blankInputs = true;
 
@@ -141,13 +150,21 @@ public class BookService {
 			blankInputStrings.append("cannot be blank.");
 			throw new InvalidParameterException(blankInputStrings.toString());
 		}
+	
+		try {
+			Genre getGenre = gd.findById(dto.getGenre()).get();
+			
+			Book addedBook = new Book(dto.getISBN(), dto.getBookName(), dto.getSynopsis(), dto.getAuthor(), getGenre, dto.getQuantity(), dto.getYear(),
+					dto.getEdition(), dto.getPublisher(), dto.getBindingType(), dto.isSaleIsActive(), dto.getSaleDiscountRate(),
+					dto.getCondition(), dto.getBookPrice(), dto.getBookImage());
+			return bd.saveAndFlush(addedBook);
+		}catch (Exception e){
+			
+			
+		}
 		
-		Book addedBook = new Book(dto.getISBN(), dto.getBookName(), dto.getSynopsis(), dto.getAuthor(), dto.getGenre(), dto.getQuantity(), dto.getYear(),
-				dto.getEdition(), dto.getPublisher(), dto.getBindingType(), dto.isSaleIsActive(), dto.getSaleDiscountRate(),
-				dto.getCondition(), dto.getBookPrice(), dto.getBookImage());
+		return null;
 		
-
-		return bd.save(addedBook);
 	}
 
 }
