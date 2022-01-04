@@ -6,6 +6,7 @@ import com.revature.lostchapterbackend.dto.LoginDto;
 import com.revature.lostchapterbackend.model.Users;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.annotations.CascadeType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -52,20 +54,15 @@ public class AuthenticationControllerTest {
     }
 
     @Test
+    @Transactional
     public void testlogin() throws Exception {
 
-        EntityManager em = emf.createEntityManager();
-        Session session = em.unwrap(Session.class);
-        Transaction tx = session.beginTransaction();
-
-        Users user1 = new Users("test123","password","testfn",
-                "testln",21,"test123@gmail.com","1990-12-09",
-                "address123","customer");
-        session.persist(user1);
 
 
         LoginDto dto = new LoginDto("test123", "password");
         String jsonToSend = mapper.writeValueAsString(dto);
+        
+        System.out.println(jsonToSend);
 
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/login")
