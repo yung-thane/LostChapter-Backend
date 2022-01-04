@@ -1,0 +1,48 @@
+Feature: Cart
+
+#TEST-45
+Scenario: Adding product to the cart when logged in
+Given I am the product page
+And I add a product to cart
+And I click add product to cart button
+Then I should be able to see a product in cart
+
+#TEST-46
+Scenario: Remove products from the cart (positive test)
+Given I am at the cart page
+And I have 2 items in cart
+And I click the delete button for an item
+Then I should be able to see that item is deleted
+
+#TEST-47
+
+
+#TEST-48
+Scenario: User attempting to add item to cart when not looged in
+Given I am at the product page
+When I click add product to cart button
+Then I should redirected to the login page
+
+#TEST-49
+Scenario: User attempting to add item to cart that is out of stock
+Given I am the product page while logged in
+And I click add product to cart button
+Then I should see a message that item is out of stock
+
+#TEST-50
+
+#TEST- 93
+Scenario: Checkout Successfully
+Given I am the cart page
+And I have 1 item in the cart
+And I click the checkout button
+Then I should be redirected to the checkout page
+
+#TEST- 94
+Scenario: Back to shopping page
+Given I am at the cart page 
+And I click on the continue shopping button
+Then I should be redirected to the product display page
+
+
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.google.gson.Gson"/>
+    <fullyQualifiedTypeName name="com.stripe.Stripe"/>
+    <fullyQualifiedTypeName name="com.stripe.param.billingportal.SessionCreateParams"/>
+    <fullyQualifiedTypeName name="com.stripe.param.checkout.SessionCreateParams"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="com.stripe.model.checkout.Session"/>
+    <fullyQualifiedTypeName name="io.cucumber.junit.platform.engine.Cucumber"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
+</qualifiedTypeNameHistroy>
