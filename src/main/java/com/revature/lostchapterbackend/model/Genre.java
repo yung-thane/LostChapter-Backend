@@ -3,6 +3,7 @@ package com.revature.lostchapterbackend.model;
 import java.util.Objects;
 
 import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,9 +23,9 @@ public class Genre {
 		super();
 	}
 
-	public Genre(int id, String genre) {
+	public Genre(int Id, String genre) {
 		super();
-		Id = id;
+		this.Id = Id;
 		this.genre = genre;
 	}
 
@@ -32,8 +33,8 @@ public class Genre {
 		return Id;
 	}
 
-	public void setId(int id) {
-		Id = id;
+	public void setId(int Id) {
+		this.Id = Id;
 	}
 
 	public String getGenre() {
