@@ -26,6 +26,14 @@ public class CartsService {
 	@Autowired
 	private BookToBuyDAO btbd;
 
+	public CartsService(BookService bs, CartsDAO cd, BookToBuyDAO btbd) {
+		// For mocking
+		// For Unit Testing of Carts Service
+		this.bs = bs;
+		this.cd = cd;
+		this.btbd = btbd;
+	}
+
 	public Carts getCartById(String id) {
 		
 		try {

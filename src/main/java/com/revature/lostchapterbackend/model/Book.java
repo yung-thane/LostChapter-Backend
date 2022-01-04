@@ -64,6 +64,29 @@ public class Book {
 		super();
 	}
 
+	public Book(String iSBN, String bookName, String synopsis, String author, Genre genre, int quantity, int year,
+			String edition, String publisher, String bindingType, boolean saleIsActive, double saleDiscountRate,
+			String condition, double bookPrice, String bookImage) {
+		super();
+		ISBN = iSBN;
+		this.bookName = bookName;
+		this.synopsis = synopsis;
+		this.author = author;
+		this.genre = genre;
+		this.quantity = quantity;
+		this.year = year;
+		this.edition = edition;
+		this.publisher = publisher;
+		this.bindingType = bindingType;
+		this.saleIsActive = saleIsActive;
+		this.saleDiscountRate = saleDiscountRate;
+		this.condition = condition;
+		this.bookPrice = bookPrice;
+		this.bookImage = bookImage;
+	}
+
+
+
 	public int getBookId() {
 		return bookId;
 	}
