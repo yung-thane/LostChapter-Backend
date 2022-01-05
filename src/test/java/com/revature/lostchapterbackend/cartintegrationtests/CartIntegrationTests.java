@@ -7,6 +7,7 @@ import javax.persistence.EntityManagerFactory;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -110,6 +111,11 @@ public class CartIntegrationTests {
 		
 		session.persist(user);
 		
+		Carts cart = new Carts(user);
+		
+		session.persist(cart);
+		
+		
 		tx.commit();
 		
 		session.close();
@@ -166,8 +172,24 @@ public class CartIntegrationTests {
 	}
 	
 	@Test
-	public void cart_test_removing_item_from_cart_positive() {
+	public void cart_test_removing_item_from_cart_positive() throws Exception {
 		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "1");
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200));
+		
+		Carts expectedCart = new Carts();
+		expectedCart.setUser(this.expectedUser);
+		expectedCart.setCartId(1);
+		ArrayList<BookToBuy> bookToBuyList = new ArrayList<>();
+		expectedCart.setBooksToBuy(bookToBuyList);
+		
+		builder = MockMvcRequestBuilders.delete("/users/1/cart").param("bookId", "1");
+		
+		String expectedJson = mapper.writeValueAsString(expectedCart);
+		
+		System.out.println(expectedJson);
+		
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
 		
 		
 	}
@@ -176,49 +198,49 @@ public class CartIntegrationTests {
 	@Test
 	public void cart_test_attempting_to_add_to_cart_item_out_of_stock_negative() {
 		
-		
+		Assertions.fail("Implement me");
 		
 	}
 	
 	@Test
 	public void cart_test_adding_item_to_cart_when_item_already_in_cart_positive() {
 		
-		
+		Assertions.fail("Implement me");
 		
 	}
 	
 	@Test
 	public void cart_test_adding_item_of_multiple_quantity_positive() {
 		
-		
+		Assertions.fail("Implement me");
 		
 	}
 	
 	@Test
 	public void cart_test_adding_item_of_negative_quantity_negative() {
 		
-		
+		Assertions.fail("Implement me");
 		
 	}
 	
 	@Test
 	public void cart_test_get_all_items_in_cart_positive() {
 		
-		
+		Assertions.fail("Implement me");
 		
 	}
 	
 	@Test
 	public void cart_test_delete_book_in_cart_positive() {
 		
-		
+		Assertions.fail("Implement me");
 		
 	}
 	
 	@Test
 	public void cart_test_delete_book_not_in_cart_negative() {
 		
-		
+		Assertions.fail("Implement me");
 		
 	}
 	
