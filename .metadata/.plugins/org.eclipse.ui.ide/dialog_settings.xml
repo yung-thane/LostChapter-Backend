@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> affa676ab4baede1382f86692b899875d43f9a9a
+=======
+>>>>>>> main
 	<list key="installedFeatures">
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
 		<item value="net.mihai-nita.ansicon:1.4.4.202102080044"/>
@@ -42,7 +45,10 @@
 		<item value="org.sonatype.m2e.mavenarchiver.feature:0.17.5.202002191804"/>
 	</list>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> main
 =======
 	<section name="ChooseWorkspaceDialogSettings">
 		<item key="DIALOG_X_ORIGIN" value="585"/>
@@ -62,5 +68,8 @@
 		</list>
 	</section>
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> affa676ab4baede1382f86692b899875d43f9a9a
+=======
+>>>>>>> main
 </section>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.google.gson.Gson"/>
     <fullyQualifiedTypeName name="com.stripe.Stripe"/>
@@ -14,3 +15,6 @@
 =======
 <qualifiedTypeNameHistroy/>
 >>>>>>> affa676ab4baede1382f86692b899875d43f9a9a
+=======
+<qualifiedTypeNameHistroy/>
+>>>>>>> main

@@ -3,6 +3,7 @@
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
 <<<<<<< HEAD
+<<<<<<< HEAD
 			<item value="C:\Users\singh\Desktop\Lost-Chapter\LostChapter-E2E"/>
 			<item value="C:\Users\singh\Desktop\Revature\Lost-chapter\LostChapter-Backend"/>
 =======
@@ -11,6 +12,11 @@
 =======
 			<item value="D:\Curriculum-211018-Jymm\project-3-Lost-Chapter\LostChapter-Backend"/>
 >>>>>>> affa676ab4baede1382f86692b899875d43f9a9a
+=======
+			<item value="C:\Users\ahern\Documents\Job Related\Java\Coding\Project3"/>
+=======
+			<item value="D:\Curriculum-211018-Jymm\project-3-Lost-Chapter\LostChapter-Backend"/>
+>>>>>>> main
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -22,10 +28,13 @@
 		</list>
 	</section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<section name="org.eclipse.m2e.core.pom.overview">
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
 =======
+=======
+>>>>>>> main
 	<section name="MavenCheckoutLocationPage">
 		<list key="scmUrl">
 		</list>
@@ -50,6 +59,9 @@
 			<item value="[groupId].[artifactId]-[version]"/>
 			<item value="[name]"/>
 		</list>
+<<<<<<< HEAD
 >>>>>>> affa676ab4baede1382f86692b899875d43f9a9a
+=======
+>>>>>>> main
 	</section>
 </section>

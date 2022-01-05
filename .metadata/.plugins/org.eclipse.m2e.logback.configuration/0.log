@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2021-12-29 13:01:20,853 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2021-12-29 13:03:13,791 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.revature:lost-chapter-backend:0.0.1-SNAPSHOT @ C:\Users\singh\Desktop\Revature\Lost-chapter\LostChapter-Backend\pom.xml.
 2021-12-29 13:03:25,484 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /lost-chapter-backend/src/main/java
@@ -671,10 +672,15 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.co
 2021-12-30 18:02:06,439 [Worker-141: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\singh\Desktop\Lost-Chapter\LostChapter-E2E\src\test\resources
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> main
 2021-12-29 11:29:50,550 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2021-12-30 12:50:29,790 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2022-01-03 12:34:03,508 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 =======
 2021-12-28 10:58:37,558 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> affa676ab4baede1382f86692b899875d43f9a9a
+=======
+>>>>>>> main

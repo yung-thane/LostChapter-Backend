@@ -47,7 +47,11 @@ public class Genre {
 
 	@Override
 	public int hashCode() {
+<<<<<<< HEAD
 		return Objects.hash(genre, Id);
+=======
+		return Objects.hash(Id, genre);
+>>>>>>> main
 	}
 
 	@Override
@@ -59,11 +63,21 @@ public class Genre {
 		if (getClass() != obj.getClass())
 			return false;
 		Genre other = (Genre) obj;
+<<<<<<< HEAD
 		return Objects.equals(genre, other.genre) && Id == other.Id;
+=======
+		return Id == other.Id && Objects.equals(genre, other.genre);
+>>>>>>> main
 	}
 
 	@Override
 	public String toString() {
+<<<<<<< HEAD
 		return "Genre [genreId=" + Id + ", genre=" + genre + "]";
 	}
+=======
+		return "Genre [Id=" + Id + ", genre=" + genre + "]";
+	}
+
+>>>>>>> main
 }
