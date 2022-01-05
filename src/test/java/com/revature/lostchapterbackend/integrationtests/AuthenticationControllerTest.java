@@ -3,9 +3,11 @@ package com.revature.lostchapterbackend.integrationtests;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.lostchapterbackend.dto.LoginDto;
 import com.revature.lostchapterbackend.dto.SignUpDto;
+import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.model.Users;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.annotations.CascadeType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -41,9 +44,8 @@ public class AuthenticationControllerTest {
         Session session = em.unwrap(Session.class);
         Transaction tx = session.beginTransaction();
 
-        Users user1 = new Users("test123",
-                "5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8",
-                "testfn",
+        Users user1 = new Users("test123","5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8","testfn",
+
                 "testln",21,"test123@gmail.com","1990-12-09",
                 "address123","customer");
         session.persist(user1);
@@ -57,16 +59,19 @@ public class AuthenticationControllerTest {
     public void testLogin_positive() throws Exception {
 
 
+
         LoginDto dto = new LoginDto("test123",
                 "password");
         String jsonToSend = mapper.writeValueAsString(dto);
+        
+        System.out.println(jsonToSend);
 
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/login")
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
-        Users expectedUser = new Users("test123",
-                "5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8","testfn",
+        Users expectedUser = new Users("test123","5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8","testfn",
+
                 "testln",21,"test123@gmail.com","1990-12-09",
                 "address123","customer");
         expectedUser.setId(1);
@@ -89,7 +94,7 @@ public class AuthenticationControllerTest {
                 andExpect(MockMvcResultMatchers.status()
                         .is(400))
                 .andExpect(MockMvcResultMatchers.content()
-                        .string("Username and/or password is incorrect"));
+                        .string("User is Null: Username and/or password is incorrect"));
 
     }
 
@@ -105,12 +110,13 @@ public class AuthenticationControllerTest {
                 andExpect(MockMvcResultMatchers.status()
                         .is(400))
                 .andExpect(MockMvcResultMatchers.content()
-                        .string("Username and/or password is incorrect"));
+                        .string("User not Null: Username and/or password is incorrect"));
 
     }
 
     @Test
     public void testCreateUser_positive() throws Exception {
+        EntityManager em = emf.createEntityManager();
 
         SignUpDto dto = new SignUpDto("testuser1",
                 "password123",
@@ -125,9 +131,12 @@ public class AuthenticationControllerTest {
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "testfirstname","testlastname",21,"test@list.com",
                 "1990-08-09","addresswest","customer");
+        em.persist(expectedUser);
         expectedUser.setId(2);
+        Carts c = new Carts(expectedUser);
+        em.persist(c);
 
-        String expectedJson = mapper.writeValueAsString(expectedUser);
+        String expectedJson = mapper.writeValueAsString(c);
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
                 .is(201)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
@@ -204,7 +213,7 @@ public class AuthenticationControllerTest {
     }
 
     @Test
-    public void testCreateUserAgeIsLessThan3_negative() throws Exception {
+    public void testCreateUserAgeIsLessThan5_negative() throws Exception {
 
         SignUpDto dto = new SignUpDto("test1234",
                 "password123",
@@ -228,7 +237,14 @@ public class AuthenticationControllerTest {
                 "password123",
                 "testfirstname","testlastname",130,"test@list.com",
                 "1990-08-09","addresswest","customer");
-        String jsonToSend = mapper.writeValueAsString(dto);
+
+        Users u = new Users("test1234",
+                "password123",
+                "testfirstname","testlastname",130,"test@list.com",
+                "1990-08-09","addresswest","customer");
+        Carts c = new Carts(u);
+        String jsonToSend = mapper.writeValueAsString(c);
+
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
@@ -323,4 +339,30 @@ public class AuthenticationControllerTest {
                 .is(400)).andExpect(MockMvcResultMatchers.content()
                 .string("username password firstName lastName email birthday address role cannot be blank."));
     }
+
+//    @Test
+//    public void testCheckLoginStatus_positive() throws Exception {
+//        Users currentlyLoggedInUser = new Users ("test123","5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8","testfn",
+//
+//                "testln",21,"test123@gmail.com","1990-12-09",
+//                "address123","customer");
+//        String jsonToSend = mapper.writeValueAsString(currentlyLoggedInUser);
+//
+//        System.out.println(jsonToSend);
+//
+//
+//        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/loginstatus")
+//                .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+//
+//        Users expectedUser = new Users("test123","5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8","testfn",
+//
+//                "testln",21,"test123@gmail.com","1990-12-09",
+//                "address123","customer");
+//        expectedUser.setId(1);
+//
+//        String expectedJson = mapper.writeValueAsString(expectedUser);
+//
+//        this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
+//                .is(200)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
+//    }
 }
