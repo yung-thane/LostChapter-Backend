@@ -38,7 +38,7 @@ public class CartsService {
 		}
 	}
 
-	public Carts addBooksToCart(Carts currentCart, String userId, String bookId, String quantityToBuy) {
+	public Carts addBooksToCart(Carts currentCart, String userId, String bookId, String quantityToBuy) throws BookNotFoundException {
 
 		currentCart = this.getCartById(userId); // checking if carts exist
 

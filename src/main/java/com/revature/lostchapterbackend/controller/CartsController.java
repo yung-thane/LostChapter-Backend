@@ -31,7 +31,7 @@ public class CartsController {
 	@PostMapping(path = "/users/{userId}/cart") // Because a User is connected to a Cart, we can then find the cart Id
 												// // by using the User.
 	public ResponseEntity<Object> addBookToCart(@PathVariable("userId") String userId,
-			@RequestParam("bookId") String bookId, @RequestParam("quantityToBuy") String quantityToBuy) {
+			@RequestParam("bookId") String bookId, @RequestParam("quantityToBuy") String quantityToBuy) throws BookNotFoundException {
 		// Aspect or another class for protecting endpoint
 		try {
 			Carts currentCart = null;

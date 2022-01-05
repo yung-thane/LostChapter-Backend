@@ -1,0 +1,31 @@
+05 Jan 2022 - 18:29:10.771 [Thread-164] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+05 Jan 2022 - 18:29:10.778 [Thread-164] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-27 - Shutdown initiated...
+05 Jan 2022 - 18:29:10.808 [Thread-164] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-27 - Shutdown completed.
+05 Jan 2022 - 18:29:11.537 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 1.8.0_311 on Corys-MacBook-Pro.local with PID 73463 (/Users/coryhall/Revature/Revature-Lost-Chapter/LostChapter-Backend/target/classes started by coryhall in /Users/coryhall/Revature/Revature-Lost-Chapter/LostChapter-Backend)
+05 Jan 2022 - 18:29:11.548 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+05 Jan 2022 - 18:29:11.859 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+05 Jan 2022 - 18:29:11.876 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+05 Jan 2022 - 18:29:12.436 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+05 Jan 2022 - 18:29:12.441 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+05 Jan 2022 - 18:29:12.441 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+05 Jan 2022 - 18:29:12.441 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+05 Jan 2022 - 18:29:12.448 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+05 Jan 2022 - 18:29:12.448 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 886 ms
+05 Jan 2022 - 18:29:12.846 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-28 - Starting...
+05 Jan 2022 - 18:29:13.228 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-28 - Start completed.
+05 Jan 2022 - 18:29:13.228 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+05 Jan 2022 - 18:29:13.373 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+05 Jan 2022 - 18:29:13.378 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+05 Jan 2022 - 18:29:13.639 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+05 Jan 2022 - 18:29:13.642 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+05 Jan 2022 - 18:29:14.268 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05 Jan 2022 - 18:29:16.453 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+05 Jan 2022 - 18:29:16.473 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+05 Jan 2022 - 18:29:16.526 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+05 Jan 2022 - 18:29:16.530 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+05 Jan 2022 - 18:29:16.551 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 5.322 seconds (JVM running for 9116.886)
+05 Jan 2022 - 18:29:16.560 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+05 Jan 2022 - 18:29:24.523 [RMI TCP Connection(234)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+05 Jan 2022 - 18:29:24.584 [RMI TCP Connection(234)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+05 Jan 2022 - 18:29:24.597 [RMI TCP Connection(234)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-28 - Shutdown initiated...
+05 Jan 2022 - 18:29:24.639 [RMI TCP Connection(234)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-28 - Shutdown completed.

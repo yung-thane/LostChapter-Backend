@@ -1,6 +1,7 @@
 package com.revature.lostchapterbackend.dao;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -20,6 +21,9 @@ public interface BookDAO extends JpaRepository<Book, Integer>{
 
 
 	public List<Book> findBysaleIsActiveTrue();
+
+	@Query("SELECT b FROM Book b WHERE b.ISBN = :ISBN")
+	public Optional<Book> findByISBN(String ISBN);
 	
 	
 
