@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;com.revature.lostchapterbackend.model.Checkout&apos; to &apos;CheckoutPayment&apos;&#x0D;&#x0A;- Original project: &apos;lost-chapter-backend&apos;&#x0D;&#x0A;- Original element: &apos;com.revature.lostchapterbackend.model.Checkout&apos;&#x0D;&#x0A;- Renamed element: &apos;com.revature.lostchapterbackend.model.CheckoutPayment&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Checkout&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.revature.lostchapterbackend.model{Checkout.java[Checkout" matchStrategy="1" name="CheckoutPayment" qualified="false" references="true" similarDeclarations="false" stamp="1640804356399" textual="false" version="1.0"/>
-</session>

@@ -1,8 +1,0 @@
-INDEX VERSION 1.131+C:\Users\singh\Desktop\Lost-Chapter\LostChapter-Backend\.metadata\.plugins\org.eclipse.jdt.core
-3797907236.index
-3263264102.index
-1865797976.index
-313943946.index
-2842058084.index
-3539380306.index
-4101912193.index
