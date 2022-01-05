@@ -8115,3 +8115,1627 @@ insert into users (id, address, age, birthday, email, first_name, last_name, pas
 05 Jan 2022 - 12:58:57.015 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
 05 Jan 2022 - 12:58:57.019 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
 05 Jan 2022 - 12:58:57.020 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.067 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.070 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.077 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.077 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:09:06.078 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.094 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.094 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.094 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.094 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.095 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.099 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.100 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.100 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.101 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.101 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.105 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.105 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.105 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.106 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.106 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.110 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.110 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.110 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.111 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.111 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.119 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.119 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.129 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.130 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.135 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.136 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.141 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.141 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.142 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.142 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.142 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.146 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.147 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.152 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.152 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.152 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.152 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.152 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.157 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.157 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.157 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.157 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.158 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.164 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.164 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.165 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.165 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.165 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.169 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.170 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.174 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.174 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.175 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.175 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.175 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.180 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.180 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.180 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.181 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.182 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.186 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.187 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.187 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.187 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.187 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.192 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.192 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.192 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.192 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.192 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.198 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.198 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.203 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.204 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.208 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.209 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.210 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.210 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.211 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.215 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.216 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.221 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.222 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.222 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.222 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:09:06.222 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.226 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.227 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.228 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.228 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:09:06.228 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.234 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.234 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.237 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.238 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.244 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.244 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.244 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.244 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.244 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.250 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.251 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.255 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.255 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.256 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.256 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.256 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.260 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.261 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.262 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:09:06.263 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:09:06.267 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.267 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.267 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.268 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.268 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.272 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.272 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.275 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.275 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.279 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.279 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.279 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.280 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): johnd@gmail.com
+05 Jan 2022 - 14:09:06.280 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.284 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.285 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.285 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:09:06.290 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:09:06.294 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.294 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.298 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.298 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.298 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.298 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.299 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.302 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.302 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.302 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.303 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoegmail
+05 Jan 2022 - 14:09:06.303 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.306 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.306 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.308 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.309 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.313 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.314 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.314 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.314 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:09:06.314 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.318 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.318 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:09:06.318 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:09:06.318 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:09:06.318 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:09:06.327 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:09:06.327 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.741 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.743 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.751 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.751 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:10:20.753 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.772 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.773 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.773 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.773 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.773 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.778 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.778 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.778 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.778 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.778 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.785 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.786 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.786 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.786 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.786 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.792 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.792 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.792 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.792 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.792 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.804 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.804 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.809 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.809 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.814 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.814 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.821 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.822 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.823 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.823 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.823 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.827 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.828 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.832 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.832 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.832 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.832 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.833 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.839 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.839 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.840 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.840 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.841 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.845 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.846 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.846 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.846 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.846 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.852 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.853 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.858 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.859 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.859 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.859 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.859 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.864 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.864 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.864 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.864 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.865 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.874 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.874 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.874 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.874 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.874 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.878 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.879 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.888 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.888 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.888 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.888 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.888 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.893 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.893 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.896 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.896 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.900 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.901 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.902 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.902 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.902 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.906 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.906 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.912 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.913 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.915 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.915 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:10:20.915 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.922 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.922 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.922 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.922 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:10:20.923 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.926 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.926 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.932 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.932 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.939 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.940 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.941 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.941 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.941 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.946 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.947 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.952 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.952 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.952 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.952 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.952 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.955 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.955 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.955 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:10:20.956 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:10:20.961 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.962 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.963 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.963 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:20.964 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:20.974 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.974 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.979 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.979 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.989 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:20.990 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:20.992 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:20.993 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): johnd@gmail.com
+05 Jan 2022 - 14:10:20.994 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:21.000 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:21.001 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:21.002 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:10:21.014 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:10:21.019 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:21.019 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:21.023 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:21.024 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:21.024 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:21.024 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:21.024 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:21.028 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:21.028 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:21.029 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:21.029 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoegmail
+05 Jan 2022 - 14:10:21.029 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:21.033 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:21.033 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:21.041 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:21.041 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:21.052 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:21.052 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:21.052 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:21.052 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:10:21.053 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:21.066 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:21.068 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:10:21.069 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:10:21.070 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:10:21.070 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:10:21.075 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:10:21.075 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.101 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.104 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.111 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.111 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:11:04.113 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.127 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.127 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.127 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.127 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.127 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.133 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.133 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.133 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.133 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.133 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.138 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.138 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.138 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.138 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.138 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.143 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.143 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.143 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.143 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.143 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.153 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.154 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.160 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.160 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.165 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.165 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.169 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.169 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.169 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.169 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.169 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.173 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.173 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.177 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.177 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.177 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.177 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.177 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.183 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.183 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.183 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.184 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.184 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.188 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.188 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.189 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.189 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.189 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.194 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.194 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.199 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.199 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.199 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.199 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.200 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.204 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.204 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.204 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.204 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.205 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.213 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.213 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.216 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.217 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.217 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.217 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.217 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.223 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.223 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.227 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.228 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.228 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.228 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.228 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.234 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.234 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.239 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.239 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.243 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.243 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.244 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.244 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.244 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.248 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.248 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.252 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.252 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.253 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.253 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:11:04.253 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.257 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.257 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.257 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.257 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:11:04.257 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.264 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.264 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.267 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.267 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.271 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.272 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.272 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.272 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.272 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.275 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.276 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.278 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.279 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.279 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.279 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.279 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.283 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.283 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.284 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:11:04.284 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:11:04.287 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.288 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.288 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.288 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.288 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.291 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.291 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.294 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.294 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.296 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.297 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.297 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.297 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): johnd@gmail.com
+05 Jan 2022 - 14:11:04.297 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.300 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.301 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.301 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:11:04.307 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:11:04.313 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.314 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.318 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.319 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.320 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.325 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.326 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.332 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.332 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.332 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.332 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoegmail
+05 Jan 2022 - 14:11:04.332 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.343 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.343 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.348 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.349 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.356 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.356 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.356 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.356 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:11:04.356 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.360 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.360 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:11:04.364 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:11:04.365 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:11:04.366 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:11:04.377 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:11:04.377 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:14:26.605 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:14:26.608 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:17:05.704 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:17:05.707 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.096 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.099 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.106 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.106 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:18:38.108 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.124 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.124 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.124 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.124 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.124 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.129 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.130 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.130 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.130 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.130 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.134 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.134 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.134 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.134 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.134 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.140 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.140 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.140 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.141 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.141 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.150 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.151 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.160 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.160 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.167 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.168 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.173 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.174 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.174 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.174 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.174 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.180 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.180 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.187 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.188 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.188 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.188 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.188 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.192 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.192 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.192 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.192 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.192 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.197 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.198 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.199 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.200 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.200 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.205 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.206 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.211 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.211 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.211 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.211 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.211 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.217 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.217 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.218 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.218 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.218 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.223 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.223 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.227 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.228 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.228 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.228 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.228 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.241 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.242 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.248 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.248 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.248 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.248 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.248 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.253 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.255 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.262 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.262 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.277 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.278 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.278 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.278 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.278 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.284 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.285 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.289 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.289 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.289 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.290 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:18:38.290 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.293 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.294 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.294 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.294 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:18:38.294 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.299 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.300 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.304 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.305 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.311 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.311 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.312 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.312 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.313 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.320 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.320 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.325 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.326 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.326 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.326 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.326 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.348 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.349 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.350 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:18:38.351 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:18:38.358 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.358 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.359 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.360 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.361 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.372 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.372 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.384 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.393 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.401 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.401 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.401 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.401 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): johnd@gmail.com
+05 Jan 2022 - 14:18:38.401 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.411 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.411 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.411 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:18:38.424 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:18:38.428 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.428 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.434 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.435 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.440 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.441 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.441 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.441 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.441 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.445 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.445 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.445 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.445 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoegmail
+05 Jan 2022 - 14:18:38.445 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.452 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.453 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.457 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.457 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.461 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.461 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.461 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.461 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:18:38.461 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.472 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.472 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.472 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:18:38.472 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:18:38.472 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:18:38.478 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.478 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:18:38.481 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:18:38.482 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:42.882 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:42.885 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:42.891 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:42.892 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:21:42.893 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:42.917 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:42.917 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:42.917 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:42.918 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:42.918 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:42.923 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:42.924 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:42.924 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:42.924 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:42.924 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:42.929 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:42.930 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:42.930 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:42.930 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:42.930 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:42.942 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:42.943 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:42.944 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:42.945 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:42.945 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:42.954 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:42.954 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:42.959 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:42.959 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:42.963 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:42.963 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:42.970 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:42.970 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:42.971 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:42.972 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:42.972 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:42.978 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:42.979 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:42.984 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:42.984 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:42.984 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:42.985 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:42.985 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:42.994 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:42.995 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:42.996 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:42.996 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:42.996 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.014 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.015 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.040 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.040 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:43.040 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.060 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.060 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.066 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.070 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.070 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.070 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:43.070 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.080 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.080 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.081 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.081 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:43.082 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.089 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.089 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.094 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.094 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.094 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.094 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:43.094 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.101 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.102 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.122 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.122 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.122 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.123 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:43.123 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.130 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.131 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.140 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.141 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.149 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.150 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.156 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.158 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.158 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.158 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:43.159 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.182 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.182 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.190 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.190 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.191 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.191 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:21:43.191 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.197 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.198 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.199 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.199 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:21:43.199 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.203 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.206 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.212 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.212 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.216 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.217 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.217 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.217 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:43.218 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.224 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.224 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.230 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.231 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.231 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.231 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:43.231 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.251 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.251 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.251 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:21:43.252 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:21:43.257 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.258 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.258 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.258 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:43.258 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.266 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.269 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.276 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.277 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.287 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.287 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.287 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.287 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): johnd@gmail.com
+05 Jan 2022 - 14:21:43.287 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.314 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.314 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.314 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:21:43.326 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:21:43.332 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.332 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.342 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.343 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.347 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.347 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.348 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.348 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:43.348 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.352 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.353 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.353 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.353 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoegmail
+05 Jan 2022 - 14:21:43.353 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.363 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.363 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.379 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.379 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.386 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.387 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.387 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.387 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:21:43.389 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.393 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.393 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.393 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:21:43.393 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:21:43.394 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:21:43.398 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.399 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:21:43.403 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:21:43.403 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:22:39.314 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:22:39.325 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.272 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.275 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.281 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.282 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:23:48.283 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.298 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.298 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.298 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.298 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.298 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.303 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.303 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.303 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.303 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.303 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.308 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.309 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.309 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.309 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.310 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.315 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.316 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.316 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.317 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.317 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.332 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.333 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.340 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.341 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.345 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.346 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.349 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.350 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.350 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.350 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.350 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.354 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.354 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.359 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.360 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.360 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.360 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.360 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.364 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.364 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.365 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.365 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.365 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.369 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.369 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.370 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.370 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.370 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.373 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.374 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.381 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.381 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.382 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.382 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.382 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.392 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.392 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.393 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.393 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.393 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.398 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.398 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.402 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.402 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.402 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.403 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.403 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.408 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.409 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.414 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.414 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.414 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.414 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.415 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.421 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.421 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.433 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.435 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.446 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.446 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.450 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.451 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.451 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.452 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.452 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.456 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.457 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.463 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.463 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.463 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.463 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:23:48.463 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.472 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.473 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.473 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.473 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:23:48.473 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.480 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.480 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.488 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.489 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.493 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.494 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.494 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.494 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.495 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.500 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.500 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.504 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.504 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.504 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.504 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.505 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.513 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.513 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.517 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.518 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.519 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:23:48.521 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:23:48.535 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.535 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.537 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.539 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.540 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.548 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.549 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.553 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.554 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.560 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.560 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.561 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.561 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): johnd@gmail.com
+05 Jan 2022 - 14:23:48.561 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.568 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.569 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.569 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:23:48.592 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:23:48.596 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.597 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.601 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.601 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.605 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.606 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.612 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.612 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.612 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.612 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.612 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.616 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.616 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.617 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.617 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoegmail
+05 Jan 2022 - 14:23:48.617 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.621 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.621 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.624 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.624 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.637 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.638 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.638 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.638 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:23:48.638 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.647 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.647 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.647 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:23:48.647 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:23:48.647 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:23:48.652 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.652 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:23:48.656 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:23:48.656 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:24:58.352 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:24:58.355 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:18.901 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:18.908 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:18.917 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:18.918 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:27:18.920 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:18.937 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:18.939 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:18.939 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:18.939 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:18.939 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:18.943 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:18.943 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:18.944 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:18.944 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:18.944 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:18.948 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:18.949 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:18.949 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:18.949 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:18.949 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:18.954 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:18.955 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:18.955 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:18.955 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:18.955 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:18.965 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:18.965 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:18.971 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:18.972 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:18.976 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:18.977 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:18.981 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:18.981 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:18.981 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:18.981 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:18.981 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:18.985 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:18.986 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:18.991 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:18.992 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:18.992 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:18.992 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:18.992 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:18.995 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:18.996 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:18.996 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:18.996 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:18.996 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.001 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.001 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.001 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.001 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:19.001 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.014 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.016 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.023 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.023 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.023 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.023 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:19.024 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.030 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.030 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.031 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.031 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:19.031 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.035 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.035 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.039 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.039 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.039 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.039 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:19.040 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.043 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.043 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.046 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.047 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.047 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.047 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:19.047 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.050 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.051 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.054 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.055 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.059 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.060 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.066 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.067 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.072 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.073 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.073 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.073 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:19.073 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.077 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.078 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.081 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.081 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.081 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.081 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:27:19.082 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.089 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.089 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.089 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.090 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:27:19.090 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.094 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.095 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.099 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.100 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.104 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.111 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.114 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.115 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:19.118 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.124 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.125 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.130 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.131 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.131 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.131 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:19.131 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.139 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.140 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.147 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.148 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.148 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:27:19.148 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:27:19.152 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.153 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.153 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.153 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:19.153 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.159 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.159 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.172 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.173 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.180 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.180 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.184 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.185 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.185 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.185 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): johnd@gmail.com
+05 Jan 2022 - 14:27:19.186 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.195 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.195 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.195 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:27:19.211 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:27:19.219 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.220 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.227 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.229 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.233 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.233 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.236 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.237 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.237 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.238 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:19.239 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.244 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.245 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.245 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.245 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoegmail
+05 Jan 2022 - 14:27:19.245 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.249 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.250 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.253 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.254 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.258 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.259 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.259 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.259 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:27:19.259 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.263 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.263 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.263 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:27:19.263 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:27:19.263 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:27:19.266 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.267 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.271 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.271 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.274 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.274 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:27:19.277 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:27:19.277 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:28:48.773 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:28:48.776 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:29:41.201 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:29:41.204 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:30:29.596 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:30:29.599 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:31:21.878 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:31:21.882 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:32:04.987 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:32:04.991 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:18.060 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:18.063 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.283 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.286 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.292 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.293 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:33:55.294 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.311 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.311 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.311 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.311 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.311 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.316 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.316 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.316 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.316 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.316 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.324 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.325 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.328 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.329 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.329 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.329 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.329 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.332 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.332 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.332 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.332 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.332 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.349 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.350 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.354 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.354 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.358 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.359 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.364 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.365 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.373 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.373 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.373 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.373 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.373 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.377 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.377 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.382 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.382 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.382 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.382 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.383 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.389 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.389 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.390 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.390 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.390 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.393 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.394 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.394 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.395 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.395 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.401 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.402 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.407 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.408 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.408 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.408 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.408 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.413 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.413 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.413 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.413 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.413 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.418 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.418 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.423 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.423 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.423 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.424 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.424 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.429 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.429 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.447 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.448 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.455 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.455 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.455 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.455 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.455 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.461 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.461 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.465 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.469 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.477 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.477 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.480 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.481 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.490 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.492 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.501 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.503 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.510 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.520 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.520 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.521 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.522 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.529 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.530 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.538 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.539 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.539 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.539 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:33:55.539 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.544 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.544 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.544 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.545 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:33:55.545 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.550 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.559 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.568 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.568 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.573 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.573 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.577 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.577 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.578 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.578 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.578 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.589 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.590 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.597 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.598 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.598 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.598 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.598 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.602 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.602 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.605 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.605 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.605 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:33:55.606 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:33:55.609 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.609 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.609 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.609 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.609 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.612 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.613 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.617 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.617 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.619 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.620 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.622 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.622 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.622 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.622 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): johnd@gmail.com
+05 Jan 2022 - 14:33:55.622 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.627 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.627 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.627 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:33:55.635 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:33:55.639 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.639 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.641 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.641 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.645 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.645 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.649 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.649 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.657 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.660 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.660 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.660 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.660 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.667 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.667 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.668 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.668 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoegmail
+05 Jan 2022 - 14:33:55.668 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.671 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.672 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.676 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.676 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.680 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.680 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.680 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.680 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:33:55.680 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.684 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.685 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.685 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:33:55.685 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:33:55.685 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:33:55.693 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.693 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.708 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.709 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.713 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.713 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:33:55.721 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:33:55.721 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:39:44.569 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:39:44.572 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:40:28.437 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:40:28.439 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:05.169 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:05.172 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:45.964 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:45.967 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:45.974 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:45.974 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:41:45.976 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:45.990 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:45.990 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:45.990 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:45.990 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:45.991 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:45.994 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:45.995 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:45.995 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:45.995 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:45.995 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.001 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.001 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.006 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.006 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.006 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.006 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.006 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.010 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.011 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.011 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.011 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.011 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.015 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.016 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.022 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.022 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.026 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.027 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.029 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.030 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.034 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.034 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.040 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.041 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.047 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.047 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.047 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.047 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.047 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.052 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.053 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.059 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.059 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.059 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.060 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.060 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.065 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.066 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.067 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.067 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.067 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.086 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.087 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.087 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.088 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.088 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.100 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.100 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.110 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.112 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.113 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.113 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.115 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.120 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.122 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.130 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.130 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.131 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.131 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.131 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.136 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.137 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.142 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.142 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.142 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.142 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.142 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.147 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.148 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.152 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.152 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.156 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.157 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.162 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.162 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.162 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.162 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.163 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.168 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.169 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.173 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.173 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.178 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.178 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.182 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.182 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.186 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.187 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.189 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.190 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.196 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.196 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.196 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.196 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.196 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.200 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.200 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.204 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.204 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.204 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.204 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:41:46.205 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.209 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.210 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.210 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.210 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:41:46.210 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.214 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.214 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.217 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.218 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.221 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.221 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.223 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.223 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.223 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.223 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.224 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.228 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.229 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.233 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.234 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.235 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.235 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.235 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.238 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.239 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.242 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.242 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.242 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:41:46.243 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:41:46.247 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.247 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.247 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.247 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.248 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.251 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.251 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.254 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.255 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.258 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.259 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.262 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.263 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.263 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.263 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): johnd@gmail.com
+05 Jan 2022 - 14:41:46.263 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.267 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.267 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.267 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+05 Jan 2022 - 14:41:46.274 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+05 Jan 2022 - 14:41:46.278 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.278 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.281 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.282 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.286 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.286 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.289 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.289 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.293 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.293 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.293 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.293 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.294 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.300 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.300 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.300 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.300 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoegmail
+05 Jan 2022 - 14:41:46.300 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.303 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.303 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.307 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.307 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.312 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.312 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.312 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.312 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+05 Jan 2022 - 14:41:46.312 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.319 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.319 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.319 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+05 Jan 2022 - 14:41:46.319 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+05 Jan 2022 - 14:41:46.319 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+05 Jan 2022 - 14:41:46.323 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.324 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.331 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.331 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.356 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.357 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+05 Jan 2022 - 14:41:46.366 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+05 Jan 2022 - 14:41:46.366 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
