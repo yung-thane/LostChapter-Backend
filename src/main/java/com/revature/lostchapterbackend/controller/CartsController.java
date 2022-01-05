@@ -65,12 +65,15 @@ public class CartsController {
 
 	@DeleteMapping(path = "/users/{userId}/cart")
 	public ResponseEntity<Object> delteteProductInCart(@PathVariable("userId") String cartId,
-			@RequestParam("bookId") String bookId) throws BookNotFoundException, NoResultException {
+			@RequestParam(name = "bookId", required = false) String bookId) throws BookNotFoundException, NoResultException {
 
 		try {
 			Carts currentCart = null;
-			if (cartId.matches(PATTERN) || bookId.matches(PATTERN)) {
+			if (bookId != null && (cartId.matches(PATTERN) || bookId.matches(PATTERN))) {
 				currentCart = cs.delteteProductInCart(currentCart, cartId, bookId);
+				return ResponseEntity.status(200).body(currentCart);
+			} else if (bookId == null) {
+				currentCart = cs.delteteAllProductInCart(currentCart, cartId);
 				return ResponseEntity.status(200).body(currentCart);
 			} else {
 				throw new NumberFormatException("cart id/product id must be of type int!");

@@ -101,52 +101,52 @@ public class CartsServiceTest {
 		});
 	}
 	
-//	@Test // Happy Path
-//	void deleteBookInTheCart_PositiveTest() throws BookNotFoundException  {
-//
-//		List<BookToBuy> bookToBuy = new ArrayList<>();
-//
-//		Carts currentCart = new Carts(new Users());
-//		currentCart = new Carts(bookToBuy);
-//		currentCart.setCartId(1);
-//
-//
-//		Mockito.when(cd.findById(currentCart.getCartId())).thenReturn(Optional.of(currentCart));
-//
-//		Genre g = new Genre(1, "Novel"); // Manually Insertting Genre
-//		Book bookToAdd = new Book("9783462015393", "The Catcher In The Rye",
-//				"set around the 1950s and is narrated by a young man named Holden Caulfield.", "J.D. Salinger", g, 100,
-//				1951, "1st edition", "Little, Brown", "Paperback", false, 0.0, "new", 8.07, "imageURL");
-//		bookToAdd.setBookId(2);
-//		BookToBuy bookToBeBought = new BookToBuy(bookToAdd, 1);
-//		bookToBeBought.setId(2);
-//
-//		Mockito.when(bd.findById(bookToAdd.getBookId())).thenReturn(Optional.of(bookToAdd));
-//
-//		List<BookToBuy> currentBooksInTheCart = currentCart.getBooksToBuy();
-//		int bookToDelete = 0;
-//
-//		Iterator<BookToBuy> iter = currentBooksInTheCart.iterator();
-//		BookToBuy q1 = null;
-//		while (iter.hasNext()) {
-//			q1 = iter.next();
-//			iter.remove();
-//			bookToDelete = q1.getId();
-//		}
-//
-//		currentCart.setBooksToBuy(currentBooksInTheCart);
-//		
-//		btbd.deleteById(bookToDelete);
-//		
-//		Mockito.verify(btbd, times(1)).deleteById(1);
-//
-//		Mockito.when(cd.saveAndFlush(currentCart)).thenReturn(currentCart);
-//		
-//		Carts actual = cs.delteteProductInCart(currentCart, "1", "2");
-//
-//		Carts expected = currentCart;
-//
-//		Assertions.assertEquals(expected, actual);
-//	}
+	@Test // Happy Path
+	void deleteBookInTheCart_PositiveTest() throws BookNotFoundException  {
+
+		List<BookToBuy> bookToBuy = new ArrayList<>();
+
+		Carts currentCart = new Carts(new Users());
+		currentCart = new Carts(bookToBuy);
+		currentCart.setCartId(1);
+
+		Mockito.when(cd.findById(currentCart.getCartId())).thenReturn(Optional.of(currentCart));
+
+		Genre g = new Genre(1, "Novel");
+		Book bookToAdd = new Book("9783462015393", "The Catcher In The Rye",
+				"set around the 1950s and is narrated by a young man named Holden Caulfield.", "J.D. Salinger", g, 100,
+				1951, "1st edition", "Little, Brown", "Paperback", false, 0.0, "new", 8.07, "imageURL");
+		bookToAdd.setBookId(2);
+		BookToBuy bookToBeBought = new BookToBuy(bookToAdd, 1);
+		bookToBeBought.setId(1);
+		bookToBuy.add(bookToBeBought);
+
+		Mockito.when(bd.findById(bookToAdd.getBookId())).thenReturn(Optional.of(bookToAdd));
+
+		List<BookToBuy> currentBooksInTheCart = currentCart.getBooksToBuy();
+		int bookToDelete = 0;
+
+		Iterator<BookToBuy> iter = currentBooksInTheCart.iterator();
+		BookToBuy q1 = null;
+		while (iter.hasNext()) {
+			q1 = iter.next();
+			iter.remove();
+			bookToDelete = q1.getId();		
+		}
+	
+		currentCart.setBooksToBuy(currentBooksInTheCart);
+		
+		btbd.deleteById(bookToDelete);
+		
+		Mockito.verify(btbd, times(1)).deleteById(1);
+
+		Mockito.when(cd.saveAndFlush(currentCart)).thenReturn(currentCart);
+		
+		Carts actual = cs.delteteProductInCart(currentCart, "1", "2");
+
+		Carts expected = currentCart;
+
+		Assertions.assertEquals(expected, actual);
+	}
 
 }
