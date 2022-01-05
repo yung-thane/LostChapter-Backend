@@ -3,14 +3,21 @@ package com.revature.lostchapterbackend.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.revature.lostchapterbackend.annotation.AuthorizedUser;
+import com.revature.lostchapterbackend.dto.AddBookDTO;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.service.BookService;
 
 @RestController
+@CrossOrigin(originPatterns = "*", allowCredentials = "true")
 public class BookController {
 	
 	@Autowired
@@ -44,5 +51,21 @@ public class BookController {
 		return bs.getBooksByKeyword(keyword);
 		
 	}
+	
+	@GetMapping(path = "/books/sales")
+	public List<Book> getBookBySale() {
+		
+		return bs.getBooksBySale();
+		
+	}
+	
+	@PostMapping(path = "/books")
+	public ResponseEntity<Object> addNewBook(@RequestBody AddBookDTO dto) {
+		Book addedBook = bs.addBook(dto);
+		return ResponseEntity.status(201).body(addedBook);
+		
+	}
+	
+	
 
 }

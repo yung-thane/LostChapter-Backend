@@ -1,6 +1,8 @@
 package com.revature.lostchapterbackend.service;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,6 +43,14 @@ public class UserService {
 
 		if (dto.getAge() < 5 || dto.getAge() > 125) {
 			throw new InvalidParameterException("Age cannot be less than 5 or greater than 125");
+		}
+		
+		Set<String> validRole = new HashSet<>();
+		validRole.add("Customer");
+		validRole.add("Admin");
+		
+		if (!validRole.contains(dto.getRole())) {
+			throw new InvalidParameterException("You can only sign up as a Customer or an Admin");
 		}
 
 		String algorithm = "SHA-256";
