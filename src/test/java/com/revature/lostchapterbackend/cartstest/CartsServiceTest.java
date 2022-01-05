@@ -59,20 +59,21 @@ public class CartsServiceTest {
 		Book bookToAdd = new Book("9783462015393", "The Catcher In The Rye",
 				"set around the 1950s and is narrated by a young man named Holden Caulfield.", "J.D. Salinger", g, 100,
 				1951, "1st edition", "Little, Brown", "Paperback", false, 0.0, "new", 8.07, "imageURL");
-		bookToAdd.setBookId(2);
+		bookToAdd.setBookId(1);
+
 		BookToBuy bookToBeBought = new BookToBuy(bookToAdd, 1);
-		bookToBeBought.setId(2);
+		bookToBeBought.setId(1);
 
 		Mockito.when(bd.findById(bookToAdd.getBookId())).thenReturn(Optional.of(bookToAdd));
 
-		List<BookToBuy> currentBooksInTheCart = currentCart.getBooksToBuy();
-		currentBooksInTheCart.add(bookToBeBought);
-		currentCart.setBooksToBuy(currentBooksInTheCart);
+		bookToBuy = currentCart.getBooksToBuy();
+		bookToBuy.add(bookToBeBought);
+		currentCart.setBooksToBuy(bookToBuy);
 
 		Mockito.when(btbd.saveAndFlush(bookToBeBought)).thenReturn(bookToBeBought);
-		Mockito.when(cd.save(currentCart)).thenReturn(currentCart);
+		Mockito.when(cd.saveAndFlush(currentCart)).thenReturn(currentCart);
 
-		Carts actual = cs.addBooksToCart(currentCart, "1", "2", "1");
+		Carts actual = cs.addBooksToCart(currentCart, "1", "1", "1");
 
 		Carts expected = currentCart;
 
@@ -89,8 +90,8 @@ public class CartsServiceTest {
 	}
 
 	@Test // Sad Path
-	void addMoreProductsToCart_NoSuchElementException_NegativeTest() { // It is working, but Exception handling needs to
-																		// be implemented in the BookController
+	void addMoreBooksToCart_NoSuchElementException_NegativeTest() { // It is working, but Exception handling needs to
+																	// be implemented in the BookController
 		List<BookToBuy> bookToBuy = new ArrayList<>();
 		Carts currentCart = new Carts(bookToBuy);
 		currentCart.setCartId(1);
@@ -100,9 +101,9 @@ public class CartsServiceTest {
 			cs.addBooksToCart(currentCart, "1", "1", "1");
 		});
 	}
-	
+
 	@Test // Happy Path
-	void deleteBookInTheCart_PositiveTest() throws BookNotFoundException  {
+	void deleteBookInTheCart_PositiveTest() throws BookNotFoundException {
 
 		List<BookToBuy> bookToBuy = new ArrayList<>();
 
@@ -131,18 +132,69 @@ public class CartsServiceTest {
 		while (iter.hasNext()) {
 			q1 = iter.next();
 			iter.remove();
-			bookToDelete = q1.getId();		
+			bookToDelete = q1.getId();
 		}
-	
+
 		currentCart.setBooksToBuy(currentBooksInTheCart);
-		
+
 		btbd.deleteById(bookToDelete);
-		
+
 		Mockito.verify(btbd, times(1)).deleteById(1);
 
 		Mockito.when(cd.saveAndFlush(currentCart)).thenReturn(currentCart);
-		
+
 		Carts actual = cs.delteteProductInCart(currentCart, "1", "2");
+
+		Carts expected = currentCart;
+
+		Assertions.assertEquals(expected, actual);
+	}
+
+	@Test // Happy Path
+	void deleteAllBookInTheCart_PositiveTest() throws BookNotFoundException {
+
+		List<BookToBuy> bookToBuy = new ArrayList<>();
+
+		Carts currentCart = new Carts(new Users());
+		currentCart = new Carts(bookToBuy);
+		currentCart.setCartId(1);
+
+		Mockito.when(cd.findById(currentCart.getCartId())).thenReturn(Optional.of(currentCart));
+
+		Genre g1 = new Genre(1, "Novel");
+		Book book1 = new Book("9783462015393", "The Catcher In The Rye",
+				"set around the 1950s and is narrated by a young man named Holden Caulfield.", "J.D. Salinger", g1, 100,
+				1951, "1st edition", "Little, Brown", "Paperback", false, 0.0, "new", 8.07, "imageURL");
+		book1.setBookId(1);
+		Genre g2 = new Genre(2, "Fantasy");
+		Book book2 = new Book("9783462015393", "The Fantasy Book",
+				"set around the 1950s and is narrated by a young man named Holden Caulfield.", "J.D. Salinger", g2, 100,
+				1951, "1st edition", "Little, Brown", "Paperback", false, 0.0, "new", 8.07, "imageURL");
+		book2.setBookId(2);
+		BookToBuy bookToBeBought = new BookToBuy(book1, 1);
+		bookToBeBought.setId(1);
+		BookToBuy bookToBeBought2 = new BookToBuy(book2, 1);
+		bookToBeBought.setId(2);
+		bookToBuy.add(bookToBeBought);
+		bookToBuy.add(bookToBeBought2);
+
+		List<BookToBuy> currentBooksInTheCart = currentCart.getBooksToBuy();
+
+		Iterator<BookToBuy> iter = currentBooksInTheCart.iterator();
+		BookToBuy q1 = null;
+		while (iter.hasNext()) {
+			q1 = iter.next();
+			iter.remove();
+			currentCart.setBooksToBuy(currentBooksInTheCart);
+		}
+
+		btbd.deleteAll();
+
+		Mockito.verify(btbd, times(1)).deleteAll();
+
+		Mockito.when(cd.saveAndFlush(currentCart)).thenReturn(currentCart);
+
+		Carts actual = cs.delteteAllProductInCart(currentCart, "1");
 
 		Carts expected = currentCart;
 
