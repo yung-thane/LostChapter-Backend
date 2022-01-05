@@ -64,8 +64,6 @@ public class Book {
 		super();
 	}
 
-<<<<<<< HEAD
-=======
 	public Book(String iSBN, String bookName, String synopsis, String author, Genre genre, int quantity, int year,
 			String edition, String publisher, String bindingType, boolean saleIsActive, double saleDiscountRate,
 			String condition, double bookPrice, String bookImage) {
@@ -87,7 +85,6 @@ public class Book {
 		this.bookImage = bookImage;
 	}
 	
->>>>>>> main
 	public int getBookId() {
 		return bookId;
 	}

@@ -1,8 +1,5 @@
 package com.revature.lostchapterbackend.usertests;
 
-<<<<<<< HEAD
-public class UserDaoTest {
-=======
 import javax.persistence.EntityManager;
 
 import org.junit.jupiter.api.Assertions;
@@ -241,6 +238,5 @@ public class UserDaoTest {
 		Assertions.assertEquals(null, sut.getUserByEmail(" "));
 	}
 	
->>>>>>> main
 
 }

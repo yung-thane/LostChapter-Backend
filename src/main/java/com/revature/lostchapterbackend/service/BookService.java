@@ -2,38 +2,33 @@ package com.revature.lostchapterbackend.service;
 
 import java.security.InvalidParameterException;
 import java.util.List;
-<<<<<<< HEAD
 
-=======
 import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
->>>>>>> main
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.lostchapterbackend.dao.BookDAO;
-<<<<<<< HEAD
+
 import com.revature.lostchapterbackend.model.Book;
-=======
+
 import com.revature.lostchapterbackend.dao.GenreDAO;
 import com.revature.lostchapterbackend.dto.AddBookDTO;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.Genre;
 
->>>>>>> main
+
 
 @Service
 public class BookService {
 
 	@Autowired
 	private BookDAO bd;
-<<<<<<< HEAD
-=======
-	
+
 	@Autowired
 	private GenreDAO gd;
->>>>>>> main
 
 	public List<Book> getAllBooks() {
 
@@ -56,23 +51,18 @@ public class BookService {
 		try {
 			int gId = Integer.parseInt(genreId);
 			return bd.getByGenreId(gId);
-<<<<<<< HEAD
-		}catch (NumberFormatException e) {
-			throw new InvalidParameterException("The genreId entered must be an int.");
-		}
-		
-		
-	}
-
-	public List<Book> getBooksByKeyword(String keyword) {
-		
-		return null;
-=======
 		} catch (NumberFormatException e) {
 			throw new InvalidParameterException("The genreId entered must be an int.");
 		}
 
+
 	}
+
+//	public List<Book> getBooksByKeyword(String keyword) {
+//
+//		return null;
+//	}
+
 
 	public List<Book> getBooksByKeyword(String keyword) {
 
@@ -187,8 +177,7 @@ public class BookService {
 		}
 		
 		return null;
-		
->>>>>>> main
+
 	}
 
 }
