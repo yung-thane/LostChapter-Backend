@@ -235,26 +235,8 @@ public class UserDaoTest {
 		
 		this.em.flush();
 		
-		Assertions.assertThrows(DataAccessException.class, () -> {
-			this.sut.getUserByEmail(" ");
-		});
-		
+		Assertions.assertEquals(null, sut.getUserByEmail(" "));
 	}
 	
-	@Test
-	@Transactional
-	
-	public void testgetUserByEmail_IncorrectEmail() {
-		
-		Users user = new Users("jane_doe", "pass12345", "Jane", "Doe", 23, "jDoe32@gmail.com", "04/23/1998", "232 Lake Sheen Ave", "customer");
-		this.em.persist(user);
-		
-		this.em.flush();
-		
-		Assertions.assertThrows(DataAccessException.class, () -> {
-			this.sut.getUserByEmail("wrongemail@yahoo.com");
-		});
-		
-	}
 
 }
