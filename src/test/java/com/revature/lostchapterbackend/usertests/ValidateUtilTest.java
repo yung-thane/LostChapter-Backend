@@ -150,6 +150,60 @@ public class ValidateUtilTest {
 	}
 	
 	@Test
+	public void testCreateUserUsernameAndFirstNameIsBlank_negative() throws NoSuchAlgorithmException, InvalidLoginException, InvalidParameterException {
+		SignUpDto createdUser = new SignUpDto(" ", "password1", " ", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			vu.verifySignUp(createdUser);
+		});
+	}
+	
+	@Test
+	public void testCreateUserUsernameAndLastNameIsBlank_negative() throws NoSuchAlgorithmException, InvalidLoginException, InvalidParameterException {
+		SignUpDto createdUser = new SignUpDto(" ", "password1", "John", " ", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			vu.verifySignUp(createdUser);
+		});
+	}
+	
+	@Test
+	public void testCreateUserUsernameAndEmailIsBlank_negative() throws NoSuchAlgorithmException, InvalidLoginException, InvalidParameterException {
+		SignUpDto createdUser = new SignUpDto(" ", "password1", "John", "Doe", 24, " ", "01/1/1997", "22nd Ave", "Customer");
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			vu.verifySignUp(createdUser);
+		});
+	}
+	
+	@Test
+	public void testCreateUserUsernameAndBirthdayIsBlank_negative() throws NoSuchAlgorithmException, InvalidLoginException, InvalidParameterException {
+		SignUpDto createdUser = new SignUpDto(" ", "password1", "John", "Doe", 24, "jdoe@gmail.com", " ", "22nd Ave", "Customer");
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			vu.verifySignUp(createdUser);
+		});
+	}
+	
+	@Test
+	public void testCreateUserUsernameAndAddressIsBlank_negative() throws NoSuchAlgorithmException, InvalidLoginException, InvalidParameterException {
+		SignUpDto createdUser = new SignUpDto(" ", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", " ", "Customer");
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			vu.verifySignUp(createdUser);
+		});
+	}
+	
+	@Test
+	public void testCreateUserUsernameAndRoleIsBlank_negative() throws NoSuchAlgorithmException, InvalidLoginException, InvalidParameterException {
+		SignUpDto createdUser = new SignUpDto(" ", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", " ");
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			vu.verifySignUp(createdUser);
+		});
+	}
+	
+	@Test
 	public void testCreateUserUsernamePasswordAndFirstNameIsBlank_negative() throws NoSuchAlgorithmException, InvalidLoginException, InvalidParameterException {
 		SignUpDto createdUser = new SignUpDto(" ", " ", " ", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
 		
@@ -269,6 +323,24 @@ public class ValidateUtilTest {
 	@Test
 	public void testCreateUserRoleIsNull_negative() throws NoSuchAlgorithmException, InvalidLoginException, InvalidParameterException {
 		SignUpDto createdUser = new SignUpDto("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", null);
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			vu.verifySignUp(createdUser);
+		});
+	}
+	
+	@Test
+	public void testCreateUserRoleUsernameIsNullAndEmailIsBlank_negative() throws NoSuchAlgorithmException, InvalidLoginException, InvalidParameterException {
+		SignUpDto createdUser = new SignUpDto(null, "password1", "John", "Doe", 24, " ", "01/1/1997", "22nd Ave", "Customer");
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			vu.verifySignUp(createdUser);
+		});
+	}
+	
+	@Test
+	public void testCreateUserRoleUsernameIsBlankAndEmailIsNull_negative() throws NoSuchAlgorithmException, InvalidLoginException, InvalidParameterException {
+		SignUpDto createdUser = new SignUpDto(" ", "password1", "John", "Doe", 24, null, "01/1/1997", "22nd Ave", "Customer");
 		
 		Assertions.assertThrows(InvalidParameterException.class, () -> {
 			vu.verifySignUp(createdUser);
@@ -756,7 +828,7 @@ public class ValidateUtilTest {
 	}
 	
 	@Test
-	public void testUpdateUserUsernameIsNull_negative() throws NoSuchAlgorithmException,  InvalidParameterException {
+	public void testUpdateUserUsernameIsNull_negative() throws NoSuchAlgorithmException, InvalidParameterException {
 		Users user1 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
 		user1.setId(1);
 		user1.setPassword(HashUtil.hashPassword("password1", "SHA-256"));
@@ -770,7 +842,7 @@ public class ValidateUtilTest {
 	}
 	
 	@Test
-	public void testUpdateUserPasswordIsNull_negative() throws NoSuchAlgorithmException,  InvalidParameterException {
+	public void testUpdateUserPasswordIsNull_negative() throws NoSuchAlgorithmException, InvalidParameterException {
 		Users user1 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
 		user1.setId(1);
 		user1.setPassword(HashUtil.hashPassword("password1", "SHA-256"));
@@ -784,7 +856,7 @@ public class ValidateUtilTest {
 	}
 	
 	@Test
-	public void testUpdateUserFirstNameIsNull_negative() throws NoSuchAlgorithmException,  InvalidParameterException {
+	public void testUpdateUserFirstNameIsNull_negative() throws NoSuchAlgorithmException, InvalidParameterException {
 		Users user1 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
 		user1.setId(1);
 		user1.setPassword(HashUtil.hashPassword("password1", "SHA-256"));
@@ -798,7 +870,7 @@ public class ValidateUtilTest {
 	}
 	
 	@Test
-	public void testUpdateUserLastNameIsNull_negative() throws NoSuchAlgorithmException,  InvalidParameterException {
+	public void testUpdateUserLastNameIsNull_negative() throws NoSuchAlgorithmException, InvalidParameterException {
 		Users user1 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
 		user1.setId(1);
 		user1.setPassword(HashUtil.hashPassword("password1", "SHA-256"));
@@ -812,7 +884,7 @@ public class ValidateUtilTest {
 	}
 	
 	@Test
-	public void testUpdateUserEmailIsNull_negative() throws NoSuchAlgorithmException,  InvalidParameterException {
+	public void testUpdateUserEmailIsNull_negative() throws NoSuchAlgorithmException, InvalidParameterException {
 		Users user1 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
 		user1.setId(1);
 		user1.setPassword(HashUtil.hashPassword("password1", "SHA-256"));
@@ -826,7 +898,7 @@ public class ValidateUtilTest {
 	}
 	
 	@Test
-	public void testUpdateUserBirthdayIsNull_negative() throws NoSuchAlgorithmException,  InvalidParameterException {
+	public void testUpdateUserBirthdayIsNull_negative() throws NoSuchAlgorithmException, InvalidParameterException {
 		Users user1 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
 		user1.setId(1);
 		user1.setPassword(HashUtil.hashPassword("password1", "SHA-256"));
@@ -840,7 +912,7 @@ public class ValidateUtilTest {
 	}
 	
 	@Test
-	public void testUpdateUserAddressIsNull_negative() throws NoSuchAlgorithmException,  InvalidParameterException {
+	public void testUpdateUserAddressIsNull_negative() throws NoSuchAlgorithmException, InvalidParameterException {
 		Users user1 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
 		user1.setId(1);
 		user1.setPassword(HashUtil.hashPassword("password1", "SHA-256"));
@@ -854,12 +926,40 @@ public class ValidateUtilTest {
 	}
 	
 	@Test
-	public void testUpdateUserRoleIsNull_negative() throws NoSuchAlgorithmException,  InvalidParameterException {
+	public void testUpdateUserRoleIsNull_negative() throws NoSuchAlgorithmException, InvalidParameterException {
 		Users user1 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
 		user1.setId(1);
 		user1.setPassword(HashUtil.hashPassword("password1", "SHA-256"));
 		
 		Users user2 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", null);
+		user2.setId(1);
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			vu.verifyUpdateUser(user2);
+		});
+	}
+	
+	@Test
+	public void testUpdateUserUsernameIsNullAndEmailIsBlank_negative() throws NoSuchAlgorithmException, InvalidParameterException {
+		Users user1 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
+		user1.setId(1);
+		user1.setPassword(HashUtil.hashPassword("password1", "SHA-256"));
+		
+		Users user2 = new Users(null, "password1", "John", "Doe", 24, " ", "01/1/1997", "22nd Ave", "Customer");
+		user2.setId(1);
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			vu.verifyUpdateUser(user2);
+		});
+	}
+	
+	@Test
+	public void testUpdateUserUsernameIsBlankAndEmailIsNull_negative() throws NoSuchAlgorithmException, InvalidParameterException {
+		Users user1 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
+		user1.setId(1);
+		user1.setPassword(HashUtil.hashPassword("password1", "SHA-256"));
+		
+		Users user2 = new Users(" ", "password1", "John", "Doe", 24, null, "01/1/1997", "22nd Ave", "Customer");
 		user2.setId(1);
 		
 		Assertions.assertThrows(InvalidParameterException.class, () -> {
