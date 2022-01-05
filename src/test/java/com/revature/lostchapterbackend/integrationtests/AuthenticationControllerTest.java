@@ -56,13 +56,8 @@ public class AuthenticationControllerTest {
         session.close();
     }
 
-    @Test
-<<<<<<< HEAD
-    @Transactional
-    public void testlogin() throws Exception {
-=======
+
     public void testLogin_positive() throws Exception {
->>>>>>> aed750f266d8c2ef96cfb0e1e3b64adbed13ccbc
 
 
 
@@ -77,10 +72,7 @@ public class AuthenticationControllerTest {
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
         Users expectedUser = new Users("test123","5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8","testfn",
-<<<<<<< HEAD
-=======
 
->>>>>>> aed750f266d8c2ef96cfb0e1e3b64adbed13ccbc
                 "testln",21,"test123@gmail.com","1990-12-09",
                 "address123","customer");
         expectedUser.setId(1);
