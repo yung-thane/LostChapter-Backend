@@ -18,6 +18,7 @@ import com.revature.lostchapterbackend.dao.BookDAO;
 import com.revature.lostchapterbackend.dao.BookToBuyDAO;
 import com.revature.lostchapterbackend.dao.CartsDAO;
 import com.revature.lostchapterbackend.exceptions.BookNotFoundException;
+import com.revature.lostchapterbackend.exceptions.OutOfStockException;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.BookToBuy;
 import com.revature.lostchapterbackend.model.Carts;
@@ -45,7 +46,7 @@ public class CartsServiceTest {
 	}
 
 	@Test // Happy Path
-	void addBooksToCart_PostiveTest() {
+	void addBooksToCart_PostiveTest() throws OutOfStockException {
 
 		List<BookToBuy> bookToBuy = new ArrayList<>();
 
@@ -86,6 +87,27 @@ public class CartsServiceTest {
 
 		Assertions.assertThrows(NoSuchElementException.class, () -> {
 			cs.addBooksToCart(null, "1", "1", "1");
+		});
+	}
+	
+	@Test // Sad Path
+	void addBooksToCart_OutOfStockException_NegativeTest() {
+		
+		Carts currentCart = new Carts();
+		currentCart.setCartId(1);
+		
+		Mockito.when(cd.findById(currentCart.getCartId())).thenReturn(Optional.of(currentCart));
+		
+		Genre g = new Genre(1, "Novel");
+		Book bookToAdd = new Book("9783462015393", "The Catcher In The Rye",
+				"set around the 1950s and is narrated by a young man named Holden Caulfield.", "J.D. Salinger", g, 0,
+				1951, "1st edition", "Little, Brown", "Paperback", false, 0.0, "new", 8.07, "imageURL");
+		bookToAdd.setBookId(1);
+		
+		Mockito.when(bd.findById(bookToAdd.getBookId())).thenReturn(Optional.of(bookToAdd));
+
+		Assertions.assertThrows(OutOfStockException.class, () -> {
+			cs.addBooksToCart(currentCart, "1", "1", "1");
 		});
 	}
 
@@ -149,7 +171,7 @@ public class CartsServiceTest {
 
 		Assertions.assertEquals(expected, actual);
 	}
-
+	
 	@Test // Happy Path
 	void deleteAllBookInTheCart_PositiveTest() throws BookNotFoundException {
 
