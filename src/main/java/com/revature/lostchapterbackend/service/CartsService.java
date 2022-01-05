@@ -5,10 +5,11 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
+import com.revature.lostchapterbackend.dao.BookToBuyDAO;
 import com.revature.lostchapterbackend.dao.CartsDAO;
-import com.revature.lostchapterbackend.dao.CartsDAOInterface;
 import com.revature.lostchapterbackend.exceptions.BookNotFoundException;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.BookToBuy;
@@ -21,16 +22,24 @@ public class CartsService {
 	private BookService bs;
 
 	@Autowired
-	private CartsDAO cd; //still using this, still trying to find a way to convert this ti JPA Repository
+	private CartsDAO cd; // using JPA Repository
 
 	@Autowired
-	private CartsDAOInterface cdi; //using JPA Repository
+	private BookToBuyDAO btbd;
+
+	public CartsService(BookService bs, CartsDAO cd, BookToBuyDAO btbd) {
+		// For mocking
+		// For Unit Testing of Carts Service
+		this.bs = bs;
+		this.cd = cd;
+		this.btbd = btbd;
+	}
 
 	public Carts getCartById(String id) {
-		
+
 		try {
 			int cartId = Integer.parseInt(id);
-			return cdi.findById(cartId).get();
+			return cd.findById(cartId).get();
 
 		} catch (NumberFormatException e) {
 			throw new InvalidParameterException("The Id entered must be an int.");
@@ -62,8 +71,9 @@ public class CartsService {
 				}
 			}
 		}
+		btbd.saveAndFlush(booksToBeBought);
+		return cd.saveAndFlush(currentCart);
 
-		return cd.insertToCart(currentCart, booksToBeBought);
 	}
 
 	private boolean checkBookInTheCart(List<BookToBuy> currentBooksInTheCart, Book b) {
@@ -82,22 +92,44 @@ public class CartsService {
 
 		List<BookToBuy> currentBooksInTheList = currentCart.getBooksToBuy();
 		int quantityToDelete = 0;
+		try {
+			Iterator<BookToBuy> iter = currentBooksInTheList.iterator();
+			System.out.println(currentBooksInTheList);
+			BookToBuy b1 = null;
+			while (iter.hasNext()) {
+				b1 = iter.next();
+				if (b1.getBooks().getBookId() == prodId) {
+					iter.remove();
+					quantityToDelete = b1.getId();
+				}
+			}
+			currentCart.setBooksToBuy(currentBooksInTheList);
 
+			btbd.deleteById(quantityToDelete);
+		} catch (EmptyResultDataAccessException e) {
+			throw new BookNotFoundException("Product not found on this cart");
+		}
+
+		return cd.saveAndFlush(currentCart);
+	}
+
+	public Carts delteteAllProductInCart(Carts currentCart, String cartId) {
+		currentCart = this.getCartById(cartId);
+
+		List<BookToBuy> currentBooksInTheList = currentCart.getBooksToBuy();
+		
 		Iterator<BookToBuy> iter = currentBooksInTheList.iterator();
+		System.out.println(currentBooksInTheList);
 		BookToBuy b1 = null;
 		while (iter.hasNext()) {
 			b1 = iter.next();
-			if (b1.getBooks().getBookId() == prodId) {
-				iter.remove();
-				quantityToDelete = b1.getId();
-				break;
-			} else {
-				throw new BookNotFoundException("Product not found on this cart");
-			}
+			iter.remove();
+			currentCart.setBooksToBuy(currentBooksInTheList);
 		}
-		currentCart.setBooksToBuy(currentBooksInTheList);
+		
+		btbd.deleteAll();
 
-		return cd.deleteAProductInTheCart(currentCart, quantityToDelete);
+		return cd.saveAndFlush(currentCart);
 	}
 
 }

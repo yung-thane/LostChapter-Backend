@@ -21,8 +21,11 @@ public class BookService {
 	@Autowired
 	private BookDAO bd;
 	
-	@Autowired
-	private GenreDAO gd;
+	public BookService(BookDAO bd) {
+		// For mocking
+		// For Unit Testing
+		this.bd = bd;
+	}
 
 	public List<Book> getAllBooks() {
 
