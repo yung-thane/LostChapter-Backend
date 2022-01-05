@@ -20,6 +20,7 @@ import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilde
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.BookToBuy;
@@ -198,50 +199,143 @@ public class CartIntegrationTests {
 	@Test
 	public void cart_test_attempting_to_add_to_cart_item_out_of_stock_negative() {
 		
-		Assertions.fail("Implement me");
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "2").param("quantityToBuy", "1");
+		
+		//this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(0))
+		
+		Assertions.fail("Waiting for checking for out of stock to be implemented");
 		
 	}
 	
 	@Test
-	public void cart_test_adding_item_to_cart_when_item_already_in_cart_positive() {
+	public void cart_test_adding_item_to_cart_when_item_already_in_cart_positive() throws Exception {
 		
-		Assertions.fail("Implement me");
 		
-	}
-	
-	@Test
-	public void cart_test_adding_item_of_multiple_quantity_positive() {
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "1");
+		Carts expectedCart = new Carts();
+
+		expectedCart.setUser(this.expectedUser);
+		expectedCart.setCartId(1);
 		
-		Assertions.fail("Implement me");
+		ArrayList<BookToBuy> bookToBuyList = new ArrayList<>();
+		this.positiveBookToBuy.setQuantityToBuy(2);
+		bookToBuyList.add(positiveBookToBuy);
 		
-	}
-	
-	@Test
-	public void cart_test_adding_item_of_negative_quantity_negative() {
+		expectedCart.setBooksToBuy(bookToBuyList);
 		
-		Assertions.fail("Implement me");
+		String expectedJson = mapper.writeValueAsString(expectedCart);
 		
-	}
-	
-	@Test
-	public void cart_test_get_all_items_in_cart_positive() {
+		this.mvc.perform(builder);
 		
-		Assertions.fail("Implement me");
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
 		
 	}
 	
 	@Test
-	public void cart_test_delete_book_in_cart_positive() {
+	public void cart_test_adding_item_of_multiple_quantity_positive() throws Exception {
 		
-		Assertions.fail("Implement me");
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "2");
+		Carts expectedCart = new Carts();
+		
+		expectedCart.setUser(this.expectedUser);
+		expectedCart.setCartId(1);
+		
+		ArrayList<BookToBuy> bookToBuyList = new ArrayList<>();
+		this.positiveBookToBuy.setQuantityToBuy(2);
+		bookToBuyList.add(positiveBookToBuy);
+		
+		expectedCart.setBooksToBuy(bookToBuyList);
+		
+		String expectedJson = mapper.writeValueAsString(expectedCart);
+		
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
 		
 	}
 	
 	@Test
-	public void cart_test_delete_book_not_in_cart_negative() {
+	public void cart_test_adding_item_of_negative_quantity_negative() throws Exception {
 		
-		Assertions.fail("Implement me");
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "-1");
+		
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("product id or quantity must be of type int!"));
 		
 	}
+	
+	@Test
+	public void cart_test_get_cart_by_id_positive() throws Exception {
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/users/1/cart");
+		
+		Carts expectedCart = new Carts();
+		expectedCart.setUser(this.expectedUser);
+		expectedCart.setCartId(1);
+		ArrayList<BookToBuy> bookToBuyList = new ArrayList<>();
+		expectedCart.setBooksToBuy(bookToBuyList);
+		
+		String expectedJson = mapper.writeValueAsString(expectedCart);
+		
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
+		
+		
+	}
+	
+	@Test
+	public void cart_test_get_cart_no_matching_id_negative() throws Exception {
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/users/4/cart");
+		
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("There is no cart with the id of 4"));
+		
+	}
+	
+	@Test
+	public void cart_test_delete_book_in_cart_positive() throws Exception {
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "1");
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200));
+		
+		Carts expectedCart = new Carts();
+		expectedCart.setUser(this.expectedUser);
+		expectedCart.setCartId(1);
+		ArrayList<BookToBuy> bookToBuyList = new ArrayList<>();
+		expectedCart.setBooksToBuy(bookToBuyList);
+		
+		String expectedJson = mapper.writeValueAsString(expectedCart);
+		
+		builder = MockMvcRequestBuilders.delete("/users/1/cart").param("bookId", "1");
+		
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
+		
+	}
+	
+	@Test
+	public void cart_test_delete_book_not_in_cart_negative() throws Exception {
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/users/1/cart").param("bookID", "1");
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("some error message"));
+		
+		
+	}
+	
+	@Test
+	public void cart_test_delete_all_items_in_cart_positive() throws Exception {
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "2");
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200));
+		
+		Carts expectedCart = new Carts();
+		expectedCart.setUser(this.expectedUser);
+		expectedCart.setCartId(1);
+		ArrayList<BookToBuy> bookToBuyList = new ArrayList<>();
+		expectedCart.setBooksToBuy(bookToBuyList);
+		
+		String expectedJson = mapper.writeValueAsString(expectedCart);
+		
+		builder = MockMvcRequestBuilders.delete("/users/1/cart");
+		
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
+		
+	}
+	
 	
 }
