@@ -50,7 +50,9 @@ public class CartsController {
 		} catch (NoResultException e) {
 			return ResponseEntity.status(404).body(e.getMessage());
 		} catch (OutOfStockException e) {
-			return ResponseEntity.status(404).body(e.getMessage());
+			return ResponseEntity.status(400).body(e.getMessage());
+		} catch (InvalidParameterException e) {
+			return ResponseEntity.status(400).body(e.getMessage());
 		}
 	}
 
