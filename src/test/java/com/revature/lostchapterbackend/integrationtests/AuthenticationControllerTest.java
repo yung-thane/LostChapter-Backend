@@ -40,33 +40,39 @@ public class AuthenticationControllerTest {
     @Autowired
     private ObjectMapper mapper;
 
+    private Users u;
+    private Users u1;
+
     @BeforeEach
     public void setup() {
         EntityManager em = emf.createEntityManager();
         Session session = em.unwrap(Session.class);
         Transaction tx = session.beginTransaction();
 
-        Users user1 = new Users("test123","5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8","testfn",
-                "testln",21,"test123@gmail.com","1990-12-09",
+        u = new Users("test123","5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8",
+                "testfn","testln",21,"test123@gmail.com","1990-12-09",
                 "address123","customer");
-        session.persist(user1);
+        session.persist(u);
+
+        u1 = new Users("testuser1",
+                "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
+                "testfirstname","testlastname",21,"test@list.com",
+                "1990-08-09","addresswest","Customer");
+        em.persist(u1);
 
         tx.commit();
 
         session.close();
     }
 
-
+    @Test
     public void testLogin_positive() throws Exception {
-
-
 
         LoginDto dto = new LoginDto("test123",
                 "password");
         String jsonToSend = mapper.writeValueAsString(dto);
         
         System.out.println(jsonToSend);
-
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/login")
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
@@ -117,7 +123,6 @@ public class AuthenticationControllerTest {
 
     @Test
     public void testCreateUser_positive() throws Exception {
-        EntityManager em = emf.createEntityManager();
 
         SignUpDto dto = new SignUpDto("testuser1",
                 "password123",
@@ -132,10 +137,7 @@ public class AuthenticationControllerTest {
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "testfirstname","testlastname",21,"test@list.com",
                 "1990-08-09","addresswest","Customer");
-        em.persist(expectedUser);
         expectedUser.setId(2);
-        Carts c = new Carts(expectedUser);
-        em.persist(c);
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
                 .is(201)).andExpect(MockMvcResultMatchers.content().string("Successfully Sign up"));
@@ -337,18 +339,12 @@ public class AuthenticationControllerTest {
     @Test
     public void testCheckLoginStatus_positive() throws Exception {
 
-        Users fakeUser = new Users("test123",
-                "5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8",
-                "testfn", "testln",21,"test123@gmail.com","1990-12-09",
-                "address123","Customer");
-        fakeUser.setId(3);
-
         MockHttpSession session = new MockHttpSession();
-        session.setAttribute("currentUser", fakeUser);
+        session.setAttribute("currentUser", u);
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/loginstatus").session(session);
 
-        String expectedJson = mapper.writeValueAsString(fakeUser);
+        String expectedJson = mapper.writeValueAsString(u);
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
                 .is(200)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
@@ -356,12 +352,6 @@ public class AuthenticationControllerTest {
 
     @Test
     public void testCheckLoginStatus_negative() throws Exception {
-
-        Users fakeUser = new Users("test123",
-                "5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8",
-                "testfn", "testln",21,"test123@gmail.com","1990-12-09",
-                "address123","Customer");
-        fakeUser.setId(3);
 
         MockHttpSession session = new MockHttpSession();
 
@@ -374,17 +364,6 @@ public class AuthenticationControllerTest {
 
     @Test
     public void testDeleteUserById_positive() throws Exception {
-        EntityManager em = emf.createEntityManager();
-        Session session = em.unwrap(Session.class);
-        Transaction tx = session.beginTransaction();
-
-        Users u = new Users("test1",
-                "5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8",
-                "testf", "testl",21,"test989@gmail.com","1990-12-09",
-                "addresstest","Customer");
-        em.persist(u);
-
-        tx.commit();
 
         MockHttpSession session1 = new MockHttpSession();
 
@@ -394,28 +373,17 @@ public class AuthenticationControllerTest {
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
                 .is(200)).andExpect(MockMvcResultMatchers.content()
-                .string("This user has been successfully deleted by id: "+ 2));
+                .string("This user has been successfully deleted by id: "+ 1));
     }
 
     @Test
     public void testUpdateUser_positive() throws Exception {
-        EntityManager em = emf.createEntityManager();
-        Session session = em.unwrap(Session.class);
-        Transaction tx = session.beginTransaction();
-
-        Users u = new Users("testuser1",
-                "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
-                "testfirstname","testlastname",21,"test@list.com",
-                "1990-08-09","addresswest","Customer");
-        em.persist(u);
-
-        tx.commit();
 
         MockHttpSession session1 = new MockHttpSession();
 
-        session1.setAttribute("currentUser", u);
+        session1.setAttribute("currentUser", u1);
 
-        String jsonToSend = mapper.writeValueAsString(u);
+        String jsonToSend = mapper.writeValueAsString(u1);
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/update").session(session1)
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
@@ -455,14 +423,6 @@ public class AuthenticationControllerTest {
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/update").session(session1)
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
-
-//        Users expectedUser = new Users("testuser1",
-//                "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
-//                "testfirstname","testlastname",21,"test@list.com",
-//                "1990-08-09","addresswest","Customer");
-//        expectedUser.setId(2);
-//
-//        String expectedJson = mapper.writeValueAsString(expectedUser);
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
                 .is(400)).andExpect(MockMvcResultMatchers.content()

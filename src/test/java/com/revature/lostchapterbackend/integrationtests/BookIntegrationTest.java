@@ -3,6 +3,7 @@ package com.revature.lostchapterbackend;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
+import com.revature.lostchapterbackend.model.Users;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.test.web.servlet.MockMvc;
@@ -40,8 +42,9 @@ public class BookIntegrationTest {
 	@Autowired
 	private ObjectMapper mapper; // translate JSON objects
 
-	public Genre g;
-	public Genre g2;
+	private Genre g;
+	private Genre g2;
+	private Users admin;
 
 	@BeforeEach
 	public void setUp() {
@@ -59,19 +62,24 @@ public class BookIntegrationTest {
 		// Arrange
 		Book actualBook = new Book("1234567879", "bookName", "synopsis",
 				"author", g, 1, 1996, "edition",
-				"publisher", "bindingType", true,
-				0.99, "condition", 10.99, "");
+				"publisher", true,
+				0.99, 10.99, "");
 		em.persist(actualBook);
 		Book actualBook2 = new Book("2122232425", "bookName2", "synopsis",
 				"author", g, 1, 1996, "edition",
-				"publisher", "bindingType", true,
-				0.99, "condition", 10.99, "");
+				"publisher", true,
+				0.99,10.99, "");
 		em.persist(actualBook2);
 		Book actualBook3 = new Book("91011121314", "bookName3", "synopsis",
 				"author", g2, 1, 1996, "edition", "publisher",
-				"bindingType", false, 0.99, "condition",
-				10.99, ""); //book id 1
+				false, 0.99, 10.99, "");
 		em.persist(actualBook3);
+
+		admin = new Users("test123",
+				"5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8",
+				"testfn","testln",21,"test123@gmail.com","1990-12-09",
+				"address123","Admin");
+		em.persist(admin);
 
 		tx.commit();
 		session.close();
@@ -88,18 +96,17 @@ public class BookIntegrationTest {
 		//fix genre here also
 		Book expectedBook = new Book("1234567879", "bookName", "synopsis",
 				"author", g, 1, 1996, "edition",
-				"publisher", "bindingType", true,
-				0.99, "condition", 10.99, "");
+				"publisher", true,
+				0.99, 10.99, "");
 		expectedBook.setBookId(1);
 		Book expectedBook2 = new Book("2122232425", "bookName2", "synopsis",
 				"author", g, 1, 1996, "edition",
-				"publisher", "bindingType", true,
-				0.99, "condition", 10.99, ""); //book id 1
+				"publisher", true,
+				0.99,10.99, ""); //book id 1
 		expectedBook2.setBookId(2);
 		Book expectedBook3 = new Book("91011121314", "bookName3", "synopsis",
 				"author", g2, 1, 1996, "edition", "publisher",
-				"bindingType", false, 0.99, "condition",
-				10.99, ""); //book id 1
+				false, 0.99, 10.99, ""); //book id 1
 		expectedBook3.setBookId(3);
 
 		List<Book> expectedBooks = new ArrayList<>();
@@ -123,8 +130,8 @@ public class BookIntegrationTest {
 		//fix genre here also
 		Book expectedBook = new Book("1234567879", "bookName", "synopsis",
 				"author", g, 1, 1996, "edition",
-				"publisher", "bindingType", true,
-				0.99, "condition", 10.99, "");
+				"publisher", true,
+				0.99, 10.99, "");
 		expectedBook.setBookId(1);
 
 		String expectedJson = mapper.writeValueAsString(expectedBook);
@@ -141,13 +148,13 @@ public class BookIntegrationTest {
 
 		Book expectedBook1 = new Book("1234567879", "bookName", "synopsis",
 				"author", g, 1, 1996, "edition",
-				"publisher", "bindingType", true,
-				0.99, "condition", 10.99, "");
+				"publisher", true,
+				0.99, 10.99, "");
 		expectedBook1.setBookId(1);
 		Book expectedBook2 = new Book("2122232425", "bookName2", "synopsis",
 				"author", g, 1, 1996, "edition",
-				"publisher", "bindingType", true,
-				0.99, "condition", 10.99, "");
+				"publisher", true,
+				0.99,10.99, "");
 		expectedBook2.setBookId(2);
 
 		List<Book> expectedBooks = new ArrayList<>();
@@ -167,18 +174,17 @@ public class BookIntegrationTest {
 
 		Book expectedBook1 = new Book("1234567879", "bookName", "synopsis",
 				"author", g, 1, 1996, "edition",
-				"publisher", "bindingType", true,
-				0.99, "condition", 10.99, "");
+				"publisher", true,
+				0.99, 10.99, "");
 		expectedBook1.setBookId(1);
 		Book expectedBook2 = new Book("2122232425", "bookName2", "synopsis",
 				"author", g, 1, 1996, "edition",
-				"publisher", "bindingType", true,
-				0.99, "condition", 10.99, "");
+				"publisher", true,
+				0.99,10.99, "");
 		expectedBook2.setBookId(2);
 		Book expectedBook3 = new Book("91011121314", "bookName3", "synopsis",
 				"author", g2, 1, 1996, "edition", "publisher",
-				"bindingType", false, 0.99, "condition",
-				10.99, "");
+				false, 0.99, 10.99, "");
 		expectedBook3.setBookId(3);
 
 		List<Book> expectedBooks = new ArrayList<>();
@@ -200,13 +206,13 @@ public class BookIntegrationTest {
 
 		Book expectedBook1 = new Book("1234567879", "bookName", "synopsis",
 				"author", g, 1, 1996, "edition",
-				"publisher", "bindingType", true,
-				0.99, "condition", 10.99, "");
+				"publisher", true,
+				0.99, 10.99, "");
 		expectedBook1.setBookId(1);
 		Book expectedBook2 = new Book("2122232425", "bookName2", "synopsis",
 				"author", g, 1, 1996, "edition",
-				"publisher", "bindingType", true,
-				0.99, "condition", 10.99, "");
+				"publisher", true,
+				0.99,10.99, "");
 		expectedBook2.setBookId(2);
 
 		List<Book> expectedBooks = new ArrayList<>();
@@ -225,17 +231,21 @@ public class BookIntegrationTest {
 
 		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
 				"author", 1, 1, 1996, "edition",
-				"publisher", "bindingType", true,
-				0.99, "condition", 10.99, "");
+				"publisher", true,
+				0.99, 10.99, "image");
 		String jsonToSend = mapper.writeValueAsString(actualBook);
 
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/books").content(jsonToSend)
-				.contentType(MediaType.APPLICATION_JSON);
+		MockHttpSession session1 = new MockHttpSession();
+
+		session1.setAttribute("currentUser", admin);
+
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/books").session(session1)
+				.content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
 		Book expectedBook1 = new Book("2425262728", "bookName4", "synopsis",
 				"author", g, 1, 1996, "edition",
-				"publisher", "bindingType", true,
-				0.99, "condition", 10.99, "");
+				"publisher", true,
+				0.99, 10.99, "image");
 		expectedBook1.setBookId(4);
 
 
@@ -246,5 +256,130 @@ public class BookIntegrationTest {
 
 	}
 
+	@Test
+	public void testAddBookISBNIsEmpty_negative() throws Exception {
+
+		AddBookDTO actualBook = new AddBookDTO("", "bookName4", "synopsis",
+				"author", 1, 1, 1996, "edition",
+				"publisher", true,
+				0.99, 10.99, "image");
+		String jsonToSend = mapper.writeValueAsString(actualBook);
+
+		MockHttpSession session1 = new MockHttpSession();
+
+		session1.setAttribute("currentUser", admin);
+
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/books").session(session1)
+				.content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400))
+				.andExpect(MockMvcResultMatchers.content().string("ISBN cannot be blank."));
+
+	}
+
+	@Test
+	public void testAddBookButBookNameIsEmpty_negative() throws Exception {
+
+		AddBookDTO actualBook = new AddBookDTO("2425262728", "", "synopsis",
+				"author", 1, 1, 1996, "edition",
+				"publisher", true,
+				0.99, 10.99, "image");
+		String jsonToSend = mapper.writeValueAsString(actualBook);
+
+		MockHttpSession session1 = new MockHttpSession();
+
+		session1.setAttribute("currentUser", admin);
+
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/books").session(session1)
+				.content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400))
+				.andExpect(MockMvcResultMatchers.content().string("Book name cannot be blank."));
+
+	}
+
+	@Test
+	public void testAddBookSynopsisIsEmpty_negative() throws Exception {
+
+		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "",
+				"author", 1, 1, 1996, "edition",
+				"publisher", true,
+				0.99, 10.99, "image");
+		String jsonToSend = mapper.writeValueAsString(actualBook);
+
+		MockHttpSession session1 = new MockHttpSession();
+
+		session1.setAttribute("currentUser", admin);
+
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/books").session(session1)
+				.content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400))
+				.andExpect(MockMvcResultMatchers.content().string("Synopsis cannot be blank."));
+
+	}
+
+	@Test
+	public void testAddBookAuthorIsEmpty_negative() throws Exception {
+
+		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+				"", 1, 1, 1996, "edition",
+				"publisher", true,
+				0.99, 10.99, "image");
+		String jsonToSend = mapper.writeValueAsString(actualBook);
+
+		MockHttpSession session1 = new MockHttpSession();
+
+		session1.setAttribute("currentUser", admin);
+
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/books").session(session1)
+				.content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400))
+				.andExpect(MockMvcResultMatchers.content().string("Author cannot be blank."));
+
+	}
+
+	@Test
+	public void testAddBookGenreIsZero_negative() throws Exception {
+
+		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+				"author", 0, 1, 1996, "edition",
+				"publisher", true,
+				0.99, 10.99, "image");
+		String jsonToSend = mapper.writeValueAsString(actualBook);
+
+		MockHttpSession session1 = new MockHttpSession();
+
+		session1.setAttribute("currentUser", admin);
+
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/books").session(session1)
+				.content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400))
+				.andExpect(MockMvcResultMatchers.content().string("Genre cannot be blank."));
+
+	}
+
+//	@Test
+//	public void testAddBookQuantityIsZero_negative() throws Exception {
+//
+//		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+//				"author", 1, 0, 1996, "edition",
+//				"publisher", true,
+//				0.99, 10.99, "image");
+//		String jsonToSend = mapper.writeValueAsString(actualBook);
+//
+//		MockHttpSession session1 = new MockHttpSession();
+//
+//		session1.setAttribute("currentUser", admin);
+//
+//		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/books").session(session1)
+//				.content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+//
+//		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400))
+//				.andExpect(MockMvcResultMatchers.content().string("Quantity cannot be blank."));
+//
+//	}
 
 }
