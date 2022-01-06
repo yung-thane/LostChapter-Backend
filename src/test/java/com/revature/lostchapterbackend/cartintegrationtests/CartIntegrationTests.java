@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.servlet.http.HttpServletRequest;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -13,6 +14,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.test.web.servlet.MockMvc;
@@ -22,6 +25,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.lostchapterbackend.dto.LoginDto;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.BookToBuy;
 import com.revature.lostchapterbackend.model.Carts;
@@ -104,7 +108,7 @@ public class CartIntegrationTests {
 		user.setEmail("test");
 		user.setBirthday("test");
 		user.setAddress("test");
-		user.setRole("test");
+		user.setRole("Customer");
 		
 		session.persist(user);
 		
@@ -128,7 +132,7 @@ public class CartIntegrationTests {
 		this.expectedUser.setEmail("test");
 		this.expectedUser.setBirthday("test");
 		this.expectedUser.setAddress("test");
-		this.expectedUser.setRole("test");
+		this.expectedUser.setRole("Customer");
 		
 		this.positiveBookToBuy = new BookToBuy();
 		this.negativeBookToBuy = new BookToBuy();
@@ -148,7 +152,10 @@ public class CartIntegrationTests {
 	@Test
 	public void cart_test_adding_item_to_cart_positive() throws Exception {
 		
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "1");
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "1").session(session);
 		Carts expectedCart = new Carts();
 
 		expectedCart.setUser(this.expectedUser);
@@ -170,8 +177,11 @@ public class CartIntegrationTests {
 	
 	@Test
 	public void cart_test_removing_item_from_cart_positive() throws Exception {
+
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
 		
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "1");
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "1").session(session);
 		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200));
 		
 		Carts expectedCart = new Carts();
@@ -180,7 +190,7 @@ public class CartIntegrationTests {
 		ArrayList<BookToBuy> bookToBuyList = new ArrayList<>();
 		expectedCart.setBooksToBuy(bookToBuyList);
 		
-		builder = MockMvcRequestBuilders.delete("/users/1/cart").param("bookId", "1");
+		builder = MockMvcRequestBuilders.delete("/users/1/cart").param("bookId", "1").session(session);
 		
 		String expectedJson = mapper.writeValueAsString(expectedCart);
 		
@@ -195,9 +205,11 @@ public class CartIntegrationTests {
 	@Test
 	public void cart_test_attempting_to_add_to_cart_item_out_of_stock_negative() throws Exception {
 		
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "2").param("quantityToBuy", "1");
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "2").param("quantityToBuy", "1").session(session);
 		
-		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(404)).andExpect(MockMvcResultMatchers.content().string("Currently Out of Stock..."));
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("Currently Out of Stock..."));
 		
 		
 	}
@@ -205,8 +217,10 @@ public class CartIntegrationTests {
 	@Test
 	public void cart_test_adding_item_to_cart_when_item_already_in_cart_positive() throws Exception {
 		
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
 		
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "1");
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "1").session(session);
 		Carts expectedCart = new Carts();
 
 		expectedCart.setUser(this.expectedUser);
@@ -229,7 +243,10 @@ public class CartIntegrationTests {
 	@Test
 	public void cart_test_adding_item_of_multiple_quantity_positive() throws Exception {
 		
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "2");
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "2").session(session);
 		Carts expectedCart = new Carts();
 		
 		expectedCart.setUser(this.expectedUser);
@@ -250,16 +267,22 @@ public class CartIntegrationTests {
 	@Test
 	public void cart_test_adding_item_of_negative_quantity_negative() throws Exception {
 		
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "-1");
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
 		
-		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("product id or quantity must be of type int!"));
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "-1").session(session);
+		
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("Quantity to Buy cannot be less than or equal to zero!"));
 		
 	}
 	
 	@Test
 	public void cart_test_get_cart_by_id_positive() throws Exception {
 		
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/users/1/cart");
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/users/1/cart").session(session);
 		
 		Carts expectedCart = new Carts();
 		expectedCart.setUser(this.expectedUser);
@@ -277,7 +300,10 @@ public class CartIntegrationTests {
 	@Test
 	public void cart_test_get_cart_no_matching_id_negative() throws Exception {
 		
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/users/4/cart");
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/users/4/cart").session(session);
 		
 		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(404)).andExpect(MockMvcResultMatchers.content().string("There is no cart with the id of 4"));
 		
@@ -286,7 +312,10 @@ public class CartIntegrationTests {
 	@Test
 	public void cart_test_delete_book_in_cart_positive() throws Exception {
 		
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "1");
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "1").session(session);
 		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200));
 		
 		Carts expectedCart = new Carts();
@@ -297,7 +326,7 @@ public class CartIntegrationTests {
 		
 		String expectedJson = mapper.writeValueAsString(expectedCart);
 		
-		builder = MockMvcRequestBuilders.delete("/users/1/cart").param("bookId", "1");
+		builder = MockMvcRequestBuilders.delete("/users/1/cart").param("bookId", "1").session(session);
 		
 		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
 		
@@ -306,7 +335,10 @@ public class CartIntegrationTests {
 	@Test
 	public void cart_test_delete_book_not_in_cart_negative() throws Exception {
 		
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/users/1/cart").param("bookID", "1");
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/users/1/cart").param("bookID", "1").session(session);
 		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200));
 		
 		
@@ -315,7 +347,10 @@ public class CartIntegrationTests {
 	@Test
 	public void cart_test_delete_all_items_in_cart_positive() throws Exception {
 		
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "2");
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "2").session(session);
 		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200));
 		
 		Carts expectedCart = new Carts();
@@ -326,7 +361,7 @@ public class CartIntegrationTests {
 		
 		String expectedJson = mapper.writeValueAsString(expectedCart);
 		
-		builder = MockMvcRequestBuilders.delete("/users/1/cart");
+		builder = MockMvcRequestBuilders.delete("/users/1/cart").session(session);
 		
 		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
 		
