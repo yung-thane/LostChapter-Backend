@@ -1,68 +1,34 @@
-package com.revature.lostchapterbackend.model;
+package com.revature.lostchapterbackend.dto;
 
 import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import com.revature.lostchapterbackend.model.Genre;
 
-@Entity
-public class Book {
+public class AddBookDTO {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int bookId;
-
-	@Column(nullable = false)
 	private String ISBN;
-
-	@Column(nullable = false)
 	private String bookName;
-
-	@Column(nullable = false, length = 800)
 	private String synopsis;
-
-	@Column(nullable = false)
 	private String author;
-
-	@ManyToOne
-	private Genre genre;
-
-	@Column(nullable = false)
+	private int genre;
 	private int quantity;
-
-	@Column(nullable = false)
 	private int year;
-
-	@Column(nullable = false)
 	private String edition;
-
-	@Column(nullable = false)
 	private String publisher;
-
-	@Column(nullable = false)
 	private boolean saleIsActive;
-
 	private double saleDiscountRate;
-
-	@Column(nullable = false)
 	private double bookPrice;
-
-	@Column(nullable = false)
 	private String bookImage;
 
-	public Book() {
+	public AddBookDTO() {
 		super();
 	}
 
-	public Book(String iSBN, String bookName, String synopsis, String author, Genre genre, int quantity, int year,
+	public AddBookDTO(String iSBN, String bookName, String synopsis, String author, int genre, int quantity, int year,
 			String edition, String publisher, boolean saleIsActive, double saleDiscountRate, double bookPrice,
 			String bookImage) {
 		super();
-		this.ISBN = iSBN;
+		ISBN = iSBN;
 		this.bookName = bookName;
 		this.synopsis = synopsis;
 		this.author = author;
@@ -71,20 +37,10 @@ public class Book {
 		this.year = year;
 		this.edition = edition;
 		this.publisher = publisher;
-
 		this.saleIsActive = saleIsActive;
 		this.saleDiscountRate = saleDiscountRate;
-
 		this.bookPrice = bookPrice;
 		this.bookImage = bookImage;
-	}
-
-	public int getBookId() {
-		return bookId;
-	}
-
-	public void setBookId(int bookId) {
-		this.bookId = bookId;
 	}
 
 	public String getISBN() {
@@ -119,11 +75,11 @@ public class Book {
 		this.author = author;
 	}
 
-	public Genre getGenre() {
+	public int getGenre() {
 		return genre;
 	}
 
-	public void setGenre(Genre genre) {
+	public void setGenre(int genre) {
 		this.genre = genre;
 	}
 
@@ -193,7 +149,7 @@ public class Book {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(ISBN, author, bookId, bookImage, bookName, bookPrice, edition, genre, publisher, quantity,
+		return Objects.hash(ISBN, author, bookImage, bookName, bookPrice, edition, genre, publisher, quantity,
 				saleDiscountRate, saleIsActive, synopsis, year);
 	}
 
@@ -205,11 +161,11 @@ public class Book {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Book other = (Book) obj;
-		return Objects.equals(ISBN, other.ISBN) && Objects.equals(author, other.author) && bookId == other.bookId
+		AddBookDTO other = (AddBookDTO) obj;
+		return Objects.equals(ISBN, other.ISBN) && Objects.equals(author, other.author)
 				&& Objects.equals(bookImage, other.bookImage) && Objects.equals(bookName, other.bookName)
 				&& Double.doubleToLongBits(bookPrice) == Double.doubleToLongBits(other.bookPrice)
-				&& Objects.equals(edition, other.edition) && Objects.equals(genre, other.genre)
+				&& Objects.equals(edition, other.edition) && genre == other.genre
 				&& Objects.equals(publisher, other.publisher) && quantity == other.quantity
 				&& Double.doubleToLongBits(saleDiscountRate) == Double.doubleToLongBits(other.saleDiscountRate)
 				&& saleIsActive == other.saleIsActive && Objects.equals(synopsis, other.synopsis) && year == other.year;
@@ -217,10 +173,12 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [bookId=" + bookId + ", ISBN=" + ISBN + ", bookName=" + bookName + ", synopsis=" + synopsis
-				+ ", author=" + author + ", genre=" + genre + ", quantity=" + quantity + ", year=" + year + ", edition="
-				+ edition + ", publisher=" + publisher + ", saleIsActive=" + saleIsActive + ", saleDiscountRate="
+		return "AddBookDTO [ISBN=" + ISBN + ", bookName=" + bookName + ", synopsis=" + synopsis + ", author=" + author
+				+ ", genre=" + genre + ", quantity=" + quantity + ", year=" + year + ", edition=" + edition
+				+ ", publisher=" + publisher + ", saleIsActive=" + saleIsActive + ", saleDiscountRate="
 				+ saleDiscountRate + ", bookPrice=" + bookPrice + ", bookImage=" + bookImage + "]";
 	}
+	
+	
 
 }
