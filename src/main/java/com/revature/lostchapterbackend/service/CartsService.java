@@ -61,7 +61,7 @@ public class CartsService {
 		int amountToBuy = Integer.parseInt(quantityToBuy);
 
 		if (amountToBuy <= 0) {
-			throw new InvalidParameterException("Quantity to Buy cannot be less than or zero!");
+			throw new InvalidParameterException("Quantity to Buy cannot be less than or equal to zero!");
 		}
 		BookToBuy booksToBeBought = new BookToBuy(b, amountToBuy);
 
