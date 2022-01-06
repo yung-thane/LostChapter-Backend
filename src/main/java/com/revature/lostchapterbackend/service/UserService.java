@@ -44,11 +44,11 @@ public class UserService {
 		if (dto.getAge() < 5 || dto.getAge() > 125) {
 			throw new InvalidParameterException("Age cannot be less than 5 or greater than 125");
 		}
-		
+
 		Set<String> validRole = new HashSet<>();
 		validRole.add("Customer");
 		validRole.add("Admin");
-		
+
 		if (!validRole.contains(dto.getRole())) {
 			throw new InvalidParameterException("You can only sign up as a Customer or an Admin");
 		}
@@ -68,12 +68,7 @@ public class UserService {
 
 		logger.info("UserService.getUser() invoked");
 
-		logger.info("username {}", username);
-
 		Users user = ud.getUser(username);
-		// Users user = ud.getUser(access, password);
-
-		logger.info("user in service layer {}", user);
 
 		try {
 

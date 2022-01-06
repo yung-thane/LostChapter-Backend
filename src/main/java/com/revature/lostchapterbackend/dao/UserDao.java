@@ -46,14 +46,7 @@ public class UserDao {
 
 		Users user = em.createQuery("FROM Users u WHERE u.username = :username AND u.password = :password", Users.class)
 				.setParameter("username", access).setParameter("password", password).getSingleResult();
-		logger.info("user {}", user);
-		// logger.info("User: " + user);
-//		if (user == null) {
-//			 user = em.createQuery("FROM Users u WHERE u.email = :email AND u.password = :password", Users.class)
-//					.setParameter("email", access)
-//					.setParameter("password", password)
-//					.getSingleResult();
-//		}
+
 		return user;
 	}
 

@@ -3,17 +3,11 @@ package com.revature.lostchapterbackend.service;
 import java.security.InvalidParameterException;
 import java.util.List;
 
-import java.util.Optional;
-
 import org.apache.commons.lang3.StringUtils;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.lostchapterbackend.dao.BookDAO;
-
-import com.revature.lostchapterbackend.model.Book;
-
 import com.revature.lostchapterbackend.dao.GenreDAO;
 import com.revature.lostchapterbackend.dto.AddBookDTO;
 import com.revature.lostchapterbackend.exceptions.BookNotFoundException;
@@ -22,20 +16,17 @@ import com.revature.lostchapterbackend.exceptions.ISBNAlreadyExists;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.Genre;
 
-
 @Service
 public class BookService {
 
 	@Autowired
 	private BookDAO bd;
 
-	
 	public BookService(BookDAO bd) {
 		// For mocking
 		// For Unit Testing
 		this.bd = bd;
 	}
-
 
 	@Autowired
 	private GenreDAO gd;
@@ -67,14 +58,7 @@ public class BookService {
 			throw new InvalidParameterException("The genreId entered must be an int.");
 		}
 
-
 	}
-
-//	public List<Book> getBooksByKeyword(String keyword) {
-//
-//		return null;
-//	}
-
 
 	public List<Book> getBooksByKeyword(String keyword) {
 
@@ -88,8 +72,9 @@ public class BookService {
 
 	public Book addBook(AddBookDTO dto) throws GenreNotFoundException, ISBNAlreadyExists {
 
-//		System.out.println(dto);
-
+		/*-
+		 * 	blank inputs
+		 */
 		boolean blankInputs = false;
 		StringBuilder blankInputStrings = new StringBuilder();
 
@@ -121,6 +106,7 @@ public class BookService {
 			}
 
 		}
+
 		if (StringUtils.isBlank(dto.getAuthor())) {
 			if (blankInputs) {
 				blankInputStrings.append(", author");
@@ -144,6 +130,7 @@ public class BookService {
 			}
 
 		}
+
 		String quantity = Integer.toString(dto.getQuantity());
 		if (StringUtils.isBlank(quantity)) {
 			if (blankInputs) {
@@ -169,6 +156,7 @@ public class BookService {
 			}
 
 		}
+
 		if (StringUtils.isBlank(dto.getEdition())) {
 			if (blankInputs) {
 				blankInputStrings.append(", edition");
@@ -180,6 +168,7 @@ public class BookService {
 			}
 
 		}
+
 		if (StringUtils.isBlank(dto.getPublisher())) {
 			if (blankInputs) {
 				blankInputStrings.append(", publisher");
@@ -216,6 +205,7 @@ public class BookService {
 			}
 
 		}
+
 		if (StringUtils.isBlank(dto.getBookImage())) {
 			if (blankInputs) {
 				blankInputStrings.append(", image");
@@ -232,11 +222,61 @@ public class BookService {
 			throw new InvalidParameterException(blankInputStrings.toString());
 		}
 
-
+		/*-
+		 *  check if isbn already exist
+		 */
 		if (bd.findByISBN(dto.getISBN()).isPresent()) {
 			throw new ISBNAlreadyExists("ISBN already used for another book");
 		}
 
+		/*-
+		 *  validate int inputs
+		 */
+		boolean lessThanZeroBoolean = false;
+		StringBuilder lessThanZeroString = new StringBuilder();
+
+		if (dto.getQuantity() <= 0) {
+			lessThanZeroString.append("Quantity");
+			lessThanZeroBoolean = true;
+		}
+
+		if (dto.getYear() <= 0) {
+			if (lessThanZeroBoolean) {
+				lessThanZeroString.append(", year");
+				lessThanZeroBoolean = true;
+			} else {
+				lessThanZeroString.append("Year");
+				lessThanZeroBoolean = true;
+			}
+
+		}
+
+		if (dto.getBookPrice() <= 0.0) {
+			if (lessThanZeroBoolean) {
+				lessThanZeroString.append(", book price");
+				lessThanZeroBoolean = true;
+			} else {
+				lessThanZeroString.append("Book price");
+				lessThanZeroBoolean = true;
+			}
+
+		}
+
+		if (lessThanZeroBoolean) {
+			lessThanZeroString.append(" cannot be less than or equal to 0.");
+			throw new InvalidParameterException(lessThanZeroString.toString());
+		}
+
+		/*-
+		 *  validate synopsis length
+		 */
+		if (dto.getSynopsis().length() > 800) {
+			throw new InvalidParameterException("Synopsis cannot be longer than 800 characters.");
+		}
+
+		/*-
+		 *  validate genre
+		 */
 		if (!gd.findById(dto.getGenre()).isPresent()) {
 			throw new GenreNotFoundException("Genre doesn't exist");
 		}
@@ -248,7 +288,6 @@ public class BookService {
 				dto.getSaleDiscountRate(), dto.getBookPrice(), dto.getBookImage());
 
 		return bd.saveAndFlush(addedBook);
-
 
 	}
 

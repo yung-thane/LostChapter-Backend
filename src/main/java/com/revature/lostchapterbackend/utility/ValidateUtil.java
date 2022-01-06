@@ -165,8 +165,8 @@ public class ValidateUtil {
 
 		logger.info("Check if email already exist");
 
-		logger.info("user.getEmail(): {}", user.getEmail());
-		logger.info("userService: {}", userService);
+		logger.debug("user.getEmail(): {}", user.getEmail());
+		logger.debug("userService: {}", userService);
 
 		String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
 
