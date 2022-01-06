@@ -65,11 +65,13 @@ public class BookIntegrationTest {
 				"publisher", true,
 				0.99, 10.99, "");
 		em.persist(actualBook);
+
 		Book actualBook2 = new Book("2122232425", "bookName2", "synopsis",
 				"author", g, 1, 1996, "edition",
 				"publisher", true,
 				0.99,10.99, "");
 		em.persist(actualBook2);
+		
 		Book actualBook3 = new Book("91011121314", "bookName3", "synopsis",
 				"author", g2, 1, 1996, "edition", "publisher",
 				false, 0.99, 10.99, "");

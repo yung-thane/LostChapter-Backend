@@ -661,6 +661,7 @@ public class AuthenticationControllerTest {
         Session session = em.unwrap(Session.class);
         Transaction tx = session.beginTransaction();
 
+
         Users u = new Users("testuser1",
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "testfirstname","testlastname",21,"test@list.com",
