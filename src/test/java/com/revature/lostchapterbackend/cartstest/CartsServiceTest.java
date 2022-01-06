@@ -119,7 +119,7 @@ public class CartsServiceTest {
 		currentCart.setCartId(1);
 		Mockito.when(cd.findById(currentCart.getCartId())).thenReturn(Optional.of(currentCart));
 
-		Assertions.assertThrows(NoSuchElementException.class, () -> {
+		Assertions.assertThrows(BookNotFoundException.class, () -> {
 			cs.addBooksToCart(currentCart, "1", "1", "1");
 		});
 	}
