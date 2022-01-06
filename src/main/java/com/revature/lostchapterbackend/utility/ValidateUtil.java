@@ -106,8 +106,35 @@ public class ValidateUtil {
 		if (!user.getEmail().matches(regex)) {
 			throw new InvalidParameterException("Invalid Email.");
 		}
-
+		
+		logger.info("Check if birthday is valid");
+		
+		logger.debug("user.getBirthday(): {}", user.getBirthday());
+		ValidateBirthday(user.getBirthday());
 	}
+	
+	public void ValidateBirthday(String birthday) throws InvalidParameterException {
+        int count = 1;
+        for(char ch : birthday.toCharArray()) {
+            
+            int num = (int) ch;
+            
+            if(count == 3 || count == 6) {
+                if(num != 47) {
+                    throw new InvalidParameterException("Birthday needs to have / in between numbers");
+                }
+            } else {
+                if(num < 48 || num > 57) {
+                    throw new InvalidParameterException("There should be 0-9 numbers inside Birthday");
+                }
+            }
+            
+            if(count > 10) {
+                throw new InvalidParameterException("There are to many numbers for birthday");
+            }
+            count++;
+        }
+    }
 
 	public void verifyUpdateUser(Users user) throws InvalidParameterException {
 		logger.info("ValidateUtil.createUser() invoked");
@@ -173,6 +200,11 @@ public class ValidateUtil {
 		if (!user.getEmail().matches(regex)) {
 			throw new InvalidParameterException("Invalid Email.");
 		}
+		
+		logger.info("Check if birthday is valid");
+		
+		logger.debug("user.getBirthday(): {}", user.getBirthday());
+		ValidateBirthday(user.getBirthday());
 
 	}
 

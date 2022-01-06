@@ -130,6 +130,10 @@ public class UserService {
 				|| updatedUserInfo.getAddress().trim().equals("") || updatedUserInfo.getRole().trim().equals("")) {
 			throw new InvalidParameterException("Do not leave any information blank");
 		}
+		
+		if (updatedUserInfo.getUsername().length() > 255 || updatedUserInfo.getFirstName().length() > 255 || updatedUserInfo.getLastName().length() > 255) {
+			throw new InvalidParameterException("Character lengths shouldn't extend over 255 characters");
+		}
 
 		if (updatedUserInfo.getAge() < 5 || updatedUserInfo.getAge() > 125) {
 			throw new InvalidParameterException("Age cannot be less than 5 or greater than 125");
