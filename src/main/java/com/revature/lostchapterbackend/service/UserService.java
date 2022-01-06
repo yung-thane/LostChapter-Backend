@@ -30,7 +30,7 @@ public class UserService {
 	public UserService(UserDao ud) {
 		this.ud = ud;
 	}
-	
+
 	public Users createUser(SignUpDto dto)
 			throws InvalidLoginException, InvalidParameterException, NoSuchAlgorithmException {
 
@@ -68,8 +68,12 @@ public class UserService {
 
 		logger.info("UserService.getUser() invoked");
 
+		logger.info("username {}", username);
+
 		Users user = ud.getUser(username);
 		// Users user = ud.getUser(access, password);
+
+		logger.info("user in service layer {}", user);
 
 		try {
 
@@ -108,11 +112,11 @@ public class UserService {
 
 	public Users getUserByEmail(String email) throws InvalidParameterException {
 		logger.info("UserService.getUserByEmail() invoked");
-		
-		if(email == null) {
+
+		if (email == null) {
 			throw new InvalidParameterException("Email is Null");
 		}
-		
+
 		Users users = this.ud.getUserByEmail(email);
 
 		return users;
@@ -145,10 +149,10 @@ public class UserService {
 	public Users getUserByUsername(String username) throws InvalidParameterException {
 		logger.info("UserService.getUserByUsername() invoked");
 
-		if(username == null) {
+		if (username == null) {
 			throw new InvalidParameterException("username is Null");
 		}
-		
+
 		Users users = this.ud.getUser(username);
 
 		return users;

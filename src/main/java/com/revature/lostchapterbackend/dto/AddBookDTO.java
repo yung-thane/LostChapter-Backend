@@ -15,10 +15,8 @@ public class AddBookDTO {
 	private int year;
 	private String edition;
 	private String publisher;
-	private String bindingType;
 	private boolean saleIsActive;
 	private double saleDiscountRate;
-	private String condition;
 	private double bookPrice;
 	private String bookImage;
 
@@ -26,11 +24,11 @@ public class AddBookDTO {
 		super();
 	}
 
-	public AddBookDTO(String ISBN, String bookName, String synopsis, String author, int genre, int quantity,
-			int year, String edition, String publisher, String bindingType, boolean saleIsActive,
-			double saleDiscountRate, String condition, double bookPrice, String bookImage) {
+	public AddBookDTO(String iSBN, String bookName, String synopsis, String author, int genre, int quantity, int year,
+			String edition, String publisher, boolean saleIsActive, double saleDiscountRate, double bookPrice,
+			String bookImage) {
 		super();
-		this.ISBN = ISBN;
+		ISBN = iSBN;
 		this.bookName = bookName;
 		this.synopsis = synopsis;
 		this.author = author;
@@ -39,10 +37,8 @@ public class AddBookDTO {
 		this.year = year;
 		this.edition = edition;
 		this.publisher = publisher;
-		this.bindingType = bindingType;
 		this.saleIsActive = saleIsActive;
 		this.saleDiscountRate = saleDiscountRate;
-		this.condition = condition;
 		this.bookPrice = bookPrice;
 		this.bookImage = bookImage;
 	}
@@ -51,8 +47,8 @@ public class AddBookDTO {
 		return ISBN;
 	}
 
-	public void setISBN(String ISBN) {
-		this.ISBN = ISBN;
+	public void setISBN(String iSBN) {
+		ISBN = iSBN;
 	}
 
 	public String getBookName() {
@@ -119,14 +115,6 @@ public class AddBookDTO {
 		this.publisher = publisher;
 	}
 
-	public String getBindingType() {
-		return bindingType;
-	}
-
-	public void setBindingType(String bindingType) {
-		this.bindingType = bindingType;
-	}
-
 	public boolean isSaleIsActive() {
 		return saleIsActive;
 	}
@@ -143,14 +131,6 @@ public class AddBookDTO {
 		this.saleDiscountRate = saleDiscountRate;
 	}
 
-	public String getCondition() {
-		return condition;
-	}
-
-	public void setCondition(String condition) {
-		this.condition = condition;
-	}
-
 	public double getBookPrice() {
 		return bookPrice;
 	}
@@ -158,7 +138,6 @@ public class AddBookDTO {
 	public void setBookPrice(double bookPrice) {
 		this.bookPrice = bookPrice;
 	}
-	
 
 	public String getBookImage() {
 		return bookImage;
@@ -170,8 +149,8 @@ public class AddBookDTO {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(ISBN, author, bindingType, bookImage, bookName, bookPrice, condition, edition, genre,
-				publisher, quantity, saleDiscountRate, saleIsActive, synopsis, year);
+		return Objects.hash(ISBN, author, bookImage, bookName, bookPrice, edition, genre, publisher, quantity,
+				saleDiscountRate, saleIsActive, synopsis, year);
 	}
 
 	@Override
@@ -184,12 +163,10 @@ public class AddBookDTO {
 			return false;
 		AddBookDTO other = (AddBookDTO) obj;
 		return Objects.equals(ISBN, other.ISBN) && Objects.equals(author, other.author)
-				&& Objects.equals(bindingType, other.bindingType) && Objects.equals(bookImage, other.bookImage)
-				&& Objects.equals(bookName, other.bookName)
+				&& Objects.equals(bookImage, other.bookImage) && Objects.equals(bookName, other.bookName)
 				&& Double.doubleToLongBits(bookPrice) == Double.doubleToLongBits(other.bookPrice)
-				&& Objects.equals(condition, other.condition) && Objects.equals(edition, other.edition)
-				&& Objects.equals(genre, other.genre) && Objects.equals(publisher, other.publisher)
-				&& Objects.equals(quantity, other.quantity)
+				&& Objects.equals(edition, other.edition) && genre == other.genre
+				&& Objects.equals(publisher, other.publisher) && quantity == other.quantity
 				&& Double.doubleToLongBits(saleDiscountRate) == Double.doubleToLongBits(other.saleDiscountRate)
 				&& saleIsActive == other.saleIsActive && Objects.equals(synopsis, other.synopsis) && year == other.year;
 	}
@@ -198,9 +175,10 @@ public class AddBookDTO {
 	public String toString() {
 		return "AddBookDTO [ISBN=" + ISBN + ", bookName=" + bookName + ", synopsis=" + synopsis + ", author=" + author
 				+ ", genre=" + genre + ", quantity=" + quantity + ", year=" + year + ", edition=" + edition
-				+ ", publisher=" + publisher + ", bindingType=" + bindingType + ", saleIsActive=" + saleIsActive
-				+ ", saleDiscountRate=" + saleDiscountRate + ", condition=" + condition + ", bookPrice=" + bookPrice
-				+ ", bookImage=" + bookImage + "]";
+				+ ", publisher=" + publisher + ", saleIsActive=" + saleIsActive + ", saleDiscountRate="
+				+ saleDiscountRate + ", bookPrice=" + bookPrice + ", bookImage=" + bookImage + "]";
 	}
+	
+	
 
 }

@@ -32,7 +32,7 @@ build/
 ### VS Code ###
 .vscode/
 
-# Eclipse bs
+# eclipse bs
 *.pydevproject
 .project
 .metadata

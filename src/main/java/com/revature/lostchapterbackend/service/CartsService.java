@@ -48,13 +48,15 @@ public class CartsService {
 		}
 	}
 
-	public Carts addBooksToCart(Carts currentCart, String userId, String bookId, String quantityToBuy) throws OutOfStockException {
+
+	public Carts addBooksToCart(Carts currentCart, String userId, String bookId, String quantityToBuy) throws OutOfStockException, BookNotFoundException {
+
 
 		currentCart = this.getCartById(userId); // checking if carts exist
 
 		Book b = bs.getBookById(bookId);
 		
-		if (b.getQuantity() == 0) {
+		if (b.getQuantity() <= 0) {
 			throw new OutOfStockException("Currently Out of Stock...");
 		}
 
