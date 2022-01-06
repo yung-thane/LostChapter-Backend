@@ -112,7 +112,7 @@ public class CartsServiceTest {
 	}
 
 	@Test // Sad Path
-	void addMoreBooksToCart_NoSuchElementException_NegativeTest() { // It is working, but Exception handling needs to
+	void addMoreBooksToCart_BookNotFoundException_NegativeTest() { // It is working, but Exception handling needs to
 																	// be implemented in the BookController
 		List<BookToBuy> bookToBuy = new ArrayList<>();
 		Carts currentCart = new Carts(bookToBuy);

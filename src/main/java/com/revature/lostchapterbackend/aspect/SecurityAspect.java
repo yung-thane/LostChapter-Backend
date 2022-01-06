@@ -49,7 +49,7 @@ public class SecurityAspect {
 			return ResponseEntity.status(401).body("You are not currently logged in");
 		}
 
-		if (!currentlyLoggedInUser.getRole().equals("customer")) {
+		if (!currentlyLoggedInUser.getRole().equals("Customer")) {
 			return ResponseEntity.status(401)
 					.body("You are logged in, but only customers are allowed to access this endpoint");
 		}
@@ -70,7 +70,7 @@ public class SecurityAspect {
 			return ResponseEntity.status(401).body("You are not currently logged in");
 		}
 
-		if (!currentlyLoggedInUser.getRole().equals("admin")) {
+		if (!currentlyLoggedInUser.getRole().equals("Admin")) {
 			return ResponseEntity.status(401)
 					.body("You are logged in, but only admins are allowed to access this endpoint");
 		}
@@ -91,7 +91,7 @@ public class SecurityAspect {
 			return ResponseEntity.status(401).body("You are not currently logged in");
 		}
 
-		if (!currentlyLoggedInUser.getRole().equals("admin") && (!currentlyLoggedInUser.getRole().equals("customer"))) {
+		if (!currentlyLoggedInUser.getRole().equals("Admin") && (!currentlyLoggedInUser.getRole().equals("Customer"))) {
 			return ResponseEntity.status(401)
 					.body("You are logged in, but only admins and customers are allowed to access this endpoint");
 		}
