@@ -84,7 +84,7 @@ public class ValidateUtil {
 		Users databaseUserEmail = userService.getUserByEmail(user.getEmail());
 
 		Users databaseUserUsername = userService.getUserByUsername(user.getUsername());
-
+		
 		if (databaseUserEmail != null) {
 			if (StringUtils.equalsAnyIgnoreCase(databaseUserEmail.getEmail().trim(), user.getEmail().trim())) {
 
