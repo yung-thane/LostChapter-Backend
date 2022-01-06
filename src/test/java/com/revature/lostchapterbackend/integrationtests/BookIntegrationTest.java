@@ -1,4 +1,4 @@
-package com.revature.lostchapterbackend;
+package com.revature.lostchapterbackend.integrationtests;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -71,7 +71,7 @@ public class BookIntegrationTest {
 				"publisher", true,
 				0.99,10.99, "");
 		em.persist(actualBook2);
-		
+
 		Book actualBook3 = new Book("91011121314", "bookName3", "synopsis",
 				"author", g2, 1, 1996, "edition", "publisher",
 				false, 0.99, 10.99, "");
