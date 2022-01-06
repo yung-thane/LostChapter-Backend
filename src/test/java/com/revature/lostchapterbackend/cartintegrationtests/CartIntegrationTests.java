@@ -201,7 +201,7 @@ public class CartIntegrationTests {
 		
 		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "2").param("quantityToBuy", "1");
 		
-		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string(""));
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(404)).andExpect(MockMvcResultMatchers.content().string("Currently Out of Stock..."));
 		
 		
 	}
@@ -283,7 +283,7 @@ public class CartIntegrationTests {
 		
 		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/users/4/cart");
 		
-		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("There is no cart with the id of 4"));
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(404)).andExpect(MockMvcResultMatchers.content().string("There is no cart with the id of 4"));
 		
 	}
 	
@@ -311,7 +311,7 @@ public class CartIntegrationTests {
 	public void cart_test_delete_book_not_in_cart_negative() throws Exception {
 		
 		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/users/1/cart").param("bookID", "1");
-		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("some error message"));
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200));
 		
 		
 	}
