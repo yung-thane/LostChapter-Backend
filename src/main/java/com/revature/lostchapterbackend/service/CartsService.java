@@ -49,7 +49,7 @@ public class CartsService {
 	}
 
 
-	public Carts addBooksToCart(Carts currentCart, String userId, String bookId, String quantityToBuy) throws OutOfStockException {
+	public Carts addBooksToCart(Carts currentCart, String userId, String bookId, String quantityToBuy) throws OutOfStockException, BookNotFoundException {
 
 
 		currentCart = this.getCartById(userId); // checking if carts exist
