@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.revature.lostchapterbackend.annotation.Admin;
+import com.revature.lostchapterbackend.annotation.AuthorizedUser;
 import com.revature.lostchapterbackend.dto.AddBookDTO;
 import com.revature.lostchapterbackend.exceptions.BookNotFoundException;
 import com.revature.lostchapterbackend.exceptions.GenreNotFoundException;
@@ -66,6 +68,7 @@ public class BookController {
 
 	}
 
+	@Admin
 	@PostMapping(path = "/books")
 	public ResponseEntity<Object> addNewBook(@RequestBody AddBookDTO dto) {
 		try {

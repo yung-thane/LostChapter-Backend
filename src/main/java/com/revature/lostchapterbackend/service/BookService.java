@@ -34,7 +34,7 @@ public class BookService {
 	public Book getBookById(String id) throws BookNotFoundException {
 		try {
 			int bookId = Integer.parseInt(id);
-			if 	 (!bd.findById(bookId).isPresent()) {
+			if (!bd.findById(bookId).isPresent()) {
 				throw new BookNotFoundException("Book doesn't exist");
 			}
 			return bd.findById(bookId).get();
@@ -64,7 +64,7 @@ public class BookService {
 
 		return bd.findBysaleIsActiveTrue();
 	}
-	
+
 	public Book addBook(AddBookDTO dto) throws GenreNotFoundException, ISBNAlreadyExists {
 
 //		System.out.println(dto);
@@ -93,37 +93,36 @@ public class BookService {
 			if (blankInputs) {
 				blankInputStrings.append(", synopsis");
 				blankInputs = true;
-			}else {
+			} else {
 				blankInputStrings.append("Synopsis");
 				blankInputs = true;
 
 			}
 
-		} 
+		}
 		if (StringUtils.isBlank(dto.getAuthor())) {
 			if (blankInputs) {
 				blankInputStrings.append(", author");
 				blankInputs = true;
-			}else {
+			} else {
 				blankInputStrings.append("Author");
 				blankInputs = true;
 
 			}
 
-		} 
-	//	String genre = Integer.toString();
+		}
+		// String genre = Integer.toString();
 		if (dto.getGenre() == 0) {
 			if (blankInputs) {
 				blankInputStrings.append(", genre");
 				blankInputs = true;
-			}else {
+			} else {
 				blankInputStrings.append("Genre");
 				blankInputs = true;
 
 			}
-			
 
-		} 
+		}
 		String quantity = Integer.toString(dto.getQuantity());
 		if (StringUtils.isBlank(quantity)) {
 			if (blankInputs) {
@@ -142,118 +141,113 @@ public class BookService {
 			if (blankInputs) {
 				blankInputStrings.append(", year");
 				blankInputs = true;
-			}else {
+			} else {
 				blankInputStrings.append("Year");
 				blankInputs = true;
 
 			}
 
-		} 
+		}
 		if (StringUtils.isBlank(dto.getEdition())) {
 			if (blankInputs) {
 				blankInputStrings.append(", edition");
 				blankInputs = true;
-			}else {
+			} else {
 				blankInputStrings.append("Edition");
 				blankInputs = true;
 
 			}
 
-		} 
+		}
 		if (StringUtils.isBlank(dto.getPublisher())) {
 			if (blankInputs) {
 				blankInputStrings.append(", publisher");
 				blankInputs = true;
-			}else {
+			} else {
 				blankInputStrings.append("Publisher");
 				blankInputs = true;
 
 			}
 
-		} 
+		}
 		if (StringUtils.isBlank(dto.getBindingType())) {
 			if (blankInputs) {
 				blankInputStrings.append(", binding type");
 				blankInputs = true;
-			}else {
+			} else {
 				blankInputStrings.append("Binding type");
 				blankInputs = true;
 
 			}
 
-		} 
+		}
 
 		String sale = Boolean.toString(dto.isSaleIsActive());
 		if (StringUtils.isBlank(sale)) {
 			if (blankInputs) {
 				blankInputStrings.append(", sale");
 				blankInputs = true;
-			}else {
+			} else {
 				blankInputStrings.append("Sale");
 				blankInputs = true;
 
 			}
 
-		} 
+		}
 		if (StringUtils.isBlank(dto.getCondition())) {
 			if (blankInputs) {
 				blankInputStrings.append(", condition");
 				blankInputs = true;
-			}else {
+			} else {
 				blankInputStrings.append("Condition");
 				blankInputs = true;
 			}
 
-		} 
+		}
 
 		String price = Double.toString(dto.getBookPrice());
 		if (StringUtils.isBlank(price)) {
 			if (blankInputs) {
 				blankInputStrings.append(", price");
 				blankInputs = true;
-			}else {
+			} else {
 				blankInputStrings.append("Price");
 				blankInputs = true;
 			}
 
-		} 
+		}
 		if (StringUtils.isBlank(dto.getBookImage())) {
 			if (blankInputs) {
 				blankInputStrings.append(", image");
 				blankInputs = true;
-			}else {
+			} else {
 				blankInputStrings.append("Image");
 				blankInputs = true;
 			}
 
-		} 
+		}
 
 		if (blankInputs) {
 			blankInputStrings.append(" cannot be blank.");
 			throw new InvalidParameterException(blankInputStrings.toString());
 		}
-		
+
 		if (bd.findByISBN(dto.getISBN()).isPresent()) {
 			throw new ISBNAlreadyExists("ISBN already used for another book");
 		}
-		
 
-			
-		if 	 (!gd.findById(dto.getGenre()).isPresent()) {
+		if (!gd.findById(dto.getGenre()).isPresent()) {
 			throw new GenreNotFoundException("Genre doesn't exist");
 		}
-		
-		Genre getGenre = gd.findById(dto.getGenre()).get();
-		
-			Book addedBook = new Book(dto.getISBN(), dto.getBookName(), dto.getSynopsis(), dto.getAuthor(), getGenre,
-					dto.getQuantity(), dto.getYear(), dto.getEdition(), dto.getPublisher(), dto.getBindingType(),
-					dto.isSaleIsActive(), dto.getSaleDiscountRate(), dto.getCondition(), dto.getBookPrice(),
-					dto.getBookImage());
-			
-			
-			return bd.saveAndFlush(addedBook);
 
-		
+		Genre getGenre = gd.findById(dto.getGenre()).get();
+
+		Book addedBook = new Book(dto.getISBN(), dto.getBookName(), dto.getSynopsis(), dto.getAuthor(), getGenre,
+				dto.getQuantity(), dto.getYear(), dto.getEdition(), dto.getPublisher(), dto.getBindingType(),
+				dto.isSaleIsActive(), dto.getSaleDiscountRate(), dto.getCondition(), dto.getBookPrice(),
+				dto.getBookImage());
+
+		return bd.saveAndFlush(addedBook);
 
 	}
 
