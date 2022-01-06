@@ -10062,3 +10062,509 @@ org.springframework.dao.EmptyResultDataAccessException: No class com.revature.lo
 05 Jan 2022 - 15:22:21.825 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 05 Jan 2022 - 15:22:21.831 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
 05 Jan 2022 - 15:22:21.838 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.
+06 Jan 2022 - 09:27:04.821 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.revature.lostchapterbackend.cartintegrationtests.CartIntegrationTests], using SpringBootContextLoader
+06 Jan 2022 - 09:27:04.830 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.revature.lostchapterbackend.cartintegrationtests.CartIntegrationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+06 Jan 2022 - 09:27:04.832 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revature.lostchapterbackend.cartintegrationtests.CartIntegrationTests]: CartIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+06 Jan 2022 - 09:27:05.015 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revature.lostchapterbackend.LostChapterBackendApplication for test class com.revature.lostchapterbackend.cartintegrationtests.CartIntegrationTests
+06 Jan 2022 - 09:27:05.163 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+06 Jan 2022 - 09:27:05.194 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3f2ef586, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@751d3241, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@76c7beb3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@64337702, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2cf92cc7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@30ea8c23, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7b139eab, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4e76dac, org.springframework.test.context.event.EventPublishingTestExecutionListener@611df6e3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5f2f577, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6273c5a4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5d465e4b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@53e211ee, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@41a90fa8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3d8bbcdc]
+06 Jan 2022 - 09:27:05.761 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 4156 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:27:05.762 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:27:07.355 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:27:07.456 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:27:09.181 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06 Jan 2022 - 09:27:09.474 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06 Jan 2022 - 09:27:09.578 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:27:09.679 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+06 Jan 2022 - 09:27:09.968 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+06 Jan 2022 - 09:27:10.320 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:27:11.233 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:27:11.241 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:15.349 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:27:19.731 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:27:19.732 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:27:19.770 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:27:19.824 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 92 ms
+06 Jan 2022 - 09:27:19.915 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 14.626 seconds (JVM running for 16.444)
+06 Jan 2022 - 09:27:20.022 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:20.022 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:27:20.050 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06 Jan 2022 - 09:27:20.058 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06 Jan 2022 - 09:27:20.137 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 4156 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:27:20.137 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:27:20.488 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:27:20.519 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:27:21.132 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+06 Jan 2022 - 09:27:21.136 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+06 Jan 2022 - 09:27:21.159 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:27:21.204 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:27:21.344 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:27:21.349 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:23.488 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:27:27.190 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:27:27.190 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:27:27.217 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:27:27.262 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 72 ms
+06 Jan 2022 - 09:27:27.304 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 7.24 seconds (JVM running for 23.833)
+06 Jan 2022 - 09:27:27.812 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:27.812 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:27:27.817 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+06 Jan 2022 - 09:27:27.818 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+06 Jan 2022 - 09:27:27.854 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 4156 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:27:27.855 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:27:28.125 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:27:28.180 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:27:28.679 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+06 Jan 2022 - 09:27:28.680 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+06 Jan 2022 - 09:27:28.696 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:27:28.703 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:27:28.781 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:27:28.782 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:30.993 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:27:34.631 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:27:34.632 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:27:34.649 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:27:34.678 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 46 ms
+06 Jan 2022 - 09:27:34.707 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.887 seconds (JVM running for 31.237)
+06 Jan 2022 - 09:27:34.742 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:34.742 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:27:34.746 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+06 Jan 2022 - 09:27:34.747 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+06 Jan 2022 - 09:27:34.785 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 4156 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:27:34.786 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:27:35.037 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:27:35.056 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:27:35.691 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+06 Jan 2022 - 09:27:35.693 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+06 Jan 2022 - 09:27:35.711 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:27:35.719 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:27:35.815 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:27:35.815 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:37.506 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:27:41.174 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:27:41.174 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:27:41.193 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:27:41.230 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 56 ms
+06 Jan 2022 - 09:27:41.259 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.51 seconds (JVM running for 37.789)
+06 Jan 2022 - 09:27:41.344 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:41.345 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:27:41.357 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+06 Jan 2022 - 09:27:41.358 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+06 Jan 2022 - 09:27:41.402 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 4156 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:27:41.403 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:27:41.702 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:27:41.725 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:27:42.249 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+06 Jan 2022 - 09:27:42.252 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+06 Jan 2022 - 09:27:42.287 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:27:42.301 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:27:42.416 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:27:42.417 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:43.916 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:27:47.288 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:27:47.288 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:27:47.309 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:27:47.338 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 50 ms
+06 Jan 2022 - 09:27:47.372 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.013 seconds (JVM running for 43.902)
+06 Jan 2022 - 09:27:47.437 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:47.438 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:27:47.440 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+06 Jan 2022 - 09:27:47.443 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+06 Jan 2022 - 09:27:47.476 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 4156 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:27:47.477 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:27:47.706 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:27:47.726 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:27:48.150 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+06 Jan 2022 - 09:27:48.151 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+06 Jan 2022 - 09:27:48.171 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:27:48.180 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:27:48.256 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:27:48.257 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:49.796 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:27:53.130 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:27:53.130 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:27:53.143 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:27:53.177 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 47 ms
+06 Jan 2022 - 09:27:53.207 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.762 seconds (JVM running for 49.736)
+06 Jan 2022 - 09:27:53.250 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:53.251 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:27:53.264 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+06 Jan 2022 - 09:27:53.265 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+06 Jan 2022 - 09:27:53.297 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 4156 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:27:53.297 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:27:53.526 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:27:53.543 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:27:53.997 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+06 Jan 2022 - 09:27:53.997 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+06 Jan 2022 - 09:27:54.011 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:27:54.019 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:27:54.088 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:27:54.088 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:55.441 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:27:58.628 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:27:58.628 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:27:58.656 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:27:58.708 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 80 ms
+06 Jan 2022 - 09:27:58.750 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.483 seconds (JVM running for 55.28)
+06 Jan 2022 - 09:27:58.825 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:27:58.827 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:27:58.839 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+06 Jan 2022 - 09:27:58.842 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+06 Jan 2022 - 09:27:58.879 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 4156 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:27:58.880 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:27:59.119 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:27:59.137 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:27:59.516 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+06 Jan 2022 - 09:27:59.517 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+06 Jan 2022 - 09:27:59.528 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:27:59.537 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:27:59.611 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:27:59.612 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:28:01.233 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:28:04.310 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:28:04.310 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:28:04.323 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:28:04.410 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 99 ms
+06 Jan 2022 - 09:28:04.443 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.598 seconds (JVM running for 60.972)
+06 Jan 2022 - 09:28:04.490 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:28:04.490 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:28:04.501 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+06 Jan 2022 - 09:28:04.502 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+06 Jan 2022 - 09:28:04.539 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 4156 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:28:04.539 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:28:04.793 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:28:04.810 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:28:05.157 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+06 Jan 2022 - 09:28:05.158 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+06 Jan 2022 - 09:28:05.176 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:28:05.183 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:28:05.245 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:28:05.245 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:28:06.839 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:28:09.937 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:28:09.937 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:28:09.948 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:28:09.974 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 37 ms
+06 Jan 2022 - 09:28:09.996 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.491 seconds (JVM running for 66.525)
+06 Jan 2022 - 09:28:10.032 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:28:10.032 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:28:10.035 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown initiated...
+06 Jan 2022 - 09:28:10.039 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown completed.
+06 Jan 2022 - 09:28:10.084 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 4156 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:28:10.084 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:28:10.393 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:28:10.409 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:28:10.862 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
+06 Jan 2022 - 09:28:10.865 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
+06 Jan 2022 - 09:28:10.888 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:28:10.896 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:28:10.954 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:28:10.955 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:28:12.657 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:28:16.207 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:28:16.208 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:28:16.221 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:28:16.248 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 40 ms
+06 Jan 2022 - 09:28:16.271 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.23 seconds (JVM running for 72.801)
+06 Jan 2022 - 09:28:16.343 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:28:16.343 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:28:16.345 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
+06 Jan 2022 - 09:28:16.348 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.
+06 Jan 2022 - 09:28:16.379 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 4156 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:28:16.380 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:28:16.623 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:28:16.639 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:28:16.997 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
+06 Jan 2022 - 09:28:16.998 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
+06 Jan 2022 - 09:28:17.010 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:28:17.022 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:28:17.074 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:28:17.074 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:28:18.631 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:28:21.863 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:28:21.863 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:28:21.879 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:28:21.912 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 49 ms
+06 Jan 2022 - 09:28:21.941 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.591 seconds (JVM running for 78.47)
+06 Jan 2022 - 09:28:21.988 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:28:21.989 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:28:21.992 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown initiated...
+06 Jan 2022 - 09:28:21.993 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown completed.
+06 Jan 2022 - 09:28:22.020 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 4156 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:28:22.020 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:28:22.332 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:28:22.354 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:28:22.772 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Starting...
+06 Jan 2022 - 09:28:22.773 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Start completed.
+06 Jan 2022 - 09:28:22.788 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:28:22.800 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:28:22.895 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:28:22.895 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:28:24.302 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:28:27.517 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:28:27.517 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:28:27.530 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:28:27.558 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 41 ms
+06 Jan 2022 - 09:28:27.581 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.586 seconds (JVM running for 84.11)
+06 Jan 2022 - 09:28:27.638 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:28:27.638 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:28:27.640 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 90121, SQLState: 90121
+06 Jan 2022 - 09:28:27.640 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+06 Jan 2022 - 09:28:27.641 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 90121, SQLState: 90121
+06 Jan 2022 - 09:28:27.641 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+06 Jan 2022 - 09:28:27.641 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+06 Jan 2022 - 09:28:27.641 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
+06 Jan 2022 - 09:28:27.642 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.
+06 Jan 2022 - 09:28:46.419 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.revature.lostchapterbackend.cartintegrationtests.CartIntegrationTests], using SpringBootContextLoader
+06 Jan 2022 - 09:28:46.426 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.revature.lostchapterbackend.cartintegrationtests.CartIntegrationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+06 Jan 2022 - 09:28:46.427 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revature.lostchapterbackend.cartintegrationtests.CartIntegrationTests]: CartIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+06 Jan 2022 - 09:28:46.589 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revature.lostchapterbackend.LostChapterBackendApplication for test class com.revature.lostchapterbackend.cartintegrationtests.CartIntegrationTests
+06 Jan 2022 - 09:28:46.727 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+06 Jan 2022 - 09:28:46.749 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@64337702, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2cf92cc7, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@30ea8c23, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7b139eab, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4e76dac, org.springframework.test.context.support.DirtiesContextTestExecutionListener@611df6e3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5f2f577, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6273c5a4, org.springframework.test.context.event.EventPublishingTestExecutionListener@5d465e4b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@53e211ee, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@41a90fa8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3d8bbcdc, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@52500920, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@117e0fe5, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@18a3962d]
+06 Jan 2022 - 09:28:47.274 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 23688 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:28:47.275 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:28:48.774 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:28:48.871 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:28:50.553 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06 Jan 2022 - 09:28:51.009 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06 Jan 2022 - 09:28:51.142 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:28:51.284 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+06 Jan 2022 - 09:28:51.581 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+06 Jan 2022 - 09:28:51.897 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:28:53.062 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:28:53.072 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:28:58.242 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:29:05.389 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:29:05.389 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:29:05.411 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:29:05.479 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 90 ms
+06 Jan 2022 - 09:29:05.559 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 18.724 seconds (JVM running for 20.24)
+06 Jan 2022 - 09:29:05.704 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:05.705 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:29:05.723 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06 Jan 2022 - 09:29:05.728 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06 Jan 2022 - 09:29:05.847 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 23688 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:29:05.849 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:29:06.605 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:29:06.658 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:29:07.422 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+06 Jan 2022 - 09:29:07.423 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+06 Jan 2022 - 09:29:07.473 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:29:07.502 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:29:07.853 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:29:07.853 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:10.289 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:29:14.112 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:29:14.112 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:29:14.129 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:29:14.164 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 52 ms
+06 Jan 2022 - 09:29:14.205 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 8.469 seconds (JVM running for 28.885)
+06 Jan 2022 - 09:29:14.727 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:14.727 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:29:14.732 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+06 Jan 2022 - 09:29:14.733 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+06 Jan 2022 - 09:29:14.776 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 23688 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:29:14.777 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:29:15.242 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:29:15.267 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:29:15.764 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+06 Jan 2022 - 09:29:15.765 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+06 Jan 2022 - 09:29:15.778 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:29:15.791 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:29:15.925 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:29:15.927 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:17.575 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:29:20.793 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:29:20.793 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:29:20.806 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:29:20.832 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 39 ms
+06 Jan 2022 - 09:29:20.860 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.124 seconds (JVM running for 35.541)
+06 Jan 2022 - 09:29:20.939 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:20.939 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:29:20.944 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+06 Jan 2022 - 09:29:20.957 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+06 Jan 2022 - 09:29:20.997 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 23688 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:29:20.998 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:29:21.290 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:29:21.309 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:29:21.708 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+06 Jan 2022 - 09:29:21.709 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+06 Jan 2022 - 09:29:21.724 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:29:21.731 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:29:21.818 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:29:21.818 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:23.526 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:29:26.762 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:29:26.762 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:29:26.780 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:29:26.851 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 88 ms
+06 Jan 2022 - 09:29:26.890 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.931 seconds (JVM running for 41.572)
+06 Jan 2022 - 09:29:26.965 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:26.966 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:29:26.972 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+06 Jan 2022 - 09:29:26.973 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+06 Jan 2022 - 09:29:27.014 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 23688 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:29:27.015 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:29:27.310 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:29:27.367 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:29:27.909 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+06 Jan 2022 - 09:29:27.910 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+06 Jan 2022 - 09:29:27.928 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:29:27.935 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:29:28.030 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:29:28.030 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:30.788 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:29:36.918 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:29:36.919 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:29:36.949 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:29:36.994 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 75 ms
+06 Jan 2022 - 09:29:37.033 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 10.057 seconds (JVM running for 51.714)
+06 Jan 2022 - 09:29:37.124 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:37.124 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:29:37.131 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+06 Jan 2022 - 09:29:37.132 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+06 Jan 2022 - 09:29:37.192 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 23688 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:29:37.192 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:29:37.651 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:29:37.689 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:29:38.576 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+06 Jan 2022 - 09:29:38.577 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+06 Jan 2022 - 09:29:38.596 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:29:38.612 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:29:38.765 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:29:38.766 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:40.497 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:29:45.187 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:29:45.188 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:29:45.221 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:29:45.283 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 95 ms
+06 Jan 2022 - 09:29:45.338 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 8.201 seconds (JVM running for 60.018)
+06 Jan 2022 - 09:29:45.407 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:45.408 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:29:45.419 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+06 Jan 2022 - 09:29:45.420 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+06 Jan 2022 - 09:29:45.483 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 23688 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:29:45.483 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:29:46.199 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:29:46.237 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:29:46.749 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+06 Jan 2022 - 09:29:46.751 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+06 Jan 2022 - 09:29:46.768 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:29:46.778 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:29:46.848 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:29:46.848 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:48.790 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:29:52.348 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:29:52.348 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:29:52.366 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:29:52.405 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 57 ms
+06 Jan 2022 - 09:29:52.438 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 7.015 seconds (JVM running for 67.119)
+06 Jan 2022 - 09:29:52.525 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:52.525 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:29:52.530 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+06 Jan 2022 - 09:29:52.531 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+06 Jan 2022 - 09:29:52.573 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 23688 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:29:52.574 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:29:52.810 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:29:52.827 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:29:53.258 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+06 Jan 2022 - 09:29:53.259 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+06 Jan 2022 - 09:29:53.272 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:29:53.283 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:29:53.357 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:29:53.357 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:54.779 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:29:58.055 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:29:58.056 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:29:58.072 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:29:58.109 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 53 ms
+06 Jan 2022 - 09:29:58.136 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.602 seconds (JVM running for 72.817)
+06 Jan 2022 - 09:29:58.171 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:29:58.172 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:29:58.177 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+06 Jan 2022 - 09:29:58.178 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+06 Jan 2022 - 09:29:58.233 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 23688 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:29:58.233 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:29:58.494 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:29:58.511 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:29:58.859 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+06 Jan 2022 - 09:29:58.861 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+06 Jan 2022 - 09:29:58.873 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:29:58.880 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:29:58.993 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:29:58.993 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:30:00.419 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:30:03.813 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:30:03.814 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:30:03.832 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:30:03.877 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 63 ms
+06 Jan 2022 - 09:30:03.930 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.748 seconds (JVM running for 78.611)
+06 Jan 2022 - 09:30:03.962 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:30:03.962 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:30:03.964 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown initiated...
+06 Jan 2022 - 09:30:03.966 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown completed.
+06 Jan 2022 - 09:30:03.999 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 23688 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:30:03.999 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:30:04.244 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:30:04.263 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:30:04.727 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
+06 Jan 2022 - 09:30:04.729 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
+06 Jan 2022 - 09:30:04.760 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:30:04.770 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:30:04.967 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:30:04.967 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:30:06.496 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:30:10.210 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:30:10.211 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:30:10.223 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:30:10.250 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 39 ms
+06 Jan 2022 - 09:30:10.274 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.307 seconds (JVM running for 84.955)
+06 Jan 2022 - 09:30:10.320 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:30:10.320 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:30:10.323 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
+06 Jan 2022 - 09:30:10.324 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.
+06 Jan 2022 - 09:30:10.352 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 23688 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:30:10.353 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:30:10.557 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:30:10.571 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:30:11.075 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
+06 Jan 2022 - 09:30:11.077 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
+06 Jan 2022 - 09:30:11.102 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:30:11.110 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:30:11.163 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:30:11.164 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:30:12.702 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:30:15.825 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:30:15.825 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:30:15.838 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:30:15.866 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 41 ms
+06 Jan 2022 - 09:30:15.890 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.564 seconds (JVM running for 90.571)
+06 Jan 2022 - 09:30:15.921 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:30:15.921 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:30:15.923 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown initiated...
+06 Jan 2022 - 09:30:15.925 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown completed.
+06 Jan 2022 - 09:30:15.955 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 23688 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+06 Jan 2022 - 09:30:15.955 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 09:30:16.177 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 09:30:16.195 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 09:30:16.595 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Starting...
+06 Jan 2022 - 09:30:16.597 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Start completed.
+06 Jan 2022 - 09:30:16.614 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 09:30:16.623 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06 Jan 2022 - 09:30:16.751 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 09:30:16.752 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:30:18.173 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 09:30:21.230 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+06 Jan 2022 - 09:30:21.230 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+06 Jan 2022 - 09:30:21.244 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 09:30:21.283 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 53 ms
+06 Jan 2022 - 09:30:21.323 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.395 seconds (JVM running for 96.004)
+06 Jan 2022 - 09:30:21.439 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 09:30:21.439 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+06 Jan 2022 - 09:30:21.440 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 90121, SQLState: 90121
+06 Jan 2022 - 09:30:21.441 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+06 Jan 2022 - 09:30:21.444 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 90121, SQLState: 90121
+06 Jan 2022 - 09:30:21.444 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+06 Jan 2022 - 09:30:21.444 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+06 Jan 2022 - 09:30:21.444 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
+06 Jan 2022 - 09:30:21.448 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.

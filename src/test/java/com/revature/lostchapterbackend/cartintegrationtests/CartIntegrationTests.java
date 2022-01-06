@@ -197,13 +197,12 @@ public class CartIntegrationTests {
 	
 	
 	@Test
-	public void cart_test_attempting_to_add_to_cart_item_out_of_stock_negative() {
+	public void cart_test_attempting_to_add_to_cart_item_out_of_stock_negative() throws Exception {
 		
 		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "2").param("quantityToBuy", "1");
 		
-		//this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(0))
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string(""));
 		
-		Assertions.fail("Waiting for checking for out of stock to be implemented");
 		
 	}
 	
