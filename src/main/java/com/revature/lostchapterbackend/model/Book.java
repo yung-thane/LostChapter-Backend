@@ -22,7 +22,7 @@ public class Book {
 	@Column(nullable = false)
 	private String bookName;
 
-	@Column(nullable = false, length = 300)
+	@Column(nullable = false, length = 800)
 	private String synopsis;
 
 	@Column(nullable = false)
@@ -44,15 +44,9 @@ public class Book {
 	private String publisher;
 
 	@Column(nullable = false)
-	private String bindingType;
-
-	@Column(nullable = false)
 	private boolean saleIsActive;
 
 	private double saleDiscountRate;
-
-	@Column(nullable = false)
-	private String condition;
 
 	@Column(nullable = false)
 	private double bookPrice;
@@ -65,8 +59,8 @@ public class Book {
 	}
 
 	public Book(String iSBN, String bookName, String synopsis, String author, Genre genre, int quantity, int year,
-			String edition, String publisher, String bindingType, boolean saleIsActive, double saleDiscountRate,
-			String condition, double bookPrice, String bookImage) {
+			String edition, String publisher, boolean saleIsActive, double saleDiscountRate, double bookPrice,
+			String bookImage) {
 		super();
 		this.ISBN = iSBN;
 		this.bookName = bookName;
@@ -77,14 +71,14 @@ public class Book {
 		this.year = year;
 		this.edition = edition;
 		this.publisher = publisher;
-		this.bindingType = bindingType;
+
 		this.saleIsActive = saleIsActive;
 		this.saleDiscountRate = saleDiscountRate;
-		this.condition = condition;
+
 		this.bookPrice = bookPrice;
 		this.bookImage = bookImage;
 	}
-	
+
 	public int getBookId() {
 		return bookId;
 	}
@@ -165,14 +159,6 @@ public class Book {
 		this.publisher = publisher;
 	}
 
-	public String getBindingType() {
-		return bindingType;
-	}
-
-	public void setBindingType(String bindingType) {
-		this.bindingType = bindingType;
-	}
-
 	public boolean isSaleIsActive() {
 		return saleIsActive;
 	}
@@ -187,14 +173,6 @@ public class Book {
 
 	public void setSaleDiscountRate(double saleDiscountRate) {
 		this.saleDiscountRate = saleDiscountRate;
-	}
-
-	public String getCondition() {
-		return condition;
-	}
-
-	public void setCondition(String condition) {
-		this.condition = condition;
 	}
 
 	public double getBookPrice() {
@@ -215,8 +193,8 @@ public class Book {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(ISBN, author, bindingType, bookId, bookImage, bookName, bookPrice, condition, edition,
-				genre, publisher, quantity, saleDiscountRate, saleIsActive, synopsis, year);
+		return Objects.hash(ISBN, author, bookId, bookImage, bookName, bookPrice, edition, genre, publisher, quantity,
+				saleDiscountRate, saleIsActive, synopsis, year);
 	}
 
 	@Override
@@ -228,13 +206,11 @@ public class Book {
 		if (getClass() != obj.getClass())
 			return false;
 		Book other = (Book) obj;
-		return Objects.equals(ISBN, other.ISBN) && Objects.equals(author, other.author)
-				&& Objects.equals(bindingType, other.bindingType) && bookId == other.bookId
+		return Objects.equals(ISBN, other.ISBN) && Objects.equals(author, other.author) && bookId == other.bookId
 				&& Objects.equals(bookImage, other.bookImage) && Objects.equals(bookName, other.bookName)
 				&& Double.doubleToLongBits(bookPrice) == Double.doubleToLongBits(other.bookPrice)
-				&& Objects.equals(condition, other.condition) && Objects.equals(edition, other.edition)
-				&& Objects.equals(genre, other.genre) && Objects.equals(publisher, other.publisher)
-				&& quantity == other.quantity
+				&& Objects.equals(edition, other.edition) && Objects.equals(genre, other.genre)
+				&& Objects.equals(publisher, other.publisher) && quantity == other.quantity
 				&& Double.doubleToLongBits(saleDiscountRate) == Double.doubleToLongBits(other.saleDiscountRate)
 				&& saleIsActive == other.saleIsActive && Objects.equals(synopsis, other.synopsis) && year == other.year;
 	}
@@ -243,9 +219,8 @@ public class Book {
 	public String toString() {
 		return "Book [bookId=" + bookId + ", ISBN=" + ISBN + ", bookName=" + bookName + ", synopsis=" + synopsis
 				+ ", author=" + author + ", genre=" + genre + ", quantity=" + quantity + ", year=" + year + ", edition="
-				+ edition + ", publisher=" + publisher + ", bindingType=" + bindingType + ", saleIsActive="
-				+ saleIsActive + ", saleDiscountRate=" + saleDiscountRate + ", condition=" + condition + ", bookPrice="
-				+ bookPrice + ", bookImage=" + bookImage + "]";
+				+ edition + ", publisher=" + publisher + ", saleIsActive=" + saleIsActive + ", saleDiscountRate="
+				+ saleDiscountRate + ", bookPrice=" + bookPrice + ", bookImage=" + bookImage + "]";
 	}
 
 }

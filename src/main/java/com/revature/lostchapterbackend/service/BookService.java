@@ -170,17 +170,6 @@ public class BookService {
 			}
 
 		}
-		if (StringUtils.isBlank(dto.getBindingType())) {
-			if (blankInputs) {
-				blankInputStrings.append(", binding type");
-				blankInputs = true;
-			} else {
-				blankInputStrings.append("Binding type");
-				blankInputs = true;
-
-			}
-
-		}
 
 		String sale = Boolean.toString(dto.isSaleIsActive());
 		if (StringUtils.isBlank(sale)) {
@@ -191,16 +180,6 @@ public class BookService {
 				blankInputStrings.append("Sale");
 				blankInputs = true;
 
-			}
-
-		}
-		if (StringUtils.isBlank(dto.getCondition())) {
-			if (blankInputs) {
-				blankInputStrings.append(", condition");
-				blankInputs = true;
-			} else {
-				blankInputStrings.append("Condition");
-				blankInputs = true;
 			}
 
 		}
@@ -243,9 +222,8 @@ public class BookService {
 		Genre getGenre = gd.findById(dto.getGenre()).get();
 
 		Book addedBook = new Book(dto.getISBN(), dto.getBookName(), dto.getSynopsis(), dto.getAuthor(), getGenre,
-				dto.getQuantity(), dto.getYear(), dto.getEdition(), dto.getPublisher(), dto.getBindingType(),
-				dto.isSaleIsActive(), dto.getSaleDiscountRate(), dto.getCondition(), dto.getBookPrice(),
-				dto.getBookImage());
+				dto.getQuantity(), dto.getYear(), dto.getEdition(), dto.getPublisher(), dto.isSaleIsActive(),
+				dto.getSaleDiscountRate(), dto.getBookPrice(), dto.getBookImage());
 
 		return bd.saveAndFlush(addedBook);
 
