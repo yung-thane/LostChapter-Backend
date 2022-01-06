@@ -15,10 +15,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.revature.lostchapterbackend.annotation.Customer;
 import com.revature.lostchapterbackend.exceptions.BookNotFoundException;
 import com.revature.lostchapterbackend.exceptions.OutOfStockException;
 import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.service.CartsService;
+
 
 @RestController
 @CrossOrigin(originPatterns = "*", allowCredentials = "true")
@@ -28,7 +30,8 @@ public class CartsController {
 	private CartsService cs;
 
 	private final String PATTERN = "[0-9]+"; // checks String if it only contains numbers
-
+	
+	@Customer
 	@PostMapping(path = "/users/{userId}/cart") // Because a User is connected to a Cart, we can then find the cart Id
 												// // by using the User.
 	public ResponseEntity<Object> addBookToCart(@PathVariable("userId") String userId,
@@ -51,6 +54,7 @@ public class CartsController {
 		}
 	}
 
+	@Customer
 	@GetMapping(path = "/users/{userId}/cart") // endpoint used for displaying all Books in the Cart
 	public ResponseEntity<Object> getCartById(@PathVariable("userId") String userId) {
 		// Aspect or another class for protecting endpoint
@@ -66,6 +70,7 @@ public class CartsController {
 		}
 	}
 
+	@Customer
 	@DeleteMapping(path = "/users/{userId}/cart")
 	public ResponseEntity<Object> delteteProductInCart(@PathVariable("userId") String cartId,
 			@RequestParam(name = "bookId", required = false) String bookId) throws BookNotFoundException, NoResultException {
