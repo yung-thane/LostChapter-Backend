@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.revature.lostchapterbackend.dao.BookToBuyDAO;
 import com.revature.lostchapterbackend.dao.CartsDAO;
 import com.revature.lostchapterbackend.exceptions.BookNotFoundException;
+import com.revature.lostchapterbackend.exceptions.OutOfStockException;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.BookToBuy;
 import com.revature.lostchapterbackend.model.Carts;
@@ -47,11 +48,15 @@ public class CartsService {
 		}
 	}
 
-	public Carts addBooksToCart(Carts currentCart, String userId, String bookId, String quantityToBuy) {
+	public Carts addBooksToCart(Carts currentCart, String userId, String bookId, String quantityToBuy) throws OutOfStockException {
 
 		currentCart = this.getCartById(userId); // checking if carts exist
 
 		Book b = bs.getBookById(bookId);
+		
+		if (b.getQuantity() == 0) {
+			throw new OutOfStockException("Currently Out of Stock...");
+		}
 
 		int amountToBuy = Integer.parseInt(quantityToBuy);
 		BookToBuy booksToBeBought = new BookToBuy(b, amountToBuy);

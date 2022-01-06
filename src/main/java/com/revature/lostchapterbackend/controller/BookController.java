@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.revature.lostchapterbackend.annotation.AuthorizedUser;
 import com.revature.lostchapterbackend.dto.AddBookDTO;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.service.BookService;

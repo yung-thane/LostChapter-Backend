@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.lostchapterbackend.exceptions.BookNotFoundException;
+import com.revature.lostchapterbackend.exceptions.OutOfStockException;
 import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.service.CartsService;
 
@@ -42,8 +43,10 @@ public class CartsController {
 				throw new NumberFormatException("product id or quantity must be of type int!");
 			}
 		} catch (NumberFormatException e) {
-			return ResponseEntity.status(400).body("boo boo");
+			return ResponseEntity.status(400).body(e.getMessage());
 		} catch (NoResultException e) {
+			return ResponseEntity.status(404).body(e.getMessage());
+		} catch (OutOfStockException e) {
 			return ResponseEntity.status(404).body(e.getMessage());
 		}
 	}

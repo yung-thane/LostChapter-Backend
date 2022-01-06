@@ -68,7 +68,7 @@ public class Book {
 			String edition, String publisher, String bindingType, boolean saleIsActive, double saleDiscountRate,
 			String condition, double bookPrice, String bookImage) {
 		super();
-		ISBN = iSBN;
+		this.ISBN = iSBN;
 		this.bookName = bookName;
 		this.synopsis = synopsis;
 		this.author = author;
@@ -84,8 +84,6 @@ public class Book {
 		this.bookPrice = bookPrice;
 		this.bookImage = bookImage;
 	}
-
-
 
 	public int getBookId() {
 		return bookId;

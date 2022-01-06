@@ -2,17 +2,23 @@ package com.revature.lostchapterbackend.service;
 
 import java.security.InvalidParameterException;
 import java.util.List;
+
 import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.lostchapterbackend.dao.BookDAO;
+
+import com.revature.lostchapterbackend.model.Book;
+
 import com.revature.lostchapterbackend.dao.GenreDAO;
 import com.revature.lostchapterbackend.dto.AddBookDTO;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.Genre;
+
 
 
 @Service
@@ -26,6 +32,9 @@ public class BookService {
 		// For Unit Testing
 		this.bd = bd;
 	}
+
+	@Autowired
+	private GenreDAO gd;
 
 	public List<Book> getAllBooks() {
 
@@ -52,7 +61,14 @@ public class BookService {
 			throw new InvalidParameterException("The genreId entered must be an int.");
 		}
 
+
 	}
+
+//	public List<Book> getBooksByKeyword(String keyword) {
+//
+//		return null;
+//	}
+
 
 	public List<Book> getBooksByKeyword(String keyword) {
 
@@ -167,7 +183,7 @@ public class BookService {
 		}
 		
 		return null;
-		
+
 	}
 
 }
