@@ -1,74 +1,36 @@
-package com.revature.lostchapterbackend.model;
+package com.revature.lostchapterbackend.dto;
 
 import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import com.revature.lostchapterbackend.model.Genre;
 
-@Entity
-public class Book {
+public class AddBookDTO {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int bookId;
-
-	@Column(nullable = false)
 	private String ISBN;
-
-	@Column(nullable = false)
 	private String bookName;
-
-	@Column(nullable = false, length = 300)
 	private String synopsis;
-
-	@Column(nullable = false)
 	private String author;
-
-	@ManyToOne
-	private Genre genre;
-
-	@Column(nullable = false)
+	private int genre;
 	private int quantity;
-
-	@Column(nullable = false)
 	private int year;
-
-	@Column(nullable = false)
 	private String edition;
-
-	@Column(nullable = false)
 	private String publisher;
-
-	@Column(nullable = false)
 	private String bindingType;
-
-	@Column(nullable = false)
 	private boolean saleIsActive;
-
 	private double saleDiscountRate;
-
-	@Column(nullable = false)
 	private String condition;
-
-	@Column(nullable = false)
 	private double bookPrice;
-
-	@Column(nullable = false)
 	private String bookImage;
 
-	public Book() {
+	public AddBookDTO() {
 		super();
 	}
 
-	public Book(String iSBN, String bookName, String synopsis, String author, Genre genre, int quantity, int year,
-			String edition, String publisher, String bindingType, boolean saleIsActive, double saleDiscountRate,
-			String condition, double bookPrice, String bookImage) {
+	public AddBookDTO(String ISBN, String bookName, String synopsis, String author, int genre, int quantity,
+			int year, String edition, String publisher, String bindingType, boolean saleIsActive,
+			double saleDiscountRate, String condition, double bookPrice, String bookImage) {
 		super();
-		this.ISBN = iSBN;
+		this.ISBN = ISBN;
 		this.bookName = bookName;
 		this.synopsis = synopsis;
 		this.author = author;
@@ -85,20 +47,12 @@ public class Book {
 		this.bookImage = bookImage;
 	}
 
-	public int getBookId() {
-		return bookId;
-	}
-
-	public void setBookId(int bookId) {
-		this.bookId = bookId;
-	}
-
 	public String getISBN() {
 		return ISBN;
 	}
 
-	public void setISBN(String iSBN) {
-		ISBN = iSBN;
+	public void setISBN(String ISBN) {
+		this.ISBN = ISBN;
 	}
 
 	public String getBookName() {
@@ -125,11 +79,11 @@ public class Book {
 		this.author = author;
 	}
 
-	public Genre getGenre() {
+	public int getGenre() {
 		return genre;
 	}
 
-	public void setGenre(Genre genre) {
+	public void setGenre(int genre) {
 		this.genre = genre;
 	}
 
@@ -204,6 +158,7 @@ public class Book {
 	public void setBookPrice(double bookPrice) {
 		this.bookPrice = bookPrice;
 	}
+	
 
 	public String getBookImage() {
 		return bookImage;
@@ -215,8 +170,8 @@ public class Book {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(ISBN, author, bindingType, bookId, bookImage, bookName, bookPrice, condition, edition,
-				genre, publisher, quantity, saleDiscountRate, saleIsActive, synopsis, year);
+		return Objects.hash(ISBN, author, bindingType, bookImage, bookName, bookPrice, condition, edition, genre,
+				publisher, quantity, saleDiscountRate, saleIsActive, synopsis, year);
 	}
 
 	@Override
@@ -227,25 +182,25 @@ public class Book {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Book other = (Book) obj;
+		AddBookDTO other = (AddBookDTO) obj;
 		return Objects.equals(ISBN, other.ISBN) && Objects.equals(author, other.author)
-				&& Objects.equals(bindingType, other.bindingType) && bookId == other.bookId
-				&& Objects.equals(bookImage, other.bookImage) && Objects.equals(bookName, other.bookName)
+				&& Objects.equals(bindingType, other.bindingType) && Objects.equals(bookImage, other.bookImage)
+				&& Objects.equals(bookName, other.bookName)
 				&& Double.doubleToLongBits(bookPrice) == Double.doubleToLongBits(other.bookPrice)
 				&& Objects.equals(condition, other.condition) && Objects.equals(edition, other.edition)
 				&& Objects.equals(genre, other.genre) && Objects.equals(publisher, other.publisher)
-				&& quantity == other.quantity
+				&& Objects.equals(quantity, other.quantity)
 				&& Double.doubleToLongBits(saleDiscountRate) == Double.doubleToLongBits(other.saleDiscountRate)
 				&& saleIsActive == other.saleIsActive && Objects.equals(synopsis, other.synopsis) && year == other.year;
 	}
 
 	@Override
 	public String toString() {
-		return "Book [bookId=" + bookId + ", ISBN=" + ISBN + ", bookName=" + bookName + ", synopsis=" + synopsis
-				+ ", author=" + author + ", genre=" + genre + ", quantity=" + quantity + ", year=" + year + ", edition="
-				+ edition + ", publisher=" + publisher + ", bindingType=" + bindingType + ", saleIsActive="
-				+ saleIsActive + ", saleDiscountRate=" + saleDiscountRate + ", condition=" + condition + ", bookPrice="
-				+ bookPrice + ", bookImage=" + bookImage + "]";
+		return "AddBookDTO [ISBN=" + ISBN + ", bookName=" + bookName + ", synopsis=" + synopsis + ", author=" + author
+				+ ", genre=" + genre + ", quantity=" + quantity + ", year=" + year + ", edition=" + edition
+				+ ", publisher=" + publisher + ", bindingType=" + bindingType + ", saleIsActive=" + saleIsActive
+				+ ", saleDiscountRate=" + saleDiscountRate + ", condition=" + condition + ", bookPrice=" + bookPrice
+				+ ", bookImage=" + bookImage + "]";
 	}
 
 }

@@ -91,11 +91,11 @@ public class UserDao {
 			return user;
 		} catch (DataAccessException e) {
 
-			e.printStackTrace();
-			return null;
-		} catch (NoResultException e) {
-			return null;
-		}
+            e.printStackTrace();
+            return null;
+        } catch (NoResultException e) {
+            return null;
+        }
 
 	}
 

@@ -1,6 +1,8 @@
 package com.revature.lostchapterbackend.service;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +27,10 @@ public class UserService {
 
 	private Logger logger = LoggerFactory.getLogger(UserService.class);
 
+	public UserService(UserDao ud) {
+		this.ud = ud;
+	}
+	
 	public Users createUser(SignUpDto dto)
 			throws InvalidLoginException, InvalidParameterException, NoSuchAlgorithmException {
 
@@ -37,6 +43,14 @@ public class UserService {
 
 		if (dto.getAge() < 5 || dto.getAge() > 125) {
 			throw new InvalidParameterException("Age cannot be less than 5 or greater than 125");
+		}
+		
+		Set<String> validRole = new HashSet<>();
+		validRole.add("Customer");
+		validRole.add("Admin");
+		
+		if (!validRole.contains(dto.getRole())) {
+			throw new InvalidParameterException("You can only sign up as a Customer or an Admin");
 		}
 
 		String algorithm = "SHA-256";
@@ -72,10 +86,10 @@ public class UserService {
 				if (correctPassword) {
 					return user;
 				} else {
-					throw new InvalidLoginException("Username and/or password is incorrect");
+					throw new InvalidLoginException("User not Null: Username and/or password is incorrect");
 				}
 			} else {
-				throw new InvalidLoginException("Username and/or password is incorrect");
+				throw new InvalidLoginException("User is Null: Username and/or password is incorrect");
 			}
 		} catch (DataAccessException e) {
 			throw new InvalidLoginException("Username and/or password is incorrect");
@@ -92,9 +106,13 @@ public class UserService {
 		}
 	}
 
-	public Users getUserByEmail(String email) {
+	public Users getUserByEmail(String email) throws InvalidParameterException {
 		logger.info("UserService.getUserByEmail() invoked");
-
+		
+		if(email == null) {
+			throw new InvalidParameterException("Email is Null");
+		}
+		
 		Users users = this.ud.getUserByEmail(email);
 
 		return users;
@@ -124,9 +142,13 @@ public class UserService {
 		return updatedUserInfo;
 	}
 
-	public Users getUserByUsername(String username) {
+	public Users getUserByUsername(String username) throws InvalidParameterException {
 		logger.info("UserService.getUserByUsername() invoked");
 
+		if(username == null) {
+			throw new InvalidParameterException("username is Null");
+		}
+		
 		Users users = this.ud.getUser(username);
 
 		return users;
