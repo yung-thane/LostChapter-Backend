@@ -37,6 +37,13 @@ public class Carts {
 		this.booksToBuy = booksToBuy;
 	}
 
+	public Carts(int cartId, Users user, List<BookToBuy> booksToBuy) {
+		super();
+		this.cartId = cartId;
+		this.user = user;
+		this.booksToBuy = booksToBuy;
+	}
+
 	public int getCartId() {
 		return cartId;
 	}

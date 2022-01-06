@@ -96,11 +96,13 @@ public class UserDao {
 			return user;
 		} catch (DataAccessException e) {
 
+
 			e.printStackTrace();
 			throw new NoResultException("Email cannot be blank");
 		} catch (NoResultException e) {
 			return null;
 		}
+
 
 	}
 

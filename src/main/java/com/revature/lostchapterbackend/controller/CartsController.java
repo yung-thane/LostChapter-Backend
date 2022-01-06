@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.lostchapterbackend.exceptions.BookNotFoundException;
+import com.revature.lostchapterbackend.exceptions.OutOfStockException;
 import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.service.CartsService;
 
@@ -42,8 +43,10 @@ public class CartsController {
 				throw new NumberFormatException("product id or quantity must be of type int!");
 			}
 		} catch (NumberFormatException e) {
-			return ResponseEntity.status(400).body("boo boo");
+			return ResponseEntity.status(400).body(e.getMessage());
 		} catch (NoResultException e) {
+			return ResponseEntity.status(404).body(e.getMessage());
+		} catch (OutOfStockException e) {
 			return ResponseEntity.status(404).body(e.getMessage());
 		}
 	}
@@ -65,12 +68,15 @@ public class CartsController {
 
 	@DeleteMapping(path = "/users/{userId}/cart")
 	public ResponseEntity<Object> delteteProductInCart(@PathVariable("userId") String cartId,
-			@RequestParam("bookId") String bookId) throws BookNotFoundException, NoResultException {
+			@RequestParam(name = "bookId", required = false) String bookId) throws BookNotFoundException, NoResultException {
 
 		try {
 			Carts currentCart = null;
-			if (cartId.matches(PATTERN) || bookId.matches(PATTERN)) {
+			if (bookId != null && (cartId.matches(PATTERN) || bookId.matches(PATTERN))) {
 				currentCart = cs.delteteProductInCart(currentCart, cartId, bookId);
+				return ResponseEntity.status(200).body(currentCart);
+			} else if (bookId == null) {
+				currentCart = cs.delteteAllProductInCart(currentCart, cartId);
 				return ResponseEntity.status(200).body(currentCart);
 			} else {
 				throw new NumberFormatException("cart id/product id must be of type int!");

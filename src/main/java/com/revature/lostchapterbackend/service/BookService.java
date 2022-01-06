@@ -2,13 +2,18 @@ package com.revature.lostchapterbackend.service;
 
 import java.security.InvalidParameterException;
 import java.util.List;
+
 import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.lostchapterbackend.dao.BookDAO;
+
+import com.revature.lostchapterbackend.model.Book;
+
 import com.revature.lostchapterbackend.dao.GenreDAO;
 import com.revature.lostchapterbackend.dto.AddBookDTO;
 import com.revature.lostchapterbackend.exceptions.BookNotFoundException;
@@ -17,11 +22,20 @@ import com.revature.lostchapterbackend.exceptions.ISBNAlreadyExists;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.Genre;
 
+
 @Service
 public class BookService {
 
 	@Autowired
 	private BookDAO bd;
+
+	
+	public BookService(BookDAO bd) {
+		// For mocking
+		// For Unit Testing
+		this.bd = bd;
+	}
+
 
 	@Autowired
 	private GenreDAO gd;
@@ -53,7 +67,14 @@ public class BookService {
 			throw new InvalidParameterException("The genreId entered must be an int.");
 		}
 
+
 	}
+
+//	public List<Book> getBooksByKeyword(String keyword) {
+//
+//		return null;
+//	}
+
 
 	public List<Book> getBooksByKeyword(String keyword) {
 
@@ -211,6 +232,7 @@ public class BookService {
 			throw new InvalidParameterException(blankInputStrings.toString());
 		}
 
+
 		if (bd.findByISBN(dto.getISBN()).isPresent()) {
 			throw new ISBNAlreadyExists("ISBN already used for another book");
 		}
@@ -226,6 +248,7 @@ public class BookService {
 				dto.getSaleDiscountRate(), dto.getBookPrice(), dto.getBookImage());
 
 		return bd.saveAndFlush(addedBook);
+
 
 	}
 
