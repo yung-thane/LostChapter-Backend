@@ -84,7 +84,7 @@ public class Book {
 		this.bookPrice = bookPrice;
 		this.bookImage = bookImage;
 	}
-	
+
 	public int getBookId() {
 		return bookId;
 	}
