@@ -13558,3 +13558,403 @@ Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-valid
 06 Jan 2022 - 15:33:55.672 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
 06 Jan 2022 - 15:33:55.677 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.
 >>>>>>> main
+06 Jan 2022 - 17:25:17.487 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.490 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.518 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.519 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+06 Jan 2022 - 17:25:17.520 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.521 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.547 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.548 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.548 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.548 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.548 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.549 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.556 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.557 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.558 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.558 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.558 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.558 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.568 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.568 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.572 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.572 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.576 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.576 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.576 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.576 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.576 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.578 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.582 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.582 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.582 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.583 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.583 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.583 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.588 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.588 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.588 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.589 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail
+06 Jan 2022 - 17:25:17.589 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.592 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.593 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.598 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.598 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.604 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.604 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.607 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.607 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.612 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.612 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.616 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.617 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.620 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.620 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.625 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.625 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.640 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.642 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.643 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.644 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.644 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.645 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.649 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.649 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.653 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.654 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.655 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.655 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.655 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.656 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.662 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.663 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.663 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.663 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.663 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.664 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.667 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.667 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.667 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.668 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.668 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.668 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.671 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.671 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.675 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.675 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.675 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.675 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.675 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.676 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.682 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.683 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.686 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.686 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.687 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.687 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.687 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.688 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.694 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.694 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.697 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.697 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.697 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.697 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.697 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.698 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.700 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.701 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.703 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.703 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.708 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.709 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.712 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.712 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.712 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.712 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.712 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.713 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.717 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.718 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.720 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.720 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.722 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.723 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.727 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.733 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.749 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.749 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.764 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.774 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.780 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.781 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.784 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.784 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.784 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.784 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.785 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.785 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.788 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.789 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.791 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.792 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.792 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.792 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+06 Jan 2022 - 17:25:17.792 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.792 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.796 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.796 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.796 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.796 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+06 Jan 2022 - 17:25:17.796 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.797 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.800 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.800 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.802 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.802 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.805 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.805 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.807 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.807 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.807 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.807 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.807 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.808 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.812 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.813 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.817 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.817 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.817 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.817 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail
+06 Jan 2022 - 17:25:17.817 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.821 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.822 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.822 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.822 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.822 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.824 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.835 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.836 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.841 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.841 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.841 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+06 Jan 2022 - 17:25:17.842 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+06 Jan 2022 - 17:25:17.845 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.845 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.848 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.848 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.848 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.848 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.848 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.849 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.851 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.852 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.852 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+06 Jan 2022 - 17:25:17.852 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+06 Jan 2022 - 17:25:17.856 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.857 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.860 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.860 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.864 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.864 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.867 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.867 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.867 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.867 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): johnd@gmail.com
+06 Jan 2022 - 17:25:17.867 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.868 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.871 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.871 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.871 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+06 Jan 2022 - 17:25:17.880 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+06 Jan 2022 - 17:25:17.883 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.889 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.889 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.894 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.894 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.897 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.897 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.900 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.900 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.905 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.906 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.909 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.909 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.909 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.909 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:17.909 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.910 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.913 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.915 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.916 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+06 Jan 2022 - 17:25:17.917 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+06 Jan 2022 - 17:25:17.920 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.920 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.920 [main] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+06 Jan 2022 - 17:25:17.921 [main] INFO  c.r.l.utility.ValidateUtil - email verification
+06 Jan 2022 - 17:25:17.924 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.925 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.945 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.945 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.945 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.946 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoegmail
+06 Jan 2022 - 17:25:17.946 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.955 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.955 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.959 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.960 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.966 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.966 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.970 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.971 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:17.971 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:17.971 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jsmith@gmail.com
+06 Jan 2022 - 17:25:17.971 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:17.975 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:17.981 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:17.982 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:18.017 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:18.018 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:18.018 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:18.018 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail.com
+06 Jan 2022 - 17:25:18.018 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:18.019 [main] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:25:18.025 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:18.025 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:18.030 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:18.030 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:18.032 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:18.033 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:18.036 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:18.036 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:18.036 [main] INFO  c.r.l.utility.ValidateUtil - Check if email already exist
+06 Jan 2022 - 17:25:18.036 [main] INFO  c.r.l.utility.ValidateUtil - user.getEmail(): jdoe@gmail
+06 Jan 2022 - 17:25:18.036 [main] INFO  c.r.l.utility.ValidateUtil - userService: us
+06 Jan 2022 - 17:25:18.040 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:18.040 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:18.044 [main] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:25:18.045 [main] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:25:31.800 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 16.0.2 on DESKTOP-DVBGLLH with PID 13468 (C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend\target\classes started by husto in C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend)
+06 Jan 2022 - 17:25:31.814 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 17:25:31.998 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+06 Jan 2022 - 17:25:31.999 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+06 Jan 2022 - 17:25:34.626 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 17:25:34.866 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 217 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 17:25:38.544 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+06 Jan 2022 - 17:25:38.761 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+06 Jan 2022 - 17:25:38.762 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+06 Jan 2022 - 17:25:38.762 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+06 Jan 2022 - 17:25:39.188 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06 Jan 2022 - 17:25:39.189 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7188 ms
+06 Jan 2022 - 17:25:40.447 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06 Jan 2022 - 17:25:42.485 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06 Jan 2022 - 17:25:42.504 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+06 Jan 2022 - 17:25:43.640 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 17:25:44.123 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+06 Jan 2022 - 17:25:44.549 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+06 Jan 2022 - 17:25:45.145 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+06 Jan 2022 - 17:25:47.971 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 17:25:47.983 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 17:25:51.791 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 17:25:57.610 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+06 Jan 2022 - 17:25:57.641 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 17:25:57.729 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+06 Jan 2022 - 17:25:57.949 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+06 Jan 2022 - 17:25:58.005 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 27.547 seconds (JVM running for 29.271)
+06 Jan 2022 - 17:26:21.647 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06 Jan 2022 - 17:26:21.647 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06 Jan 2022 - 17:26:21.649 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+06 Jan 2022 - 17:26:22.080 [http-nio-8081-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): expected a value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): expected a value<EOL> at [Source: (PushbackInputStream); line: 6, column: 13]]
+06 Jan 2022 - 17:26:30.317 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:26:30.318 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:26:30.328 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+06 Jan 2022 - 17:26:30.328 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+06 Jan 2022 - 17:26:30.423 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+06 Jan 2022 - 17:26:30.676 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+06 Jan 2022 - 17:26:30.677 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+06 Jan 2022 - 17:26:30.677 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - username connorH
+06 Jan 2022 - 17:26:30.728 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - user in dao layerUsers [id=5, username=connorH, password=88E43563EB048331CECC5F4F6823B2328BB482BE858F5984EC8FE93E6BAD1E78, firstName=Connor, lastName=Huston, age=24, email=hustonc@yahoo.com, birthday=02/21/1997, address=5457 RiverBend Dr., role=Customer]
+06 Jan 2022 - 17:26:40.323 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:26:40.323 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:26:40.323 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+06 Jan 2022 - 17:26:40.323 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+06 Jan 2022 - 17:26:40.389 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+06 Jan 2022 - 17:26:40.495 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+06 Jan 2022 - 17:26:40.495 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+06 Jan 2022 - 17:26:40.496 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - username connorH
+06 Jan 2022 - 17:26:40.562 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - user in dao layerUsers [id=5, username=connorH, password=88E43563EB048331CECC5F4F6823B2328BB482BE858F5984EC8FE93E6BAD1E78, firstName=Connor, lastName=Huston, age=24, email=hustonc@yahoo.com, birthday=02/21/1997, address=5457 RiverBend Dr., role=Customer]
+06 Jan 2022 - 17:26:49.808 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:26:49.808 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:26:49.808 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+06 Jan 2022 - 17:26:49.809 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+06 Jan 2022 - 17:26:49.851 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+06 Jan 2022 - 17:26:49.950 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+06 Jan 2022 - 17:26:49.951 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+06 Jan 2022 - 17:26:49.952 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - username connorHu
+06 Jan 2022 - 17:26:50.059 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - email verification
+06 Jan 2022 - 17:26:50.060 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:44:01.527 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 17:44:01.568 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06 Jan 2022 - 17:44:01.578 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06 Jan 2022 - 17:44:01.908 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 16.0.2 on DESKTOP-DVBGLLH with PID 13468 (C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend\target\classes started by husto in C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend)
+06 Jan 2022 - 17:44:01.914 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+06 Jan 2022 - 17:44:03.120 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06 Jan 2022 - 17:44:03.251 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 128 ms. Found 4 JPA repository interfaces.
+06 Jan 2022 - 17:44:04.579 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+06 Jan 2022 - 17:44:04.580 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+06 Jan 2022 - 17:44:04.580 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+06 Jan 2022 - 17:44:04.581 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+06 Jan 2022 - 17:44:04.653 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06 Jan 2022 - 17:44:04.654 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2726 ms
+06 Jan 2022 - 17:44:05.361 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+06 Jan 2022 - 17:44:06.018 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+06 Jan 2022 - 17:44:06.019 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+06 Jan 2022 - 17:44:06.383 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06 Jan 2022 - 17:44:06.397 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+06 Jan 2022 - 17:44:06.828 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06 Jan 2022 - 17:44:06.829 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 17:44:08.992 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06 Jan 2022 - 17:44:14.029 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+06 Jan 2022 - 17:44:14.065 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+06 Jan 2022 - 17:44:14.092 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+06 Jan 2022 - 17:44:14.096 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+06 Jan 2022 - 17:44:14.103 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 12.373 seconds (JVM running for 1125.369)
+06 Jan 2022 - 17:44:14.107 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+06 Jan 2022 - 17:44:22.727 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06 Jan 2022 - 17:44:22.728 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06 Jan 2022 - 17:44:22.734 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+06 Jan 2022 - 17:44:22.742 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:44:22.742 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:44:22.743 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+06 Jan 2022 - 17:44:22.743 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+06 Jan 2022 - 17:44:22.842 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+06 Jan 2022 - 17:44:23.067 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+06 Jan 2022 - 17:44:23.069 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+06 Jan 2022 - 17:44:23.070 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - username connorHu
+06 Jan 2022 - 17:44:23.317 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - email verification
+06 Jan 2022 - 17:44:23.318 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:44:29.352 [http-nio-8081-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character (',' (code 44)): expected a value; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): expected a value<EOL> at [Source: (PushbackInputStream); line: 6, column: 13]]
+06 Jan 2022 - 17:44:39.802 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:44:39.802 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:44:39.805 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+06 Jan 2022 - 17:44:39.805 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+06 Jan 2022 - 17:44:39.860 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+06 Jan 2022 - 17:44:39.986 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+06 Jan 2022 - 17:44:39.987 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+06 Jan 2022 - 17:44:39.988 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - username connorHu
+06 Jan 2022 - 17:44:40.105 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - email verification
+06 Jan 2022 - 17:44:40.106 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:45:02.282 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+06 Jan 2022 - 17:45:02.288 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+06 Jan 2022 - 17:45:02.288 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+06 Jan 2022 - 17:45:02.288 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+06 Jan 2022 - 17:45:02.337 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+06 Jan 2022 - 17:45:02.429 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+06 Jan 2022 - 17:45:02.429 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+06 Jan 2022 - 17:45:02.430 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - username connorHu
+06 Jan 2022 - 17:45:02.522 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - email verification
+06 Jan 2022 - 17:45:02.523 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+06 Jan 2022 - 17:50:20.151 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06 Jan 2022 - 17:50:20.152 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+06 Jan 2022 - 17:50:20.161 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
