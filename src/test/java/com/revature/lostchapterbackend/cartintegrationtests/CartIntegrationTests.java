@@ -72,10 +72,8 @@ public class CartIntegrationTests {
 		positiveBook.setYear(2000);
 		positiveBook.setEdition("test");
 		positiveBook.setPublisher("test");
-		positiveBook.setBindingType("test");
 		positiveBook.setSaleIsActive(false);
 		positiveBook.setSaleDiscountRate(0);
-		positiveBook.setCondition("test");
 		positiveBook.setBookPrice(0);
 		positiveBook.setBookImage("test");
 		
@@ -90,10 +88,8 @@ public class CartIntegrationTests {
 		noStockBook.setYear(2000);
 		noStockBook.setEdition("test");
 		noStockBook.setPublisher("test");
-		noStockBook.setBindingType("test");
 		noStockBook.setSaleIsActive(false);
 		noStockBook.setSaleDiscountRate(0);
-		noStockBook.setCondition("test");
 		noStockBook.setBookPrice(0);
 		noStockBook.setBookImage("test");
 		
