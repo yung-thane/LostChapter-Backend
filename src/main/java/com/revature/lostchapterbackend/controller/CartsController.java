@@ -39,7 +39,7 @@ public class CartsController {
 		// Aspect or another class for protecting endpoint
 		try {
 			Carts currentCart = null;
-			if (userId.matches(PATTERN) || bookId.matches(PATTERN) || quantityToBuy.matches(PATTERN)) {
+			if (userId.matches(PATTERN) && bookId.matches(PATTERN) && quantityToBuy.matches(PATTERN)) {
 				currentCart = cs.addBooksToCart(currentCart, userId, bookId, quantityToBuy);
 				return ResponseEntity.status(200).body(currentCart);
 			} else {
@@ -75,7 +75,7 @@ public class CartsController {
 
 		try {
 			Carts currentCart = null;
-			if (bookId != null && (cartId.matches(PATTERN) || bookId.matches(PATTERN))) {
+			if (bookId != null && (cartId.matches(PATTERN) && bookId.matches(PATTERN))) {
 				currentCart = cs.delteteProductInCart(currentCart, cartId, bookId);
 				return ResponseEntity.status(200).body(currentCart);
 			} else if (bookId == null) {
@@ -89,6 +89,5 @@ public class CartsController {
 		} catch (NoResultException | BookNotFoundException e) {
 			return ResponseEntity.status(404).body(e.getMessage());
 		} 
-
 	}
 }

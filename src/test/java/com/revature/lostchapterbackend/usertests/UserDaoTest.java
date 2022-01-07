@@ -238,5 +238,6 @@ public class UserDaoTest {
 		Assertions.assertEquals(null, sut.getUserByEmail(" "));
 	}
 	
+	
 
 }
