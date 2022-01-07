@@ -45,19 +45,11 @@ public class CartsController {
 			} else {
 				throw new NumberFormatException("product id or quantity must be of type int!");
 			}
-		} catch (NumberFormatException e) {
+		} catch (NumberFormatException | OutOfStockException | InvalidParameterException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
 		} catch (NoResultException e) {
 			return ResponseEntity.status(404).body(e.getMessage());
-		} catch (OutOfStockException e) {
-			return ResponseEntity.status(400).body(e.getMessage());
-		} catch (InvalidParameterException e) {
-			return ResponseEntity.status(400).body(e.getMessage());
-		} catch(NoSuchElementException e) {
-			return ResponseEntity.status(400).body(e.getMessage());
-		} catch(BookNotFoundException e) {
-			return ResponseEntity.status(400).body(e.getMessage());					
-		}
+		} 
 	}
 
 	@Customer
@@ -94,13 +86,8 @@ public class CartsController {
 			}
 		} catch (NumberFormatException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
-		} catch (NoResultException e) {
+		} catch (NoResultException | BookNotFoundException e) {
 			return ResponseEntity.status(404).body(e.getMessage());
-		} catch (BookNotFoundException e) {
-			return ResponseEntity.status(404).body(e.getMessage());
-		} catch (NoSuchElementException e) {
-			return ResponseEntity.status(404).body(e.getMessage());			
-		}
-
+		} 
 	}
 }
