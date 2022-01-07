@@ -21,7 +21,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.revature.lostchapterbackend.dto.AddBookDTO;
+import com.revature.lostchapterbackend.dto.AddOrUpdateBookDTO;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.Genre;
 
@@ -231,7 +231,7 @@ public class BookIntegrationTest {
 	@Test
 	public void testAddBook_positive() throws Exception {
 
-		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+		AddOrUpdateBookDTO actualBook = new AddOrUpdateBookDTO("2425262728", "bookName4", "synopsis",
 				"author", 1, 1, 1996, "edition",
 				"publisher", true,
 				0.99, 10.99, "image");
