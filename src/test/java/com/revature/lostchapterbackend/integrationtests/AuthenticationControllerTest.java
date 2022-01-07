@@ -54,6 +54,7 @@ public class AuthenticationControllerTest {
         tx.commit();
 
         session.close();
+        
     }
 
 
