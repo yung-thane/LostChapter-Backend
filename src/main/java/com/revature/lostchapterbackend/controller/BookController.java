@@ -112,6 +112,7 @@ public class BookController {
 		logger.info("BookController.updateBookById() invoked.");
 
 		try {
+
 			Book updatedBook = bs.updateBook(dto, id);
 
 			logger.info("updatedBook {}", updatedBook);
@@ -126,6 +127,9 @@ public class BookController {
 			return ResponseEntity.status(400).body(e.getMessage());
 		} catch (SaleDiscountRateException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
+		} catch (ISBNAlreadyExists e) {
+			return ResponseEntity.status(400).body(e.getMessage());
+
 		}
 
 	}

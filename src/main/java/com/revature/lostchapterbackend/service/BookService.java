@@ -125,27 +125,71 @@ public class BookService {
 				throw new BookNotFoundException("Book doesn't exist");
 			}
 
-			vBUtil.validateBookInput(dto);
+			logger.debug("bd.findById(bookId).get() {}", bd.findById(bookId).get());
 
-			Book bookToUpdate = bd.findById(bookId).get();
+			String bookIsbn = bd.findById(bookId).get().getISBN();
 
-			Genre getGenre = gd.findById(dto.getGenre()).get();
+			logger.debug("bd.findById(bookId).get().getISBN() {}", bd.findById(bookId).get().getISBN());
+			logger.debug("bookIsbn {}", bookIsbn);
+			logger.debug("dto.getISBN() {}", dto.getISBN());
 
-			bookToUpdate.setISBN(dto.getISBN());
-			bookToUpdate.setBookName(dto.getBookName());
-			bookToUpdate.setSynopsis(dto.getSynopsis());
-			bookToUpdate.setAuthor(dto.getAuthor());
-			bookToUpdate.setGenre(getGenre);
-			bookToUpdate.setQuantity(dto.getQuantity());
-			bookToUpdate.setYear(dto.getYear());
-			bookToUpdate.setEdition(dto.getEdition());
-			bookToUpdate.setPublisher(dto.getPublisher());
-			bookToUpdate.setSaleIsActive(dto.isSaleIsActive());
-			bookToUpdate.setSaleDiscountRate(dto.getSaleDiscountRate());
-			bookToUpdate.setBookPrice(dto.getBookPrice());
-			bookToUpdate.setBookImage(dto.getBookImage());
+			if (bookIsbn.equals(dto.getISBN())) {
 
-			return bd.saveAndFlush(bookToUpdate);
+				logger.debug("bookIsbn 1 {}", bookIsbn);
+				logger.debug("dto.getISBN 1 () {}", dto.getISBN());
+
+				vBUtil.validateBookInput(dto);
+
+				Book bookToUpdate = bd.findById(bookId).get();
+
+				Genre getGenre = gd.findById(dto.getGenre()).get();
+
+				bookToUpdate.setISBN(dto.getISBN());
+				bookToUpdate.setBookName(dto.getBookName());
+				bookToUpdate.setSynopsis(dto.getSynopsis());
+				bookToUpdate.setAuthor(dto.getAuthor());
+				bookToUpdate.setGenre(getGenre);
+				bookToUpdate.setQuantity(dto.getQuantity());
+				bookToUpdate.setYear(dto.getYear());
+				bookToUpdate.setEdition(dto.getEdition());
+				bookToUpdate.setPublisher(dto.getPublisher());
+				bookToUpdate.setSaleIsActive(dto.isSaleIsActive());
+				bookToUpdate.setSaleDiscountRate(dto.getSaleDiscountRate());
+				bookToUpdate.setBookPrice(dto.getBookPrice());
+				bookToUpdate.setBookImage(dto.getBookImage());
+
+				return bd.saveAndFlush(bookToUpdate);
+
+			} else {
+
+				if (bd.findByISBN(dto.getISBN()).isPresent()) {
+					throw new ISBNAlreadyExists("ISBN already used for another book");
+
+				} else {
+
+					vBUtil.validateBookInput(dto);
+
+					Book bookToUpdate = bd.findById(bookId).get();
+
+					Genre getGenre = gd.findById(dto.getGenre()).get();
+
+					bookToUpdate.setISBN(dto.getISBN());
+					bookToUpdate.setBookName(dto.getBookName());
+					bookToUpdate.setSynopsis(dto.getSynopsis());
+					bookToUpdate.setAuthor(dto.getAuthor());
+					bookToUpdate.setGenre(getGenre);
+					bookToUpdate.setQuantity(dto.getQuantity());
+					bookToUpdate.setYear(dto.getYear());
+					bookToUpdate.setEdition(dto.getEdition());
+					bookToUpdate.setPublisher(dto.getPublisher());
+					bookToUpdate.setSaleIsActive(dto.isSaleIsActive());
+					bookToUpdate.setSaleDiscountRate(dto.getSaleDiscountRate());
+					bookToUpdate.setBookPrice(dto.getBookPrice());
+					bookToUpdate.setBookImage(dto.getBookImage());
+
+					return bd.saveAndFlush(bookToUpdate);
+				}
+			}
 
 		} catch (NumberFormatException e) {
 			throw new InvalidParameterException("Id must be in Int format");

@@ -14,7 +14,6 @@ import com.revature.lostchapterbackend.exceptions.GenreNotFoundException;
 import com.revature.lostchapterbackend.exceptions.ISBNAlreadyExists;
 import com.revature.lostchapterbackend.exceptions.SaleDiscountRateException;
 import com.revature.lostchapterbackend.exceptions.SynopsisInputException;
-import com.revature.lostchapterbackend.service.BookService;
 
 public class ValidateBookUtil {
 
