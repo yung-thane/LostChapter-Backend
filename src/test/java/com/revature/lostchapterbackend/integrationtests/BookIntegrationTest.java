@@ -235,7 +235,7 @@ public class BookIntegrationTest {
 		AddOrUpdateBookDTO actualBook = new AddOrUpdateBookDTO("2425262728", "bookName4", "synopsis",
 				"author", 1, 1, 1996, "edition",
 				"publisher", true,
-				0.99, 10.99, "image");
+				0.90, 10.99, "image");
 		String jsonToSend = mapper.writeValueAsString(actualBook);
 
 		MockHttpSession session1 = new MockHttpSession();
@@ -248,7 +248,7 @@ public class BookIntegrationTest {
 		Book expectedBook1 = new Book("2425262728", "bookName4", "synopsis",
 				"author", g, 1, 1996, "edition",
 				"publisher", true,
-				0.99, 10.99, "image");
+				0.90, 10.99, "image");
 		expectedBook1.setBookId(4);
 
 
