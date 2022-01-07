@@ -139,6 +139,39 @@ public class UserServiceTest {
 	}
 	
 	@Test
+	public void testCreateUserUsernameHasMoreThan255Characters_negative() {
+		SignUpDto createdUser = new SignUpDto("JDoeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				+ "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				+ "eeeeeeeeeeeeeeeeeeeeeeeeeeeee", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "  ");
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			us.createUser(createdUser);
+		});
+	}
+	
+	@Test
+	public void testCreateUserFirstNameHasMoreThan255Characters_negative() {
+		SignUpDto createdUser = new SignUpDto("JDoe", "password1", "Johnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn"
+				+ "nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn"
+				+ "nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "  ");
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			us.createUser(createdUser);
+		});
+	}
+	
+	@Test
+	public void testCreateUserLastNameHasMoreThan255Characters_negative() {
+		SignUpDto createdUser = new SignUpDto("JDoe", "password1", "John", "Doeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				+ "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				+ "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "  ");
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			us.createUser(createdUser);
+		});
+	}
+	
+	@Test
 	public void testGetUser_positive() throws NoSuchAlgorithmException, InvalidLoginException {
 		Users user = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
 		user.setId(1);
@@ -350,6 +383,56 @@ public class UserServiceTest {
 		user1.setId(1);
 		
 		Users user2 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "  ", "Customer");
+		user2.setId(1);
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			us.updateUser(user1, user2);
+		});
+	}
+	
+	@Test
+	public void testUpdateUserUsernameHasMoreThan255Characters_negative() throws InvalidParameterException {
+		Users user1 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
+		user1.setId(1);
+		
+		Users user2 = new Users("JDoeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				+ "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				+ "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				+ "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				+ "eeeeeeeeeeeeeeeeeeeeeeeeeeee", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
+		user2.setId(1);
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			us.updateUser(user1, user2);
+		});
+	}
+	
+	@Test
+	public void testUpdateUserFirstNameHasMoreThan255Characters_negative() throws InvalidParameterException {
+		Users user1 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
+		user1.setId(1);
+		
+		Users user2 = new Users("JDoe", "password1", "Johnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn"
+				+ "nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn"
+				+ "nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn"
+				+ "nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
+		user2.setId(1);
+		
+		Assertions.assertThrows(InvalidParameterException.class, () -> {
+			us.updateUser(user1, user2);
+		});
+	}
+	
+	@Test
+	public void testUpdateUserLastNameHasMoreThan255Characters_negative() throws InvalidParameterException {
+		Users user1 = new Users("JDoe", "password1", "John", "Doe", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
+		user1.setId(1);
+		
+		Users user2 = new Users("JDoe", "password1", "John", "Doeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				+ "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				+ "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				+ "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+				+ "eeeeeeeeeeeeeeeeeeeeeeeeeeee", 24, "jdoe@gmail.com", "01/1/1997", "22nd Ave", "Customer");
 		user2.setId(1);
 		
 		Assertions.assertThrows(InvalidParameterException.class, () -> {

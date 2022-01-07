@@ -48,19 +48,21 @@ public class CartsService {
 		}
 	}
 
-
-	public Carts addBooksToCart(Carts currentCart, String userId, String bookId, String quantityToBuy) throws OutOfStockException, BookNotFoundException {
-
+	public Carts addBooksToCart(Carts currentCart, String userId, String bookId, String quantityToBuy)
+			throws OutOfStockException, BookNotFoundException {
 
 		currentCart = this.getCartById(userId); // checking if carts exist
 
 		Book b = bs.getBookById(bookId);
-		
+
 		if (b.getQuantity() <= 0) {
 			throw new OutOfStockException("Currently Out of Stock...");
 		}
-
 		int amountToBuy = Integer.parseInt(quantityToBuy);
+
+		if (amountToBuy <= 0) {
+			throw new InvalidParameterException("Quantity to Buy cannot be less than or equal to zero!");
+		}
 		BookToBuy booksToBeBought = new BookToBuy(b, amountToBuy);
 
 		List<BookToBuy> currentBooksInTheCart = currentCart.getBooksToBuy();
@@ -124,7 +126,7 @@ public class CartsService {
 		currentCart = this.getCartById(cartId);
 
 		List<BookToBuy> currentBooksInTheList = currentCart.getBooksToBuy();
-		
+
 		Iterator<BookToBuy> iter = currentBooksInTheList.iterator();
 		System.out.println(currentBooksInTheList);
 		BookToBuy b1 = null;
@@ -133,7 +135,7 @@ public class CartsService {
 			iter.remove();
 			currentCart.setBooksToBuy(currentBooksInTheList);
 		}
-		
+
 		btbd.deleteAll();
 
 		return cd.saveAndFlush(currentCart);
