@@ -47,13 +47,14 @@ public class AuthenticationControllerTest {
         Transaction tx = session.beginTransaction();
 
         Users user1 = new Users("test123","5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8","testfn",
-                "testln",21,"test123@gmail.com","1990-12-09",
+                "testln",21,"test123@gmail.com","12/09/1990",
                 "address123","customer");
         session.persist(user1);
 
         tx.commit();
 
         session.close();
+        
     }
 
 
@@ -73,7 +74,7 @@ public class AuthenticationControllerTest {
 
         Users expectedUser = new Users("test123","5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8","testfn",
 
-                "testln",21,"test123@gmail.com","1990-12-09",
+                "testln",21,"test123@gmail.com","12/09/1990",
                 "address123","customer");
         expectedUser.setId(1);
 
@@ -122,7 +123,7 @@ public class AuthenticationControllerTest {
         SignUpDto dto = new SignUpDto("testuser1",
                 "password123",
                 "testfirstname","testlastname",21,"test@list.com",
-                "1990-08-09","addresswest","Customer");
+                "09/08/1990","addresswest","Customer");
         String jsonToSend = mapper.writeValueAsString(dto);
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
@@ -131,7 +132,7 @@ public class AuthenticationControllerTest {
         Users expectedUser = new Users("testuser1",
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "testfirstname","testlastname",21,"test@list.com",
-                "1990-08-09","addresswest","Customer");
+                "09/08/1990","addresswest","Customer");
         em.persist(expectedUser);
         expectedUser.setId(2);
         Carts c = new Carts(expectedUser);
@@ -147,7 +148,7 @@ public class AuthenticationControllerTest {
         SignUpDto dto = new SignUpDto(" ",
                 "password123",
                 "testfirstname","testlastname",21,"test@list.com",
-                "1990-08-09","addresswest","customer");
+                "09/08/1990","addresswest","customer");
         String jsonToSend = mapper.writeValueAsString(dto);
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
@@ -165,7 +166,7 @@ public class AuthenticationControllerTest {
         SignUpDto dto = new SignUpDto("test123",
                 " ",
                 "testfirstname","testlastname",21,"test@list.com",
-                "1990-08-09","addresswest","customer");
+                "09/08/1990","addresswest","customer");
         String jsonToSend = mapper.writeValueAsString(dto);
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
@@ -183,7 +184,7 @@ public class AuthenticationControllerTest {
         SignUpDto dto = new SignUpDto("test123",
                 "password123",
                 "","testlastname",21,"test@list.com",
-                "1990-08-09","addresswest","customer");
+                "09/08/1990","addresswest","customer");
         String jsonToSend = mapper.writeValueAsString(dto);
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
@@ -200,7 +201,7 @@ public class AuthenticationControllerTest {
         SignUpDto dto = new SignUpDto("test123",
                 "password123",
                 "testfirstname","",21,"test@list.com",
-                "1990-08-09","addresswest","customer");
+                "09/08/1990","addresswest","customer");
         String jsonToSend = mapper.writeValueAsString(dto);
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
@@ -217,7 +218,7 @@ public class AuthenticationControllerTest {
         SignUpDto dto = new SignUpDto("test1234",
                 "password123",
                 "testfirstname","testlastname",3,"test@list.com",
-                "1990-08-09","addresswest","Customer");
+                "09/08/1990","addresswest","Customer");
         String jsonToSend = mapper.writeValueAsString(dto);
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
@@ -235,7 +236,7 @@ public class AuthenticationControllerTest {
         SignUpDto dto = new SignUpDto("test1234",
                 "password123",
                 "testfirstname","testlastname",130,"test@list.com",
-                "1990-08-09","addresswest","Customer");
+                "09/08/1990","addresswest","Customer");
 
         String jsonToSend = mapper.writeValueAsString(dto);
 
@@ -255,7 +256,7 @@ public class AuthenticationControllerTest {
         SignUpDto dto = new SignUpDto("test123",
                 "password123",
                 "testfirstname","testlastname",3,"",
-                "1990-08-09","addresswest","customer");
+                "09/08/1990","addresswest","customer");
         String jsonToSend = mapper.writeValueAsString(dto);
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
@@ -289,7 +290,7 @@ public class AuthenticationControllerTest {
         SignUpDto dto = new SignUpDto("test123",
                 "password123",
                 "testfirstname","testlastname",3,"test@list.com",
-                "1990-08-09","","customer");
+                "09/08/1990","","customer");
         String jsonToSend = mapper.writeValueAsString(dto);
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
@@ -306,7 +307,7 @@ public class AuthenticationControllerTest {
         SignUpDto dto = new SignUpDto("test123",
                 "password123",
                 "testfirstname","testlastname",3,"test@list.com",
-                "1990-08-09","addresswest","");
+                "09/08/1990","addresswest","");
         String jsonToSend = mapper.writeValueAsString(dto);
 
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/signup")
@@ -339,7 +340,7 @@ public class AuthenticationControllerTest {
 
         Users fakeUser = new Users("test123",
                 "5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8",
-                "testfn", "testln",21,"test123@gmail.com","1990-12-09",
+                "testfn", "testln",21,"test123@gmail.com","12/09/1990",
                 "address123","Customer");
         fakeUser.setId(3);
 
@@ -359,7 +360,7 @@ public class AuthenticationControllerTest {
 
         Users fakeUser = new Users("test123",
                 "5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8",
-                "testfn", "testln",21,"test123@gmail.com","1990-12-09",
+                "testfn", "testln",21,"test123@gmail.com","12/09/1990",
                 "address123","Customer");
         fakeUser.setId(3);
 
@@ -380,7 +381,7 @@ public class AuthenticationControllerTest {
 
         Users u = new Users("test1",
                 "5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8",
-                "testf", "testl",21,"test989@gmail.com","1990-12-09",
+                "testf", "testl",21,"test989@gmail.com","12/09/1990",
                 "addresstest","Customer");
         em.persist(u);
 
@@ -406,7 +407,7 @@ public class AuthenticationControllerTest {
         Users u = new Users("testuser1",
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "testfirstname","testlastname",21,"test@list.com",
-                "1990-08-09","addresswest","Customer");
+                "09/08/1990","addresswest","Customer");
         em.persist(u);
 
         tx.commit();
@@ -423,7 +424,7 @@ public class AuthenticationControllerTest {
         Users expectedUser = new Users("testuser1",
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "testfirstname","testlastname",21,"test@list.com",
-                "1990-08-09","addresswest","Customer");
+                "09/08/1990","addresswest","Customer");
         expectedUser.setId(2);
 
         String expectedJson = mapper.writeValueAsString(expectedUser);
@@ -442,7 +443,7 @@ public class AuthenticationControllerTest {
         Users u = new Users("",
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "testfirstname","testlastname",21,"test@list.com",
-                "1990-08-09","addresswest","Customer");
+                "09/08/1990","addresswest","Customer");
         em.persist(u);
 
         tx.commit();
@@ -459,7 +460,7 @@ public class AuthenticationControllerTest {
 //        Users expectedUser = new Users("testuser1",
 //                "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
 //                "testfirstname","testlastname",21,"test@list.com",
-//                "1990-08-09","addresswest","Customer");
+//                "09/08/1990","addresswest","Customer");
 //        expectedUser.setId(2);
 //
 //        String expectedJson = mapper.writeValueAsString(expectedUser);
@@ -478,7 +479,7 @@ public class AuthenticationControllerTest {
         Users u = new Users("testuser1",
                 "",
                 "testfirstname","testlastname",21,"test@list.com",
-                "1990-08-09","addresswest","Customer");
+                "09/08/1990","addresswest","Customer");
         em.persist(u);
 
         tx.commit();
@@ -506,7 +507,7 @@ public class AuthenticationControllerTest {
         Users u = new Users("testuser1",
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "","testlastname",21,"test@list.com",
-                "1990-08-09","addresswest","Customer");
+                "09/08/1990","addresswest","Customer");
         em.persist(u);
 
         tx.commit();
@@ -535,7 +536,7 @@ public class AuthenticationControllerTest {
         Users u = new Users("testuser1",
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "testfirstname","",21,"test@list.com",
-                "1990-08-09","addresswest","Customer");
+                "09/08/1990","addresswest","Customer");
         em.persist(u);
 
         tx.commit();
@@ -563,7 +564,7 @@ public class AuthenticationControllerTest {
         Users u = new Users("testuser1",
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "testfirstname","testlastname",2,"test@list.com",
-                "1990-08-09","addresswest","Customer");
+                "09/08/1990","addresswest","Customer");
         em.persist(u);
 
         tx.commit();
@@ -591,7 +592,7 @@ public class AuthenticationControllerTest {
         Users u = new Users("testuser1",
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "testfirstname","testlastname",220,"test@list.com",
-                "1990-08-09","addresswest","Customer");
+                "09/08/1990","addresswest","Customer");
         em.persist(u);
 
         tx.commit();
@@ -619,7 +620,7 @@ public class AuthenticationControllerTest {
         Users u = new Users("testuser1",
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "testfirstname","testlastname",21,"",
-                "1990-08-09","addresswest","Customer");
+                "09/08/1990","addresswest","Customer");
         em.persist(u);
 
         tx.commit();
@@ -648,7 +649,7 @@ public class AuthenticationControllerTest {
         Users u = new Users("testuser1",
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "testfirstname","testlastname",21,"test@list.com",
-                "1990-08-09","","Customer");
+                "09/08/1990","","Customer");
         em.persist(u);
 
         tx.commit();
@@ -704,7 +705,7 @@ public class AuthenticationControllerTest {
         Users u = new Users("testuser1",
                 "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F",
                 "testfirstname","testlastname",21,"test@list.com",
-                "1990-08-09","addresswest","");
+                "09/08/1990","addresswest","");
         em.persist(u);
 
         tx.commit();
