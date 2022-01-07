@@ -9,14 +9,12 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-
 import com.revature.lostchapterbackend.annotation.Admin;
-import com.revature.lostchapterbackend.annotation.AuthorizedUser;
-
-import com.revature.lostchapterbackend.dto.AddBookDTO;
+import com.revature.lostchapterbackend.dto.AddOrUpdateBookDTO;
 import com.revature.lostchapterbackend.exceptions.BookNotFoundException;
 import com.revature.lostchapterbackend.exceptions.GenreNotFoundException;
 import com.revature.lostchapterbackend.exceptions.ISBNAlreadyExists;
@@ -72,7 +70,7 @@ public class BookController {
 
 	@Admin
 	@PostMapping(path = "/books")
-	public ResponseEntity<Object> addNewBook(@RequestBody AddBookDTO dto) {
+	public ResponseEntity<Object> addNewBook(@RequestBody AddOrUpdateBookDTO dto) {
 		try {
 			Book addedBook = bs.addBook(dto);
 			return ResponseEntity.status(201).body(addedBook);
@@ -87,4 +85,16 @@ public class BookController {
 
 	}
 
+	@PutMapping(path = "/books/{id}")
+	public ResponseEntity<Object> updateBookById(@PathVariable(value = "id") String id, @RequestBody AddOrUpdateBookDTO dto)  {
+		try {
+			Book updatedBook = bs.updateBook(dto, id);
+			return ResponseEntity.status(204).body(updatedBook);
+		} catch (BookNotFoundException e) {
+			
+			e.printStackTrace();
+		}
+		return null;
+
+	}
 }

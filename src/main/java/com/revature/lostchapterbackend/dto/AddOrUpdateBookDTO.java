@@ -4,7 +4,7 @@ import java.util.Objects;
 
 import com.revature.lostchapterbackend.model.Genre;
 
-public class AddBookDTO {
+public class AddOrUpdateBookDTO {
 
 	private String ISBN;
 	private String bookName;
@@ -20,11 +20,11 @@ public class AddBookDTO {
 	private double bookPrice;
 	private String bookImage;
 
-	public AddBookDTO() {
+	public AddOrUpdateBookDTO() {
 		super();
 	}
 
-	public AddBookDTO(String iSBN, String bookName, String synopsis, String author, int genre, int quantity, int year,
+	public AddOrUpdateBookDTO(String iSBN, String bookName, String synopsis, String author, int genre, int quantity, int year,
 			String edition, String publisher, boolean saleIsActive, double saleDiscountRate, double bookPrice,
 			String bookImage) {
 		super();
@@ -161,7 +161,7 @@ public class AddBookDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		AddBookDTO other = (AddBookDTO) obj;
+		AddOrUpdateBookDTO other = (AddOrUpdateBookDTO) obj;
 		return Objects.equals(ISBN, other.ISBN) && Objects.equals(author, other.author)
 				&& Objects.equals(bookImage, other.bookImage) && Objects.equals(bookName, other.bookName)
 				&& Double.doubleToLongBits(bookPrice) == Double.doubleToLongBits(other.bookPrice)
