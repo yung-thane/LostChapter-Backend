@@ -69,8 +69,10 @@ public class UserDao {
 	@Transactional
 	public void deleteUserById(int id) {
 		Users user = em.find(Users.class, id);
-
+		Carts cart = em.find(Carts.class, id);
+		
 		em.remove(user);
+		em.remove(cart);
 	}
 
 	// Getting a user by email
