@@ -40,6 +40,10 @@ public class UserService {
 				|| dto.getAddress().trim().equals("") || dto.getRole().trim().equals("")) {
 			throw new InvalidParameterException("Do not leave any information blank");
 		}
+		
+		if (dto.getUsername().length() > 255 || dto.getFirstName().length() > 255 || dto.getLastName().length() > 255) {
+			throw new InvalidParameterException("Character lengths shouldn't extend over 255 characters");
+		}
 
 		if (dto.getAge() < 5 || dto.getAge() > 125) {
 			throw new InvalidParameterException("Age cannot be less than 5 or greater than 125");
@@ -129,6 +133,10 @@ public class UserService {
 				|| updatedUserInfo.getBirthday().trim().equals("") || updatedUserInfo.getEmail().trim().equals("")
 				|| updatedUserInfo.getAddress().trim().equals("") || updatedUserInfo.getRole().trim().equals("")) {
 			throw new InvalidParameterException("Do not leave any information blank");
+		}
+		
+		if (updatedUserInfo.getUsername().length() > 255 || updatedUserInfo.getFirstName().length() > 255 || updatedUserInfo.getLastName().length() > 255) {
+			throw new InvalidParameterException("Character lengths shouldn't extend over 255 characters");
 		}
 
 		if (updatedUserInfo.getAge() < 5 || updatedUserInfo.getAge() > 125) {
