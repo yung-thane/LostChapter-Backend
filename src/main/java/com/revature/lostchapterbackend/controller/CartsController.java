@@ -53,6 +53,10 @@ public class CartsController {
 			return ResponseEntity.status(400).body(e.getMessage());
 		} catch (InvalidParameterException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
+		} catch(NoSuchElementException e) {
+			return ResponseEntity.status(400).body(e.getMessage());
+		} catch(BookNotFoundException e) {
+			return ResponseEntity.status(400).body(e.getMessage());					
 		}
 	}
 
@@ -79,7 +83,7 @@ public class CartsController {
 
 		try {
 			Carts currentCart = null;
-			if (bookId != null && (cartId.matches(PATTERN) || bookId.matches(PATTERN))) {
+			if (bookId != null && (cartId.matches(PATTERN) && bookId.matches(PATTERN))) {
 				currentCart = cs.delteteProductInCart(currentCart, cartId, bookId);
 				return ResponseEntity.status(200).body(currentCart);
 			} else if (bookId == null) {
@@ -94,6 +98,8 @@ public class CartsController {
 			return ResponseEntity.status(404).body(e.getMessage());
 		} catch (BookNotFoundException e) {
 			return ResponseEntity.status(404).body(e.getMessage());
+		} catch (NoSuchElementException e) {
+			return ResponseEntity.status(404).body(e.getMessage());			
 		}
 
 	}
