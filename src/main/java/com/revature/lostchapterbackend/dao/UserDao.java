@@ -56,12 +56,8 @@ public class UserDao {
 
 		try {
 
-			logger.info("username {}", access);
-
 			Users user = em.createQuery("FROM Users u WHERE u.username = :username", Users.class)
 					.setParameter("username", access).getSingleResult();
-
-			logger.info("user in dao layer{}", user);
 
 			return user;
 		} catch (NoResultException e) {
@@ -89,13 +85,11 @@ public class UserDao {
 			return user;
 		} catch (DataAccessException e) {
 
-
 			e.printStackTrace();
 			throw new NoResultException("Email cannot be blank");
 		} catch (NoResultException e) {
 			return null;
 		}
-
 
 	}
 

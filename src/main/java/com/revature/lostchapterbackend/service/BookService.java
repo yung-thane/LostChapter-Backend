@@ -3,27 +3,32 @@ package com.revature.lostchapterbackend.service;
 import java.security.InvalidParameterException;
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.revature.lostchapterbackend.controller.BookController;
 import com.revature.lostchapterbackend.dao.BookDAO;
 import com.revature.lostchapterbackend.dao.GenreDAO;
 import com.revature.lostchapterbackend.dto.AddOrUpdateBookDTO;
 import com.revature.lostchapterbackend.exceptions.BookNotFoundException;
 import com.revature.lostchapterbackend.exceptions.GenreNotFoundException;
 import com.revature.lostchapterbackend.exceptions.ISBNAlreadyExists;
+import com.revature.lostchapterbackend.exceptions.SaleDiscountRateException;
+import com.revature.lostchapterbackend.exceptions.SynopsisInputException;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.Genre;
 import com.revature.lostchapterbackend.utility.ValidateBookUtil;
 
-
 @Service
 public class BookService {
 
+	private Logger logger = LoggerFactory.getLogger(BookService.class);
+
 	@Autowired
 	private BookDAO bd;
-	
+
 	@Autowired
 	private ValidateBookUtil vBUtil;
 
@@ -37,11 +42,14 @@ public class BookService {
 	private GenreDAO gd;
 
 	public List<Book> getAllBooks() {
+		logger.info("BookService.getAllBooks() invoked.");
 
 		return bd.findAll();
 	}
 
 	public Book getBookById(String id) throws BookNotFoundException {
+		logger.info("BookService.getBookById() invoked.");
+
 		try {
 			int bookId = Integer.parseInt(id);
 			if (!bd.findById(bookId).isPresent()) {
@@ -56,6 +64,8 @@ public class BookService {
 	}
 
 	public List<Book> getBooksByGenreId(String genreId) {
+		logger.info("BookService.getBooksByGenreId() invoked.");
+
 		try {
 			int gId = Integer.parseInt(genreId);
 			return bd.getByGenreId(gId);
@@ -66,17 +76,33 @@ public class BookService {
 	}
 
 	public List<Book> getBooksByKeyword(String keyword) {
+		logger.info("BookService.getBooksByKeyword() invoked.");
 
 		return bd.findBybookNameIgnoreCaseContaining(keyword);
 	}
 
 	public List<Book> getBooksBySale() {
+		logger.info("BookService.getBooksBySale() invoked.");
 
 		return bd.findBysaleIsActiveTrue();
 	}
 
-	public Book addBook(AddOrUpdateBookDTO dto) throws GenreNotFoundException, ISBNAlreadyExists, InvalidParameterException {
-		vBUtil.validateBookInput(dto);	
+	public Book addBook(AddOrUpdateBookDTO dto) throws GenreNotFoundException, ISBNAlreadyExists,
+			InvalidParameterException, SynopsisInputException, SaleDiscountRateException {
+
+		logger.info("BookService.addBook() invoked.");
+
+		vBUtil.validateBookInput(dto);
+
+		/*-
+		 *  check if isbn already exist
+		 */
+		logger.info("check if ISBN already exist");
+
+		if (bd.findByISBN(dto.getISBN()).isPresent()) {
+			throw new ISBNAlreadyExists("ISBN already used for another book");
+		}
+
 		Genre getGenre = gd.findById(dto.getGenre()).get();
 		Book addedBook = new Book(dto.getISBN(), dto.getBookName(), dto.getSynopsis(), dto.getAuthor(), getGenre,
 				dto.getQuantity(), dto.getYear(), dto.getEdition(), dto.getPublisher(), dto.isSaleIsActive(),
@@ -86,7 +112,11 @@ public class BookService {
 
 	}
 
-	public Book updateBook(AddOrUpdateBookDTO dto, String id) throws BookNotFoundException {
+	public Book updateBook(AddOrUpdateBookDTO dto, String id) throws BookNotFoundException, InvalidParameterException,
+			GenreNotFoundException, ISBNAlreadyExists, SynopsisInputException, SaleDiscountRateException {
+
+		logger.info("BookService.updateBook() invoked.");
+
 		try {
 			int bookId = Integer.parseInt(id);
 
@@ -94,13 +124,32 @@ public class BookService {
 
 				throw new BookNotFoundException("Book doesn't exist");
 			}
+
+			vBUtil.validateBookInput(dto);
+
 			Book bookToUpdate = bd.findById(bookId).get();
+
+			Genre getGenre = gd.findById(dto.getGenre()).get();
+
+			bookToUpdate.setISBN(dto.getISBN());
+			bookToUpdate.setBookName(dto.getBookName());
+			bookToUpdate.setSynopsis(dto.getSynopsis());
+			bookToUpdate.setAuthor(dto.getAuthor());
+			bookToUpdate.setGenre(getGenre);
+			bookToUpdate.setQuantity(dto.getQuantity());
+			bookToUpdate.setYear(dto.getYear());
+			bookToUpdate.setEdition(dto.getEdition());
+			bookToUpdate.setPublisher(dto.getPublisher());
+			bookToUpdate.setSaleIsActive(dto.isSaleIsActive());
+			bookToUpdate.setSaleDiscountRate(dto.getSaleDiscountRate());
+			bookToUpdate.setBookPrice(dto.getBookPrice());
+			bookToUpdate.setBookImage(dto.getBookImage());
+
+			return bd.saveAndFlush(bookToUpdate);
+
 		} catch (NumberFormatException e) {
 			throw new InvalidParameterException("Id must be in Int format");
 		}
-		
-		
-		return null;
 	}
 
 }

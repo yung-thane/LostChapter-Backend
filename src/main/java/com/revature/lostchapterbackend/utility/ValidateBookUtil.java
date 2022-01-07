@@ -3,6 +3,8 @@ package com.revature.lostchapterbackend.utility;
 import java.security.InvalidParameterException;
 
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.revature.lostchapterbackend.dao.BookDAO;
@@ -10,9 +12,13 @@ import com.revature.lostchapterbackend.dao.GenreDAO;
 import com.revature.lostchapterbackend.dto.AddOrUpdateBookDTO;
 import com.revature.lostchapterbackend.exceptions.GenreNotFoundException;
 import com.revature.lostchapterbackend.exceptions.ISBNAlreadyExists;
-
+import com.revature.lostchapterbackend.exceptions.SaleDiscountRateException;
+import com.revature.lostchapterbackend.exceptions.SynopsisInputException;
+import com.revature.lostchapterbackend.service.BookService;
 
 public class ValidateBookUtil {
+
+	private Logger logger = LoggerFactory.getLogger(ValidateBookUtil.class);
 
 	@Autowired
 	GenreDAO gd;
@@ -20,11 +26,16 @@ public class ValidateBookUtil {
 	@Autowired
 	BookDAO bd;
 
-	public void validateBookInput(AddOrUpdateBookDTO dto)
-			throws GenreNotFoundException, InvalidParameterException, ISBNAlreadyExists {
+	public void validateBookInput(AddOrUpdateBookDTO dto) throws GenreNotFoundException, InvalidParameterException,
+			ISBNAlreadyExists, SynopsisInputException, SaleDiscountRateException {
+
+		logger.info("ValidateBookUtil.validateBookInput() invoked.");
+
 		/*-
 		 * 	blank inputs
 		 */
+		logger.info("check blank inputs");
+
 		boolean blankInputs = false;
 		StringBuilder blankInputStrings = new StringBuilder();
 
@@ -142,21 +153,6 @@ public class ValidateBookUtil {
 
 			}
 
-		} else {
-			if ((dto.isSaleIsActive() == true)) {
-				if (dto.getSaleDiscountRate() == 0.0) {
-					if (blankInputs) {
-						blankInputStrings.append(", sale discount rate");
-						blankInputs = true;
-					} else {
-						blankInputStrings.append("Sale discount rate");
-						blankInputs = true;
-
-					}
-
-				}
-
-			}
 		}
 
 		String price = Double.toString(dto.getBookPrice());
@@ -188,15 +184,10 @@ public class ValidateBookUtil {
 		}
 
 		/*-
-		 *  check if isbn already exist
-		 */
-		if (bd.findByISBN(dto.getISBN()).isPresent()) {
-			throw new ISBNAlreadyExists("ISBN already used for another book");
-		}
-
-		/*-
 		 *  validate int inputs
 		 */
+		logger.info("validate int inputs");
+
 		boolean lessThanZeroBoolean = false;
 		StringBuilder lessThanZeroString = new StringBuilder();
 
@@ -235,13 +226,27 @@ public class ValidateBookUtil {
 		/*-
 		 *  validate synopsis length
 		 */
+		logger.info("validate synopsis length");
+
 		if (dto.getSynopsis().length() > 800) {
-			throw new InvalidParameterException("Synopsis cannot be longer than 800 characters.");
+			throw new SynopsisInputException("Synopsis cannot be longer than 800 characters.");
+		}
+
+		/*-
+		 *  validate sale discount rate
+		 */
+		logger.info("validate sale discount rate");
+
+		if (dto.getSaleDiscountRate() <= 0.0 || dto.getSaleDiscountRate() > 0.90) {
+			throw new SaleDiscountRateException(
+					"Sale discount rate must be more than 0.0 and less than or equal to 0.90");
 		}
 
 		/*-
 		 *  validate genre
 		 */
+		logger.info("validate genre");
+
 		if (!gd.findById(dto.getGenre()).isPresent()) {
 			throw new GenreNotFoundException("Genre doesn't exist");
 		}

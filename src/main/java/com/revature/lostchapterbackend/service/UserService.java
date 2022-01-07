@@ -56,7 +56,6 @@ public class UserService {
 		String algorithm = "SHA-256";
 		String hashedPassword = HashUtil.hashPassword(dto.getPassword().trim(), algorithm);
 		dto.setPassword(hashedPassword);
-		System.out.println(hashedPassword);
 
 		Carts c = null;
 		Users createdUser = this.ud.addUser(dto, c);
@@ -75,10 +74,6 @@ public class UserService {
 			if (user != null) {
 				String algorithm = "SHA-256";
 				String hashedInputPassword = HashUtil.hashInputPassword(password.trim(), algorithm);
-				System.out.println(hashedInputPassword);
-
-				logger.info("hashedInputPassword {}", hashedInputPassword);
-				logger.info("user.getPassword {}", user.getPassword());
 
 				Boolean correctPassword = hashedInputPassword.equals(user.getPassword());
 
