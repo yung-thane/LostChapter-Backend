@@ -3238,3 +3238,1236 @@
 07 Jan 2022 - 10:10:26.397 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
 07 Jan 2022 - 10:10:26.397 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-29 - Shutdown initiated...
 07 Jan 2022 - 10:10:26.397 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-29 - Shutdown completed.
+07 Jan 2022 - 11:36:06.785 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 16860 (C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend\target\classes started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 11:36:06.789 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 11:36:06.837 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+07 Jan 2022 - 11:36:06.837 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+07 Jan 2022 - 11:36:07.713 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 11:36:07.769 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 11:36:09.337 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+07 Jan 2022 - 11:36:09.353 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+07 Jan 2022 - 11:36:09.353 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+07 Jan 2022 - 11:36:09.353 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+07 Jan 2022 - 11:36:09.447 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+07 Jan 2022 - 11:36:09.448 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2610 ms
+07 Jan 2022 - 11:36:10.071 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+07 Jan 2022 - 11:36:11.038 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+07 Jan 2022 - 11:36:11.051 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+07 Jan 2022 - 11:36:11.514 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 11:36:11.573 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+07 Jan 2022 - 11:36:11.766 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07 Jan 2022 - 11:36:11.963 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+07 Jan 2022 - 11:36:13.135 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 11:36:13.143 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 11:36:14.755 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 11:36:19.277 [RMI TCP Connection(3)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+07 Jan 2022 - 11:36:19.278 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+07 Jan 2022 - 11:36:19.504 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 11:36:19.527 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 249 ms
+07 Jan 2022 - 11:36:19.690 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+07 Jan 2022 - 11:36:19.739 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+07 Jan 2022 - 11:36:19.766 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+07 Jan 2022 - 11:36:19.772 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 13.377 seconds (JVM running for 14.205)
+07 Jan 2022 - 11:49:05.352 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 11:49:05.359 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - username username
+07 Jan 2022 - 11:49:05.607 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:49:05.607 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - username username
+07 Jan 2022 - 11:49:05.821 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 11:49:10.362 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 11:49:10.362 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - username vhvhjkb
+07 Jan 2022 - 11:49:10.404 [http-nio-8081-exec-5] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:49:10.404 [http-nio-8081-exec-5] INFO  c.r.lostchapterbackend.dao.UserDao - username vhvhjkb
+07 Jan 2022 - 11:49:10.495 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 11:49:14.028 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 11:49:14.028 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - username JohnDoeFake
+07 Jan 2022 - 11:49:14.078 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:49:14.079 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - username JohnDoeFake
+07 Jan 2022 - 11:49:14.171 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 11:49:17.947 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 11:49:17.948 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - username null
+07 Jan 2022 - 11:49:17.992 [http-nio-8081-exec-5] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:49:17.993 [http-nio-8081-exec-5] INFO  c.r.lostchapterbackend.dao.UserDao - username null
+07 Jan 2022 - 11:49:18.093 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 11:49:22.413 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 11:49:22.413 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - username JohnDoeFake
+07 Jan 2022 - 11:49:22.457 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:49:22.457 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - username JohnDoeFake
+07 Jan 2022 - 11:49:22.558 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 11:49:26.499 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 11:49:26.499 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - username Admin
+07 Jan 2022 - 11:49:26.564 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:49:26.564 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - username Admin
+07 Jan 2022 - 11:49:26.651 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 11:52:05.090 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 11:52:05.090 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - username username
+07 Jan 2022 - 11:52:05.139 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:52:05.139 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - username username
+07 Jan 2022 - 11:52:05.243 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 11:57:32.997 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:57:33.004 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:57:33.129 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:57:33.130 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:57:33.207 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:57:33.375 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:57:33.376 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:57:33.376 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - username WXJPCRIKEYGAUJBOUDWD
+07 Jan 2022 - 11:57:33.468 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:57:33.472 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:57:38.117 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:57:38.118 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:57:38.118 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:57:38.118 [http-nio-8081-exec-9] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:57:38.160 [http-nio-8081-exec-9] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:57:38.253 [http-nio-8081-exec-9] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:57:38.253 [http-nio-8081-exec-9] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:57:38.253 [http-nio-8081-exec-9] INFO  c.r.lostchapterbackend.dao.UserDao - username LGGPVCPAXFEWSYBOIAJB
+07 Jan 2022 - 11:57:38.341 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:57:38.341 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:57:42.661 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:57:42.661 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:57:46.716 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:57:46.716 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:57:50.874 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:57:50.874 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:57:55.465 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:57:55.465 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:57:59.761 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:57:59.762 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:58:04.264 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:58:04.264 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:58:04.264 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:58:04.264 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:58:04.306 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:58:04.406 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:58:04.406 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:58:04.406 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - username WUDNPCVHCCXHQCRYJANO
+07 Jan 2022 - 11:58:04.496 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:58:04.497 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:58:09.238 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:58:09.239 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:58:14.227 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:58:14.227 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:58:14.227 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:58:14.227 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:58:14.276 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:58:14.376 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:58:14.376 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:58:14.376 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - username username
+07 Jan 2022 - 11:58:14.467 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:58:14.467 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:58:20.900 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:58:20.900 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:58:20.900 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:58:20.900 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:58:20.943 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:58:21.033 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:58:21.033 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:58:21.033 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - username BQPORSUVKQAWVLHNLFUC
+07 Jan 2022 - 11:58:21.124 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:58:21.125 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:58:29.614 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:58:29.615 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:58:29.615 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:58:29.615 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:58:29.662 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:58:29.762 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:58:29.763 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:58:29.763 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - username HMBIBKSOYYURGGQXWVVE
+07 Jan 2022 - 11:58:29.853 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:58:29.853 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:58:35.568 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:58:35.568 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:58:35.568 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:58:35.568 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:58:35.617 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:58:35.718 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:58:35.718 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:58:35.718 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - username AAALQIRCFIKXLGHYYMCY
+07 Jan 2022 - 11:58:35.797 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:58:35.797 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:58:40.169 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:58:40.170 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:58:40.170 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:58:40.170 [http-nio-8081-exec-9] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:58:40.212 [http-nio-8081-exec-9] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:58:40.294 [http-nio-8081-exec-9] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:58:40.295 [http-nio-8081-exec-9] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:58:40.295 [http-nio-8081-exec-9] INFO  c.r.lostchapterbackend.dao.UserDao - username QXYWAVYXVHLCLCAXJJYV
+07 Jan 2022 - 11:58:40.381 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:58:45.629 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:58:45.630 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:58:45.630 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:58:45.630 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:58:45.677 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:58:45.758 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:58:45.758 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:58:45.758 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - username GYYLYVKQBQTXXVDBBGTD
+07 Jan 2022 - 11:58:45.858 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:58:45.858 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:58:53.142 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:58:53.142 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:58:53.142 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:58:53.142 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:58:53.189 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:58:53.285 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:58:53.285 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:58:53.286 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - username FRNGGXNHYCRLQRQEPADC
+07 Jan 2022 - 11:58:53.374 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:58:53.375 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:59:00.434 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:59:00.435 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:59:00.436 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:59:00.436 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:59:00.488 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:59:00.594 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:59:00.595 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:59:00.595 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - username HAAHBTJIYXXEJCEIJSAJ
+07 Jan 2022 - 11:59:00.696 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:59:00.697 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:59:00.808 [http-nio-8081-exec-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 22001
+07 Jan 2022 - 11:59:00.809 [http-nio-8081-exec-7] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: value too long for type character varying(255)
+07 Jan 2022 - 11:59:01.047 [http-nio-8081-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.DataException: could not execute statement] with root cause
+org.postgresql.util.PSQLException: ERROR: value too long for type character varying(255)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2674)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2364)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:354)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:484)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:404)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:162)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:58)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3279)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3885)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
+	at jdk.internal.reflect.GeneratedMethodAccessor117.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362)
+	at jdk.proxy4/jdk.proxy4.$Proxy125.persist(Unknown Source)
+	at jdk.internal.reflect.GeneratedMethodAccessor117.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
+	at jdk.proxy4/jdk.proxy4.$Proxy125.persist(Unknown Source)
+	at com.revature.lostchapterbackend.dao.UserDao.addUser(UserDao.java:35)
+	at com.revature.lostchapterbackend.dao.UserDao$$FastClassBySpringCGLIB$$7b90217.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.revature.lostchapterbackend.dao.UserDao$$EnhancerBySpringCGLIB$$4fccdf40.addUser(<generated>)
+	at com.revature.lostchapterbackend.service.UserService.createUser(UserService.java:66)
+	at com.revature.lostchapterbackend.controller.AuthenticationController.signUp(AuthenticationController.java:47)
+	at jdk.internal.reflect.GeneratedMethodAccessor120.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+07 Jan 2022 - 11:59:08.304 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:59:08.304 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:59:08.304 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:59:08.304 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:59:08.350 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:59:08.439 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:59:08.440 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:59:08.440 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - username gwpwgfuktxgakkfxxxujuqyjheujbwvjrarpmburgvxjcfvxizabrwbgazdmzwikifbhatutfgpzmbhmjegvrhxzphvwmqxuduknwznvugikuzbxrkkqwwwpiajmvukjanhbgyibpuztmxzbzdzezdvbwykpfgvdbcwqminjqmipbnjjkahngymuuzgenkbharxwrajkzjiverczpftdvmgcdcipkzxtnypwrqczjxdugbggrerhxvtyrhhmcubnimevrdqyjqmffiwezxrezvunrfhwucrqaanxitqgnhem
+07 Jan 2022 - 11:59:08.547 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:59:08.548 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:59:15.140 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:59:15.140 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:59:15.140 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:59:15.140 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:59:15.191 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:59:15.284 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:59:15.286 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:59:15.286 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - username XJPRIMUTIKLUBLQQWMQW
+07 Jan 2022 - 11:59:15.396 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:59:15.397 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:59:20.660 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:59:20.660 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:59:25.752 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:59:25.753 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:59:30.198 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:59:30.198 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:59:30.198 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:59:30.198 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:59:30.243 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:59:30.342 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:59:30.343 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:59:30.343 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - username KMOXXMPHUVNDUDVPPROY
+07 Jan 2022 - 11:59:30.432 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:59:30.432 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:59:34.796 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:59:34.796 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:59:34.796 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:59:34.796 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:59:34.844 [http-nio-8081-exec-5] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:59:34.926 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:59:34.926 [http-nio-8081-exec-5] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:59:34.926 [http-nio-8081-exec-5] INFO  c.r.lostchapterbackend.dao.UserDao - username KMOXXMPHUVNDUDVPPROY
+07 Jan 2022 - 11:59:35.019 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:59:35.019 [http-nio-8081-exec-5] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 11:59:35.314 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 11:59:35.314 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 11:59:35.314 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 11:59:35.314 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 11:59:35.314 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 11:59:35.397 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 11:59:35.397 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 11:59:35.397 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - username KMOXXMPHUVNDUDVPPROY
+07 Jan 2022 - 11:59:35.487 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 11:59:35.487 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 12:01:10.451 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:01:10.451 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:01:10.451 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:01:10.451 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:01:10.492 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:01:10.584 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:01:10.584 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:01:10.584 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - username CLOKRURMTMDSOXBFBUDK
+07 Jan 2022 - 12:01:10.677 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 12:01:10.677 [http-nio-8081-exec-1] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 12:01:15.263 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:01:15.263 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:01:15.263 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:01:15.264 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:01:15.307 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:01:15.408 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:01:15.408 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:01:15.408 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - username CYFHNIBWXATPNBYFVTCL
+07 Jan 2022 - 12:01:15.507 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 12:01:15.507 [http-nio-8081-exec-7] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 12:01:20.178 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:01:20.178 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:01:24.524 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:01:24.524 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:01:28.768 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:01:28.768 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:01:32.970 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:01:32.970 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:01:37.489 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:01:37.490 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:01:41.457 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:01:41.457 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:01:41.457 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:01:41.457 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:01:41.502 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:01:41.582 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:01:41.582 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:01:41.582 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - username UIROYCCIDOVSYISIKCTX
+07 Jan 2022 - 12:01:41.673 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 12:01:41.673 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 12:01:46.074 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:01:46.074 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:01:50.325 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:01:50.326 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:01:50.326 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:01:50.326 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:01:50.371 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:01:50.452 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:01:50.452 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:01:50.452 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - username username
+07 Jan 2022 - 12:01:50.558 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - user in dao layerUsers [id=11, username=username, password=5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8, firstName=John, lastName=Doe, age=25, email=AWNJFCVDCDTIDQIKYDAH@gmail.com, birthday=10/03/1996, address=1095 downtown road, role=Customer]
+07 Jan 2022 - 12:01:54.787 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:01:54.788 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:01:54.788 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:01:54.788 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:01:54.836 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:01:54.925 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:01:54.925 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:01:54.925 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - username EGMNPRGTQKVPWDHXCIIV
+07 Jan 2022 - 12:01:59.357 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:01:59.357 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:01:59.357 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:01:59.357 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:01:59.400 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:01:59.490 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:01:59.490 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:01:59.490 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - username WOSYBQBMOUHDMELMXYYT
+07 Jan 2022 - 12:01:59.590 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 12:01:59.591 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 12:02:03.896 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:02:03.896 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:02:03.897 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:02:03.898 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:02:03.945 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:02:04.025 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:02:04.026 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:02:04.026 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - username ROLTTNVAOGBURBCDCSQJ
+07 Jan 2022 - 12:02:04.114 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 12:02:04.114 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 12:02:08.377 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:02:08.377 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:02:08.377 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:02:08.377 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:02:08.419 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:02:08.519 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:02:08.519 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:02:08.519 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - username MSGNRSKKUXFJCXHBIXFI
+07 Jan 2022 - 12:02:08.608 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 12:02:13.609 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:02:13.609 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:02:13.609 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:02:13.609 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:02:13.654 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:02:13.760 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:02:13.760 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:02:13.760 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - username PHFXVKAMTFCNMFKCHRIM
+07 Jan 2022 - 12:02:13.874 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 12:02:13.874 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 12:02:18.783 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:02:18.783 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:02:18.783 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:02:18.783 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:02:18.830 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:02:18.910 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:02:18.910 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:02:18.910 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - username XCCMOUFBFQUPSTECDJVL
+07 Jan 2022 - 12:02:19.002 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 12:02:19.002 [http-nio-8081-exec-10] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 12:02:23.796 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:02:23.796 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:02:23.796 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:02:23.796 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:02:23.845 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:02:23.934 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:02:23.934 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:02:23.934 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - username KQMONKPQHTXAOFMGWNOM
+07 Jan 2022 - 12:02:24.015 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 12:02:24.015 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 12:02:24.065 [http-nio-8081-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 22001
+07 Jan 2022 - 12:02:24.065 [http-nio-8081-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: value too long for type character varying(255)
+07 Jan 2022 - 12:02:24.116 [http-nio-8081-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.DataException: could not execute statement] with root cause
+org.postgresql.util.PSQLException: ERROR: value too long for type character varying(255)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2674)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2364)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:354)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:484)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:404)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:162)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:58)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3279)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3885)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:760)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:746)
+	at jdk.internal.reflect.GeneratedMethodAccessor117.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362)
+	at jdk.proxy4/jdk.proxy4.$Proxy125.persist(Unknown Source)
+	at jdk.internal.reflect.GeneratedMethodAccessor117.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
+	at jdk.proxy4/jdk.proxy4.$Proxy125.persist(Unknown Source)
+	at com.revature.lostchapterbackend.dao.UserDao.addUser(UserDao.java:35)
+	at com.revature.lostchapterbackend.dao.UserDao$$FastClassBySpringCGLIB$$7b90217.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.revature.lostchapterbackend.dao.UserDao$$EnhancerBySpringCGLIB$$4fccdf40.addUser(<generated>)
+	at com.revature.lostchapterbackend.service.UserService.createUser(UserService.java:66)
+	at com.revature.lostchapterbackend.controller.AuthenticationController.signUp(AuthenticationController.java:47)
+	at jdk.internal.reflect.GeneratedMethodAccessor120.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+07 Jan 2022 - 12:02:29.815 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:02:29.815 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:02:29.816 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:02:29.816 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:02:29.861 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:02:29.960 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:02:29.961 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:02:29.961 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - username gwpwgfuktxgakkfxxxujuqyjheujbwvjrarpmburgvxjcfvxizabrwbgazdmzwikifbhatutfgpzmbhmjegvrhxzphvwmqxuduknwznvugikuzbxrkkqwwwpiajmvukjanhbgyibpuztmxzbzdzezdvbwykpfgvdbcwqminjqmipbnjjkahngymuuzgenkbharxwrajkzjiverczpftdvmgcdcipkzxtnypwrqczjxdugbggrerhxvtyrhhmcubnimevrdqyjqmffiwezxrezvunrfhwucrqaanxitqgnhem
+07 Jan 2022 - 12:02:30.051 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 12:02:30.051 [http-nio-8081-exec-8] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 12:02:36.297 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:02:36.297 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:02:36.297 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:02:36.297 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:02:36.348 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:02:36.449 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:02:36.449 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:02:36.449 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - username KRACILVERHLVQSPGBUVC
+07 Jan 2022 - 12:02:36.547 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 12:02:36.547 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 12:02:41.229 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:02:41.230 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:02:45.271 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:02:45.272 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:02:49.580 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 12:02:49.580 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 12:02:49.581 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 12:02:49.581 [http-nio-8081-exec-9] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 12:02:49.630 [http-nio-8081-exec-9] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 12:02:49.721 [http-nio-8081-exec-9] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 12:02:49.721 [http-nio-8081-exec-9] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 12:02:49.721 [http-nio-8081-exec-9] INFO  c.r.lostchapterbackend.dao.UserDao - username EFJGQDGRTRQADQBFJLBN
+07 Jan 2022 - 12:02:49.810 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 12:02:49.810 [http-nio-8081-exec-9] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 13:08:20.502 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 13:08:20.503 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - username username
+07 Jan 2022 - 13:08:20.552 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 13:08:20.552 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - username username
+07 Jan 2022 - 13:08:20.603 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - user in dao layerUsers [id=11, username=username, password=5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8, firstName=John, lastName=Doe, age=25, email=AWNJFCVDCDTIDQIKYDAH@gmail.com, birthday=10/03/1996, address=1095 downtown road, role=Customer]
+07 Jan 2022 - 13:08:20.652 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - user in service layer Users [id=11, username=username, password=5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8, firstName=John, lastName=Doe, age=25, email=AWNJFCVDCDTIDQIKYDAH@gmail.com, birthday=10/03/1996, address=1095 downtown road, role=Customer]
+07 Jan 2022 - 13:08:20.652 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - hashedInputPassword 5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8
+07 Jan 2022 - 13:08:20.652 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - user.getPassword 5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8
+07 Jan 2022 - 13:09:54.241 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 13:09:54.242 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 13:09:54.242 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 13:09:54.242 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 13:09:54.285 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 13:09:54.386 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 13:09:54.386 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 13:09:54.386 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - username marshall.hobbs
+07 Jan 2022 - 13:09:54.485 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 13:09:54.486 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 13:10:09.052 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 13:10:09.052 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - username marshall.hobbs96
+07 Jan 2022 - 13:10:09.100 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 13:10:09.100 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - username marshall.hobbs96
+07 Jan 2022 - 13:10:09.202 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 13:10:13.754 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 13:10:13.754 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - username marshall.hobbs96
+07 Jan 2022 - 13:10:13.795 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 13:10:13.795 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - username marshall.hobbs96
+07 Jan 2022 - 13:10:13.895 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 13:10:14.622 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 13:10:14.622 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - username marshall.hobbs96
+07 Jan 2022 - 13:10:14.666 [http-nio-8081-exec-5] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 13:10:14.666 [http-nio-8081-exec-5] INFO  c.r.lostchapterbackend.dao.UserDao - username marshall.hobbs96
+07 Jan 2022 - 13:10:14.766 [http-nio-8081-exec-5] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 13:10:14.783 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 13:10:14.783 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - username marshall.hobbs96
+07 Jan 2022 - 13:10:14.783 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 13:10:14.783 [http-nio-8081-exec-10] INFO  c.r.lostchapterbackend.dao.UserDao - username marshall.hobbs96
+07 Jan 2022 - 13:10:14.876 [http-nio-8081-exec-10] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 13:10:14.932 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 13:10:14.932 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - username marshall.hobbs96
+07 Jan 2022 - 13:10:14.932 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 13:10:14.932 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - username marshall.hobbs96
+07 Jan 2022 - 13:10:15.027 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 13:10:15.074 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 13:10:15.074 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - username marshall.hobbs96
+07 Jan 2022 - 13:10:15.075 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 13:10:15.075 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - username marshall.hobbs96
+07 Jan 2022 - 13:10:15.166 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 13:10:22.083 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 13:10:22.083 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - username marshall.hobbs96
+07 Jan 2022 - 13:10:22.133 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 13:10:22.133 [http-nio-8081-exec-1] INFO  c.r.lostchapterbackend.dao.UserDao - username marshall.hobbs96
+07 Jan 2022 - 13:10:22.234 [http-nio-8081-exec-1] INFO  c.r.l.service.UserService - user in service layer null
+07 Jan 2022 - 13:10:57.194 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 13:10:57.194 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 13:10:57.194 [http-nio-8081-exec-3] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 13:10:57.194 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 13:10:57.238 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 13:10:57.338 [http-nio-8081-exec-3] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 13:10:57.338 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 13:10:57.338 [http-nio-8081-exec-3] INFO  c.r.lostchapterbackend.dao.UserDao - username marshall
+07 Jan 2022 - 13:11:01.541 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+07 Jan 2022 - 13:11:01.541 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+07 Jan 2022 - 13:11:01.541 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+07 Jan 2022 - 13:11:01.541 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+07 Jan 2022 - 13:11:01.583 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+07 Jan 2022 - 13:11:01.684 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+07 Jan 2022 - 13:11:01.684 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 13:11:01.684 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - username marshall
+07 Jan 2022 - 13:11:01.783 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - email verification
+07 Jan 2022 - 13:11:01.784 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+07 Jan 2022 - 13:11:14.258 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 13:11:14.258 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - username marshall
+07 Jan 2022 - 13:11:14.305 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 13:11:14.305 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - username marshall
+07 Jan 2022 - 13:11:14.355 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - user in dao layerUsers [id=16, username=marshall, password=5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8, firstName=marshall, lastName=hobbs, age=25, email=marshall123@gmail.com, birthday=02/02/1994, address=1234 downtown road, role=Customer]
+07 Jan 2022 - 13:11:14.406 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - user in service layer Users [id=16, username=marshall, password=5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8, firstName=marshall, lastName=hobbs, age=25, email=marshall123@gmail.com, birthday=02/02/1994, address=1234 downtown road, role=Customer]
+07 Jan 2022 - 13:11:14.406 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - hashedInputPassword 5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8
+07 Jan 2022 - 13:11:14.406 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - user.getPassword 5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8
+07 Jan 2022 - 13:35:14.245 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:35:14.271 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+07 Jan 2022 - 13:35:14.274 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+07 Jan 2022 - 13:35:14.640 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 16860 (C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend\target\classes started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:35:14.640 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:35:15.285 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:35:15.317 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:35:16.273 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+07 Jan 2022 - 13:35:16.274 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+07 Jan 2022 - 13:35:16.274 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+07 Jan 2022 - 13:35:16.274 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+07 Jan 2022 - 13:35:16.299 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+07 Jan 2022 - 13:35:16.299 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1656 ms
+07 Jan 2022 - 13:35:16.786 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+07 Jan 2022 - 13:35:17.345 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+07 Jan 2022 - 13:35:17.345 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+07 Jan 2022 - 13:35:17.644 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:35:17.655 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+07 Jan 2022 - 13:35:17.956 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:35:17.957 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:35:19.045 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:35:22.662 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+07 Jan 2022 - 13:35:22.681 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:35:22.709 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+07 Jan 2022 - 13:35:22.713 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+07 Jan 2022 - 13:35:22.722 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 8.121 seconds (JVM running for 7157.155)
+07 Jan 2022 - 13:35:22.726 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+07 Jan 2022 - 13:36:11.471 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:36:11.472 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+07 Jan 2022 - 13:36:11.474 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+07 Jan 2022 - 13:36:11.561 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 16860 (C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend\target\classes started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:36:11.561 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:36:11.877 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:36:11.903 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:36:12.621 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+07 Jan 2022 - 13:36:12.621 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+07 Jan 2022 - 13:36:12.621 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+07 Jan 2022 - 13:36:12.621 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+07 Jan 2022 - 13:36:12.640 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+07 Jan 2022 - 13:36:12.640 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1075 ms
+07 Jan 2022 - 13:36:13.169 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+07 Jan 2022 - 13:36:13.792 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+07 Jan 2022 - 13:36:13.792 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+07 Jan 2022 - 13:36:14.032 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:36:14.036 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+07 Jan 2022 - 13:36:14.341 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:36:14.342 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:36:15.468 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:36:19.078 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+07 Jan 2022 - 13:36:19.097 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:36:19.123 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+07 Jan 2022 - 13:36:19.125 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+07 Jan 2022 - 13:36:19.137 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 7.605 seconds (JVM running for 7213.571)
+07 Jan 2022 - 13:36:19.141 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+07 Jan 2022 - 13:37:26.419 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:37:26.420 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+07 Jan 2022 - 13:37:26.425 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+07 Jan 2022 - 13:37:26.532 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 16860 (C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend\target\classes started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:37:26.533 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:37:26.826 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:37:26.841 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:37:27.654 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+07 Jan 2022 - 13:37:27.655 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+07 Jan 2022 - 13:37:27.655 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+07 Jan 2022 - 13:37:27.655 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+07 Jan 2022 - 13:37:27.672 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+07 Jan 2022 - 13:37:27.672 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1137 ms
+07 Jan 2022 - 13:37:28.166 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+07 Jan 2022 - 13:37:28.746 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+07 Jan 2022 - 13:37:28.746 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+07 Jan 2022 - 13:37:28.964 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:37:28.968 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+07 Jan 2022 - 13:37:29.297 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:37:29.298 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:37:30.499 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:37:34.409 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+07 Jan 2022 - 13:37:34.428 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:37:34.457 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+07 Jan 2022 - 13:37:34.460 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+07 Jan 2022 - 13:37:34.469 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 7.97 seconds (JVM running for 7288.902)
+07 Jan 2022 - 13:37:34.473 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+07 Jan 2022 - 13:37:41.688 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.revature.lostchapterbackend.cartintegrationtests.CartIntegrationTests], using SpringBootContextLoader
+07 Jan 2022 - 13:37:41.700 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.revature.lostchapterbackend.cartintegrationtests.CartIntegrationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+07 Jan 2022 - 13:37:41.701 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revature.lostchapterbackend.cartintegrationtests.CartIntegrationTests]: CartIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07 Jan 2022 - 13:37:41.894 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revature.lostchapterbackend.LostChapterBackendApplication for test class com.revature.lostchapterbackend.cartintegrationtests.CartIntegrationTests
+07 Jan 2022 - 13:37:42.108 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07 Jan 2022 - 13:37:42.133 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c351808, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@180e6ac4, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@42b64ab8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7e985ce9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2a39fe6a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@410ae9a3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@319988b0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@d5ae57e, org.springframework.test.context.event.EventPublishingTestExecutionListener@68759011, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7e242b4d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@305f031, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@592e843a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1d1f7216, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@423e4cbb, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6e16b8b5]
+07 Jan 2022 - 13:37:42.705 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:37:42.705 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:37:45.280 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:37:45.419 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 128 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:37:47.999 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+07 Jan 2022 - 13:37:48.391 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+07 Jan 2022 - 13:37:48.614 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:37:48.712 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+07 Jan 2022 - 13:37:49.168 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07 Jan 2022 - 13:37:49.810 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:37:50.705 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:37:50.712 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:37:54.030 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:37:58.558 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:37:58.559 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:37:58.596 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:37:58.646 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 87 ms
+07 Jan 2022 - 13:37:58.705 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 16.442 seconds (JVM running for 18.159)
+07 Jan 2022 - 13:37:58.827 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:37:58.828 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:37:58.872 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+07 Jan 2022 - 13:37:58.898 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+07 Jan 2022 - 13:37:58.953 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:37:58.954 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:37:59.377 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:37:59.402 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:37:59.881 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+07 Jan 2022 - 13:37:59.883 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+07 Jan 2022 - 13:37:59.948 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:37:59.990 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:38:00.166 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:38:00.166 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:02.171 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:38:05.889 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:38:05.890 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:38:05.914 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:38:05.961 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 71 ms
+07 Jan 2022 - 13:38:05.997 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 7.095 seconds (JVM running for 25.451)
+07 Jan 2022 - 13:38:06.594 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:06.594 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:38:06.598 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+07 Jan 2022 - 13:38:06.599 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+07 Jan 2022 - 13:38:06.638 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:38:06.638 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:38:06.926 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:38:06.948 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:38:07.394 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+07 Jan 2022 - 13:38:07.396 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+07 Jan 2022 - 13:38:07.415 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:38:07.428 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:38:07.547 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:38:07.549 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:09.393 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:38:13.419 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:38:13.419 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:38:13.461 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:38:13.502 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 83 ms
+07 Jan 2022 - 13:38:13.541 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.938 seconds (JVM running for 32.995)
+07 Jan 2022 - 13:38:13.578 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:13.578 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:38:13.591 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+07 Jan 2022 - 13:38:13.595 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+07 Jan 2022 - 13:38:13.636 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:38:13.636 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:38:13.932 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:38:13.954 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:38:14.390 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+07 Jan 2022 - 13:38:14.391 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+07 Jan 2022 - 13:38:14.409 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:38:14.417 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:38:14.485 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:38:14.486 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:16.295 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:38:19.702 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:38:19.703 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:38:19.716 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:38:19.742 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 39 ms
+07 Jan 2022 - 13:38:19.777 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.179 seconds (JVM running for 39.232)
+07 Jan 2022 - 13:38:19.800 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:19.801 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:38:19.805 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+07 Jan 2022 - 13:38:19.806 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+07 Jan 2022 - 13:38:19.843 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:38:19.843 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:38:20.111 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:38:20.132 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:38:20.547 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+07 Jan 2022 - 13:38:20.549 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+07 Jan 2022 - 13:38:20.577 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:38:20.597 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:38:20.691 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:38:20.692 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:22.345 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:38:25.654 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:38:25.655 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:38:25.672 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:38:25.706 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 50 ms
+07 Jan 2022 - 13:38:25.741 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.933 seconds (JVM running for 45.196)
+07 Jan 2022 - 13:38:25.799 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:25.800 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:38:25.804 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+07 Jan 2022 - 13:38:25.805 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+07 Jan 2022 - 13:38:25.840 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:38:25.840 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:38:26.104 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:38:26.127 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:38:26.548 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+07 Jan 2022 - 13:38:26.548 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+07 Jan 2022 - 13:38:26.566 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:38:26.576 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:38:26.658 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:38:26.658 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:28.208 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:38:31.482 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:38:31.482 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:38:31.513 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:38:31.541 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 59 ms
+07 Jan 2022 - 13:38:31.568 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.761 seconds (JVM running for 51.023)
+07 Jan 2022 - 13:38:31.642 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:31.643 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:38:31.646 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+07 Jan 2022 - 13:38:31.648 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+07 Jan 2022 - 13:38:31.684 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:38:31.685 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:38:31.965 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:38:31.986 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:38:32.370 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+07 Jan 2022 - 13:38:32.371 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+07 Jan 2022 - 13:38:32.412 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:38:32.423 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:38:32.513 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:38:32.513 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:34.130 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:38:37.405 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:38:37.405 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:38:37.422 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:38:37.456 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 51 ms
+07 Jan 2022 - 13:38:37.482 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.831 seconds (JVM running for 56.937)
+07 Jan 2022 - 13:38:37.527 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:37.528 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:38:37.531 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+07 Jan 2022 - 13:38:37.532 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+07 Jan 2022 - 13:38:37.567 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:38:37.567 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:38:37.827 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:38:37.846 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:38:38.429 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+07 Jan 2022 - 13:38:38.430 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+07 Jan 2022 - 13:38:38.448 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:38:38.457 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:38:38.546 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:38:38.546 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:40.313 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:38:43.458 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:38:43.458 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:38:43.473 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:38:43.499 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 41 ms
+07 Jan 2022 - 13:38:43.520 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.986 seconds (JVM running for 62.974)
+07 Jan 2022 - 13:38:43.545 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:43.545 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:38:43.547 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+07 Jan 2022 - 13:38:43.548 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+07 Jan 2022 - 13:38:43.578 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:38:43.578 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:38:43.788 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:38:43.807 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:38:44.207 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+07 Jan 2022 - 13:38:44.209 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+07 Jan 2022 - 13:38:44.222 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:38:44.229 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:38:44.301 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:38:44.301 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:45.749 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:38:48.976 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:38:48.976 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:38:49.011 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:38:49.047 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 71 ms
+07 Jan 2022 - 13:38:49.080 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.529 seconds (JVM running for 68.535)
+07 Jan 2022 - 13:38:49.132 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:49.132 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:38:49.135 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown initiated...
+07 Jan 2022 - 13:38:49.137 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown completed.
+07 Jan 2022 - 13:38:49.177 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:38:49.177 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:38:49.409 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:38:49.427 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:38:49.885 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
+07 Jan 2022 - 13:38:49.886 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
+07 Jan 2022 - 13:38:49.899 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:38:49.913 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:38:49.967 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:38:49.967 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:51.522 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:38:55.281 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:38:55.281 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:38:55.294 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:38:55.321 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 40 ms
+07 Jan 2022 - 13:38:55.355 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.214 seconds (JVM running for 74.81)
+07 Jan 2022 - 13:38:55.376 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:55.376 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:38:55.379 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
+07 Jan 2022 - 13:38:55.380 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.
+07 Jan 2022 - 13:38:55.411 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:38:55.413 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:38:55.639 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:38:55.658 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:38:56.025 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
+07 Jan 2022 - 13:38:56.026 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
+07 Jan 2022 - 13:38:56.042 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:38:56.051 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:38:56.105 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:38:56.106 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:38:57.791 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:39:01.292 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:39:01.292 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:39:01.310 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:39:01.347 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 54 ms
+07 Jan 2022 - 13:39:01.372 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.99 seconds (JVM running for 80.827)
+07 Jan 2022 - 13:39:01.392 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:01.393 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:39:01.395 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown initiated...
+07 Jan 2022 - 13:39:01.396 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown completed.
+07 Jan 2022 - 13:39:01.426 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:39:01.426 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:39:01.694 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:39:01.713 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:39:02.156 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Starting...
+07 Jan 2022 - 13:39:02.193 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Start completed.
+07 Jan 2022 - 13:39:02.403 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:39:02.437 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:39:02.564 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:39:02.565 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:04.383 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:39:07.677 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:39:07.678 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:39:07.691 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:39:07.719 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 41 ms
+07 Jan 2022 - 13:39:07.743 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.345 seconds (JVM running for 87.198)
+07 Jan 2022 - 13:39:07.771 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:07.771 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:39:07.774 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
+07 Jan 2022 - 13:39:07.776 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.
+07 Jan 2022 - 13:39:07.811 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:39:07.811 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:39:08.067 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:39:08.087 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:39:09.286 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Starting...
+07 Jan 2022 - 13:39:09.286 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Start completed.
+07 Jan 2022 - 13:39:09.302 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:39:09.313 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:39:09.424 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:39:09.425 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:11.393 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:39:17.823 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:39:17.823 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:39:17.849 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:39:17.898 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 75 ms
+07 Jan 2022 - 13:39:17.939 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 10.161 seconds (JVM running for 97.394)
+07 Jan 2022 - 13:39:17.985 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:17.986 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:39:17.989 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown initiated...
+07 Jan 2022 - 13:39:17.990 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown completed.
+07 Jan 2022 - 13:39:18.044 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:39:18.044 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:39:19.175 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:39:19.320 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 145 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:39:20.320 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Starting...
+07 Jan 2022 - 13:39:20.321 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Start completed.
+07 Jan 2022 - 13:39:20.345 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:39:20.355 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:39:20.652 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:39:20.652 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:24.275 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:39:27.935 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:39:27.936 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:39:27.948 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:39:27.972 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 36 ms
+07 Jan 2022 - 13:39:27.994 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 10.0 seconds (JVM running for 107.449)
+07 Jan 2022 - 13:39:28.014 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:28.014 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:39:28.015 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown initiated...
+07 Jan 2022 - 13:39:28.019 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown completed.
+07 Jan 2022 - 13:39:28.053 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:39:28.053 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:39:28.284 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:39:28.305 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:39:28.787 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Starting...
+07 Jan 2022 - 13:39:28.788 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Start completed.
+07 Jan 2022 - 13:39:28.808 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:39:28.825 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:39:29.010 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:39:29.012 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:32.197 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:39:35.563 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:39:35.563 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:39:35.587 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:39:35.615 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 52 ms
+07 Jan 2022 - 13:39:35.644 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 7.623 seconds (JVM running for 115.098)
+07 Jan 2022 - 13:39:35.674 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:35.675 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:39:35.677 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown initiated...
+07 Jan 2022 - 13:39:35.678 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown completed.
+07 Jan 2022 - 13:39:35.718 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:39:35.719 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:39:35.984 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:39:36.003 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:39:36.506 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Starting...
+07 Jan 2022 - 13:39:36.507 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Start completed.
+07 Jan 2022 - 13:39:36.534 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:39:36.546 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:39:36.634 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:39:36.635 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:38.595 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:39:42.470 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:39:42.471 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:39:42.492 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:39:42.530 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 58 ms
+07 Jan 2022 - 13:39:42.571 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.886 seconds (JVM running for 122.026)
+07 Jan 2022 - 13:39:42.675 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:42.675 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:39:42.677 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown initiated...
+07 Jan 2022 - 13:39:42.679 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown completed.
+07 Jan 2022 - 13:39:42.720 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:39:42.721 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:39:43.051 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:39:43.085 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:39:43.570 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Starting...
+07 Jan 2022 - 13:39:43.571 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Start completed.
+07 Jan 2022 - 13:39:43.588 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:39:43.596 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:39:43.679 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:39:43.679 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:45.956 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:39:50.656 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:39:50.656 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:39:50.728 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:39:50.822 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 166 ms
+07 Jan 2022 - 13:39:50.897 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 8.215 seconds (JVM running for 130.351)
+07 Jan 2022 - 13:39:50.940 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:50.941 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:39:50.944 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Shutdown initiated...
+07 Jan 2022 - 13:39:50.946 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Shutdown completed.
+07 Jan 2022 - 13:39:50.998 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:39:50.998 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:39:51.557 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:39:51.593 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:39:52.220 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Starting...
+07 Jan 2022 - 13:39:52.221 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Start completed.
+07 Jan 2022 - 13:39:52.242 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:39:52.248 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:39:52.308 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:39:52.308 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:53.943 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:39:57.678 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:39:57.679 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:39:57.692 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:39:57.723 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 44 ms
+07 Jan 2022 - 13:39:57.750 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.8 seconds (JVM running for 137.205)
+07 Jan 2022 - 13:39:57.770 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:39:57.770 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:39:57.772 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Shutdown initiated...
+07 Jan 2022 - 13:39:57.774 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Shutdown completed.
+07 Jan 2022 - 13:39:57.810 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:39:57.810 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:39:58.079 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:39:58.100 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:39:58.525 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Starting...
+07 Jan 2022 - 13:39:58.526 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Start completed.
+07 Jan 2022 - 13:39:58.541 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:39:58.547 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:39:58.601 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:39:58.601 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:40:00.197 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:40:03.757 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:40:03.757 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:40:03.774 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:40:03.841 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 84 ms
+07 Jan 2022 - 13:40:03.878 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.101 seconds (JVM running for 143.333)
+07 Jan 2022 - 13:40:03.899 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:40:03.900 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:40:03.901 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Shutdown initiated...
+07 Jan 2022 - 13:40:03.907 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Shutdown completed.
+07 Jan 2022 - 13:40:03.940 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:40:03.941 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:40:04.180 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:40:04.205 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:40:04.564 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Starting...
+07 Jan 2022 - 13:40:04.564 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Start completed.
+07 Jan 2022 - 13:40:04.577 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:40:04.582 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:40:04.630 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:40:04.631 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:40:06.505 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:40:10.089 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:40:10.089 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:40:10.105 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:40:10.131 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 42 ms
+07 Jan 2022 - 13:40:10.164 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.253 seconds (JVM running for 149.619)
+07 Jan 2022 - 13:40:10.182 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:40:10.182 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:40:10.183 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Shutdown initiated...
+07 Jan 2022 - 13:40:10.184 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Shutdown completed.
+07 Jan 2022 - 13:40:10.217 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:40:10.218 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:40:10.407 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:40:10.422 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:40:10.834 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Starting...
+07 Jan 2022 - 13:40:10.835 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Start completed.
+07 Jan 2022 - 13:40:10.850 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:40:10.856 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:40:10.919 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:40:10.920 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:40:12.476 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:40:15.974 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:40:15.974 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:40:15.992 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:40:16.054 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 80 ms
+07 Jan 2022 - 13:40:16.082 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 5.896 seconds (JVM running for 155.537)
+07 Jan 2022 - 13:40:16.132 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:40:16.132 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:40:16.133 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Shutdown initiated...
+07 Jan 2022 - 13:40:16.134 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Shutdown completed.
+07 Jan 2022 - 13:40:16.167 [main] INFO  c.r.l.c.CartIntegrationTests - Starting CartIntegrationTests using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 31900 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
+07 Jan 2022 - 13:40:16.167 [main] INFO  c.r.l.c.CartIntegrationTests - No active profile set, falling back to default profiles: default
+07 Jan 2022 - 13:40:16.360 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07 Jan 2022 - 13:40:16.376 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+07 Jan 2022 - 13:40:16.827 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Starting...
+07 Jan 2022 - 13:40:16.827 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Start completed.
+07 Jan 2022 - 13:40:16.842 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07 Jan 2022 - 13:40:16.874 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+07 Jan 2022 - 13:40:16.969 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07 Jan 2022 - 13:40:16.970 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:40:18.772 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07 Jan 2022 - 13:40:22.214 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+07 Jan 2022 - 13:40:22.214 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+07 Jan 2022 - 13:40:22.254 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+07 Jan 2022 - 13:40:22.290 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 76 ms
+07 Jan 2022 - 13:40:22.315 [main] INFO  c.r.l.c.CartIntegrationTests - Started CartIntegrationTests in 6.179 seconds (JVM running for 161.77)
+07 Jan 2022 - 13:40:22.352 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 13:40:22.352 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+07 Jan 2022 - 13:40:22.356 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 90121, SQLState: 90121
+07 Jan 2022 - 13:40:22.357 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+07 Jan 2022 - 13:40:22.359 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 90121, SQLState: 90121
+07 Jan 2022 - 13:40:22.360 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+07 Jan 2022 - 13:40:22.360 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+07 Jan 2022 - 13:40:22.361 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Shutdown initiated...
+07 Jan 2022 - 13:40:22.361 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Shutdown completed.

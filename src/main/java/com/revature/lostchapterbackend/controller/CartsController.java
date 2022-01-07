@@ -45,7 +45,7 @@ public class CartsController {
 			} else {
 				throw new NumberFormatException("product id or quantity must be of type int!");
 			}
-		} catch (NumberFormatException | OutOfStockException | InvalidParameterException e) {
+		} catch (NumberFormatException | OutOfStockException | InvalidParameterException | NoSuchElementException | BookNotFoundException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
 		} catch (NoResultException e) {
 			return ResponseEntity.status(404).body(e.getMessage());
@@ -86,7 +86,7 @@ public class CartsController {
 			}
 		} catch (NumberFormatException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
-		} catch (NoResultException | BookNotFoundException e) {
+		} catch (NoResultException | BookNotFoundException | NoSuchElementException e) {
 			return ResponseEntity.status(404).body(e.getMessage());
 		} 
 	}
