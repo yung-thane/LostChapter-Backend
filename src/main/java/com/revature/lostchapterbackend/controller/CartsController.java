@@ -39,7 +39,7 @@ public class CartsController {
 		// Aspect or another class for protecting endpoint
 		try {
 			Carts currentCart = null;
-			if (userId.matches(PATTERN) || bookId.matches(PATTERN) || quantityToBuy.matches(PATTERN)) {
+			if (userId.matches(PATTERN) && bookId.matches(PATTERN) && quantityToBuy.matches(PATTERN)) {
 				currentCart = cs.addBooksToCart(currentCart, userId, bookId, quantityToBuy);
 				return ResponseEntity.status(200).body(currentCart);
 			} else {

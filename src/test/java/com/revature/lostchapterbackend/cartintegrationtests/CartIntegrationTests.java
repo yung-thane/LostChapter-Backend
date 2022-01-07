@@ -272,7 +272,7 @@ public class CartIntegrationTests {
 		
 		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "-1").session(session);
 		
-		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("Quantity to Buy cannot be less than or equal to zero!"));
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("product id or quantity must be of type int!"));
 		
 	}
 	
@@ -364,6 +364,44 @@ public class CartIntegrationTests {
 		builder = MockMvcRequestBuilders.delete("/users/1/cart").session(session);
 		
 		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200)).andExpect(MockMvcResultMatchers.content().json(expectedJson));
+		
+	}
+	
+	@Test 
+	public void cart_test_add_book_to_cart_user_id_doesnt_match_pattern_negative() throws Exception {
+		
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/a/cart").param("bookId", "1").param("quantityToBuy", "1").session(session);
+		
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("product id or quantity must be of type int!"));
+		
+	}
+	
+	@Test
+	public void cart_test_add_book_to_cart_bookId_doesnt_match_pattern_negative() throws Exception {
+		
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "a").param("quantityToBuy", "1").session(session);
+		
+		
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("product id or quantity must be of type int!"));
+	}
+	
+	@Test
+	public void cart_test_add_book_to_cart_quantityToBuy_doesnt_match_pattern_negative() throws Exception {
+		
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "1").param("quantityToBuy", "a").session(session);
+		
+		
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("product id or quantity must be of type int!"));
+	
 		
 	}
 	
