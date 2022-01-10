@@ -5674,367 +5674,61 @@ insert into users (id, address, age, birthday, email, first_name, last_name, pas
 07 Jan 2022 - 17:09:39.633 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
 07 Jan 2022 - 17:09:39.633 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-75 - Shutdown initiated...
 07 Jan 2022 - 17:09:39.633 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-75 - Shutdown completed.
-10 Jan 2022 - 14:07:35.059 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.revature.lostchapterbackend.integrationtests.BookIntegrationTest], using SpringBootContextLoader
-10 Jan 2022 - 14:07:35.068 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.revature.lostchapterbackend.integrationtests.BookIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-10 Jan 2022 - 14:07:35.069 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revature.lostchapterbackend.integrationtests.BookIntegrationTest]: BookIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-10 Jan 2022 - 14:07:35.247 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.revature.lostchapterbackend.LostChapterBackendApplication for test class com.revature.lostchapterbackend.integrationtests.BookIntegrationTest
-10 Jan 2022 - 14:07:35.388 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-10 Jan 2022 - 14:07:35.414 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7b139eab, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4e76dac, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@611df6e3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5f2f577, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6273c5a4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5d465e4b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@53e211ee, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@41a90fa8, org.springframework.test.context.event.EventPublishingTestExecutionListener@3d8bbcdc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@52500920, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@117e0fe5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@18a3962d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@78aea4b9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2a65bb85, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4b85880b]
-10 Jan 2022 - 14:07:36.413 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:07:36.414 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:07:37.950 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:07:38.048 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:07:39.647 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-10 Jan 2022 - 14:07:39.932 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-10 Jan 2022 - 14:07:40.034 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:07:40.144 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
-10 Jan 2022 - 14:07:40.428 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-10 Jan 2022 - 14:07:40.747 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:07:41.749 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:07:41.760 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:07:45.060 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:07:49.917 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:07:49.918 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:07:49.941 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:07:49.989 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 71 ms
-10 Jan 2022 - 14:07:50.052 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 14.325 seconds (JVM running for 16.71)
-10 Jan 2022 - 14:07:50.168 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:07:50.169 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:07:50.224 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-10 Jan 2022 - 14:07:50.233 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-10 Jan 2022 - 14:07:50.307 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:07:50.308 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:07:50.731 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:07:50.758 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:07:51.291 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-10 Jan 2022 - 14:07:51.293 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-10 Jan 2022 - 14:07:51.312 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:07:51.323 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:07:51.458 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:07:51.459 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:07:53.528 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:07:56.998 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:07:56.999 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:07:57.021 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:07:57.084 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 85 ms
-10 Jan 2022 - 14:07:57.129 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 6.887 seconds (JVM running for 23.787)
-10 Jan 2022 - 14:07:57.504 [main] INFO  c.r.l.controller.BookController - BookController.getAllBooks() invoked.
-10 Jan 2022 - 14:07:57.504 [main] INFO  c.r.l.service.BookService - BookService.getAllBooks() invoked.
-10 Jan 2022 - 14:07:57.623 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:07:57.623 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:07:57.633 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
-10 Jan 2022 - 14:07:57.635 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
-10 Jan 2022 - 14:07:57.691 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:07:57.692 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:07:58.069 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:07:58.120 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:07:58.647 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
-10 Jan 2022 - 14:07:58.649 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
-10 Jan 2022 - 14:07:58.668 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:07:58.682 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:07:58.817 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:07:58.818 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:00.572 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:08:03.782 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:08:03.782 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:08:03.798 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:08:03.830 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 48 ms
-10 Jan 2022 - 14:08:03.858 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 6.221 seconds (JVM running for 30.516)
-10 Jan 2022 - 14:08:03.931 [main] INFO  c.r.l.controller.BookController - BookController.addNewBook() invoked.
-10 Jan 2022 - 14:08:03.931 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
-10 Jan 2022 - 14:08:03.931 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
-10 Jan 2022 - 14:08:03.931 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
-10 Jan 2022 - 14:08:03.948 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:03.950 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:08:03.957 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
-10 Jan 2022 - 14:08:03.959 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
-10 Jan 2022 - 14:08:04.010 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:08:04.011 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:08:04.360 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:08:04.384 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:08:04.882 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
-10 Jan 2022 - 14:08:04.883 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
-10 Jan 2022 - 14:08:04.902 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:08:04.915 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:08:05.029 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:08:05.029 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:06.521 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:08:09.715 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:08:09.715 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:08:09.729 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:08:09.760 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 45 ms
-10 Jan 2022 - 14:08:09.795 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 5.833 seconds (JVM running for 36.453)
-10 Jan 2022 - 14:08:09.809 [main] INFO  c.r.l.controller.BookController - BookController.addNewBook() invoked.
-10 Jan 2022 - 14:08:09.809 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
-10 Jan 2022 - 14:08:09.809 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
-10 Jan 2022 - 14:08:09.809 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
-10 Jan 2022 - 14:08:09.823 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:09.824 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:08:09.831 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
-10 Jan 2022 - 14:08:09.836 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
-10 Jan 2022 - 14:08:09.894 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:08:09.894 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:08:10.212 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:08:10.253 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:08:10.687 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
-10 Jan 2022 - 14:08:10.688 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
-10 Jan 2022 - 14:08:10.702 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:08:10.711 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:08:10.819 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:08:10.819 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:12.183 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:08:15.007 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:08:15.008 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:08:15.020 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:08:15.045 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 37 ms
-10 Jan 2022 - 14:08:15.068 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 5.229 seconds (JVM running for 41.726)
-10 Jan 2022 - 14:08:15.082 [main] INFO  c.r.l.controller.BookController - BookController.addNewBook() invoked.
-10 Jan 2022 - 14:08:15.082 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
-10 Jan 2022 - 14:08:15.082 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
-10 Jan 2022 - 14:08:15.083 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
-10 Jan 2022 - 14:08:15.090 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:15.091 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:08:15.094 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
-10 Jan 2022 - 14:08:15.095 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
-10 Jan 2022 - 14:08:15.133 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:08:15.133 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:08:15.395 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:08:15.421 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:08:15.826 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
-10 Jan 2022 - 14:08:15.827 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
-10 Jan 2022 - 14:08:15.842 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:08:15.850 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:08:15.943 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:08:15.944 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:17.288 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:08:20.172 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:08:20.172 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:08:20.188 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:08:20.212 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 38 ms
-10 Jan 2022 - 14:08:20.236 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 5.139 seconds (JVM running for 46.894)
-10 Jan 2022 - 14:08:20.251 [main] INFO  c.r.l.controller.BookController - BookController.addNewBook() invoked.
-10 Jan 2022 - 14:08:20.251 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
-10 Jan 2022 - 14:08:20.251 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
-10 Jan 2022 - 14:08:20.252 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
-10 Jan 2022 - 14:08:20.258 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:20.258 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:08:20.264 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
-10 Jan 2022 - 14:08:20.267 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
-10 Jan 2022 - 14:08:20.306 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:08:20.306 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:08:20.563 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:08:20.583 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:08:20.954 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
-10 Jan 2022 - 14:08:20.955 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
-10 Jan 2022 - 14:08:20.969 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:08:20.977 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:08:21.157 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:08:21.157 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:22.639 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:08:25.559 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:08:25.559 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:08:25.590 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:08:25.619 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 60 ms
-10 Jan 2022 - 14:08:25.647 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 5.377 seconds (JVM running for 52.305)
-10 Jan 2022 - 14:08:25.667 [main] INFO  c.r.l.controller.BookController - BookController.getBookByGenreId() invoked.
-10 Jan 2022 - 14:08:25.667 [main] INFO  c.r.l.service.BookService - BookService.getBooksByGenreId() invoked.
-10 Jan 2022 - 14:08:25.689 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:25.690 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:08:25.693 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
-10 Jan 2022 - 14:08:25.695 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
-10 Jan 2022 - 14:08:25.733 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:08:25.733 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:08:25.997 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:08:26.018 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:08:26.362 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
-10 Jan 2022 - 14:08:26.363 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
-10 Jan 2022 - 14:08:26.374 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:08:26.380 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:08:26.439 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:08:26.439 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:27.829 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:08:30.674 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:08:30.674 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:08:30.690 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:08:30.715 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 41 ms
-10 Jan 2022 - 14:08:30.754 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 5.057 seconds (JVM running for 57.413)
-10 Jan 2022 - 14:08:30.767 [main] INFO  c.r.l.controller.BookController - BookController.addNewBook() invoked.
-10 Jan 2022 - 14:08:30.767 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
-10 Jan 2022 - 14:08:30.767 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
-10 Jan 2022 - 14:08:30.767 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
-10 Jan 2022 - 14:08:30.776 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:30.777 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:08:30.780 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
-10 Jan 2022 - 14:08:30.781 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
-10 Jan 2022 - 14:08:30.813 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:08:30.813 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:08:31.052 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:08:31.077 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:08:31.444 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
-10 Jan 2022 - 14:08:31.444 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
-10 Jan 2022 - 14:08:31.456 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:08:31.462 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:08:31.542 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:08:31.543 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:32.902 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:08:35.637 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:08:35.638 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:08:35.650 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:08:35.674 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 36 ms
-10 Jan 2022 - 14:08:35.711 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 4.926 seconds (JVM running for 62.369)
-10 Jan 2022 - 14:08:35.727 [main] INFO  c.r.l.controller.BookController - BookController.addNewBook() invoked.
-10 Jan 2022 - 14:08:35.727 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
-10 Jan 2022 - 14:08:35.727 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
-10 Jan 2022 - 14:08:35.727 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
-10 Jan 2022 - 14:08:35.732 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:35.733 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:08:35.736 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown initiated...
-10 Jan 2022 - 14:08:35.737 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown completed.
-10 Jan 2022 - 14:08:35.765 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:08:35.766 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:08:35.962 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:08:35.980 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:08:36.363 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
-10 Jan 2022 - 14:08:36.364 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
-10 Jan 2022 - 14:08:36.379 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:08:36.388 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:08:36.453 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:08:36.454 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:37.758 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:08:40.566 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:08:40.566 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:08:40.578 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:08:40.602 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 36 ms
-10 Jan 2022 - 14:08:40.623 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 4.884 seconds (JVM running for 67.281)
-10 Jan 2022 - 14:08:40.633 [main] INFO  c.r.l.controller.BookController - BookController.getBookBySale() invoked.
-10 Jan 2022 - 14:08:40.634 [main] INFO  c.r.l.service.BookService - BookService.getBooksBySale() invoked.
-10 Jan 2022 - 14:08:40.646 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:40.646 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:08:40.648 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
-10 Jan 2022 - 14:08:40.649 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.
-10 Jan 2022 - 14:08:40.673 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:08:40.673 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:08:40.866 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:08:40.884 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:08:41.215 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
-10 Jan 2022 - 14:08:41.216 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
-10 Jan 2022 - 14:08:41.228 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:08:41.234 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:08:41.294 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:08:41.294 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:42.702 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:08:45.637 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:08:45.637 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:08:45.649 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:08:45.673 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 35 ms
-10 Jan 2022 - 14:08:45.694 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 5.043 seconds (JVM running for 72.352)
-10 Jan 2022 - 14:08:45.712 [main] INFO  c.r.l.controller.BookController - BookController.getBookByKeyword() invoked.
-10 Jan 2022 - 14:08:45.712 [main] INFO  c.r.l.service.BookService - BookService.getBooksByKeyword() invoked.
-10 Jan 2022 - 14:08:45.729 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:45.729 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:08:45.731 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown initiated...
-10 Jan 2022 - 14:08:45.732 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown completed.
-10 Jan 2022 - 14:08:45.758 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:08:45.759 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:08:45.949 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:08:45.968 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:08:46.308 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Starting...
-10 Jan 2022 - 14:08:46.308 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Start completed.
-10 Jan 2022 - 14:08:46.319 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:08:46.325 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:08:46.380 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:08:46.381 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:47.677 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:08:50.652 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:08:50.652 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:08:50.666 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:08:50.691 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 39 ms
-10 Jan 2022 - 14:08:50.712 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 4.979 seconds (JVM running for 77.371)
-10 Jan 2022 - 14:08:50.724 [main] INFO  c.r.l.controller.BookController - BookController.addNewBook() invoked.
-10 Jan 2022 - 14:08:50.725 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
-10 Jan 2022 - 14:08:50.725 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
-10 Jan 2022 - 14:08:50.725 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
-10 Jan 2022 - 14:08:50.731 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:50.731 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:08:50.733 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
-10 Jan 2022 - 14:08:50.734 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.
-10 Jan 2022 - 14:08:50.761 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:08:50.761 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:08:51.026 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:08:51.044 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:08:51.415 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Starting...
-10 Jan 2022 - 14:08:51.416 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Start completed.
-10 Jan 2022 - 14:08:51.428 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:08:51.434 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:08:51.497 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:08:51.497 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:52.820 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:08:55.605 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:08:55.605 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:08:55.618 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:08:55.642 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 37 ms
-10 Jan 2022 - 14:08:55.664 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 4.927 seconds (JVM running for 82.321)
-10 Jan 2022 - 14:08:55.674 [main] INFO  c.r.l.controller.BookController - BookController.getBookById() invoked.
-10 Jan 2022 - 14:08:55.674 [main] INFO  c.r.l.service.BookService - BookService.getBookById() invoked.
-10 Jan 2022 - 14:08:55.684 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:55.685 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:08:55.687 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown initiated...
-10 Jan 2022 - 14:08:55.687 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown completed.
-10 Jan 2022 - 14:08:55.712 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:08:55.712 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:08:55.877 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:08:55.893 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:08:56.244 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Starting...
-10 Jan 2022 - 14:08:56.245 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Start completed.
-10 Jan 2022 - 14:08:56.257 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:08:56.263 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:08:56.322 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:08:56.323 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:08:57.738 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:09:00.871 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:09:00.871 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:09:00.886 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:09:00.919 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 48 ms
-10 Jan 2022 - 14:09:00.950 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 5.261 seconds (JVM running for 87.608)
-10 Jan 2022 - 14:09:00.967 [main] INFO  c.r.l.controller.BookController - BookController.addNewBook() invoked.
-10 Jan 2022 - 14:09:00.967 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
-10 Jan 2022 - 14:09:00.967 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
-10 Jan 2022 - 14:09:00.967 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
-10 Jan 2022 - 14:09:00.967 [main] INFO  c.r.l.utility.ValidateBookUtil - validate int inputs
-10 Jan 2022 - 14:09:00.967 [main] INFO  c.r.l.utility.ValidateBookUtil - validate synopsis length
-10 Jan 2022 - 14:09:00.967 [main] INFO  c.r.l.utility.ValidateBookUtil - validate sale discount rate
-10 Jan 2022 - 14:09:00.967 [main] INFO  c.r.l.utility.ValidateBookUtil - validate genre
-10 Jan 2022 - 14:09:00.969 [main] INFO  c.r.l.service.BookService - check if ISBN already exist
-10 Jan 2022 - 14:09:00.990 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:09:00.990 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:09:00.994 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown initiated...
-10 Jan 2022 - 14:09:00.995 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown completed.
-10 Jan 2022 - 14:09:01.022 [main] INFO  c.r.l.i.BookIntegrationTest - Starting BookIntegrationTest using Java 16.0.2 on LAPTOP-FFT0FMPP with PID 12468 (started by apers in C:\Users\apers\OneDrive\Desktop\LostChapter\LostChapter-Backend)
-10 Jan 2022 - 14:09:01.022 [main] INFO  c.r.l.i.BookIntegrationTest - No active profile set, falling back to default profiles: default
-10 Jan 2022 - 14:09:01.296 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10 Jan 2022 - 14:09:01.312 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
-10 Jan 2022 - 14:09:01.669 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Starting...
-10 Jan 2022 - 14:09:01.676 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Start completed.
-10 Jan 2022 - 14:09:01.692 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-10 Jan 2022 - 14:09:01.698 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10 Jan 2022 - 14:09:01.747 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-10 Jan 2022 - 14:09:01.747 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:09:03.947 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10 Jan 2022 - 14:09:07.761 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-10 Jan 2022 - 14:09:07.761 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-10 Jan 2022 - 14:09:07.779 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
-10 Jan 2022 - 14:09:07.814 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 53 ms
-10 Jan 2022 - 14:09:07.852 [main] INFO  c.r.l.i.BookIntegrationTest - Started BookIntegrationTest in 6.855 seconds (JVM running for 94.51)
-10 Jan 2022 - 14:09:07.868 [main] INFO  c.r.l.controller.BookController - BookController.addNewBook() invoked.
-10 Jan 2022 - 14:09:07.869 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
-10 Jan 2022 - 14:09:07.869 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
-10 Jan 2022 - 14:09:07.869 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
-10 Jan 2022 - 14:09:07.888 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-10 Jan 2022 - 14:09:07.888 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-10 Jan 2022 - 14:09:07.888 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 90121, SQLState: 90121
-10 Jan 2022 - 14:09:07.889 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-10 Jan 2022 - 14:09:07.890 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 90121, SQLState: 90121
-10 Jan 2022 - 14:09:07.891 [SpringApplicationShutdownHook] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-10 Jan 2022 - 14:09:07.891 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
-10 Jan 2022 - 14:09:07.891 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown initiated...
-10 Jan 2022 - 14:09:07.892 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown completed.
+10 Jan 2022 - 14:58:15.728 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 16.0.2 on DESKTOP-DVBGLLH with PID 15904 (C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend\target\classes started by husto in C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend)
+10 Jan 2022 - 14:58:15.762 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+10 Jan 2022 - 14:58:16.141 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+10 Jan 2022 - 14:58:16.142 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+10 Jan 2022 - 14:58:20.858 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+10 Jan 2022 - 14:58:21.150 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 276 ms. Found 4 JPA repository interfaces.
+10 Jan 2022 - 14:58:25.703 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+10 Jan 2022 - 14:58:25.763 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+10 Jan 2022 - 14:58:25.764 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+10 Jan 2022 - 14:58:25.765 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+10 Jan 2022 - 14:58:26.091 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+10 Jan 2022 - 14:58:26.091 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9942 ms
+10 Jan 2022 - 14:58:27.452 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+10 Jan 2022 - 14:58:28.777 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+10 Jan 2022 - 14:58:28.792 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+10 Jan 2022 - 14:58:29.988 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+10 Jan 2022 - 14:58:30.381 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+10 Jan 2022 - 14:58:31.552 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+10 Jan 2022 - 14:58:32.201 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+10 Jan 2022 - 14:58:35.062 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10 Jan 2022 - 14:58:35.097 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10 Jan 2022 - 14:58:38.967 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10 Jan 2022 - 14:58:47.550 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+10 Jan 2022 - 14:58:47.588 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+10 Jan 2022 - 14:58:47.654 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+10 Jan 2022 - 14:58:47.925 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+10 Jan 2022 - 14:58:47.984 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 34.082 seconds (JVM running for 36.453)
+10 Jan 2022 - 14:58:56.555 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10 Jan 2022 - 14:58:56.555 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+10 Jan 2022 - 14:58:56.557 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+10 Jan 2022 - 14:58:56.939 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+10 Jan 2022 - 14:58:56.939 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+10 Jan 2022 - 14:58:56.959 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+10 Jan 2022 - 14:58:56.959 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+10 Jan 2022 - 14:58:57.027 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+10 Jan 2022 - 14:58:57.183 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+10 Jan 2022 - 14:58:57.184 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+10 Jan 2022 - 14:58:57.277 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - email verification
+10 Jan 2022 - 14:59:26.697 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+10 Jan 2022 - 14:59:26.697 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+10 Jan 2022 - 14:59:26.697 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+10 Jan 2022 - 14:59:26.697 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+10 Jan 2022 - 14:59:26.742 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+10 Jan 2022 - 14:59:26.861 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+10 Jan 2022 - 14:59:26.861 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+10 Jan 2022 - 14:59:26.955 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - email verification
+10 Jan 2022 - 14:59:26.956 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+10 Jan 2022 - 14:59:40.475 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+10 Jan 2022 - 14:59:40.476 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+10 Jan 2022 - 14:59:40.476 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+10 Jan 2022 - 14:59:40.476 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+10 Jan 2022 - 14:59:40.520 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+10 Jan 2022 - 14:59:40.611 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+10 Jan 2022 - 14:59:40.612 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+10 Jan 2022 - 14:59:40.721 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - email verification
+10 Jan 2022 - 14:59:40.721 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+10 Jan 2022 - 14:59:48.885 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+10 Jan 2022 - 14:59:48.930 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
