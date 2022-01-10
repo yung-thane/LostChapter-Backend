@@ -57,7 +57,7 @@ public class AuthenticationController {
 	public ResponseEntity<Object> login(@RequestBody LoginDto dto) throws NoSuchAlgorithmException {
 		
 		try {
-			Users user = this.us.getUser(dto.getAccess(), dto.getPassword());
+			Users user = this.us.getUser(dto.getUsername(), dto.getPassword());
 			
 			HttpSession session = req.getSession();
 			session.setAttribute("currentUser", user);
