@@ -5674,3 +5674,61 @@ insert into users (id, address, age, birthday, email, first_name, last_name, pas
 07 Jan 2022 - 17:09:39.633 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
 07 Jan 2022 - 17:09:39.633 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-75 - Shutdown initiated...
 07 Jan 2022 - 17:09:39.633 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-75 - Shutdown completed.
+10 Jan 2022 - 14:58:15.728 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Starting LostChapterBackendApplication using Java 16.0.2 on DESKTOP-DVBGLLH with PID 15904 (C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend\target\classes started by husto in C:\Users\husto\Revature\Trainning\Projects\Project 3\LostChapter-Backend)
+10 Jan 2022 - 14:58:15.762 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - No active profile set, falling back to default profiles: default
+10 Jan 2022 - 14:58:16.141 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+10 Jan 2022 - 14:58:16.142 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+10 Jan 2022 - 14:58:20.858 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+10 Jan 2022 - 14:58:21.150 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 276 ms. Found 4 JPA repository interfaces.
+10 Jan 2022 - 14:58:25.703 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+10 Jan 2022 - 14:58:25.763 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+10 Jan 2022 - 14:58:25.764 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+10 Jan 2022 - 14:58:25.765 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+10 Jan 2022 - 14:58:26.091 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+10 Jan 2022 - 14:58:26.091 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9942 ms
+10 Jan 2022 - 14:58:27.452 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+10 Jan 2022 - 14:58:28.777 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+10 Jan 2022 - 14:58:28.792 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://lostchapter-1191.cvtq9j4axrge.us-east-1.rds.amazonaws.com:5432/postgres'
+10 Jan 2022 - 14:58:29.988 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+10 Jan 2022 - 14:58:30.381 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+10 Jan 2022 - 14:58:31.552 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+10 Jan 2022 - 14:58:32.201 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+10 Jan 2022 - 14:58:35.062 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10 Jan 2022 - 14:58:35.097 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10 Jan 2022 - 14:58:38.967 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10 Jan 2022 - 14:58:47.550 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+10 Jan 2022 - 14:58:47.588 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+10 Jan 2022 - 14:58:47.654 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+10 Jan 2022 - 14:58:47.925 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+10 Jan 2022 - 14:58:47.984 [restartedMain] INFO  c.r.l.LostChapterBackendApplication - Started LostChapterBackendApplication in 34.082 seconds (JVM running for 36.453)
+10 Jan 2022 - 14:58:56.555 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10 Jan 2022 - 14:58:56.555 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+10 Jan 2022 - 14:58:56.557 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+10 Jan 2022 - 14:58:56.939 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+10 Jan 2022 - 14:58:56.939 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+10 Jan 2022 - 14:58:56.959 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+10 Jan 2022 - 14:58:56.959 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+10 Jan 2022 - 14:58:57.027 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+10 Jan 2022 - 14:58:57.183 [http-nio-8081-exec-2] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+10 Jan 2022 - 14:58:57.184 [http-nio-8081-exec-2] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+10 Jan 2022 - 14:58:57.277 [http-nio-8081-exec-2] INFO  c.r.l.utility.ValidateUtil - email verification
+10 Jan 2022 - 14:59:26.697 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+10 Jan 2022 - 14:59:26.697 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+10 Jan 2022 - 14:59:26.697 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+10 Jan 2022 - 14:59:26.697 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+10 Jan 2022 - 14:59:26.742 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+10 Jan 2022 - 14:59:26.861 [http-nio-8081-exec-4] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+10 Jan 2022 - 14:59:26.861 [http-nio-8081-exec-4] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+10 Jan 2022 - 14:59:26.955 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - email verification
+10 Jan 2022 - 14:59:26.956 [http-nio-8081-exec-4] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+10 Jan 2022 - 14:59:40.475 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - ValidateUtil.createUser() invoked
+10 Jan 2022 - 14:59:40.476 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - check if inputs are blank
+10 Jan 2022 - 14:59:40.476 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if email and username already exist
+10 Jan 2022 - 14:59:40.476 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByEmail() invoked
+10 Jan 2022 - 14:59:40.520 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUserByEmail() invoked
+10 Jan 2022 - 14:59:40.611 [http-nio-8081-exec-6] INFO  c.r.l.service.UserService - UserService.getUserByUsername() invoked
+10 Jan 2022 - 14:59:40.612 [http-nio-8081-exec-6] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+10 Jan 2022 - 14:59:40.721 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - email verification
+10 Jan 2022 - 14:59:40.721 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
+10 Jan 2022 - 14:59:48.885 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+10 Jan 2022 - 14:59:48.930 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
