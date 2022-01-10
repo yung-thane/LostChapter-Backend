@@ -4471,3 +4471,18 @@ org.postgresql.util.PSQLException: ERROR: value too long for type character vary
 07 Jan 2022 - 13:40:22.360 [SpringApplicationShutdownHook] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
 07 Jan 2022 - 13:40:22.361 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Shutdown initiated...
 07 Jan 2022 - 13:40:22.361 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Shutdown completed.
+07 Jan 2022 - 14:00:09.881 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+07 Jan 2022 - 14:00:09.881 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+07 Jan 2022 - 14:00:09.883 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+07 Jan 2022 - 14:35:20.828 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - UserService.getUser() invoked
+07 Jan 2022 - 14:35:20.829 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - username marshall
+07 Jan 2022 - 14:35:21.008 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+07 Jan 2022 - 14:35:21.008 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - username marshall
+07 Jan 2022 - 14:35:21.131 [http-nio-8081-exec-8] INFO  c.r.lostchapterbackend.dao.UserDao - user in dao layerUsers [id=16, username=marshall, password=5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8, firstName=marshall, lastName=hobbs, age=25, email=marshall123@gmail.com, birthday=02/02/1994, address=1234 downtown road, role=Customer]
+07 Jan 2022 - 14:35:21.181 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - user in service layer Users [id=16, username=marshall, password=5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8, firstName=marshall, lastName=hobbs, age=25, email=marshall123@gmail.com, birthday=02/02/1994, address=1234 downtown road, role=Customer]
+07 Jan 2022 - 14:35:21.221 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - hashedInputPassword 5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8
+07 Jan 2022 - 14:35:21.221 [http-nio-8081-exec-8] INFO  c.r.l.service.UserService - user.getPassword 5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8
+07 Jan 2022 - 15:06:21.238 [RMI TCP Connection(247)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+07 Jan 2022 - 15:06:21.366 [RMI TCP Connection(247)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07 Jan 2022 - 15:06:21.384 [RMI TCP Connection(247)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+07 Jan 2022 - 15:06:21.386 [RMI TCP Connection(247)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
