@@ -41,23 +41,23 @@ public class UserDao {
 
 	// Login method
 	@Transactional
-	public Users getUser(String access, String password) {
+	public Users getUser(String username, String password) {
 		logger.info("UserDao.getUser() invoked");
 
 		Users user = em.createQuery("FROM Users u WHERE u.username = :username AND u.password = :password", Users.class)
-				.setParameter("username", access).setParameter("password", password).getSingleResult();
+				.setParameter("username", username).setParameter("password", password).getSingleResult();
 
 		return user;
 	}
 
 	@Transactional
-	public Users getUser(String access) {
+	public Users getUser(String username) {
 		logger.info("UserDao.getUser() invoked");
 
 		try {
 
 			Users user = em.createQuery("FROM Users u WHERE u.username = :username", Users.class)
-					.setParameter("username", access).getSingleResult();
+					.setParameter("username", username).getSingleResult();
 
 			return user;
 		} catch (NoResultException e) {
@@ -69,8 +69,10 @@ public class UserDao {
 	@Transactional
 	public void deleteUserById(int id) {
 		Users user = em.find(Users.class, id);
-
+		Carts cart = em.find(Carts.class, id);
+		
 		em.remove(user);
+		em.remove(cart);
 	}
 
 	// Getting a user by email

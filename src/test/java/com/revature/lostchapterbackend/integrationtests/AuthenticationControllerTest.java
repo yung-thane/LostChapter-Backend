@@ -50,6 +50,8 @@ public class AuthenticationControllerTest {
                 "testln",21,"test123@gmail.com","12/09/1990",
                 "address123","customer");
         session.persist(user1);
+        Carts c = new Carts(user1);
+        session.persist(c);
 
         tx.commit();
 
@@ -96,7 +98,7 @@ public class AuthenticationControllerTest {
                 andExpect(MockMvcResultMatchers.status()
                         .is(400))
                 .andExpect(MockMvcResultMatchers.content()
-                        .string("User is Null: Username and/or password is incorrect"));
+                        .string("Username and/or password is incorrect"));
 
     }
 
@@ -112,7 +114,7 @@ public class AuthenticationControllerTest {
                 andExpect(MockMvcResultMatchers.status()
                         .is(400))
                 .andExpect(MockMvcResultMatchers.content()
-                        .string("User not Null: Username and/or password is incorrect"));
+                        .string("Username and/or password is incorrect"));
 
     }
 
@@ -375,18 +377,19 @@ public class AuthenticationControllerTest {
 
     @Test
     public void testDeleteUserById_positive() throws Exception {
-        EntityManager em = emf.createEntityManager();
-        Session session = em.unwrap(Session.class);
-        Transaction tx = session.beginTransaction();
+//        EntityManager em = emf.createEntityManager();
+//        Session session = em.unwrap(Session.class);
+//        Transaction tx = session.beginTransaction();
 
         Users u = new Users("test1",
                 "5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8",
                 "testf", "testl",21,"test989@gmail.com","12/09/1990",
                 "addresstest","Customer");
-        em.persist(u);
-
-        tx.commit();
-
+        u.setId(1);
+        
+        Carts c = new Carts(u);
+        c.setCartId(1);
+        
         MockHttpSession session1 = new MockHttpSession();
 
         session1.setAttribute("currentUser", u);
@@ -395,7 +398,7 @@ public class AuthenticationControllerTest {
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
                 .is(200)).andExpect(MockMvcResultMatchers.content()
-                .string("This user has been successfully deleted by id: "+ 2));
+                .string("This user has been successfully deleted by id: "+ 1));
     }
 
     @Test

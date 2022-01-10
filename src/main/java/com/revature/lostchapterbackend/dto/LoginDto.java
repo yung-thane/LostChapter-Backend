@@ -4,25 +4,25 @@ import java.util.Objects;
 
 public class LoginDto {
 
-	private String access; // This will take an email or username
+	private String username;
 	private String password;
 
 	public LoginDto() {
 		super();
 	}
 
-	public LoginDto(String access, String password) {
+	public LoginDto(String username, String password) {
 		super();
-		this.access = access;
+		this.username = username;
 		this.password = password;
 	}
 
-	public String getAccess() {
-		return access;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setAccess(String access) {
-		this.access = access;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -35,7 +35,7 @@ public class LoginDto {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(access, password);
+		return Objects.hash(username, password);
 	}
 
 	@Override
@@ -47,12 +47,12 @@ public class LoginDto {
 		if (getClass() != obj.getClass())
 			return false;
 		LoginDto other = (LoginDto) obj;
-		return Objects.equals(access, other.access) && Objects.equals(password, other.password);
+		return Objects.equals(username, other.username) && Objects.equals(password, other.password);
 	}
 
 	@Override
 	public String toString() {
-		return "LoginDto [access=" + access + ", password=" + password + "]";
+		return "LoginDto [ausername=" + username + ", password=" + password + "]";
 	}
 
 }
