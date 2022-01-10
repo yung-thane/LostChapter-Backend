@@ -98,7 +98,7 @@ public class AuthenticationControllerTest {
                 andExpect(MockMvcResultMatchers.status()
                         .is(400))
                 .andExpect(MockMvcResultMatchers.content()
-                        .string("User is Null: Username and/or password is incorrect"));
+                        .string("Username and/or password is incorrect"));
 
     }
 
@@ -114,7 +114,7 @@ public class AuthenticationControllerTest {
                 andExpect(MockMvcResultMatchers.status()
                         .is(400))
                 .andExpect(MockMvcResultMatchers.content()
-                        .string("User not Null: Username and/or password is incorrect"));
+                        .string("Username and/or password is incorrect"));
 
     }
 
