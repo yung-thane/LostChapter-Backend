@@ -384,4 +384,67 @@ public class BookIntegrationTest {
 //
 //	}
 
+	@Test
+	public void testAddBookEditionIsEmpty_negative() throws Exception {
+
+		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+				"author", 1, 0, 1996, "",
+				"publisher", true,
+				0.99, 10.99, "image");
+
+		String jsonToSend = mapper.writeValueAsString(actualBook);
+
+		MockHttpSession session1 = new MockHttpSession();
+
+		session1.setAttribute("currentUser", admin);
+
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/books").session(session1)
+				.content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400))
+				.andExpect(MockMvcResultMatchers.content().string("Edition cannot be blank."));
+	}
+
+	@Test
+	public void testAddBookPublisherIsEmpty_negative() throws Exception {
+
+		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+				"author", 1, 0, 1996, "edition",
+				"", true,
+				0.99, 10.99, "image");
+
+		String jsonToSend = mapper.writeValueAsString(actualBook);
+
+		MockHttpSession session1 = new MockHttpSession();
+
+		session1.setAttribute("currentUser", admin);
+
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/books").session(session1)
+				.content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400))
+				.andExpect(MockMvcResultMatchers.content().string("Publisher cannot be blank."));
+	}
+
+	@Test
+	public void testAddBookImageIsEmpty_negative() throws Exception {
+
+		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+				"author", 1, 0, 1996, "edition",
+				"publisher", true,
+				0.99, 10.99, "");
+
+		String jsonToSend = mapper.writeValueAsString(actualBook);
+
+		MockHttpSession session1 = new MockHttpSession();
+
+		session1.setAttribute("currentUser", admin);
+
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/books").session(session1)
+				.content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
+
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400))
+				.andExpect(MockMvcResultMatchers.content().string("Image cannot be blank."));
+	}
+
 }
