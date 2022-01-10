@@ -7,7 +7,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.revature.lostchapterbackend.dto.SignUpDto;
 import com.revature.lostchapterbackend.exceptions.InvalidParameterException;
 import com.revature.lostchapterbackend.model.Users;
@@ -84,7 +83,7 @@ public class ValidateUtil {
 		Users databaseUserEmail = userService.getUserByEmail(user.getEmail());
 
 		Users databaseUserUsername = userService.getUserByUsername(user.getUsername());
-		
+
 		if (databaseUserEmail != null) {
 			if (StringUtils.equalsAnyIgnoreCase(databaseUserEmail.getEmail().trim(), user.getEmail().trim())) {
 
@@ -122,7 +121,7 @@ public class ValidateUtil {
             
             if(count == 3 || count == 6) {
                 if(num != 47) {
-                    throw new InvalidParameterException("Birthday needs to have / in between numbers");
+                    throw new InvalidParameterException("Invalid birthday has been entered in. Should be MM/DD/YYYY");
                 }
                 
                 if (count == 3) {
@@ -220,8 +219,8 @@ public class ValidateUtil {
 
 		logger.info("Check if email already exist");
 
-		logger.info("user.getEmail(): {}", user.getEmail());
-		logger.info("userService: {}", userService);
+		logger.debug("user.getEmail(): {}", user.getEmail());
+		logger.debug("userService: {}", userService);
 
 		String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
 

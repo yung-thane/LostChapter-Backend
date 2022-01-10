@@ -46,14 +46,7 @@ public class UserDao {
 
 		Users user = em.createQuery("FROM Users u WHERE u.username = :username AND u.password = :password", Users.class)
 				.setParameter("username", access).setParameter("password", password).getSingleResult();
-		logger.info("user {}", user);
-		// logger.info("User: " + user);
-//		if (user == null) {
-//			 user = em.createQuery("FROM Users u WHERE u.email = :email AND u.password = :password", Users.class)
-//					.setParameter("email", access)
-//					.setParameter("password", password)
-//					.getSingleResult();
-//		}
+
 		return user;
 	}
 
@@ -63,12 +56,8 @@ public class UserDao {
 
 		try {
 
-			logger.info("username {}", access);
-
 			Users user = em.createQuery("FROM Users u WHERE u.username = :username", Users.class)
 					.setParameter("username", access).getSingleResult();
-
-			logger.info("user in dao layer{}", user);
 
 			return user;
 		} catch (NoResultException e) {
@@ -80,8 +69,10 @@ public class UserDao {
 	@Transactional
 	public void deleteUserById(int id) {
 		Users user = em.find(Users.class, id);
-
+		Carts cart = em.find(Carts.class, id);
+		
 		em.remove(user);
+		em.remove(cart);
 	}
 
 	// Getting a user by email
@@ -96,13 +87,11 @@ public class UserDao {
 			return user;
 		} catch (DataAccessException e) {
 
-
 			e.printStackTrace();
 			throw new NoResultException("Email cannot be blank");
 		} catch (NoResultException e) {
 			return null;
 		}
-
 
 	}
 

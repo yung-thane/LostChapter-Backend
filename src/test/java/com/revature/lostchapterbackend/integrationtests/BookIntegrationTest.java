@@ -21,7 +21,8 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.revature.lostchapterbackend.dto.AddBookDTO;
+
+import com.revature.lostchapterbackend.dto.AddOrUpdateBookDTO;
 import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.Genre;
 
@@ -231,10 +232,10 @@ public class BookIntegrationTest {
 	@Test
 	public void testAddBook_positive() throws Exception {
 
-		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+		AddOrUpdateBookDTO actualBook = new AddOrUpdateBookDTO("2425262728", "bookName4", "synopsis",
 				"author", 1, 1, 1996, "edition",
 				"publisher", true,
-				0.99, 10.99, "image");
+				0.90, 10.99, "image");
 		String jsonToSend = mapper.writeValueAsString(actualBook);
 
 		MockHttpSession session1 = new MockHttpSession();
@@ -247,7 +248,7 @@ public class BookIntegrationTest {
 		Book expectedBook1 = new Book("2425262728", "bookName4", "synopsis",
 				"author", g, 1, 1996, "edition",
 				"publisher", true,
-				0.99, 10.99, "image");
+				0.90, 10.99, "image");
 		expectedBook1.setBookId(4);
 
 
@@ -261,7 +262,7 @@ public class BookIntegrationTest {
 	@Test
 	public void testAddBookISBNIsEmpty_negative() throws Exception {
 
-		AddBookDTO actualBook = new AddBookDTO("", "bookName4", "synopsis",
+		AddOrUpdateBookDTO actualBook = new AddOrUpdateBookDTO("", "bookName4", "synopsis",
 				"author", 1, 1, 1996, "edition",
 				"publisher", true,
 				0.99, 10.99, "image");
@@ -282,7 +283,7 @@ public class BookIntegrationTest {
 	@Test
 	public void testAddBookButBookNameIsEmpty_negative() throws Exception {
 
-		AddBookDTO actualBook = new AddBookDTO("2425262728", "", "synopsis",
+		AddOrUpdateBookDTO actualBook = new AddOrUpdateBookDTO("2425262728", "", "synopsis",
 				"author", 1, 1, 1996, "edition",
 				"publisher", true,
 				0.99, 10.99, "image");
@@ -303,7 +304,7 @@ public class BookIntegrationTest {
 	@Test
 	public void testAddBookSynopsisIsEmpty_negative() throws Exception {
 
-		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "",
+		AddOrUpdateBookDTO actualBook = new AddOrUpdateBookDTO("2425262728", "bookName4", "",
 				"author", 1, 1, 1996, "edition",
 				"publisher", true,
 				0.99, 10.99, "image");
@@ -324,7 +325,7 @@ public class BookIntegrationTest {
 	@Test
 	public void testAddBookAuthorIsEmpty_negative() throws Exception {
 
-		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+		AddOrUpdateBookDTO actualBook = new AddOrUpdateBookDTO("2425262728", "bookName4", "synopsis",
 				"", 1, 1, 1996, "edition",
 				"publisher", true,
 				0.99, 10.99, "image");
@@ -345,7 +346,7 @@ public class BookIntegrationTest {
 	@Test
 	public void testAddBookGenreIsZero_negative() throws Exception {
 
-		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+		AddOrUpdateBookDTO actualBook = new AddOrUpdateBookDTO("2425262728", "bookName4", "synopsis",
 				"author", 0, 1, 1996, "edition",
 				"publisher", true,
 				0.99, 10.99, "image");
@@ -366,7 +367,7 @@ public class BookIntegrationTest {
 //	@Test
 //	public void testAddBookQuantityIsZero_negative() throws Exception {
 //
-//		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+//		AddOrUpdateBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
 //				"author", 1, 0, 1996, "edition",
 //				"publisher", true,
 //				0.99, 10.99, "image");

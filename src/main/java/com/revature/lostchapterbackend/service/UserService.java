@@ -48,11 +48,11 @@ public class UserService {
 		if (dto.getAge() < 5 || dto.getAge() > 125) {
 			throw new InvalidParameterException("Age cannot be less than 5 or greater than 125");
 		}
-		
+
 		Set<String> validRole = new HashSet<>();
 		validRole.add("Customer");
 		validRole.add("Admin");
-		
+
 		if (!validRole.contains(dto.getRole())) {
 			throw new InvalidParameterException("You can only sign up as a Customer or an Admin");
 		}
@@ -60,7 +60,6 @@ public class UserService {
 		String algorithm = "SHA-256";
 		String hashedPassword = HashUtil.hashPassword(dto.getPassword().trim(), algorithm);
 		dto.setPassword(hashedPassword);
-		System.out.println(hashedPassword);
 
 		Carts c = null;
 		Users createdUser = this.ud.addUser(dto, c);
@@ -72,22 +71,13 @@ public class UserService {
 
 		logger.info("UserService.getUser() invoked");
 
-		logger.info("username {}", username);
-
 		Users user = ud.getUser(username);
-		// Users user = ud.getUser(access, password);
-
-		logger.info("user in service layer {}", user);
 
 		try {
 
 			if (user != null) {
 				String algorithm = "SHA-256";
 				String hashedInputPassword = HashUtil.hashInputPassword(password.trim(), algorithm);
-				System.out.println(hashedInputPassword);
-
-				logger.info("hashedInputPassword {}", hashedInputPassword);
-				logger.info("user.getPassword {}", user.getPassword());
 
 				Boolean correctPassword = hashedInputPassword.equals(user.getPassword());
 

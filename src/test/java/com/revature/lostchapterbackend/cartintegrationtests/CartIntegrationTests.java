@@ -405,5 +405,85 @@ public class CartIntegrationTests {
 		
 	}
 	
+	@Test
+	public void cart_test_trying_to_add_book_that_doesnt_exist_negative() throws Exception {
+		
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/1/cart").param("bookId", "5").param("quantityToBuy", "1").session(session);
+		
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("Book doesn't exist"));
+				
+		
+	}
+	
+	
+	@Test
+	public void cart_test_trying_to_access_cart_that_doesnt_exist_negative() throws Exception {
+		
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/users/5/cart").param("bookId", "1").param("quantityToBuy", "1").session(session);
+		
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("No value present"));
+		
+	}
+	
+	@Test
+	public void cart_test_trying_to_get_cart_cart_id_not_int_negative() throws Exception {
+		
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/users/a/cart").session(session);
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("The Id entered must be an int."));
+		
+	}
+	
+	@Test
+	public void cart_test_delete_item_in_cart_cartId_doesnt_match_pattern_negative() throws Exception {
+		
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/users/a/cart").param("bookId", "1").session(session);
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("cart id/product id must be of type int!"));
+		
+	}
+	
+	@Test
+	public void cart_test_delete_item_in_cart_bookId_doesnt_match_pattern_negative() throws Exception {
+		
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/users/1/cart").param("bookId", "a").session(session);
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("cart id/product id must be of type int!"));
+		
+	}
+	
+	@Test
+	public void cart_test_delete_item_in_cart_bookId_doesnt_exist_negative() throws Exception {
+		
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/users/1/cart").param("bookId", "6").session(session);
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(404)).andExpect(MockMvcResultMatchers.content().string("Product not found on this cart"));
+		
+	}
+	
+	@Test
+	public void cart_test_delete_item_in_cart_cartId_doesnt_exist_negative() throws Exception {
+		
+		MockHttpSession session = new MockHttpSession();
+		session.setAttribute("currentUser", this.expectedUser);
+		
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/users/7/cart").param("bookId", "1").session(session);
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(404)).andExpect(MockMvcResultMatchers.content().string("No value present"));
+		
+	}
 	
 }

@@ -3,10 +3,10 @@ package com.revature.lostchapterbackend.dto;
 import java.util.Objects;
 
 public class LoginDto {
-	
-	private String access; //This will take an email or username
+
+	private String access; // This will take an email or username
 	private String password;
-	
+
 	public LoginDto() {
 		super();
 	}
@@ -54,7 +54,5 @@ public class LoginDto {
 	public String toString() {
 		return "LoginDto [access=" + access + ", password=" + password + "]";
 	}
-	
-	
 
 }
