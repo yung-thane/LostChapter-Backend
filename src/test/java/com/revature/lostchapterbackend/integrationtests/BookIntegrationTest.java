@@ -388,7 +388,7 @@ public class BookIntegrationTest {
 	@Test
 	public void testAddBookEditionIsEmpty_negative() throws Exception {
 
-		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+		AddOrUpdateBookDTO actualBook = new AddOrUpdateBookDTO("2425262728", "bookName4", "synopsis",
 				"author", 1, 0, 1996, "",
 				"publisher", true,
 				0.99, 10.99, "image");
@@ -409,7 +409,7 @@ public class BookIntegrationTest {
 	@Test
 	public void testAddBookPublisherIsEmpty_negative() throws Exception {
 
-		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+		AddOrUpdateBookDTO actualBook = new AddOrUpdateBookDTO("2425262728", "bookName4", "synopsis",
 				"author", 1, 0, 1996, "edition",
 				"", true,
 				0.99, 10.99, "image");
@@ -430,7 +430,7 @@ public class BookIntegrationTest {
 	@Test
 	public void testAddBookImageIsEmpty_negative() throws Exception {
 
-		AddBookDTO actualBook = new AddBookDTO("2425262728", "bookName4", "synopsis",
+		AddOrUpdateBookDTO actualBook = new AddOrUpdateBookDTO("2425262728", "bookName4", "synopsis",
 				"author", 1, 0, 1996, "edition",
 				"publisher", true,
 				0.99, 10.99, "");
