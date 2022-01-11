@@ -84,10 +84,10 @@ public class UserService {
 				if (correctPassword) {
 					return user;
 				} else {
-					throw new InvalidLoginException("User not Null: Username and/or password is incorrect");
+					throw new InvalidLoginException("Username and/or password is incorrect");
 				}
 			} else {
-				throw new InvalidLoginException("User is Null: Username and/or password is incorrect");
+				throw new InvalidLoginException("Username and/or password is incorrect");
 			}
 		} catch (DataAccessException e) {
 			throw new InvalidLoginException("Username and/or password is incorrect");
