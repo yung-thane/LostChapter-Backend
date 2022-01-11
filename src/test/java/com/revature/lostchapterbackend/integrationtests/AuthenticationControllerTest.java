@@ -59,7 +59,7 @@ public class AuthenticationControllerTest {
         
     }
 
-
+    @Test
     public void testLogin_positive() throws Exception {
 
 
