@@ -740,7 +740,7 @@ public class AuthenticationControllerTest {
     public void delete_user_but_not_logged_in_negative() throws Exception {
     	
     	MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/delete");
-    	this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string(""));
+    	this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("This user does not exist or is not logged in"));
     	
     }
 
