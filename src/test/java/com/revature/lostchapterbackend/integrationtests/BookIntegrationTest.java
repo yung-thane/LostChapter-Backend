@@ -635,7 +635,7 @@ public class BookIntegrationTest {
 	public void book_controller_get_books_by_genre_id_InvalidParamterException_negative() throws Exception { //Same thing here
 		
 		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/books/genre/a");
-		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("The Id entered must be an int."));
+		this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("The genreId entered must be an int."));
 		
 	}
 	
