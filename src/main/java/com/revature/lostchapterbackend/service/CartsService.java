@@ -134,9 +134,10 @@ public class CartsService {
 			b1 = iter.next();
 			iter.remove();
 			currentCart.setBooksToBuy(currentBooksInTheList);
+			System.out.println(b1.getId());
+			btbd.deleteById(b1.getId());
 		}
 
-		btbd.deleteAll();
 
 		return cd.saveAndFlush(currentCart);
 	}

@@ -41,7 +41,7 @@ public class UserService {
 			throw new InvalidParameterException("Do not leave any information blank");
 		}
 		
-		if (dto.getUsername().length() > 255 || dto.getFirstName().length() > 255 || dto.getLastName().length() > 255) {
+		if (dto.getUsername().length() > 255 || dto.getFirstName().length() > 255 || dto.getLastName().length() > 255 || dto.getEmail().length() > 255) {
 			throw new InvalidParameterException("Character lengths shouldn't extend over 255 characters");
 		}
 
@@ -84,10 +84,10 @@ public class UserService {
 				if (correctPassword) {
 					return user;
 				} else {
-					throw new InvalidLoginException("User not Null: Username and/or password is incorrect");
+					throw new InvalidLoginException("Username and/or password is incorrect");
 				}
 			} else {
-				throw new InvalidLoginException("User is Null: Username and/or password is incorrect");
+				throw new InvalidLoginException("Username and/or password is incorrect");
 			}
 		} catch (DataAccessException e) {
 			throw new InvalidLoginException("Username and/or password is incorrect");
@@ -125,7 +125,7 @@ public class UserService {
 			throw new InvalidParameterException("Do not leave any information blank");
 		}
 		
-		if (updatedUserInfo.getUsername().length() > 255 || updatedUserInfo.getFirstName().length() > 255 || updatedUserInfo.getLastName().length() > 255) {
+		if (updatedUserInfo.getUsername().length() > 255 || updatedUserInfo.getFirstName().length() > 255 || updatedUserInfo.getLastName().length() > 255 || updatedUserInfo.getEmail().length() > 255) {
 			throw new InvalidParameterException("Character lengths shouldn't extend over 255 characters");
 		}
 

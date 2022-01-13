@@ -57,7 +57,7 @@ public class AuthenticationController {
 	public ResponseEntity<Object> login(@RequestBody LoginDto dto) throws NoSuchAlgorithmException {
 		
 		try {
-			Users user = this.us.getUser(dto.getAccess(), dto.getPassword());
+			Users user = this.us.getUser(dto.getUsername(), dto.getPassword());
 			
 			HttpSession session = req.getSession();
 			session.setAttribute("currentUser", user);
@@ -88,19 +88,25 @@ public class AuthenticationController {
 	
 	@DeleteMapping(path = "/delete")
 	public ResponseEntity<Object> deleteUserById() throws UserNotFoundException {
-		
-		HttpSession session = req.getSession();
-		Users currentlyLoggedInUser = (Users) session.getAttribute("currentUser");
-		
-		if (currentlyLoggedInUser == null) {
-			throw new UserNotFoundException("This user does not exist or is not logged in");
+		try {
+			HttpSession session = req.getSession();
+			Users currentlyLoggedInUser = (Users) session.getAttribute("currentUser");
+			
+			if (currentlyLoggedInUser == null) {
+				throw new UserNotFoundException("This user does not exist or is not logged in");
+			}
+			
+			int id = currentlyLoggedInUser.getId();
+			us.deleteUserById(currentlyLoggedInUser);
+			req.getSession().invalidate();
+			
+			return ResponseEntity.status(200).body("This user has been successfully deleted by id: " + id);
 		}
-		
-		int id = currentlyLoggedInUser.getId();
-		us.deleteUserById(currentlyLoggedInUser);
-		req.getSession().invalidate();
-		
-		return ResponseEntity.status(200).body("This user has been successfully deleted by id: " + id);
+		catch(UserNotFoundException e) {
+			
+			return ResponseEntity.status(400).body(e.getMessage());
+			
+		}
 	}
 	
 	@PutMapping(path = "/update")

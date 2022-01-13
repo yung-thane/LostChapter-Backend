@@ -121,7 +121,7 @@ public class ValidateUtil {
             
             if(count == 3 || count == 6) {
                 if(num != 47) {
-                    throw new InvalidParameterException("Birthday needs to have / in between numbers");
+                    throw new InvalidParameterException("Invalid birthday has been entered in. Should be MM/DD/YYYY");
                 }
                 
                 if (count == 3) {
