@@ -6,6 +6,9 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.revature.lostchapterbackend.controller.BookController;
@@ -45,6 +48,19 @@ public class BookService {
 		logger.info("BookService.getAllBooks() invoked.");
 
 		return bd.findAll();
+	}
+
+	public List<Book> getFeaturedBooks() {
+		logger.info("BookService.getFeaturedBooks() invoked.");
+
+		Page<Book> bookPage = bd.findAll(PageRequest.of(0, 5, Sort.by("quantity").descending()));
+		List<Book> b = null;
+		if (bookPage.hasContent()) {
+			System.out.println(bookPage.getContent());
+			b = bookPage.getContent();
+		}
+
+		return b;
 	}
 
 	public Book getBookById(String id) throws BookNotFoundException {
