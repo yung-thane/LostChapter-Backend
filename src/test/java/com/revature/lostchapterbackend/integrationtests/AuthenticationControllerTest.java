@@ -59,7 +59,7 @@ public class AuthenticationControllerTest {
         
     }
 
-
+    @Test
     public void testLogin_positive() throws Exception {
 
 
@@ -98,7 +98,7 @@ public class AuthenticationControllerTest {
                 andExpect(MockMvcResultMatchers.status()
                         .is(400))
                 .andExpect(MockMvcResultMatchers.content()
-                        .string("User is Null: Username and/or password is incorrect"));
+                        .string("Username and/or password is incorrect"));
 
     }
 
@@ -114,7 +114,7 @@ public class AuthenticationControllerTest {
                 andExpect(MockMvcResultMatchers.status()
                         .is(400))
                 .andExpect(MockMvcResultMatchers.content()
-                        .string("User not Null: Username and/or password is incorrect"));
+                        .string("Username and/or password is incorrect"));
 
     }
 
@@ -726,6 +726,22 @@ public class AuthenticationControllerTest {
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
                 .is(400)).andExpect(MockMvcResultMatchers.content()
                 .string("role cannot be blank."));
+    }
+    
+    @Test
+    public void logout_positive() throws Exception {
+    	
+    	MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.post("/logout");
+    	this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(200)).andExpect(MockMvcResultMatchers.content().string("Successfully logged out"));
+    	
+    }
+    
+    @Test
+    public void delete_user_but_not_logged_in_negative() throws Exception {
+    	
+    	MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/delete");
+    	this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("This user does not exist or is not logged in"));
+    	
     }
 
 }
