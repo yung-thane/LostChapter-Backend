@@ -5732,3 +5732,89 @@ insert into users (id, address, age, birthday, email, first_name, last_name, pas
 10 Jan 2022 - 14:59:40.721 [http-nio-8081-exec-6] INFO  c.r.l.utility.ValidateUtil - Check if birthday is valid
 10 Jan 2022 - 14:59:48.885 [http-nio-8081-exec-7] INFO  c.r.l.service.UserService - UserService.getUser() invoked
 10 Jan 2022 - 14:59:48.930 [http-nio-8081-exec-7] INFO  c.r.lostchapterbackend.dao.UserDao - UserDao.getUser() invoked
+10 Jan 2022 - 15:56:47.296 [main] INFO  c.r.l.service.BookService - BookService.getAllBooks() invoked.
+10 Jan 2022 - 16:14:13.634 [main] INFO  c.r.l.service.BookService - BookService.getAllBooks() invoked.
+10 Jan 2022 - 16:15:53.623 [main] INFO  c.r.l.service.BookService - BookService.getAllBooks() invoked.
+10 Jan 2022 - 16:17:07.420 [main] INFO  c.r.l.service.BookService - BookService.getAllBooks() invoked.
+10 Jan 2022 - 16:27:18.753 [main] INFO  c.r.l.service.BookService - BookService.getBookById() invoked.
+10 Jan 2022 - 16:36:33.173 [main] INFO  c.r.l.service.BookService - BookService.getBooksByGenreId() invoked.
+10 Jan 2022 - 16:36:46.612 [main] INFO  c.r.l.service.BookService - BookService.getBooksByGenreId() invoked.
+10 Jan 2022 - 16:37:00.149 [main] INFO  c.r.l.service.BookService - BookService.getBooksByGenreId() invoked.
+10 Jan 2022 - 16:37:24.166 [main] INFO  c.r.l.service.BookService - BookService.getBooksByGenreId() invoked.
+10 Jan 2022 - 16:39:35.821 [main] INFO  c.r.l.service.BookService - BookService.getBooksByKeyword() invoked.
+10 Jan 2022 - 16:41:21.526 [main] INFO  c.r.l.service.BookService - BookService.getBooksBySale() invoked.
+10 Jan 2022 - 16:42:06.517 [main] INFO  c.r.l.service.BookService - BookService.getBooksBySale() invoked.
+10 Jan 2022 - 17:04:42.431 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
+10 Jan 2022 - 17:08:02.604 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
+10 Jan 2022 - 17:22:00.136 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
+10 Jan 2022 - 17:30:26.060 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
+10 Jan 2022 - 17:33:59.191 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
+10 Jan 2022 - 17:44:52.149 [main] INFO  c.r.l.service.BookService - BookService.getAllBooks() invoked.
+10 Jan 2022 - 17:45:19.656 [main] INFO  c.r.l.service.BookService - BookService.getAllBooks() invoked.
+11 Jan 2022 - 14:55:13.069 [main] INFO  c.r.l.service.BookService - BookService.getAllBooks() invoked.
+11 Jan 2022 - 14:55:32.092 [main] INFO  c.r.l.service.BookService - BookService.getBookById() invoked.
+11 Jan 2022 - 15:00:32.173 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
+11 Jan 2022 - 15:00:32.175 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
+11 Jan 2022 - 15:00:32.933 [main] INFO  c.r.l.utility.ValidateBookUtil - validate int inputs
+11 Jan 2022 - 15:00:32.934 [main] INFO  c.r.l.utility.ValidateBookUtil - validate synopsis length
+11 Jan 2022 - 15:00:32.934 [main] INFO  c.r.l.utility.ValidateBookUtil - validate sale discount rate
+11 Jan 2022 - 15:01:06.951 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
+11 Jan 2022 - 15:01:06.953 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
+11 Jan 2022 - 15:01:06.960 [main] INFO  c.r.l.utility.ValidateBookUtil - validate int inputs
+11 Jan 2022 - 15:01:06.960 [main] INFO  c.r.l.utility.ValidateBookUtil - validate synopsis length
+11 Jan 2022 - 15:01:06.960 [main] INFO  c.r.l.utility.ValidateBookUtil - validate sale discount rate
+11 Jan 2022 - 15:01:28.828 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
+11 Jan 2022 - 15:01:28.830 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
+11 Jan 2022 - 15:01:28.837 [main] INFO  c.r.l.utility.ValidateBookUtil - validate int inputs
+11 Jan 2022 - 15:01:28.837 [main] INFO  c.r.l.utility.ValidateBookUtil - validate synopsis length
+11 Jan 2022 - 15:01:28.837 [main] INFO  c.r.l.utility.ValidateBookUtil - validate sale discount rate
+11 Jan 2022 - 15:01:28.837 [main] INFO  c.r.l.utility.ValidateBookUtil - validate genre
+12 Jan 2022 - 17:48:51.559 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
+12 Jan 2022 - 17:48:51.600 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
+12 Jan 2022 - 17:48:51.691 [main] INFO  c.r.l.utility.ValidateBookUtil - validate int inputs
+12 Jan 2022 - 17:48:51.692 [main] INFO  c.r.l.utility.ValidateBookUtil - validate synopsis length
+12 Jan 2022 - 17:48:51.693 [main] INFO  c.r.l.utility.ValidateBookUtil - validate sale discount rate
+12 Jan 2022 - 17:48:51.694 [main] INFO  c.r.l.utility.ValidateBookUtil - validate genre
+12 Jan 2022 - 17:49:45.328 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
+12 Jan 2022 - 17:49:45.330 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
+12 Jan 2022 - 17:49:45.336 [main] INFO  c.r.l.utility.ValidateBookUtil - validate int inputs
+12 Jan 2022 - 17:49:45.337 [main] INFO  c.r.l.utility.ValidateBookUtil - validate synopsis length
+12 Jan 2022 - 17:49:45.337 [main] INFO  c.r.l.utility.ValidateBookUtil - validate sale discount rate
+12 Jan 2022 - 17:49:45.337 [main] INFO  c.r.l.utility.ValidateBookUtil - validate genre
+13 Jan 2022 - 10:34:19.931 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
+13 Jan 2022 - 10:34:19.951 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
+13 Jan 2022 - 10:34:20.030 [main] INFO  c.r.l.utility.ValidateBookUtil - validate int inputs
+13 Jan 2022 - 10:34:20.032 [main] INFO  c.r.l.utility.ValidateBookUtil - validate synopsis length
+13 Jan 2022 - 10:34:20.033 [main] INFO  c.r.l.utility.ValidateBookUtil - validate sale discount rate
+13 Jan 2022 - 10:34:20.034 [main] INFO  c.r.l.utility.ValidateBookUtil - validate genre
+13 Jan 2022 - 11:16:31.988 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
+13 Jan 2022 - 11:16:31.998 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
+13 Jan 2022 - 11:16:32.015 [main] INFO  c.r.l.utility.ValidateBookUtil - validate int inputs
+13 Jan 2022 - 11:16:32.015 [main] INFO  c.r.l.utility.ValidateBookUtil - validate synopsis length
+13 Jan 2022 - 11:16:32.015 [main] INFO  c.r.l.utility.ValidateBookUtil - validate sale discount rate
+13 Jan 2022 - 11:16:32.015 [main] INFO  c.r.l.utility.ValidateBookUtil - validate genre
+13 Jan 2022 - 11:18:42.347 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
+13 Jan 2022 - 11:18:42.350 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
+13 Jan 2022 - 11:18:42.356 [main] INFO  c.r.l.utility.ValidateBookUtil - validate int inputs
+13 Jan 2022 - 11:18:42.356 [main] INFO  c.r.l.utility.ValidateBookUtil - validate synopsis length
+13 Jan 2022 - 11:18:42.356 [main] INFO  c.r.l.utility.ValidateBookUtil - validate sale discount rate
+13 Jan 2022 - 11:18:42.356 [main] INFO  c.r.l.utility.ValidateBookUtil - validate genre
+13 Jan 2022 - 11:55:18.145 [main] INFO  c.r.l.service.BookService - BookService.getBookById() invoked.
+13 Jan 2022 - 11:55:18.229 [main] INFO  c.r.l.service.BookService - BookService.getBooksBySale() invoked.
+13 Jan 2022 - 11:55:18.237 [main] INFO  c.r.l.service.BookService - BookService.getBooksByGenreId() invoked.
+13 Jan 2022 - 11:55:18.244 [main] INFO  c.r.l.service.BookService - BookService.getBooksByKeyword() invoked.
+13 Jan 2022 - 11:55:18.249 [main] INFO  c.r.l.service.BookService - BookService.getAllBooks() invoked.
+13 Jan 2022 - 11:56:24.375 [main] INFO  c.r.l.service.BookService - BookService.getBookById() invoked.
+13 Jan 2022 - 11:56:24.392 [main] INFO  c.r.l.service.BookService - BookService.getBooksBySale() invoked.
+13 Jan 2022 - 11:56:24.396 [main] INFO  c.r.l.service.BookService - BookService.getBooksByGenreId() invoked.
+13 Jan 2022 - 11:56:24.399 [main] INFO  c.r.l.service.BookService - BookService.getBooksByKeyword() invoked.
+13 Jan 2022 - 11:56:24.403 [main] INFO  c.r.l.service.BookService - BookService.getAllBooks() invoked.
+13 Jan 2022 - 12:01:39.757 [main] INFO  c.r.l.utility.ValidateBookUtil - ValidateBookUtil.validateBookInput() invoked.
+13 Jan 2022 - 12:01:39.759 [main] INFO  c.r.l.utility.ValidateBookUtil - check blank inputs
+13 Jan 2022 - 12:01:40.077 [main] INFO  c.r.l.utility.ValidateBookUtil - validate int inputs
+13 Jan 2022 - 12:01:40.078 [main] INFO  c.r.l.utility.ValidateBookUtil - validate synopsis length
+13 Jan 2022 - 12:01:40.079 [main] INFO  c.r.l.utility.ValidateBookUtil - validate sale discount rate
+13 Jan 2022 - 12:01:40.079 [main] INFO  c.r.l.utility.ValidateBookUtil - validate genre
+13 Jan 2022 - 12:06:06.783 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
+13 Jan 2022 - 12:08:46.172 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
+13 Jan 2022 - 12:15:26.482 [main] INFO  c.r.l.service.BookService - BookService.addBook() invoked.
