@@ -62,17 +62,22 @@ public class BookController {
 		try {
 			Book book = bs.getBookById(id);
 			return ResponseEntity.status(200).body(book);
-		} catch (BookNotFoundException e) {
+		} catch (BookNotFoundException | InvalidParameterException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
 		}
 
 	}
 
 	@GetMapping(path = "/books/genre/{genreId}")
-	public List<Book> getBookByGenreId(@PathVariable(value = "genreId") String genreId) {
+	public ResponseEntity<Object> getBookByGenreId(@PathVariable(value = "genreId") String genreId) {
 		logger.info("BookController.getBookByGenreId() invoked.");
 
-		return bs.getBooksByGenreId(genreId);
+		try {
+			List<Book> bookList = bs.getBooksByGenreId(genreId);
+			return ResponseEntity.status(200).body(bookList);
+		} catch (InvalidParameterException e) {
+			return ResponseEntity.status(400).body(e.getMessage());
+		}
 
 	}
 
@@ -109,8 +114,9 @@ public class BookController {
 			return ResponseEntity.status(400).body(e.getMessage());
 		} catch (ISBNAlreadyExists e) {
 			return ResponseEntity.status(400).body(e.getMessage());
+		} catch (SaleDiscountRateException e) {
+			return ResponseEntity.status(400).body(e.getMessage());
 		}
-
 	}
 
 	@Admin
