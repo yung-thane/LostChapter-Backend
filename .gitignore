@@ -47,3 +47,4 @@ local.properties
 .classpath
 .settings/
 .loadpath
+mylogfile.log
