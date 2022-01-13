@@ -1,4 +1,4 @@
-package com.revature.lostchapterbackend.exception;
+package com.revature.lostchapterbackend.exceptions;
 
 public class CardNotFoundException extends Exception {
 

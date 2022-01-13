@@ -53,6 +53,29 @@ public class ValidateCheckoutUtil {
 		if (payout.getCardholderName().length() >= 255 || payout.getCardholderName().length() <= 0) {
 			throw new Exception("Card Holder Name cannot be greater than 255 or less than 0");
 		}
+		
+		Set<String> validDeliveryDate = new HashSet<>();
+		// HashSet<String> valid deliveryDate 
+		// 1. 7 Days Delivery Date
+		// 2. 1 Month Delivery Date
+		validDeliveryDate.add("7 Days Delivery Date");
+		validDeliveryDate.add("1 Month Delivery Date");
+		
+		if (!validDeliveryDate.contains(payout.getShippingAddress().getDeliveryDate())) {
+			throw new Exception("Only options are 7 Days or 1 Month Delivery Date");
+		}
+	}
+	
+	public void verifyCardInfo(Checkout cardInfo, Checkout payout) throws Exception {
+		
+		if (!cardInfo.getExpirationMonth().equals(payout.getExpirationMonth())) {
+			throw new Exception ("expiration month doesn't match the card number information");
+		}else if (!cardInfo.getExpirationYear().equals(payout.getExpirationYear())) {
+			throw new Exception ("expiration year doesn't match the card number information");
+		}else if (!cardInfo.getSecurityCode().equals(payout.getSecurityCode())) {
+			throw new Exception ("CVV doesn't match the card number information");
+		}
+		
 	}
 
 }

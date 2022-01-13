@@ -1,5 +1,6 @@
 package com.revature.lostchapterbackend.model;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,18 +20,21 @@ public class TransactionKeeper {
 	private double totalPrice;
 	@ElementCollection
 	private List<String> previousOrder;
+	private LocalDateTime transactionDate;
 
 	public TransactionKeeper() {
 		super();
 	}
 
-	public TransactionKeeper(String orderNumber, double totalPrice, List<String> previousOrder) {
+	public TransactionKeeper(String orderNumber, double totalPrice, List<String> previousOrder,
+			LocalDateTime transactionDate) {
 		super();
 		this.orderNumber = orderNumber;
 		this.totalPrice = totalPrice;
 		this.previousOrder = previousOrder;
+		this.transactionDate = transactionDate;
 	}
-	
+
 	public int getTransactionId() {
 		return transactionId;
 	}
@@ -63,9 +67,17 @@ public class TransactionKeeper {
 		this.previousOrder = previousOrder;
 	}
 
+	public LocalDateTime getTransactionDate() {
+		return transactionDate;
+	}
+
+	public void setTransactionDate(LocalDateTime transactionDate) {
+		this.transactionDate = transactionDate;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(orderNumber, previousOrder, totalPrice, transactionId);
+		return Objects.hash(orderNumber, previousOrder, totalPrice, transactionDate, transactionId);
 	}
 
 	@Override
@@ -79,13 +91,13 @@ public class TransactionKeeper {
 		TransactionKeeper other = (TransactionKeeper) obj;
 		return Objects.equals(orderNumber, other.orderNumber) && Objects.equals(previousOrder, other.previousOrder)
 				&& Double.doubleToLongBits(totalPrice) == Double.doubleToLongBits(other.totalPrice)
-				&& transactionId == other.transactionId;
+				&& Objects.equals(transactionDate, other.transactionDate) && transactionId == other.transactionId;
 	}
 
 	@Override
 	public String toString() {
 		return "TransactionKeeper [transactionId=" + transactionId + ", orderNumber=" + orderNumber + ", totalPrice="
-				+ totalPrice + ", previousOrder=" + previousOrder + "]";
+				+ totalPrice + ", previousOrder=" + previousOrder + ", transactionDate=" + transactionDate + "]";
 	}
 
 }

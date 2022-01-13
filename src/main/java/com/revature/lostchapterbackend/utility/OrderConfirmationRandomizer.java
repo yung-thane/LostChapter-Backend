@@ -1,6 +1,6 @@
 package com.revature.lostchapterbackend.utility;
 
-import java.util.Random;
+import java.security.SecureRandom;
 
 public class OrderConfirmationRandomizer {
 
@@ -10,8 +10,8 @@ public class OrderConfirmationRandomizer {
 	public String randomBankAccount() {
 		int leftLimit = 48; // numeral '0'
 		int rightLimit = 122; // letter 'z'
-		int targetStringLength = 50;
-		Random random = new Random();
+		int targetStringLength = 15;
+		SecureRandom random = new SecureRandom();
 
 		String generatedString = random.ints(leftLimit, rightLimit + 1)
 				.filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97)).limit(targetStringLength)

@@ -1,16 +1,16 @@
 package com.revature.lostchapterbackend.service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.lostchapterbackend.dao.BookDAO;
 import com.revature.lostchapterbackend.dao.CheckoutDAO;
+import com.revature.lostchapterbackend.dao.ShippingInfoDAO;
 import com.revature.lostchapterbackend.dao.TransactionKeeperDAO;
-import com.revature.lostchapterbackend.model.Book;
 import com.revature.lostchapterbackend.model.BookToBuy;
 import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.model.Checkout;
@@ -37,6 +37,9 @@ public class CheckoutService {
 
 	@Autowired
 	private CheckoutDAO cod;
+	
+	@Autowired 
+	private ShippingInfoDAO sid;
 	
 	private TransactionKeeper tk;
 
@@ -73,7 +76,7 @@ public class CheckoutService {
 
 		OrderConfirmationRandomizer ocr = new OrderConfirmationRandomizer(); // creates a random order number
 
-		tk = new TransactionKeeper(ocr.randomBankAccount(), this.totalPrice, previousOrder);
+		tk = new TransactionKeeper(ocr.randomBankAccount(), this.totalPrice, previousOrder, LocalDateTime.now());
 		tkd.saveAndFlush(tk); // saves a transaction
 
 		this.saveCard(payout); // save and updates card info
@@ -86,6 +89,7 @@ public class CheckoutService {
 
 	public void saveCard(Checkout payout) {
 
+		sid.save(payout.getShippingAddress());
 		cod.saveAndFlush(payout);
 
 	}

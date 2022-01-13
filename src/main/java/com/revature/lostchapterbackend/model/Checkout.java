@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Checkout {
@@ -14,7 +15,7 @@ public class Checkout {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int checkoutId;
-	
+
 	@Column(length = 19)
 	private String cardNumber; // 13 - 19 restriction
 	@Column(length = 4)
@@ -26,15 +27,15 @@ public class Checkout {
 	@Column(length = 50)
 	private String cardholderName;
 	private double cardBalance;
-	// private Users user; // @OneToMany ? // can be accessed by
-	// currentlyLoggedInUser
+	@ManyToOne
+	private ShippingInformation shippingAddress;
 
 	public Checkout() {
 		super();
 	}
 
 	public Checkout(String cardNumber, String securityCode, String expirationMonth, String expirationYear,
-			String cardholderName, double cardBalance/* , Users user */) {
+			String cardholderName, double cardBalance, ShippingInformation shippingAddress) {
 		super();
 		this.cardNumber = cardNumber;
 		this.securityCode = securityCode;
@@ -42,7 +43,7 @@ public class Checkout {
 		this.expirationYear = expirationYear;
 		this.cardholderName = cardholderName;
 		this.cardBalance = cardBalance;
-//		this.user = user;
+		this.shippingAddress = shippingAddress;
 	}
 
 	public int getCheckoutId() {
@@ -101,10 +102,18 @@ public class Checkout {
 		this.cardBalance = cardBalance;
 	}
 
+	public ShippingInformation getShippingAddress() {
+		return shippingAddress;
+	}
+
+	public void setShippingAddress(ShippingInformation shippingAddress) {
+		this.shippingAddress = shippingAddress;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(cardBalance, cardNumber, cardholderName, checkoutId, expirationMonth, expirationYear,
-				securityCode);
+				securityCode, shippingAddress);
 	}
 
 	@Override
@@ -116,18 +125,18 @@ public class Checkout {
 		if (getClass() != obj.getClass())
 			return false;
 		Checkout other = (Checkout) obj;
-		return cardBalance == other.cardBalance && Objects.equals(cardNumber, other.cardNumber)
-				&& Objects.equals(cardholderName, other.cardholderName) && checkoutId == other.checkoutId
-				&& Objects.equals(expirationMonth, other.expirationMonth)
+		return Double.doubleToLongBits(cardBalance) == Double.doubleToLongBits(other.cardBalance)
+				&& Objects.equals(cardNumber, other.cardNumber) && Objects.equals(cardholderName, other.cardholderName)
+				&& checkoutId == other.checkoutId && Objects.equals(expirationMonth, other.expirationMonth)
 				&& Objects.equals(expirationYear, other.expirationYear)
-				&& Objects.equals(securityCode, other.securityCode);
+				&& Objects.equals(securityCode, other.securityCode) && Objects.equals(shippingAddress, other.shippingAddress);
 	}
 
 	@Override
 	public String toString() {
 		return "Checkout [checkoutId=" + checkoutId + ", cardNumber=" + cardNumber + ", securityCode=" + securityCode
 				+ ", expirationMonth=" + expirationMonth + ", expirationYear=" + expirationYear + ", cardholderName="
-				+ cardholderName + ", cardBalance=" + cardBalance + "]";
+				+ cardholderName + ", cardBalance=" + cardBalance + ", si=" + shippingAddress + "]";
 	}
 
 }

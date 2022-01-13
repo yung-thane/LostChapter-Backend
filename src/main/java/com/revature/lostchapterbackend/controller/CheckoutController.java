@@ -59,6 +59,7 @@ public class CheckoutController {
 				return ResponseEntity.status(200).body(tk);
 			} else {
 			// if it exists...
+				validateCheckoutUtil.verifyCardInfo(getCardNumber, payout);
 				tk = cs.confirmCheckout(c, getCardNumber);
 				return ResponseEntity.status(200).body(tk);
 			}
@@ -66,7 +67,7 @@ public class CheckoutController {
 		} catch (Exception e) {
 			return ResponseEntity.status(400).body(e.getMessage());
 		}
-
 	}
+
 
 }
