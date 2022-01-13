@@ -3,11 +3,11 @@ package com.revature.lostchapterbackend.model;
 import java.util.List;
 import java.util.Objects;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 @Entity
 public class TransactionKeeper {
@@ -17,14 +17,14 @@ public class TransactionKeeper {
 	private int transactionId;
 	private String orderNumber;
 	private double totalPrice;
-	@OneToMany
-	private List<Book> previousOrder;
+	@ElementCollection
+	private List<String> previousOrder;
 
 	public TransactionKeeper() {
 		super();
 	}
 
-	public TransactionKeeper(String orderNumber, double totalPrice, List<Book> previousOrder) {
+	public TransactionKeeper(String orderNumber, double totalPrice, List<String> previousOrder) {
 		super();
 		this.orderNumber = orderNumber;
 		this.totalPrice = totalPrice;
@@ -55,11 +55,11 @@ public class TransactionKeeper {
 		this.totalPrice = totalPrice;
 	}
 
-	public List<Book> getPreviousOrder() {
+	public List<String> getPreviousOrder() {
 		return previousOrder;
 	}
 
-	public void setPreviousOrder(List<Book> previousOrder) {
+	public void setPreviousOrder(List<String> previousOrder) {
 		this.previousOrder = previousOrder;
 	}
 

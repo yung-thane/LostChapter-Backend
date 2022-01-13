@@ -2,6 +2,7 @@ package com.revature.lostchapterbackend.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,55 +37,66 @@ public class CheckoutService {
 
 	@Autowired
 	private CheckoutDAO cod;
+	
+	private TransactionKeeper tk;
 
-	public void confirmCheckout(Carts c, Checkout payout) {
-		// First get the total of the product
-		String cartId = String.valueOf(c.getCartId());
-
-		List<BookToBuy> getTotalAmountOfAllBooks = c.getBooksToBuy();
-		List<Book> booksToBeKeeped = new ArrayList<>();
-
-		for (BookToBuy b : getTotalAmountOfAllBooks) {
-			booksToBeKeeped.add(b.getBooks());
-			if (b.getBooks().isSaleIsActive()) {
+	public TransactionKeeper confirmCheckout(Carts currentCart, Checkout payout) throws Exception {
+		
+		// gets all Books from the current cart
+		List<BookToBuy> getTotalAmountOfAllBooks = currentCart.getBooksToBuy();
+		// checks if cart is empty;
+		if (getTotalAmountOfAllBooks.isEmpty()) {
+			throw new Exception ("No Books currently");
+		}	
+		// A list to save all previous order
+		List<String> previousOrder = new ArrayList<>();
+		
+		// Iterate each BookToBuy object from the List of BookToBuy
+		for (BookToBuy b : getTotalAmountOfAllBooks) {		
+			previousOrder.add(b.getBooks().getISBN()); // Add every ISBN number to the previous order
+			if (b.getBooks().isSaleIsActive()) { // check if it's on sale
 				this.totalPriceOfEachBook = (b.getBooks().getBookPrice()
 						- (b.getBooks().getBookPrice() * b.getBooks().getSaleDiscountRate())) * b.getQuantityToBuy();
-			} else {
+			} else { // if not
 				this.totalPriceOfEachBook = b.getQuantityToBuy() * b.getBooks().getBookPrice();
 			}
-			this.booksRemaining = b.getBooks().getQuantity() - b.getQuantityToBuy();
-			b.getBooks().setQuantity(booksRemaining);
-			// System.out.println("Quantity remaining for book "+b.getBooks().getBookId() +
-			// " is: " +b.getBooks().getQuantity());
-			this.subTotal += this.totalPriceOfEachBook;
-			// System.out.println(this.subTotal);
-			this.totalPrice = this.subTotal + (this.subTotal * this.TAX);
 			
-			bd.saveAndFlush(b.getBooks());
+			this.booksRemaining = b.getBooks().getQuantity() - b.getQuantityToBuy(); // updates the quantity of book
+			b.getBooks().setQuantity(booksRemaining); // updates the quantity of book
+			this.subTotal += this.totalPriceOfEachBook; // calculates subtotal for all the book
+			this.totalPrice = this.subTotal + (this.subTotal * this.TAX); // calculates total price including tax
+
+			bd.saveAndFlush(b.getBooks()); // every iteration, save and update the necessary info
 		}
 
-		payout.setCardBalance(payout.getCardBalance() - this.totalPrice);
-		System.out.println(payout.getCardBalance());
+		payout.setCardBalance(payout.getCardBalance() - this.totalPrice); // updates the card balance
 
-		// save totalPrice in a order confirmation page model/transaction model
-		System.out.println("total price with tax" + this.totalPrice);
+		OrderConfirmationRandomizer ocr = new OrderConfirmationRandomizer(); // creates a random order number
 
-		// Order Confirmation Page = total price, randomized string for order number
-		// Add a like a transaction table to save previous order
-		OrderConfirmationRandomizer ocr = new OrderConfirmationRandomizer();
+		tk = new TransactionKeeper(ocr.randomBankAccount(), this.totalPrice, previousOrder);
+		tkd.saveAndFlush(tk); // saves a transaction
 
-		TransactionKeeper tk = new TransactionKeeper();
-		tk = new TransactionKeeper(ocr.randomBankAccount(), this.totalPrice, booksToBeKeeped);
-		tkd.saveAndFlush(tk);
+		this.saveCard(payout); // save and updates card info
 
-		Carts updatedCart = cs.delteteAllProductInCart(c, cartId);
-		System.out.println(updatedCart);
+		cs.delteteAllProductInCart(currentCart, String.valueOf(currentCart.getCartId())); // clear outs all the books in the cart
+
+		return tk;
 
 	}
 
 	public void saveCard(Checkout payout) {
 
 		cod.saveAndFlush(payout);
+
+	}
+
+	public Checkout findByCardNumber(String cardNumber) {
+
+		if (cod.findBycardNumber(cardNumber) == null) {
+			return null;
+		} else {
+			return cod.findBycardNumber(cardNumber);
+		}
 
 	}
 }

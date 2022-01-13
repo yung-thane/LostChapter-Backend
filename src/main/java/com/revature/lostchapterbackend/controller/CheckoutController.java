@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.revature.lostchapterbackend.annotation.Customer;
 import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.model.Checkout;
+import com.revature.lostchapterbackend.model.TransactionKeeper;
 import com.revature.lostchapterbackend.model.Users;
 import com.revature.lostchapterbackend.service.CartsService;
 import com.revature.lostchapterbackend.service.CheckoutService;
@@ -23,45 +24,49 @@ public class CheckoutController {
 
 	@Autowired
 	private HttpServletRequest req;
-	
-	@Autowired 
+
+	@Autowired
 	private ValidateCheckoutUtil validateCheckoutUtil;
-	
+
 	@Autowired
 	private CheckoutService cs;
-	
+
 	@Autowired
 	private CartsService css;
 	
+	private TransactionKeeper tk;
+
 	@Customer
 	@PostMapping(path = "/user/checkout")
 	public ResponseEntity<Object> payout(@RequestBody Checkout payout) {
-		
-		Users currentlyLoggedInUser = (Users) req.getSession().getAttribute("currentUser"); 
-		// can be offloaded to frontend
-		// main way to get User info such as Shipping Info, or should be manually inputed as well?
-		try {
-			validateCheckoutUtil.verifyCheckout(payout);
-			payout.setCardNumber(payout.getCardNumber().trim().replaceAll("\\s+",""));
-			System.out.println(payout);
-			//if everything checksout, send payout to service
-			//then get cart by using currentlyLoggedInUser;
-			Carts c = css.getCartById(String.valueOf(currentlyLoggedInUser.getId()));
 
-			payout.setCardBalance(10000);
-			cs.saveCard(payout);
-					
-			cs.confirmCheckout(c, payout);
+		// main way to get cartId
+		Users currentlyLoggedInUser = (Users) req.getSession().getAttribute("currentUser");
+		
+		try {
+			Carts c = css.getCartById(String.valueOf(currentlyLoggedInUser.getId()));
+			validateCheckoutUtil.verifyCheckout(payout); // validates card information
 			
-			return ResponseEntity.status(200).body(currentlyLoggedInUser); //must return an order confirmation?
+			// removes all the spaces in the  card number when user inputs spaces
+			payout.setCardNumber(payout.getCardNumber().trim().replaceAll("\\s+", "")); 
+			
+			// checks if card already exists
+			Checkout getCardNumber = cs.findByCardNumber(payout.getCardNumber());
+			//if it doesn't ...
+			if (getCardNumber == null) {
+				payout.setCardBalance(10000);
+				tk = cs.confirmCheckout(c, payout);
+				return ResponseEntity.status(200).body(tk);
+			} else {
+			// if it exists...
+				tk = cs.confirmCheckout(c, getCardNumber);
+				return ResponseEntity.status(200).body(tk);
+			}
+			
 		} catch (Exception e) {
 			return ResponseEntity.status(400).body(e.getMessage());
 		}
-			
-			
 
-		
-		
 	}
-	
+
 }
