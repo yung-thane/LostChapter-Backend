@@ -93,6 +93,7 @@ public class BookService {
 		logger.info("BookService.addBook() invoked.");
 
 		vBUtil.validateBookInput(dto);
+		System.out.println("service syso:" +dto.getYear());
 
 		/*-
 		 *  check if isbn already exist

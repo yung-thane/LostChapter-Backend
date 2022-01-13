@@ -75,11 +75,13 @@ public class CheckoutService {
 		payout.setCardBalance(payout.getCardBalance() - this.totalPrice); // updates the card balance
 
 		OrderConfirmationRandomizer ocr = new OrderConfirmationRandomizer(); // creates a random order number
+		
+		this.saveCard(payout); // save and updates card info
 
 		tk = new TransactionKeeper(ocr.randomBankAccount(), this.totalPrice, previousOrder, LocalDateTime.now());
 		tkd.saveAndFlush(tk); // saves a transaction
 
-		this.saveCard(payout); // save and updates card info
+		
 
 		cs.delteteAllProductInCart(currentCart, String.valueOf(currentCart.getCartId())); // clear outs all the books in the cart
 
