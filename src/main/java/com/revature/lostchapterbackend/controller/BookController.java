@@ -45,6 +45,16 @@ public class BookController {
 
 	}
 
+	@GetMapping(path = "/books/featured")
+	public List<Book> getFeaturedBooks() {
+
+		logger.info("BookController.getFeaturedBooks() invoked.");
+
+		List<Book> featuredBooks = bs.getFeaturedBooks();
+
+		return featuredBooks;
+	}
+
 	@GetMapping(path = "/books/{id}")
 	public ResponseEntity<Object> getBookById(@PathVariable(value = "id") String id) {
 		logger.info("BookController.getBookById() invoked.");
