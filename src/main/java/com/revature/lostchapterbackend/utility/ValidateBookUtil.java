@@ -167,7 +167,7 @@ public class ValidateBookUtil {
 		}
 
 		if (lessThanZeroBoolean) {
-			lessThanZeroString.append(" cannot be blank and cannot be less than or equal to 0.");
+			lessThanZeroString.append(" cannot be less than or equal to 0.");
 			throw new InvalidParameterException(lessThanZeroString.toString());
 		}
 
