@@ -86,7 +86,7 @@ public class AuthenticationController {
 		return ResponseEntity.status(200).body("No one is currently logged in");
 	}
 	
-	@DeleteMapping(path = "/delete")
+	@DeleteMapping(path = "/user")
 	public ResponseEntity<Object> deleteUserById() throws UserNotFoundException {
 		try {
 			HttpSession session = req.getSession();
@@ -109,7 +109,7 @@ public class AuthenticationController {
 		}
 	}
 	
-	@PutMapping(path = "/update")
+	@PutMapping(path = "/user")
 	public ResponseEntity<Object> updateUser(@RequestBody Users user) throws UserNotFoundException {
 		
 		try {
@@ -118,6 +118,7 @@ public class AuthenticationController {
 			Users currentlyLoggedInUser = (Users) session.getAttribute("currentUser");
 			
 			Users userToBeUpdated = us.updateUser(currentlyLoggedInUser, user);
+			session.setAttribute("currentUser", userToBeUpdated);
 			return ResponseEntity.status(200).body(userToBeUpdated);
 		} catch (InvalidParameterException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
