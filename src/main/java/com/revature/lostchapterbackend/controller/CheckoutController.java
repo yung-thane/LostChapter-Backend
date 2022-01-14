@@ -39,11 +39,11 @@ public class CheckoutController {
 	@Customer
 	@PostMapping(path = "/user/checkout")
 	public ResponseEntity<Object> payout(@RequestBody Checkout payout) {
-
-		// main way to get cartId
-		Users currentlyLoggedInUser = (Users) req.getSession().getAttribute("currentUser");
 		
-		try {
+		try {		
+			// main way to get cartId
+			Users currentlyLoggedInUser = (Users) req.getSession().getAttribute("currentUser");
+			
 			Carts c = css.getCartById(String.valueOf(currentlyLoggedInUser.getId()));
 			validateCheckoutUtil.verifyCheckout(payout); // validates card information
 			
@@ -54,7 +54,6 @@ public class CheckoutController {
 			Checkout getCardNumber = cs.findByCardNumber(payout.getCardNumber());
 			//if it doesn't ...
 			if (getCardNumber == null) {
-				System.out.println(payout);
 				payout.setCardBalance(10000);
 				tk = cs.confirmCheckout(c, payout);
 				return ResponseEntity.status(200).body(tk);
@@ -62,7 +61,7 @@ public class CheckoutController {
 			// if it exists...
 				validateCheckoutUtil.verifyCardInfo(getCardNumber, payout);
 				getCardNumber.setShippingAddress(payout.getShippingAddress());
-				System.out.println(getCardNumber);
+				cs.saveCard(getCardNumber);
 				tk = cs.confirmCheckout(c, getCardNumber);
 				return ResponseEntity.status(200).body(tk);
 			}

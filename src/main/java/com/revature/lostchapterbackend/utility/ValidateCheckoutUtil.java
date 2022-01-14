@@ -10,6 +10,7 @@ public class ValidateCheckoutUtil {
 	public void verifyCheckout(Checkout payout) throws Exception {
 
 		final String CARD_NUMBER = payout.getCardNumber().trim().replaceAll("\\s+","");
+		int month = Integer.parseInt(payout.getExpirationYear());
 		if (CARD_NUMBER.length() >= 20 || CARD_NUMBER.length() <= 12) {
 			throw new Exception("Card number can't be less than or equal to 12 or greater than or equal to 20");
 		}
@@ -38,9 +39,12 @@ public class ValidateCheckoutUtil {
 		if (payout.getExpirationMonth().trim().equals("")) {
 			throw new Exception("expiration month cannot be empty");
 		}
-		//--------------------------------------------
-		// year validtion on hold
-		//--------------------------------------------
+		if (payout.getExpirationYear().trim().length() >= 3 || payout.getExpirationYear().trim().length() <= 1) {
+			throw new Exception("valid expiration year starts from 22 (2022)");
+		}
+		if (month < 22) {
+			throw new Exception("valid expiration year starts from 22 (2022)");
+		}
 		if (payout.getSecurityCode().trim().length() >= 5 || payout.getSecurityCode().trim().length() <= 2) {
 			throw new Exception("security code must have 3 or 4 values");
 		}
