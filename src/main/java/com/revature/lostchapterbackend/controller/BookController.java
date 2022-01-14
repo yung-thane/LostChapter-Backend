@@ -97,24 +97,20 @@ public class BookController {
 
 	}
 
-	@Admin
+	// @Admin
 	@PostMapping(path = "/books")
-	public ResponseEntity<Object> addNewBook(@RequestBody AddOrUpdateBookDTO dto)
-			throws SynopsisInputException, SaleDiscountRateException {
+	public ResponseEntity<Object> addNewBook(@RequestBody AddOrUpdateBookDTO dto) throws SynopsisInputException {
 
 		logger.info("BookController.addNewBook() invoked.");
 
 		try {
+			System.out.println("controller syso:" + dto.getSaleDiscountRate());
 			Book addedBook = bs.addBook(dto);
 			return ResponseEntity.status(201).body(addedBook);
 		} catch (InvalidParameterException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
 
-		} catch (GenreNotFoundException e) {
-			return ResponseEntity.status(400).body(e.getMessage());
-		} catch (ISBNAlreadyExists e) {
-			return ResponseEntity.status(400).body(e.getMessage());
-		} catch (SaleDiscountRateException e) {
+		} catch (GenreNotFoundException | ISBNAlreadyExists | SaleDiscountRateException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
 		}
 	}
