@@ -45,6 +45,16 @@ public class BookController {
 
 	}
 
+	@GetMapping(path = "/books/featured")
+	public List<Book> getFeaturedBooks() {
+
+		logger.info("BookController.getFeaturedBooks() invoked.");
+
+		List<Book> featuredBooks = bs.getFeaturedBooks();
+
+		return featuredBooks;
+	}
+
 	@GetMapping(path = "/books/{id}")
 	public ResponseEntity<Object> getBookById(@PathVariable(value = "id") String id) {
 		logger.info("BookController.getBookById() invoked.");
@@ -67,7 +77,7 @@ public class BookController {
 			return ResponseEntity.status(200).body(bookList);
 		} catch (InvalidParameterException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
-		}		
+		}
 
 	}
 
@@ -104,8 +114,9 @@ public class BookController {
 			return ResponseEntity.status(400).body(e.getMessage());
 		} catch (ISBNAlreadyExists e) {
 			return ResponseEntity.status(400).body(e.getMessage());
+		} catch (SaleDiscountRateException e) {
+			return ResponseEntity.status(400).body(e.getMessage());
 		}
-
 	}
 
 	@Admin

@@ -78,39 +78,13 @@ public class ValidateBookUtil {
 			}
 
 		}
-		// String genre = Integer.toString();
+
 		if (dto.getGenre() == 0) {
 			if (blankInputs) {
 				blankInputStrings.append(", genre");
 				blankInputs = true;
 			} else {
 				blankInputStrings.append("Genre");
-				blankInputs = true;
-
-			}
-
-		}
-
-		String quantity = Integer.toString(dto.getQuantity());
-		if (StringUtils.isBlank(quantity)) {
-			if (blankInputs) {
-				blankInputStrings.append(", quantity");
-				blankInputs = true;
-			} else {
-				blankInputStrings.append("Quantity");
-				blankInputs = true;
-
-			}
-
-		}
-
-		String year = Integer.toString(dto.getYear());
-		if (StringUtils.isBlank(year)) {
-			if (blankInputs) {
-				blankInputStrings.append(", year");
-				blankInputs = true;
-			} else {
-				blankInputStrings.append("Year");
 				blankInputs = true;
 
 			}
@@ -137,31 +111,6 @@ public class ValidateBookUtil {
 				blankInputStrings.append("Publisher");
 				blankInputs = true;
 
-			}
-
-		}
-
-		String sale = Boolean.toString(dto.isSaleIsActive());
-		if (StringUtils.isBlank(sale)) {
-			if (blankInputs) {
-				blankInputStrings.append(", sale");
-				blankInputs = true;
-			} else {
-				blankInputStrings.append("Sale");
-				blankInputs = true;
-
-			}
-
-		}
-
-		String price = Double.toString(dto.getBookPrice());
-		if (StringUtils.isBlank(price)) {
-			if (blankInputs) {
-				blankInputStrings.append(", price");
-				blankInputs = true;
-			} else {
-				blankInputStrings.append("Price");
-				blankInputs = true;
 			}
 
 		}
