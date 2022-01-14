@@ -20,5 +20,5 @@ public interface BookDAO extends JpaRepository<Book, Integer> {
 
 	@Query("SELECT b FROM Book b WHERE b.ISBN = :ISBN")
 	public Optional<Book> findByISBN(String ISBN);
-
+	
 }

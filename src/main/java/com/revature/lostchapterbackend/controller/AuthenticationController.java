@@ -86,24 +86,30 @@ public class AuthenticationController {
 		return ResponseEntity.status(200).body("No one is currently logged in");
 	}
 	
-	@DeleteMapping(path = "/delete")
+	@DeleteMapping(path = "/user")
 	public ResponseEntity<Object> deleteUserById() throws UserNotFoundException {
-		
-		HttpSession session = req.getSession();
-		Users currentlyLoggedInUser = (Users) session.getAttribute("currentUser");
-		
-		if (currentlyLoggedInUser == null) {
-			throw new UserNotFoundException("This user does not exist or is not logged in");
+		try {
+			HttpSession session = req.getSession();
+			Users currentlyLoggedInUser = (Users) session.getAttribute("currentUser");
+			
+			if (currentlyLoggedInUser == null) {
+				throw new UserNotFoundException("This user does not exist or is not logged in");
+			}
+			
+			int id = currentlyLoggedInUser.getId();
+			us.deleteUserById(currentlyLoggedInUser);
+			req.getSession().invalidate();
+			
+			return ResponseEntity.status(200).body("This user has been successfully deleted by id: " + id);
 		}
-		
-		int id = currentlyLoggedInUser.getId();
-		us.deleteUserById(currentlyLoggedInUser);
-		req.getSession().invalidate();
-		
-		return ResponseEntity.status(200).body("This user has been successfully deleted by id: " + id);
+		catch(UserNotFoundException e) {
+			
+			return ResponseEntity.status(400).body(e.getMessage());
+			
+		}
 	}
 	
-	@PutMapping(path = "/update")
+	@PutMapping(path = "/user")
 	public ResponseEntity<Object> updateUser(@RequestBody Users user) throws UserNotFoundException {
 		
 		try {
@@ -112,6 +118,7 @@ public class AuthenticationController {
 			Users currentlyLoggedInUser = (Users) session.getAttribute("currentUser");
 			
 			Users userToBeUpdated = us.updateUser(currentlyLoggedInUser, user);
+			session.setAttribute("currentUser", userToBeUpdated);
 			return ResponseEntity.status(200).body(userToBeUpdated);
 		} catch (InvalidParameterException e) {
 			return ResponseEntity.status(400).body(e.getMessage());

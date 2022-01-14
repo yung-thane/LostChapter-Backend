@@ -78,7 +78,7 @@ public class ValidateBookUtil {
 			}
 
 		}
-		// String genre = Integer.toString();
+
 		if (dto.getGenre() == 0) {
 			if (blankInputs) {
 				blankInputStrings.append(", genre");

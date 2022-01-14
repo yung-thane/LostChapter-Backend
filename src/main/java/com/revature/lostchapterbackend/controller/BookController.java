@@ -45,6 +45,16 @@ public class BookController {
 
 	}
 
+	@GetMapping(path = "/books/featured")
+	public List<Book> getFeaturedBooks() {
+
+		logger.info("BookController.getFeaturedBooks() invoked.");
+
+		List<Book> featuredBooks = bs.getFeaturedBooks();
+
+		return featuredBooks;
+	}
+
 	@GetMapping(path = "/books/{id}")
 	public ResponseEntity<Object> getBookById(@PathVariable(value = "id") String id) {
 		logger.info("BookController.getBookById() invoked.");
@@ -67,7 +77,7 @@ public class BookController {
 			return ResponseEntity.status(200).body(bookList);
 		} catch (InvalidParameterException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
-		}		
+		}
 
 	}
 
@@ -87,15 +97,14 @@ public class BookController {
 
 	}
 
-	//@Admin
+	// @Admin
 	@PostMapping(path = "/books")
-	public ResponseEntity<Object> addNewBook(@RequestBody AddOrUpdateBookDTO dto)
-			throws SynopsisInputException {
+	public ResponseEntity<Object> addNewBook(@RequestBody AddOrUpdateBookDTO dto) throws SynopsisInputException {
 
 		logger.info("BookController.addNewBook() invoked.");
 
 		try {
-			System.out.println("controller syso:" +dto.getSaleDiscountRate());
+			System.out.println("controller syso:" + dto.getSaleDiscountRate());
 			Book addedBook = bs.addBook(dto);
 			return ResponseEntity.status(201).body(addedBook);
 		} catch (InvalidParameterException e) {
@@ -103,8 +112,7 @@ public class BookController {
 
 		} catch (GenreNotFoundException | ISBNAlreadyExists | SaleDiscountRateException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
-		} 
-
+		}
 	}
 
 	@Admin
