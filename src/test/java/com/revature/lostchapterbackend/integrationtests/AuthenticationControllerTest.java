@@ -1,6 +1,5 @@
 package com.revature.lostchapterbackend.integrationtests;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.lostchapterbackend.dto.LoginDto;
 import com.revature.lostchapterbackend.dto.SignUpDto;
@@ -8,7 +7,6 @@ import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.model.Users;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.annotations.CascadeType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +19,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import org.springframework.transaction.annotation.Transactional;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
@@ -394,7 +390,7 @@ public class AuthenticationControllerTest {
 
         session1.setAttribute("currentUser", u);
 
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/delete").session(session1);
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/user").session(session1);
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
                 .is(200)).andExpect(MockMvcResultMatchers.content()
@@ -421,7 +417,7 @@ public class AuthenticationControllerTest {
 
         String jsonToSend = mapper.writeValueAsString(u);
 
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/update").session(session1)
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/user").session(session1)
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
         Users expectedUser = new Users("testuser1",
@@ -457,7 +453,7 @@ public class AuthenticationControllerTest {
 
         String jsonToSend = mapper.writeValueAsString(u);
 
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/update").session(session1)
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/user").session(session1)
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
 //        Users expectedUser = new Users("testuser1",
@@ -493,7 +489,7 @@ public class AuthenticationControllerTest {
 
         String jsonToSend = mapper.writeValueAsString(u);
 
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/update").session(session1)
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/user").session(session1)
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
@@ -521,7 +517,7 @@ public class AuthenticationControllerTest {
 
         String jsonToSend = mapper.writeValueAsString(u);
 
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/update").session(session1)
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/user").session(session1)
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
 
@@ -550,7 +546,7 @@ public class AuthenticationControllerTest {
 
         String jsonToSend = mapper.writeValueAsString(u);
 
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/update").session(session1)
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/user").session(session1)
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
@@ -578,7 +574,7 @@ public class AuthenticationControllerTest {
 
         String jsonToSend = mapper.writeValueAsString(u);
 
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/update").session(session1)
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/user").session(session1)
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
@@ -606,7 +602,7 @@ public class AuthenticationControllerTest {
 
         String jsonToSend = mapper.writeValueAsString(u);
 
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/update").session(session1)
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/user").session(session1)
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
@@ -634,7 +630,7 @@ public class AuthenticationControllerTest {
 
         String jsonToSend = mapper.writeValueAsString(u);
 
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/update").session(session1)
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/user").session(session1)
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
 
@@ -663,7 +659,7 @@ public class AuthenticationControllerTest {
 
         String jsonToSend = mapper.writeValueAsString(u);
 
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/update").session(session1)
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/user").session(session1)
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
@@ -691,7 +687,7 @@ public class AuthenticationControllerTest {
 
         String jsonToSend = mapper.writeValueAsString(u);
 
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/update").session(session1)
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/user").session(session1)
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
@@ -719,7 +715,7 @@ public class AuthenticationControllerTest {
 
         String jsonToSend = mapper.writeValueAsString(u);
 
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/update").session(session1)
+        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/user").session(session1)
                 .content(jsonToSend).contentType(MediaType.APPLICATION_JSON);
 
 
@@ -739,7 +735,7 @@ public class AuthenticationControllerTest {
     @Test
     public void delete_user_but_not_logged_in_negative() throws Exception {
     	
-    	MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/delete");
+    	MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.delete("/user");
     	this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status().is(400)).andExpect(MockMvcResultMatchers.content().string("This user does not exist or is not logged in"));
     	
     }
