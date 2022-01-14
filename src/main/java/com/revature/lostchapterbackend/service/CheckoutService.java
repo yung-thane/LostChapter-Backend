@@ -1,5 +1,6 @@
 package com.revature.lostchapterbackend.service;
 
+import java.security.InvalidParameterException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,30 +38,23 @@ public class CheckoutService {
 
 	@Autowired
 	private CheckoutDAO cod;
-	
-	@Autowired 
+
+	@Autowired
 	private ShippingInfoDAO sid;
-	
-//	public CheckoutService(CheckoutDAO cod, TransactionKeeperDAO tkd, ShippingInfoDAO sid, BookDAO bd) {
-//		this.cod = cod;
-//		this.tkd = tkd;
-//		this.sid = sid;
-//		this.bd = bd;
-//	}
-	
+
 	public TransactionKeeper confirmCheckout(Carts currentCart, Checkout payout) throws Exception {
-		
+
 		// gets all Books from the current cart
 		List<BookToBuy> getTotalAmountOfAllBooks = currentCart.getBooksToBuy();
 		// checks if cart is empty;
 		if (getTotalAmountOfAllBooks.isEmpty()) {
-			throw new Exception ("No Books currently");
-		}	
+			throw new Exception("No Books currently");
+		}
 		// A list to save all previous order
 		List<String> previousOrder = new ArrayList<>();
-		
+
 		// Iterate each BookToBuy object from the List of BookToBuy
-		for (BookToBuy b : getTotalAmountOfAllBooks) {		
+		for (BookToBuy b : getTotalAmountOfAllBooks) {
 			previousOrder.add(b.getBooks().getISBN()); // Add every ISBN number to the previous order
 			if (b.getBooks().isSaleIsActive()) { // check if it's on sale
 				totalPriceOfEachBook = (b.getBooks().getBookPrice()
@@ -68,7 +62,7 @@ public class CheckoutService {
 			} else { // if not
 				totalPriceOfEachBook = b.getQuantityToBuy() * b.getBooks().getBookPrice();
 			}
-			
+
 			booksRemaining = b.getBooks().getQuantity() - b.getQuantityToBuy(); // updates the quantity of book
 			b.getBooks().setQuantity(booksRemaining); // updates the quantity of book
 			subTotal += totalPriceOfEachBook; // calculates subtotal for all the book
@@ -80,14 +74,15 @@ public class CheckoutService {
 		payout.setCardBalance(payout.getCardBalance() - totalPrice); // updates the card balance
 
 		OrderConfirmationRandomizer ocr = new OrderConfirmationRandomizer(); // creates a random order number
-		
+
 		this.saveCard(payout); // save and updates card info
 
 		TransactionKeeper tk;
 		tk = new TransactionKeeper(ocr.randomBankAccount(), totalPrice, previousOrder, LocalDateTime.now());
 		tkd.saveAndFlush(tk); // saves a transaction
 
-		cs.delteteAllProductInCart(currentCart, String.valueOf(currentCart.getCartId())); // clear outs all the books in the cart
+		cs.delteteAllProductInCart(currentCart, String.valueOf(currentCart.getCartId())); // clear outs all the books in
+																							// the cart
 
 		return tk;
 
@@ -108,5 +103,16 @@ public class CheckoutService {
 			return cod.findBycardNumber(cardNumber);
 		}
 
+	}
+
+	public TransactionKeeper getTransactionById(String transacId) {
+
+		try {
+			int transactionId = Integer.parseInt(transacId);
+			return tkd.findById(transactionId).get();
+
+		} catch (NumberFormatException e) {
+			throw new InvalidParameterException("The Id entered must be an int.");
+		}
 	}
 }
