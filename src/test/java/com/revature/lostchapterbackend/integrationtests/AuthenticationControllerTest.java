@@ -367,7 +367,7 @@ public class AuthenticationControllerTest {
         MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/loginstatus").session(session);
 
         this.mvc.perform(builder).andExpect(MockMvcResultMatchers.status()
-                .is(200)).andExpect(MockMvcResultMatchers.content()
+                .is(400)).andExpect(MockMvcResultMatchers.content()
                 .string("No one is currently logged in"));
     }
 
