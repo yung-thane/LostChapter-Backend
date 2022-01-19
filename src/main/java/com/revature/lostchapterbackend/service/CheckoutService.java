@@ -21,11 +21,11 @@ import com.revature.lostchapterbackend.utility.OrderConfirmationRandomizer;
 @Service
 public class CheckoutService {
 
-	static double totalPriceOfEachBook = 0.0;
-	static double totalPrice = 0.0;
-	static double subTotal = 0.0;
-	static int booksRemaining = 0;
-	final static double tax = 0.06; // 6%
+	ThreadLocal<Double> totalPriceOfEachBook = new ThreadLocal<>();
+	ThreadLocal<Double> totalPrice = new ThreadLocal<>();
+	ThreadLocal<Double> subTotal = new ThreadLocal<>();
+	ThreadLocal<Integer> booksRemaining = new ThreadLocal<>();
+	ThreadLocal<Double> tax = new ThreadLocal<>(); // 6%
 
 	@Autowired
 	private BookDAO bd;
@@ -43,6 +43,9 @@ public class CheckoutService {
 	private ShippingInfoDAO sid;
 
 	public TransactionKeeper confirmCheckout(Carts currentCart, Checkout payout) throws Exception {
+		
+		tax.set(0.06);
+		subTotal.set(0.0);
 
 		// gets all Books from the current cart
 		List<BookToBuy> getTotalAmountOfAllBooks = currentCart.getBooksToBuy();
@@ -57,28 +60,27 @@ public class CheckoutService {
 		for (BookToBuy b : getTotalAmountOfAllBooks) {
 			previousOrder.add(b.getBooks().getISBN()); // Add every ISBN number to the previous order
 			if (b.getBooks().isSaleIsActive()) { // check if it's on sale
-				totalPriceOfEachBook = (b.getBooks().getBookPrice()
-						- (b.getBooks().getBookPrice() * b.getBooks().getSaleDiscountRate())) * b.getQuantityToBuy();
+				totalPriceOfEachBook.set((b.getBooks().getBookPrice()
+						- (b.getBooks().getBookPrice() * b.getBooks().getSaleDiscountRate())) * b.getQuantityToBuy());
 			} else { // if not
-				totalPriceOfEachBook = b.getQuantityToBuy() * b.getBooks().getBookPrice();
+				totalPriceOfEachBook.set(b.getQuantityToBuy() * b.getBooks().getBookPrice());
 			}
 
-			booksRemaining = b.getBooks().getQuantity() - b.getQuantityToBuy(); // updates the quantity of book
-			b.getBooks().setQuantity(booksRemaining); // updates the quantity of book
-			subTotal += totalPriceOfEachBook; // calculates subtotal for all the book
-			totalPrice = subTotal + (subTotal * tax); // calculates total price including tax
-
+			booksRemaining.set(b.getBooks().getQuantity() - b.getQuantityToBuy()); // updates the quantity of book
+			b.getBooks().setQuantity(booksRemaining.get()); // updates the quantity of book
+			subTotal.set(subTotal.get() + totalPriceOfEachBook.get()); // calculates subtotal for all the book
+			totalPrice.set(subTotal.get() + (subTotal.get() * tax.get())); // calculates total price including tax
 			bd.saveAndFlush(b.getBooks()); // every iteration, save and update the necessary info
 		}
 
-		payout.setCardBalance(payout.getCardBalance() - totalPrice); // updates the card balance
-
+		payout.setCardBalance(payout.getCardBalance() - totalPrice.get()); // updates the card balance
+		
 		OrderConfirmationRandomizer ocr = new OrderConfirmationRandomizer(); // creates a random order number
 
 		this.saveCard(payout); // save and updates card info
 
 		TransactionKeeper tk;
-		tk = new TransactionKeeper(ocr.randomBankAccount(), totalPrice, previousOrder, LocalDateTime.now());
+		tk = new TransactionKeeper(ocr.randomBankAccount(), totalPrice.get(), previousOrder, LocalDateTime.now());
 		tkd.saveAndFlush(tk); // saves a transaction
 
 		cs.delteteAllProductInCart(currentCart, String.valueOf(currentCart.getCartId())); // clear outs all the books in
