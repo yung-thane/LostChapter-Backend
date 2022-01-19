@@ -83,7 +83,7 @@ public class AuthenticationController {
 			return ResponseEntity.status(200).body(currentlyLoggedInUser);
 		}
 		
-		return ResponseEntity.status(200).body("No one is currently logged in");
+		return ResponseEntity.status(400).body("No one is currently logged in");
 	}
 	
 	@DeleteMapping(path = "/user")

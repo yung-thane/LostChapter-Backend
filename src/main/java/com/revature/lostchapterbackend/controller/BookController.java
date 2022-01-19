@@ -97,7 +97,7 @@ public class BookController {
 
 	}
 
-	// @Admin
+	//@Admin
 	@PostMapping(path = "/books")
 	public ResponseEntity<Object> addNewBook(@RequestBody AddOrUpdateBookDTO dto) throws SynopsisInputException {
 

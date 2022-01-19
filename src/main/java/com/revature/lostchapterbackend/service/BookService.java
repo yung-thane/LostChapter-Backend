@@ -53,7 +53,7 @@ public class BookService {
 	public List<Book> getFeaturedBooks() {
 		logger.info("BookService.getFeaturedBooks() invoked.");
 
-		Page<Book> bookPage = bd.findAll(PageRequest.of(0, 5, Sort.by("quantity").descending()));
+		Page<Book> bookPage = bd.findAll(PageRequest.of(0, 15, Sort.by("quantity").descending()));
 		List<Book> b = null;
 		if (bookPage.hasContent()) {
 			System.out.println(bookPage.getContent());
