@@ -69,7 +69,8 @@ public class CheckoutService {
 			booksRemaining.set(b.getBooks().getQuantity() - b.getQuantityToBuy()); // updates the quantity of book
 			b.getBooks().setQuantity(booksRemaining.get()); // updates the quantity of book
 			subTotal.set(subTotal.get() + totalPriceOfEachBook.get()); // calculates subtotal for all the book
-			totalPrice.set(subTotal.get() + (subTotal.get() * tax.get())); // calculates total price including tax
+			totalPrice.set(subTotal.get() + (subTotal.get() * tax.get())); 
+			Math.round((totalPrice.get()*100)/100);// calculates total price including tax
 			bd.saveAndFlush(b.getBooks()); // every iteration, save and update the necessary info
 		}
 
