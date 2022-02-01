@@ -8,12 +8,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
+@Table
 public class Book {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@SequenceGenerator(name="book_sequence",sequenceName="book_sequence",allocationSize=1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator="book_sequence")
 	private int bookId;
 
 	@Column(nullable = false)
