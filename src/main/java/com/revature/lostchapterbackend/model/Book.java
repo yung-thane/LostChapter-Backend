@@ -16,8 +16,7 @@ import javax.persistence.Table;
 public class Book {
 
 	@Id
-	@SequenceGenerator(name="book_sequence",sequenceName="book_sequence",allocationSize=1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator="book_sequence")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int bookId;
 
 	@Column(nullable = false)
