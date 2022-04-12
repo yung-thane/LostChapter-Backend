@@ -99,3 +99,8 @@
 ### Developers' Notes
 * Currently the Card System is a built in, hard coded implementation, so whenever there is a new card to be saved to the database, the card balance is set to 10,000.
 
+## Start-Up
+* Must have docker installed on system
+* Open terminal and navigate to backend directory
+* Run `docker-compose up --build` to run database and server together
+    * Use the `-d` option to run in the background
