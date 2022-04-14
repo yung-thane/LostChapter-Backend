@@ -1,10 +1,12 @@
 package com.revature.lostchapterbackend.controller;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.Collections;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import com.revature.lostchapterbackend.utility.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -35,7 +37,10 @@ public class AuthenticationController {
 	private HttpServletRequest req;
 	
 	@Autowired
-	private ValidateUtil validateUtil; 
+	private ValidateUtil validateUtil;
+
+	@Autowired
+	private JWTUtil jwtUtil;
 	
 	@PostMapping(path = "/signup")
 	public ResponseEntity<Object> signUp(@RequestBody SignUpDto dto) throws InvalidParameterException, NoSuchAlgorithmException, InvalidLoginException {
@@ -45,8 +50,10 @@ public class AuthenticationController {
 			validateUtil.verifySignUp(dto);
 			
 			Users user = this.us.createUser(dto);
+
+			String token = jwtUtil.generateToken(user.getUsername());
 			
-			return ResponseEntity.status(201).body("Successfully Sign up");
+			return ResponseEntity.status(201).body(Collections.singletonMap("jwt-token", token));
 			
 		} catch (InvalidParameterException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
