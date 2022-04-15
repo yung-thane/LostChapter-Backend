@@ -42,11 +42,11 @@ public class UserService {
 		}
 		
 		if (dto.getUsername().length() > 255 || dto.getFirstName().length() > 255 || dto.getLastName().length() > 255 || dto.getEmail().length() > 255) {
-			throw new InvalidParameterException("Character lengths shouldn't extend over 255 characters");
+			throw new InvalidParameterException("Character lengths shouldn't extend over 255 characters.");
 		}
 
 		if (dto.getAge() < 5 || dto.getAge() > 125) {
-			throw new InvalidParameterException("Age cannot be less than 5 or greater than 125");
+			throw new InvalidParameterException("Age cannot be less than 5 or greater than 125.");
 		}
 
 		Set<String> validRole = new HashSet<>();
@@ -54,11 +54,12 @@ public class UserService {
 		validRole.add("Admin");
 
 		if (!validRole.contains(dto.getRole())) {
-			throw new InvalidParameterException("You can only sign up as a Customer or an Admin");
+			throw new InvalidParameterException("You can only sign up as a Customer or an Admin.");
 		}
 
 		String algorithm = "SHA-256";
-		String hashedPassword = HashUtil.hashPassword(dto.getPassword().trim(), algorithm);
+		//String hashedPassword = HashUtil.hashPassword(dto.getPassword().trim(), algorithm);
+		String hashedPassword = HashUtil.hashPassword(dto.getPassword());
 		dto.setPassword(hashedPassword);
 
 		Carts c = null;
@@ -76,21 +77,18 @@ public class UserService {
 		try {
 
 			if (user != null) {
-				String algorithm = "SHA-256";
-				String hashedInputPassword = HashUtil.hashInputPassword(password.trim(), algorithm);
-
-				Boolean correctPassword = hashedInputPassword.equals(user.getPassword());
+				boolean correctPassword = HashUtil.passwordsMatch(user.getPassword(), password);
 
 				if (correctPassword) {
 					return user;
 				} else {
-					throw new InvalidLoginException("Username and/or password is incorrect");
+					throw new InvalidLoginException("Password is incorrect.");
 				}
 			} else {
-				throw new InvalidLoginException("Username and/or password is incorrect");
+				throw new InvalidLoginException("Username is incorrect.");
 			}
 		} catch (DataAccessException e) {
-			throw new InvalidLoginException("Username and/or password is incorrect");
+			throw new InvalidLoginException("Username and/or password is incorrect.");
 		}
 	}
 
@@ -100,7 +98,7 @@ public class UserService {
 			int currentUserId = currentUser.getId();
 			ud.deleteUserById(currentUserId);
 		} else {
-			throw new UserNotFoundException("Current user is null");
+			throw new UserNotFoundException("Current user is null.");
 		}
 	}
 
@@ -108,7 +106,7 @@ public class UserService {
 		logger.info("UserService.getUserByEmail() invoked");
 
 		if (email == null) {
-			throw new InvalidParameterException("Email is Null");
+			throw new InvalidParameterException("Email is Null.");
 		}
 
 		Users users = this.ud.getUserByEmail(email);
@@ -122,15 +120,15 @@ public class UserService {
 				|| updatedUserInfo.getFirstName().trim().equals("") || updatedUserInfo.getLastName().trim().equals("")
 				|| updatedUserInfo.getBirthday().trim().equals("") || updatedUserInfo.getEmail().trim().equals("")
 				|| updatedUserInfo.getAddress().trim().equals("") || updatedUserInfo.getRole().trim().equals("")) {
-			throw new InvalidParameterException("Do not leave any information blank");
+			throw new InvalidParameterException("Do not leave any information blank.");
 		}
 		
 		if (updatedUserInfo.getUsername().length() > 255 || updatedUserInfo.getFirstName().length() > 255 || updatedUserInfo.getLastName().length() > 255 || updatedUserInfo.getEmail().length() > 255) {
-			throw new InvalidParameterException("Character lengths shouldn't extend over 255 characters");
+			throw new InvalidParameterException("Character lengths shouldn't extend over 255 characters.");
 		}
 
 		if (updatedUserInfo.getAge() < 5 || updatedUserInfo.getAge() > 125) {
-			throw new InvalidParameterException("Age cannot be less than 5 or greater than 125");
+			throw new InvalidParameterException("Age cannot be less than 5 or greater than 125.");
 		}
 
 		int currentUserId = currentUser.getId();
@@ -148,7 +146,7 @@ public class UserService {
 		logger.info("UserService.getUserByUsername() invoked");
 
 		if (username == null) {
-			throw new InvalidParameterException("username is Null");
+			throw new InvalidParameterException("username is Null.");
 		}
 
 		Users users = this.ud.getUser(username);

@@ -30,43 +30,43 @@ public class ValidateUtil {
 		StringBuilder blankInputStrings = new StringBuilder();
 
 		if (user.getUsername() == null || StringUtils.isBlank(user.getUsername().trim())) {
-			blankInputStrings.append("username ");
+			blankInputStrings.append("Username ");
 			blankInputs = true;
 		}
 
 		if (user.getPassword() == null || StringUtils.isBlank(user.getPassword().trim())) {
-			blankInputStrings.append("password ");
+			blankInputStrings.append("Password ");
 			blankInputs = true;
 		}
 
 		if (user.getFirstName() == null || StringUtils.isBlank(user.getFirstName().trim())) {
-			blankInputStrings.append("firstName ");
+			blankInputStrings.append("First name ");
 			blankInputs = true;
 		}
 
 		if (user.getLastName() == null || StringUtils.isBlank(user.getLastName().trim())) {
-			blankInputStrings.append("lastName ");
+			blankInputStrings.append("Last name ");
 			blankInputs = true;
 		}
 
 		if (user.getEmail() == null || StringUtils.isBlank(user.getEmail().trim())) {
-			blankInputStrings.append("email ");
+			blankInputStrings.append("Email ");
 			blankInputs = true;
 
 		}
 
 		if (user.getBirthday() == null || StringUtils.isBlank(user.getBirthday().trim())) {
-			blankInputStrings.append("birthday ");
+			blankInputStrings.append("Birthday ");
 			blankInputs = true;
 		}
 
 		if (user.getAddress() == null || StringUtils.isBlank(user.getAddress().trim())) {
-			blankInputStrings.append("address ");
+			blankInputStrings.append("Address ");
 			blankInputs = true;
 		}
 
 		if (user.getRole() == null || StringUtils.isBlank(user.getRole().trim())) {
-			blankInputStrings.append("role ");
+			blankInputStrings.append("Role ");
 			blankInputs = true;
 		}
 

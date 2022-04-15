@@ -66,10 +66,9 @@ public class AuthenticationController {
 		try {
 			Users user = this.us.getUser(dto.getUsername(), dto.getPassword());
 			
-			HttpSession session = req.getSession();
-			session.setAttribute("currentUser", user);
-			
-			return ResponseEntity.status(200).body(user);
+			String token = jwtUtil.generateToken(user.getUsername());
+
+			return ResponseEntity.status(200).body(Collections.singletonMap("jwt-token", token));
 		} catch (InvalidLoginException e) {
 			return ResponseEntity.status(400).body(e.getMessage());
 		}
