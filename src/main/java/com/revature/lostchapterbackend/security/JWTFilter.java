@@ -15,13 +15,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 @Component
 public class JWTFilter extends OncePerRequestFilter {
-    @Autowired private LostChapterUserDetailsService userDetailsService;
-    @Autowired private JWTUtil jwtUtil;
+    @Autowired
+    private LostChapterUserDetailsService userDetailsService;
+    @Autowired
+    private JWTUtil jwtUtil;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
@@ -38,18 +41,19 @@ public class JWTFilter extends OncePerRequestFilter {
                     String username = jwtUtil.validateTokenAndGetUsername(jwt);
                     UserDetails userDetails = userDetailsService.loadUserByUsername(username);
                     UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
-                                                                        username, 
-                                                                        userDetails.getPassword(), 
-                                                                        userDetails.getAuthorities());
-                                                                        
+                            username,
+                            userDetails.getPassword(),
+                            userDetails.getAuthorities());
+
                     if (SecurityContextHolder.getContext().getAuthentication() == null)
                         SecurityContextHolder.getContext().setAuthentication(authToken);
                 } catch (JWTVerificationException exc) {
                     response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid JWT Token");
+                } catch (UsernameNotFoundException e) {
+                    response.sendError(HttpServletResponse.SC_BAD_REQUEST, "No user found for token.");
                 }
             }
         }
-
         filterChain.doFilter(request, response);
     }
 }

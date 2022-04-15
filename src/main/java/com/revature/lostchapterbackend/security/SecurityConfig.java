@@ -20,37 +20,44 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-    @Autowired private UserService userService;
-    @Autowired private JWTFilter jwtFilter;
-    @Autowired private LostChapterUserDetailsService uds;
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private JWTFilter jwtFilter;
+    @Autowired
+    private LostChapterUserDetailsService uds;
 
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
-            .httpBasic().disable()
-            .cors()
-            .and()
-            .authorizeHttpRequests()
-            .antMatchers("/**").permitAll()
-            .and()
-            .userDetailsService(uds)
-            .exceptionHandling()
+                .httpBasic().disable()
+                .cors()
+                .and()
+                .authorizeHttpRequests()
+                .antMatchers("/signup", "/login", "/loginstatus").permitAll()
+                //.antMatchers("/loginstatus").hasAnyRole("USER", "ADMIN")
+                .antMatchers("/**").permitAll()
+                .and()
+                .userDetailsService(uds)
+                .exceptionHandling()
                 .authenticationEntryPoint(
-                    (request, response, authException) -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized")
+                        (request, response, authException) -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized")
                 )
-            .and()
-            .sessionManagement()
-            .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .and()
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
-        http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);        
+        http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
     }
 
-    @Bean public PasswordEncoder passwordEncoder() {
+    @Bean
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean @Override
+    @Bean
+    @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }

@@ -36,4 +36,12 @@ public class JWTUtil {
         DecodedJWT jwt = verifier.verify(token);
         return jwt.getClaim("username").asString();
     }
+
+    public boolean checkCorrectFormat(String s) throws Exception {
+        if (s == null || s.isBlank())
+            throw new Exception("No valid token.");
+        if (!s.startsWith("Bearer "))
+            throw new Exception("Invalid token format.");
+        return true;
+    }
 }

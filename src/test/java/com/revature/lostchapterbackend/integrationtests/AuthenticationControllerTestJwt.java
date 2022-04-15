@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.lostchapterbackend.dto.LoginDto;
 import com.revature.lostchapterbackend.dto.SignUpDto;
 
+import com.revature.lostchapterbackend.model.Users;
 import com.revature.lostchapterbackend.utility.JWTUtil;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -13,6 +14,7 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -47,7 +49,17 @@ public class AuthenticationControllerTestJwt {
     @Autowired
     private ObjectMapper mapper;
 
-    private String testToken;
+    private static String testToken;
+    private SignUpDto testDto = new SignUpDto(
+            "test",
+            "password",
+            "testFirstName",
+            "testLastName",
+            21,
+            "test@aol.com",
+            "09/08/1990",
+            "addresswest",
+            "Customer");
 
     @BeforeEach
     public void setup() throws Exception {
@@ -56,23 +68,16 @@ public class AuthenticationControllerTestJwt {
                 .addFilters(springSecurityFilterChain)
                 .build();
 
-        SignUpDto dto = new SignUpDto(
-                "test",
-                "password",
-                "testFirstName",
-                "testLastName",
-                21,
-                "test@aol.com",
-                "09/08/1990",
-                "addresswest",
-                "Customer");
-        String dtoAsString = mapper.writeValueAsString(dto);
-
-        testToken = mvc.perform(post("/signup")
+        String signUpDtoJson = mapper.writeValueAsString(testDto);
+        String response = mvc.perform(post("/signup")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(dtoAsString))
-                // extract the returned token
+                        .content(signUpDtoJson))
                 .andReturn().getResponse().getContentAsString();
+
+        System.out.println(response);
+        if (!response.equals("Email already exist."))
+            testToken = response.substring(14, response.length() - 2);
+        System.out.println(testToken);
     }
 
     @Nested
@@ -363,6 +368,7 @@ public class AuthenticationControllerTestJwt {
     class LoginTests {
         @Test
         public void testLogin_positive() throws Exception {
+
             LoginDto dto = new LoginDto(
                     "test",
                     "password"
@@ -372,12 +378,152 @@ public class AuthenticationControllerTestJwt {
             String token = jwtUtil.generateToken(dto.getUsername());
             String expectedToken = mapper.writeValueAsString(Collections.singletonMap("jwt-token", token));
 
-            System.out.println(mvc.perform(post("/login")
+            mvc.perform(post("/login")
                             .contentType(MediaType.APPLICATION_JSON)
                             .content(jsonToSend))
                     //.andExpect(status().is(200))
-                    .andExpect(content().json(expectedToken))
-                    .andReturn().getResponse().getContentAsString());
+                    .andExpect(content().json(expectedToken));
+        }
+
+        @Test
+        public void testLogin_wrongUsername_negative() throws Exception {
+            LoginDto dto = new LoginDto(
+                    "tes",
+                    "password"
+            );
+
+            String jsonToSend = mapper.writeValueAsString(dto);
+
+            mvc.perform(post("/login")
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonToSend))
+                    .andExpect(status().is(400))
+                    .andExpect(content().string("Username is incorrect."));
+        }
+
+        @Test
+        public void testLogin_wrongPassword_negative() throws Exception {
+            LoginDto dto = new LoginDto(
+                    "test",
+                    "pass"
+            );
+
+            String jsonToSend = mapper.writeValueAsString(dto);
+
+            mvc.perform(post("/login")
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonToSend))
+                    .andExpect(status().is(400))
+                    .andExpect(content().string("Password is incorrect."));
+        }
+
+        @Test
+        public void testCheckLoginStatus_positive() throws Exception {
+            System.out.println(testToken);
+            mvc.perform(get("/loginstatus")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken))
+                    .andExpect(status().is(200));
+        }
+
+        @Test
+        public void testCheckLoginStatus_noToken() throws Exception {
+            mvc.perform(get("/loginstatus"))
+                    .andExpect(status().is(400));
+        }
+
+        @Test
+        public void testCheckLoginStatus_noUserForToken() throws Exception {
+            String fakeToken = jwtUtil.generateToken("fake");
+
+            mvc.perform(get("/loginstatus")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + fakeToken))
+                    .andExpect(status().is(400));
+        }
+    }
+
+    @Nested
+    @DisplayName("Delete tests")
+    class DeleteTests {
+        @Test
+        public void testDeleteUser_positive() throws Exception {
+            mvc.perform(delete("/user")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken))
+                    .andExpect(status().is(200))
+                    .andExpect(content().string("This user has been successfully deleted by id: " + 1));
+        }
+
+        @Test
+        public void testDeleteUser_notLoggedIn_negative() throws Exception {
+            mvc.perform(delete("/user"))
+                    .andExpect(status().is(400));
+        }
+    }
+
+    @Nested
+    @DisplayName("Update tests")
+    class UpdateTests {
+        @Test
+        public void testUpdateUser_positive() throws Exception {
+            Users updateUser = new Users(
+                    testDto.getUsername(),
+                    testDto.getPassword(),
+                    testDto.getFirstName(),
+                    testDto.getLastName(),
+                    testDto.getAge(),
+                    testDto.getEmail(),
+                    testDto.getBirthday(),
+                    testDto.getAddress(),
+                    testDto.getRole());
+            updateUser.setId(4);
+
+            String jsonToSend = mapper.writeValueAsString(updateUser);
+
+            updateUser.setId(4);
+
+            String expectedJson = mapper.writeValueAsString(updateUser);
+            mvc.perform(put("/user")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken)
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonToSend))
+                    .andExpect(status().is(200))
+                    .andExpect(content().json(expectedJson));
+        }
+
+        @Test
+        public void testUpdateUser_usernameIsEmpty_negative() throws Exception {}
+
+        @Test
+        public void testUpdateUser_passwordIsEmpty_negative() throws Exception {}
+
+        @Test
+        public void testUpdateUser_firstNameIsEmpty_negative() throws Exception {}
+        @Test
+        public void testUpdateUser_lastNameIsEmpty_negative() throws Exception {}
+        @Test
+        public void testUpdateUser_ageLessThan5_negative() throws Exception {}
+        @Test
+        public void testUpdateUser_ageGreaterThan125_negative() throws Exception {}
+        @Test
+        public void testUpdateUser_emailIsEmpty_negative() throws Exception {}
+        @Test
+        public void testUpdateUser_addressIsEmpty_negative() throws Exception {}
+
+        @Test
+        public void testUpdateUser_birthdayIsEmpty_negative() throws Exception {}
+
+        @Test
+        public void testUpdateUser_roleIsEmpty_negative() throws Exception {}
+    }
+
+    @Nested
+    @DisplayName("Logout Tests")
+    class LogoutTests {
+        @Test
+        public void testLogout_positive() throws Exception {
+            mvc.perform(post("/logout")
+                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken))
+                    .andExpect(status().is(200))
+                    .andExpect(content().string("Successfully logged out"));
         }
     }
 }

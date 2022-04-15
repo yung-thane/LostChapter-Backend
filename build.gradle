@@ -36,7 +36,7 @@ dependencies {
 group = 'com.revature'
 version = '0.0.1-SNAPSHOT'
 description = 'lost-chapter-backend'
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.sourceCompatibility = JavaVersion.VERSION_11
 
 publishing {
     publications {
@@ -61,3 +61,4 @@ jar {
 tasks.named('test') {
     useJUnitPlatform()
 }
+targetCompatibility = JavaVersion.VERSION_11
