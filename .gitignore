@@ -51,3 +51,6 @@ mylogfile.log
 
 # gradle stuff
 .gradle/
+
+#db data
+db/data/
