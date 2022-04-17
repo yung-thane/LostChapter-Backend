@@ -7,7 +7,9 @@ import com.revature.lostchapterbackend.dto.LoginDto;
 import com.revature.lostchapterbackend.dto.SignUpDto;
 
 import com.revature.lostchapterbackend.model.Users;
+import com.revature.lostchapterbackend.utility.HashUtil;
 import com.revature.lostchapterbackend.utility.JWTUtil;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -16,14 +18,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.test.web.servlet.ResultMatcher;
+import org.springframework.test.web.servlet.result.ContentResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.util.Assert;
 import org.springframework.web.context.WebApplicationContext;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestBuilders.*;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.*;
@@ -464,6 +475,7 @@ public class AuthenticationControllerTestJwt {
     class UpdateTests {
         @Test
         public void testUpdateUser_positive() throws Exception {
+
             Users updateUser = new Users(
                     testDto.getUsername(),
                     testDto.getPassword(),
@@ -474,45 +486,79 @@ public class AuthenticationControllerTestJwt {
                     testDto.getBirthday(),
                     testDto.getAddress(),
                     testDto.getRole());
-            updateUser.setId(4);
+            updateUser.setId(1);
 
             String jsonToSend = mapper.writeValueAsString(updateUser);
 
-            updateUser.setId(4);
+            updateUser.setId(1);
 
             String expectedJson = mapper.writeValueAsString(updateUser);
-            mvc.perform(put("/user")
+
+            //Getting back a MvcResult to get the response to test
+            MvcResult mvcResult = mvc.perform(put("/user")
                             .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken)
                             .contentType(MediaType.APPLICATION_JSON)
                             .content(jsonToSend))
-                    .andExpect(status().is(200))
-                    .andExpect(content().json(expectedJson));
+                    .andExpect(status().is(200)).andReturn();
+            //The response is converted to string but in the json format string
+            String response = mvcResult.getResponse().getContentAsString();
+            //The string is splited with a comma to get an array of String
+            String[] result = response.split(",");
+            for (int i = 0; i < result.length; i++) {
+                System.out.println(result[i]);
+            }
+
+            // This is to access a specific value since the string is Json format
+            String hashedPassword = result[2].substring(result[2].indexOf(":")+2, result[2].length()-1);
+            System.out.println("password: " + hashedPassword);
+            //"password"
+            boolean isMatch = new BCryptPasswordEncoder().matches(updateUser.getPassword(), hashedPassword);
+            Assertions.assertThat(isMatch).isTrue();
+            String username = result[1].substring(result[1].indexOf(":")+2, result[1].length()-1);
+            Assertions.assertThat(username).isEqualTo(updateUser.getUsername());
+
+
         }
 
         @Test
-        public void testUpdateUser_usernameIsEmpty_negative() throws Exception {}
+        public void testUpdateUser_usernameIsEmpty_negative() throws Exception {
+        }
 
         @Test
-        public void testUpdateUser_passwordIsEmpty_negative() throws Exception {}
+        public void testUpdateUser_passwordIsEmpty_negative() throws Exception {
+        }
 
         @Test
-        public void testUpdateUser_firstNameIsEmpty_negative() throws Exception {}
-        @Test
-        public void testUpdateUser_lastNameIsEmpty_negative() throws Exception {}
-        @Test
-        public void testUpdateUser_ageLessThan5_negative() throws Exception {}
-        @Test
-        public void testUpdateUser_ageGreaterThan125_negative() throws Exception {}
-        @Test
-        public void testUpdateUser_emailIsEmpty_negative() throws Exception {}
-        @Test
-        public void testUpdateUser_addressIsEmpty_negative() throws Exception {}
+        public void testUpdateUser_firstNameIsEmpty_negative() throws Exception {
+        }
 
         @Test
-        public void testUpdateUser_birthdayIsEmpty_negative() throws Exception {}
+        public void testUpdateUser_lastNameIsEmpty_negative() throws Exception {
+        }
 
         @Test
-        public void testUpdateUser_roleIsEmpty_negative() throws Exception {}
+        public void testUpdateUser_ageLessThan5_negative() throws Exception {
+        }
+
+        @Test
+        public void testUpdateUser_ageGreaterThan125_negative() throws Exception {
+        }
+
+        @Test
+        public void testUpdateUser_emailIsEmpty_negative() throws Exception {
+        }
+
+        @Test
+        public void testUpdateUser_addressIsEmpty_negative() throws Exception {
+        }
+
+        @Test
+        public void testUpdateUser_birthdayIsEmpty_negative() throws Exception {
+        }
+
+        @Test
+        public void testUpdateUser_roleIsEmpty_negative() throws Exception {
+        }
     }
 
     @Nested
@@ -521,7 +567,7 @@ public class AuthenticationControllerTestJwt {
         @Test
         public void testLogout_positive() throws Exception {
             mvc.perform(post("/logout")
-                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken))
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken))
                     .andExpect(status().is(200))
                     .andExpect(content().string("Successfully logged out"));
         }
