@@ -10,13 +10,16 @@ import com.revature.lostchapterbackend.model.BookToBuy;
 import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.model.Wishlist;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.security.InvalidParameterException;
+import java.util.Iterator;
 import java.util.List;
 
 @Service
 public class WishlistService {
+    public static final int QUANTITY_TO_BUY = 1;
     /**
      * To-do list:
      * - Create CRUD (create- read - update - delete)
@@ -60,19 +63,59 @@ public class WishlistService {
 
     public Wishlist addBooksToWishlist(Wishlist currentWishlist, String userId, String bookId, String quantityToBuy)
             throws OutOfStockException, BookNotFoundException {
+
         currentWishlist = this.getWishlistById(userId);
+        //Retrieve a book obj from id from the bookService class
         Book b = bs.getBookById(bookId);
+        //We will get an exception telling us if the book is out of stock
         if (b.getQuantity() <= 0) {
             throw new OutOfStockException("Currently Out of Stock...");
         }
+        //If the book is available we pass it to BookToBuy
         BookToBuy booksToBeBought = new BookToBuy(b);
-        booksToBeBought.setQuantityToBuy(1);
+        //Since this is a wish list, I put default number as 1 book
+        booksToBeBought.setQuantityToBuy(QUANTITY_TO_BUY);
         List<BookToBuy> currentBookInWishList = currentWishlist.getBooksToBuy();
         currentBookInWishList.add(booksToBeBought);
         btbd.save(booksToBeBought);
         return wld.save(currentWishlist);
-
     }
+
+    public boolean checkBookInTheWishList(List<BookToBuy> currentBooksInTheWishList, Book b) {
+        boolean result = false;
+        for (BookToBuy b1 : currentBooksInTheWishList) {
+            if (b1.getBooks() == b) {
+                result = true;
+            }
+        }
+        return result;
+    }
+
+    public Wishlist deleteProductInWishList(Wishlist currentWishlist, String wishlistId, String productId) throws BookNotFoundException {
+        currentWishlist = this.getWishlistById(wishlistId);
+
+        int prodId = Integer.parseInt(productId);
+        List<BookToBuy> currentBooksInTheWishlist = currentWishlist.getBooksToBuy();
+        int quantityToDelete = 0;
+        try{
+            Iterator<BookToBuy> iter = currentBooksInTheWishlist.iterator();
+            System.out.println(currentBooksInTheWishlist);
+            BookToBuy b1 = null;
+            while (iter.hasNext()){
+                b1 = iter.next();
+                if (b1.getBooks().getBookId() == prodId){
+                    iter.remove();
+                    quantityToDelete = b1.getId();
+                }
+            }
+            currentWishlist.setBooksToBuy(currentBooksInTheWishlist);
+            btbd.deleteById(quantityToDelete);
+        }catch (EmptyResultDataAccessException e){
+            throw new BookNotFoundException("Product not found on this wishlist");
+        }
+        return wld.save(currentWishlist);
+    }
+
 
 
 }
