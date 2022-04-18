@@ -18,7 +18,16 @@ public class Wishlist {
     public Wishlist() {
     }
 
-    public Wishlist(Users user, List<BookToBuy> booksToBuy) {
+    public Wishlist(Users user) {
+        this.user = user;
+    }
+
+    public Wishlist(List<BookToBuy> booksToBuy) {
+        this.booksToBuy = booksToBuy;
+    }
+
+    public Wishlist(int id, Users user, List<BookToBuy> booksToBuy) {
+        this.id = id;
         this.user = user;
         this.booksToBuy = booksToBuy;
     }

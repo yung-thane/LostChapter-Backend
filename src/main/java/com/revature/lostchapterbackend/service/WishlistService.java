@@ -58,45 +58,21 @@ public class WishlistService {
         }
     }
 
-//    public Wishlist addBooksToWishlist(Wishlist currentWishlist, String userId, String bookId, String quantityToBuy)
-//            throws OutOfStockException, BookNotFoundException {
-//
-//        // checking if wishlist exist
-//        currentWishlist = this.getWishlistById(userId);
-//
-//        Book b = bs.getBookById(bookId);
-//
-//        if (b.getQuantity() <= 0) {
-//            throw new OutOfStockException("Currently Out of Stock...");
-//        }
-////        int amountToBuy = Integer.parseInt(quantityToBuy);
-////
-////        if (amountToBuy <= 0) {
-////            throw new InvalidParameterException("Quantity to Buy cannot be less than or equal to zero!");
-////        }
-//        BookToBuy booksToBeBought = new BookToBuy(b);
-////
-//        List<BookToBuy> currentBooksInTheCart = currentWishlist.getBooksToBuy();
-////
-//        boolean checkBook = checkBookInTheCart(currentBooksInTheCart, b);
-//
-//        if (checkBook == false) {
-//            currentBooksInTheCart.add(booksToBeBought);
-//            currentCart.setBooksToBuy(currentBooksInTheCart);
-//        } else if (checkBook == true) {
-//            for (BookToBuy b1 : currentBooksInTheCart) {
-//                if (b1.getBooks() == b) {
-//                    b1.setQuantityToBuy(b1.getQuantityToBuy() + amountToBuy);
-//                    booksToBeBought = b1;
-//                }
-//            }
-//        }
-//        wld.saveAndFlush(booksToBeBought);
-//        btbd.saveAndFlush(booksToBeBought);
-//        return wld.saveAndFlush(currentWishlist);
-//        return cd.saveAndFlush(currentCart);
-//
-//    }
+    public Wishlist addBooksToWishlist(Wishlist currentWishlist, String userId, String bookId, String quantityToBuy)
+            throws OutOfStockException, BookNotFoundException {
+        currentWishlist = this.getWishlistById(userId);
+        Book b = bs.getBookById(bookId);
+        if (b.getQuantity() <= 0) {
+            throw new OutOfStockException("Currently Out of Stock...");
+        }
+        BookToBuy booksToBeBought = new BookToBuy(b);
+        booksToBeBought.setQuantityToBuy(1);
+        List<BookToBuy> currentBookInWishList = currentWishlist.getBooksToBuy();
+        currentBookInWishList.add(booksToBeBought);
+        btbd.save(booksToBeBought);
+        return wld.save(currentWishlist);
+
+    }
 
 
 }
