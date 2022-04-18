@@ -26,6 +26,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.ResultMatcher;
 import org.springframework.test.web.servlet.result.ContentResultMatchers;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.util.Assert;
 import org.springframework.web.context.WebApplicationContext;
@@ -492,8 +493,6 @@ public class AuthenticationControllerTestJwt {
 
             updateUser.setId(1);
 
-            String expectedJson = mapper.writeValueAsString(updateUser);
-
             //Getting back a MvcResult to get the response to test
             MvcResult mvcResult = mvc.perform(put("/user")
                             .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken)
@@ -509,31 +508,105 @@ public class AuthenticationControllerTestJwt {
             }
 
             // This is to access a specific value since the string is Json format
-            String hashedPassword = result[2].substring(result[2].indexOf(":")+2, result[2].length()-1);
+            String hashedPassword = result[2].substring(result[2].indexOf(":") + 2, result[2].length() - 1);
             System.out.println("password: " + hashedPassword);
             //"password"
             boolean isMatch = new BCryptPasswordEncoder().matches(updateUser.getPassword(), hashedPassword);
             Assertions.assertThat(isMatch).isTrue();
-            String username = result[1].substring(result[1].indexOf(":")+2, result[1].length()-1);
+            String username = result[1].substring(result[1].indexOf(":") + 2, result[1].length() - 1);
             Assertions.assertThat(username).isEqualTo(updateUser.getUsername());
-
-
         }
 
         @Test
         public void testUpdateUser_usernameIsEmpty_negative() throws Exception {
+            Users updateUser = new Users(
+                    "",
+                    testDto.getPassword(),
+                    testDto.getFirstName(),
+                    testDto.getLastName(),
+                    testDto.getAge(),
+                    testDto.getEmail(),
+                    testDto.getBirthday(),
+                    testDto.getAddress(),
+                    testDto.getRole());
+            String jsonToSend = mapper.writeValueAsString(updateUser);
+            //Getting back a MvcResult to get the response to test
+            mvc.perform(put("/user")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken)
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonToSend))
+                    .andExpect(status().is(400))
+                    .andExpect(MockMvcResultMatchers.content()
+                            .string("username cannot be blank."));
         }
 
         @Test
         public void testUpdateUser_passwordIsEmpty_negative() throws Exception {
+            Users updateUser = new Users(
+                    testDto.getUsername(),
+                    "",
+                    testDto.getFirstName(),
+                    testDto.getLastName(),
+                    testDto.getAge(),
+                    testDto.getEmail(),
+                    testDto.getBirthday(),
+                    testDto.getAddress(),
+                    testDto.getRole());
+            String jsonToSend = mapper.writeValueAsString(updateUser);
+            //Getting back a MvcResult to get the response to test
+            mvc.perform(put("/user")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken)
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonToSend))
+                    .andExpect(status().is(400))
+                    .andExpect(MockMvcResultMatchers.content()
+                            .string("password cannot be blank."));
         }
 
         @Test
         public void testUpdateUser_firstNameIsEmpty_negative() throws Exception {
+            Users updateUser = new Users(
+                    testDto.getUsername(),
+                    testDto.getPassword(),
+                    "",
+                    testDto.getLastName(),
+                    testDto.getAge(),
+                    testDto.getEmail(),
+                    testDto.getBirthday(),
+                    testDto.getAddress(),
+                    testDto.getRole());
+            String jsonToSend = mapper.writeValueAsString(updateUser);
+            //Getting back a MvcResult to get the response to test
+            mvc.perform(put("/user")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken)
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonToSend))
+                    .andExpect(status().is(400))
+                    .andExpect(MockMvcResultMatchers.content()
+                            .string("firstName cannot be blank."));
         }
 
         @Test
         public void testUpdateUser_lastNameIsEmpty_negative() throws Exception {
+            Users updateUser = new Users(
+                    testDto.getUsername(),
+                    testDto.getPassword(),
+                    testDto.getFirstName(),
+                    "",
+                    testDto.getAge(),
+                    testDto.getEmail(),
+                    testDto.getBirthday(),
+                    testDto.getAddress(),
+                    testDto.getRole());
+            String jsonToSend = mapper.writeValueAsString(updateUser);
+            //Getting back a MvcResult to get the response to test
+            mvc.perform(put("/user")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken)
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonToSend))
+                    .andExpect(status().is(400))
+                    .andExpect(MockMvcResultMatchers.content()
+                            .string("lastName cannot be blank."));
         }
 
         @Test
