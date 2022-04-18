@@ -44,11 +44,10 @@ public class WishlistService {
 //        this.wld = wld;
 //    }
 
-    public WishlistService(BookService bs, CartsDAO cd, BookToBuyDAO btbd, WishlistDAO wld) {
+    public WishlistService(BookService bs, WishlistDAO wld, BookToBuyDAO btbd) {
         this.bs = bs;
-        this.cd = cd;
-        this.btbd = btbd;
         this.wld = wld;
+        this.btbd = btbd;
     }
 
     public Wishlist getWishlistById(String id) {
