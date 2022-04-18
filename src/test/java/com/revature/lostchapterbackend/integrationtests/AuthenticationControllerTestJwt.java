@@ -611,26 +611,140 @@ public class AuthenticationControllerTestJwt {
 
         @Test
         public void testUpdateUser_ageLessThan5_negative() throws Exception {
+            Users updateUser = new Users(
+                    testDto.getUsername(),
+                    testDto.getPassword(),
+                    testDto.getFirstName(),
+                    testDto.getLastName(),
+                    4,
+                    testDto.getEmail(),
+                    testDto.getBirthday(),
+                    testDto.getAddress(),
+                    testDto.getRole());
+            String jsonToSend = mapper.writeValueAsString(updateUser);
+            //Getting back a MvcResult to get the response to test
+            mvc.perform(put("/user")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken)
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonToSend))
+                    .andExpect(status().is(400))
+                    .andExpect(MockMvcResultMatchers.content()
+                            .string("Age cannot be less than 5 or greater than 125."));
         }
 
         @Test
         public void testUpdateUser_ageGreaterThan125_negative() throws Exception {
+            Users updateUser = new Users(
+                    testDto.getUsername(),
+                    testDto.getPassword(),
+                    testDto.getFirstName(),
+                    testDto.getLastName(),
+                    130,
+                    testDto.getEmail(),
+                    testDto.getBirthday(),
+                    testDto.getAddress(),
+                    testDto.getRole());
+            String jsonToSend = mapper.writeValueAsString(updateUser);
+            //Getting back a MvcResult to get the response to test
+            mvc.perform(put("/user")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken)
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonToSend))
+                    .andExpect(status().is(400))
+                    .andExpect(MockMvcResultMatchers.content()
+                            .string("Age cannot be less than 5 or greater than 125."));
         }
 
         @Test
         public void testUpdateUser_emailIsEmpty_negative() throws Exception {
+            Users updateUser = new Users(
+                    testDto.getUsername(),
+                    testDto.getPassword(),
+                    testDto.getFirstName(),
+                    testDto.getLastName(),
+                    testDto.getAge(),
+                    "",
+                    testDto.getBirthday(),
+                    testDto.getAddress(),
+                    testDto.getRole());
+            String jsonToSend = mapper.writeValueAsString(updateUser);
+            //Getting back a MvcResult to get the response to test
+            mvc.perform(put("/user")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken)
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonToSend))
+                    .andExpect(status().is(400))
+                    .andExpect(MockMvcResultMatchers.content()
+                            .string("email cannot be blank."));
         }
 
         @Test
         public void testUpdateUser_addressIsEmpty_negative() throws Exception {
+            Users updateUser = new Users(
+                    testDto.getUsername(),
+                    testDto.getPassword(),
+                    testDto.getFirstName(),
+                    testDto.getLastName(),
+                    testDto.getAge(),
+                    testDto.getEmail(),
+                    testDto.getBirthday(),
+                    "",
+                    testDto.getRole());
+            String jsonToSend = mapper.writeValueAsString(updateUser);
+            //Getting back a MvcResult to get the response to test
+            mvc.perform(put("/user")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken)
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonToSend))
+                    .andExpect(status().is(400))
+                    .andExpect(MockMvcResultMatchers.content()
+                            .string("address cannot be blank."));
         }
 
         @Test
         public void testUpdateUser_birthdayIsEmpty_negative() throws Exception {
+            Users updateUser = new Users(
+                    testDto.getUsername(),
+                    testDto.getPassword(),
+                    testDto.getFirstName(),
+                    testDto.getLastName(),
+                    testDto.getAge(),
+                    testDto.getEmail(),
+                    "",
+                    testDto.getAddress(),
+                    testDto.getRole());
+            String jsonToSend = mapper.writeValueAsString(updateUser);
+            //Getting back a MvcResult to get the response to test
+            mvc.perform(put("/user")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken)
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonToSend))
+                    .andExpect(status().is(400))
+                    .andExpect(MockMvcResultMatchers.content()
+                            .string("birthday cannot be blank."));
         }
 
         @Test
         public void testUpdateUser_roleIsEmpty_negative() throws Exception {
+            Users updateUser = new Users(
+                    testDto.getUsername(),
+                    testDto.getPassword(),
+                    testDto.getFirstName(),
+                    testDto.getLastName(),
+                    testDto.getAge(),
+                    testDto.getEmail(),
+                    testDto.getBirthday(),
+                    testDto.getAddress(),
+                    "");
+            String jsonToSend = mapper.writeValueAsString(updateUser);
+            //Getting back a MvcResult to get the response to test
+            mvc.perform(put("/user")
+                            .header(HttpHeaders.AUTHORIZATION, "Bearer " + testToken)
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(jsonToSend))
+                    .andExpect(status().is(400))
+                    .andExpect(MockMvcResultMatchers.content()
+                            .string("role cannot be blank."));
         }
     }
 
