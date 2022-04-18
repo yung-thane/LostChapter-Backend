@@ -36,7 +36,7 @@ import com.revature.lostchapterbackend.model.Users;
 @SpringBootTest
 @AutoConfigureMockMvc
 @DirtiesContext(classMode = ClassMode.BEFORE_EACH_TEST_METHOD)
-public class CartIntegrationTests {
+public class CartIntegrationTestsJWT {
 
 	@Autowired
 	private MockMvc mvc;
@@ -76,9 +76,8 @@ public class CartIntegrationTests {
 
 		genre.setGenre("test");
 
-		//session.persist(genre);
-
-
+		//ToDo: find another way to add a genre
+		session.persist(genre);
 
 		positiveBook.setISBN("test");
 		positiveBook.setBookName("test");
@@ -130,7 +129,8 @@ public class CartIntegrationTests {
 
 		Carts cart = new Carts(user);
 
-		session.persist(cart);
+		//ToDo: persist Cart
+		//session.persist(cart);
 
 
 		tx.commit();
