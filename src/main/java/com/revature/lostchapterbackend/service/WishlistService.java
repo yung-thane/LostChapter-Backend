@@ -116,6 +116,24 @@ public class WishlistService {
         return wld.save(currentWishlist);
     }
 
+    public Wishlist deleteAllProductInCart(Wishlist currentWishlist, String wishlistId) {
+        currentWishlist = this.getWishlistById(wishlistId);
 
+        List<BookToBuy> currentBooksInTheWishlist = currentWishlist.getBooksToBuy();
+
+        Iterator<BookToBuy> iter = currentBooksInTheWishlist.iterator();
+        System.out.println(currentBooksInTheWishlist);
+        BookToBuy b1 = null;
+        while (iter.hasNext()) {
+            b1 = iter.next();
+            iter.remove();
+            currentWishlist.setBooksToBuy(currentBooksInTheWishlist);
+            System.out.println(b1.getId());
+            btbd.deleteById(b1.getId());
+        }
+
+
+        return wld.save(currentWishlist);
+    }
 
 }
