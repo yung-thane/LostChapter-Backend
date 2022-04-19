@@ -4,8 +4,11 @@ import java.util.ArrayList;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.servlet.Filter;
 import javax.servlet.http.HttpServletRequest;
 
+import com.revature.lostchapterbackend.dao.BookDAO;
+import com.revature.lostchapterbackend.dao.GenreDAO;
 import com.revature.lostchapterbackend.dto.SignUpDto;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -32,26 +35,37 @@ import com.revature.lostchapterbackend.model.BookToBuy;
 import com.revature.lostchapterbackend.model.Carts;
 import com.revature.lostchapterbackend.model.Genre;
 import com.revature.lostchapterbackend.model.Users;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 @SpringBootTest
 @AutoConfigureMockMvc
 @DirtiesContext(classMode = ClassMode.BEFORE_EACH_TEST_METHOD)
 public class CartIntegrationTestsJWT {
+	@Autowired
+	private WebApplicationContext webAppContext;
 
 	@Autowired
-	private MockMvc mvc;
-
-	@Autowired
-	private EntityManagerFactory emf;
+	private Filter springSecurityFilterChain;
 
 	@Autowired
 	private ObjectMapper mapper;
 
-	private Users expectedUser;
-	private BookToBuy positiveBookToBuy;
-	private BookToBuy negativeBookToBuy;
+	@Autowired
+	private GenreDAO genreDao;
 
+	@Autowired
+	private BookDAO bookDao;
+
+	private MockMvc mvc;
 	private static String testToken;
+
+	private Genre fiction, nonfiction;
+
+	private Users expectedUser;
+
 	private SignUpDto testDto = new SignUpDto(
 			"test",
 			"password",
@@ -63,73 +77,70 @@ public class CartIntegrationTestsJWT {
 			"addresswest",
 			"Customer");
 
+
+	private BookToBuy positiveBookToBuy;
+	private BookToBuy negativeBookToBuy;
+
+
+
 	@BeforeEach
 	public void setup() {
 
 
+		Book positiveBook = new Book();    //Id should be 1
+		Book noStockBook = new Book();    //Id should be 2
 
-		Book positiveBook = new Book();	//Id should be 1
-		Book noStockBook = new Book();	//Id should be 2
-		Genre genre = new Genre();	//Id should be 1
+		mvc = MockMvcBuilders
+				.webAppContextSetup(webAppContext)
+				.addFilters(springSecurityFilterChain)
+				.build();
 
-		genre.setGenre("test");
+		fiction = new Genre();
+		fiction.setGenre("fiction");
 
+		nonfiction = new Genre();
+		nonfiction.setGenre("nonfiction");
 
-		positiveBook.setISBN("test");
-		positiveBook.setBookName("test");
-		positiveBook.setSynopsis("test");
-		positiveBook.setAuthor("test");
-		positiveBook.setGenre(genre);
-		positiveBook.setQuantity(100);
-		positiveBook.setYear(2000);
-		positiveBook.setEdition("test");
-		positiveBook.setPublisher("test");
-		positiveBook.setSaleIsActive(false);
-		positiveBook.setSaleDiscountRate(0);
-		positiveBook.setBookPrice(0);
-		positiveBook.setBookImage("test");
+		genreDao.save(fiction);
+		genreDao.save(nonfiction);
 
+		positiveBook = new Book("1234567879", "bookName", "synopsis",
+				"author", fiction, 1, 1996, "edition",
+				"publisher", true,
+				0.99, 10.99, "");
 
-		noStockBook.setISBN("test");
-		noStockBook.setBookName("test");
-		noStockBook.setSynopsis("test");
-		noStockBook.setAuthor("test");
-		noStockBook.setGenre(genre);
-		noStockBook.setQuantity(0);
-		noStockBook.setYear(2000);
-		noStockBook.setEdition("test");
-		noStockBook.setPublisher("test");
-		noStockBook.setSaleIsActive(false);
-		noStockBook.setSaleDiscountRate(0);
-		noStockBook.setBookPrice(0);
-		noStockBook.setBookImage("test");
+		noStockBook = new Book("2122232425", "bookName2", "synopsis",
+				"author", fiction, 0, 1996, "edition",
+				"publisher", true,
+				0.99, 10.99, "");
 
-//		Users user = new Users();	//Id should be 1
-//		user.setUsername("test");
-//		user.setPassword("5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8"); //its "password"
-//		user.setFirstName("test");
-//		user.setLastName("test");
-//		user.setAge(25);
-//		user.setEmail("test");
-//		user.setBirthday("test");
-//		user.setAddress("test");
-//		user.setRole("Customer");
+		bookDao.save(positiveBook);
+		bookDao.save(noStockBook);
 
 
+		SignUpDto signUpDto = new SignUpDto("test123", "password",
+				"testfn", "testln", 21, "test123@gmail.com",
+				"1990-12-09", "address123", "Customer");
 
+		String signUpJson = "";
+		try {
+			signUpJson = mapper.writeValueAsString(signUpDto);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
+		String response = null;
+		try {
+			response = mvc.perform(post("/signup")
+							.contentType(MediaType.APPLICATION_JSON)
+							.content(signUpJson))
+					.andReturn().getResponse().getContentAsString();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-		this.expectedUser = new Users();
-
-		this.expectedUser.setId(1);
-		this.expectedUser.setUsername("test");
-		this.expectedUser.setPassword("5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8"); //its "password"
-		this.expectedUser.setFirstName("test");
-		this.expectedUser.setLastName("test");
-		this.expectedUser.setAge(25);
-		this.expectedUser.setEmail("test");
-		this.expectedUser.setBirthday("test");
-		this.expectedUser.setAddress("test");
-		this.expectedUser.setRole("Customer");
+		if (!response.equals("Email already exist.")) {
+			testToken = response.substring(14, response.length() - 2);
+		}
 
 		this.positiveBookToBuy = new BookToBuy();
 		this.negativeBookToBuy = new BookToBuy();
