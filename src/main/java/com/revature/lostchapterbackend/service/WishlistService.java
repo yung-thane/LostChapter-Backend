@@ -90,7 +90,7 @@ public class WishlistService {
         return result;
     }
 
-    public Wishlist deleteProductInWishList(Wishlist currentWishlist, String wishlistId, String productId) throws BookNotFoundException {
+    public Wishlist deleteProductInWishlist(Wishlist currentWishlist, String wishlistId, String productId) throws BookNotFoundException {
         currentWishlist = this.getWishlistById(wishlistId);
 
         int prodId = Integer.parseInt(productId);
@@ -115,7 +115,7 @@ public class WishlistService {
         return wld.save(currentWishlist);
     }
 
-    public Wishlist deleteAllProductInCart(Wishlist currentWishlist, String wishlistId) {
+    public Wishlist deleteAllProductInWishlist(Wishlist currentWishlist, String wishlistId) {
         currentWishlist = this.getWishlistById(wishlistId);
 
         List<BookToBuy> currentBooksInTheWishlist = currentWishlist.getBooksToBuy();

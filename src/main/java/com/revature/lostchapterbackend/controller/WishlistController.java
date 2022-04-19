@@ -14,10 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.NoResultException;
-import java.security.InvalidParameterException;
-import java.util.NoSuchElementException;
-
 @RestController
 @CrossOrigin(originPatterns = "*", allowCredentials = "true")
 public class WishlistController {
@@ -52,7 +48,7 @@ public class WishlistController {
     }
 
     @Customer
-    @GetMapping(path = "/users/{userId}/wishlist") // endpoint used for displaying all Books in the Cart
+    @GetMapping(path = "/users/{userId}/wishlist") // endpoint used for displaying all Books in the Wishlist
     public ResponseEntity<Object> getWishListById(@PathVariable("userId") String userId) {
         // Aspect or another class for protecting endpoint
         try {
@@ -62,8 +58,38 @@ public class WishlistController {
         } catch (InvalidParameterException e) {
             return ResponseEntity.status(400).body(e.getMessage());
         }  catch (NoSuchElementException e) {
-            return ResponseEntity.status(404).body("There is no cart with the id of " +userId);
+            return ResponseEntity.status(404).body("There is no wishlist with the id of " +userId);
         }
     }
 
+    @Customer
+    @DeleteMapping(path = "/user/{wishlistId}/wishlist/{productId}")
+    public ResponseEntity<Object> deleteProductInWishlist(
+            @PathVariable("currentWishlist") Wishlist currentWishlist,
+            @PathVariable("wishlistId") String wishlistId,
+            @PathVariable("productId") String productId) {
+        try {
+            wishlistService.deleteProductInWishlist(currentWishlist, wishlistId, productId);
+            return ResponseEntity.status(200).body("Book successfully deleted from wishlist");
+        } catch (InvalidParameterException e) {
+            return ResponseEntity.status(400).body(e.getMessage());
+        } catch (NoSuchElementException | BookNotFoundException e) {
+            return ResponseEntity.status(404).body("There is no wishlist with the id of " + wishlistId);
+        }
+    }
+
+    @Customer
+    @DeleteMapping(path = "/user/{wishlistId}/wishlist")
+    public ResponseEntity<Object> deleteAllProductInWishlist(
+            @PathVariable("currentWishlist") Wishlist currentWishlist,
+            @PathVariable("wishlistId") String wishlistId) {
+        try {
+            wishlistService.deleteAllProductInWishlist(currentWishlist, wishlistId);
+            return ResponseEntity.status(200).body("Wishlist successfully deleted");
+        } catch (InvalidParameterException e) {
+            return ResponseEntity.status(400).body(e.getMessage());
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.status(404).body("There is no wishlist with the id of " + wishlistId);
+        }
+    }
 }
