@@ -1,5 +1,7 @@
 package com.revature.lostchapterbackend.utility;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -7,6 +9,7 @@ public class HashUtil {
 	
 	// hexadecimal = hexArray
 		private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
+		private final static BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
 		// convert bytes To String
 		private static String bytesToStringHex(byte[] bytes) {
@@ -39,4 +42,15 @@ public class HashUtil {
 			return bytesToStringHex(hash);
 		}
 
+		public static String hashPassword(String password) {
+			return encoder.encode(password);
+		}
+
+		public static String hashInputPassword(String password) {
+			return encoder.encode(password);
+		}
+
+		public static boolean passwordsMatch(String pass1Encoded, String pass2) {
+			return encoder.matches(pass2, pass1Encoded);
+		}
 }
